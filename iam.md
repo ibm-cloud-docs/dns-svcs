@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-30"
 
 keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc, Access Control Lists, IAM, permitted networks
 
@@ -77,8 +77,9 @@ The following table shows how service access roles map to {{site.data.keyword.dn
 ## Working with permitted network (VPC) related IAM access
 {: #permitted-network-vpc-access-roles}
 
-| Role    | Description       |Actions  |
-| :------ | :---------------- |:------- |
-|Operator | All VPC Infrastructure resources|Add or remove a permitted network (VPC) to the DNS zone
+To add a VPC into permitted networks for a DNS zone, users must have the **Operator** role on the VPC resource. The permission can be granted to any user by creating an IAM access policy with the following assignments in {{site.data.keyword.cloud_notm}} UI:
+1. Select **VPC Infrastructure** for *What type of access do you want to assign?*.
+1. Select **Virtual Private Cloud** for *Resource Type*.
+1. Choose the appropriate VPC under *VPC ID*.
 
 To learn more about providing Operator level access to the VPC, see [VPC: Getting started with IAM](/docs/vpc?topic=vpc-iam-getting-started).

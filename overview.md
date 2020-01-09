@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-10-09"
+  years: 2019, 2020
+lastupdated: "2020-01-06"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -59,8 +59,6 @@ Resource records and zones configured through {{site.data.keyword.dns_short}} ar
 
 
 {{site.data.keyword.dns_short}} ensures a level of privacy for information specified in your zones and resource records.
-
-While {{site.data.keyword.dns_short}} is accessible globally on the IBM Cloud network, the `us-south` and `eu-de` MZRs are optimized for latency at this time. Other MZRs will be optimized over time.
 
 {{site.data.keyword.dns_short}} is private only. For provisioning and configuring DNS records for public DNS resolution, refer to [{{site.data.keyword.cis_full_notm}}](/docs/infrastructure/cis?topic=cis-about-ibm-cloud-internet-services-cis) ({{site.data.keyword.cis_short_notm}}).
 {: note}
