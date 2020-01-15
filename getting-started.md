@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2019
-lastupdated: "2019-11-25"
+  years: 2019, 2020
+lastupdated: "2020-1-15"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -36,8 +36,8 @@ To get started:
 1. Create a {{site.data.keyword.dns_short}} instance.
 1. Add a DNS zone.
 1. Add VPC as a permitted network to the DNS zone.
-1. Add DNS Resource Records to the DNS zone.
-1. Ensure that servers in the VPC use the private DNS resolvers.
+1. Add DNS resource records to the DNS zone.
+1. Ensure that virtual server instances in the VPC use the private DNS resolvers.
 1. Test if the DNS name resolution works from the VPC.
 
 These steps enable you to query any record added to the zone from the permitted VPC network.
@@ -85,7 +85,7 @@ Currently, the default and only available plan is free.
 
 This request adds the VPC network to the zone, which gives the network access to the zone.
 
-## Adding DNS Resource Records
+## Adding DNS resource records
 {:#step-4-add-dns-resource-records}
 
 1. Select the zone from the table on the DNS Zones page.
