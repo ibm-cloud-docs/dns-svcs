@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-25"
+  years: 2019, 2020
+lastupdated: "2020-01-15"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -43,69 +43,69 @@ You can use the **Type** menu to select the type of record that you want to crea
 
 When you enter a name in the Name field, a domain name is automatically appended if you did not add one manually. For example, if you type `www` or `www.example.com` in the Name field, the API handles both entries as `www.example.com`. If you enter the exact domain name into the name field, then it won't append to itself (for example, `example.com` is handled as `example.com`). However, the list of DNS records only shows the names, without the domain name added on. As a result, `www.example.com` displays as `www` and `example.com` as `example.com`.
 
-The default value of TTL is `1 min`, but users can change it.
+The default value of TTL is `15 min`, but users can change it.
 {:note}
 
 #### A Type record
 {:#a-record}
 
-To add this record type, valid values must exist in the **Name** and **IPv4 Address** fields. Specify a **TTL** value from the list menu, with a default value of `1 min`.
+To add this record type, valid values must exist in the **Name** and **IPv4 Address** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
 Required Fields:
 * Name
 * IPv4 Address
-* TTL (Default value is 1 min)
+* TTL (Default value is 15 min)
 
 #### AAAA Type record
 {:#aaaa-record}
 
-To add this record type, valid values must exist in the **Name** and **IPv6 Address** fields. Specify a **TTL** value from the list menu, with a default value of `1 min`.
+To add this record type, valid values must exist in the **Name** and **IPv6 Address** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
 Required Fields:
 * Name
 * IPv6 Address
-* TTL (Default value is 1 min)
+* TTL (Default value is 15 min)
 
 #### CNAME Type record
 {:#cname-record}
 
-To add this record type, a valid value must exist in the **Name** field and a fully qualified domain name must be in the **Target** (FQDN) field. A **TTL** can also be specified from the list menu, with the default value of `1 min`.
+To add this record type, a valid value must exist in the **Name** field and a fully qualified domain name must be in the **Target** (FQDN) field. A **TTL** can also be specified from the list menu, with the default value of `15 min`.
 
 Required Fields:
 * Name
 * Target (for CNAME)
-* TTL (Default value is 1 min)
+* TTL (Default value is 15 min)
 
 #### MX Type record
 {:#mx-record}
 
-To add this record type, a valid value must exist in the **Name** field, a fully qualified domain name must be in the **Mail Server** (FQDN)field, and a valid number must exist in the **Priority** field. Specify a **TTL** value from the list menu, with a default value of `1 min`.
+To add this record type, a valid value must exist in the **Name** field, a fully qualified domain name must be in the **Mail Server** (FQDN)field, and a valid number must exist in the **Priority** field. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
 Required Fields:
 * Name
 * Mail Server
-* TTL (Default value is 1 min)
+* TTL (Default value is 15 min)
 * Priority (Default value is 1)
 
 #### PTR Type record
 {:#ptr-record}
 
-To add this record type, an existing A or AAAA record must be created beforehand that is not already associated with another PTR record. Select an existing record from the list menu. Specify a **TTL** value from the list menu, with a default value of `1 min`.
+To add this record type, an existing A or AAAA record must be created beforehand that is not already associated with another PTR record. Select an existing record from the list menu. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
 Required Fields:
 * Select existing record
-* TTL (Default value is 1 min)
+* TTL (Default value is 15 min)
 
 #### SRV Type record
 {:#srv-record}
 
-To add this record type, valid values must exist in the **Name**, **Service Name** and **Target** fields. Use the list menu to select a **protocol**, which defaults to the UDP protocol. Additionally, you can specify **Priority**, **Weight** and **Port**. These three fields default to a value of `1`. Specify a **TTL** value from the list menu, with a default value of `1 min`.
+To add this record type, valid values must exist in the **Name**, **Service Name** and **Target** fields. Use the list menu to select a **protocol**, which defaults to the UDP protocol. Additionally, you can specify **Priority**, **Weight** and **Port**. These three fields default to a value of `1`. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
 Required Fields:
 * Name
 * Service Name
 * Target
-* TTL (Default value is 1 min)
+* TTL (Default value is 15 min)
 * Protocol (Default value is UDP)
 * Priority (Default value is 1)
 * Weight (Default value is 1)
@@ -114,12 +114,12 @@ Required Fields:
 #### TXT Type record
 {:#txt-record}
 
-To add this record type, valid values must exist in the **Name** and **Content** fields. Specify a **TTL** value from the list menu, with a default value of `1 min`.
+To add this record type, valid values must exist in the **Name** and **Content** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
 Required Fields:
 * Name
 * Content
-* TTL (Default value is 1 min)
+* TTL (Default value is 15 min)
 
 ### Updating DNS records
 {:#updating-dns-records}
