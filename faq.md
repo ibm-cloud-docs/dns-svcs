@@ -40,7 +40,7 @@ Private DNS permits name resolution only from permitted VPCs within your {{site.
 ## Can I manage publicly available DNS records with this service?
 {: faq}
 
-No, {{site.data.keyword.dns_short}} only offers private DNS at the moment. Use [{{site.data.keyword.cis_short_notm}}](/docs/infrastructure/cis?topic=cis-getting-started#getting-started) for public DNS.
+No, {{site.data.keyword.dns_short}} only offers private DNS at the moment. Use [{{site.data.keyword.cis_short_notm}}](/docs/cis?topic=cis-getting-started#getting-started) for public DNS.
 
 ## Is DNSSec supported with zones managed by {{site.data.keyword.dns_short}}?
 {: faq}

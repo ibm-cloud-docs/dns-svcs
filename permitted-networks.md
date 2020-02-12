@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-25"
+  years: 2019, 2020
+lastupdated: "2020-02-10"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -81,13 +81,13 @@ A DNS zone's initial state is `PENDING_NETWORK_ADD`, because its permitted netwo
 
 ```bash
 curl -X POST \
-         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/acls \
+         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks \
          -H "Authorization: $TOKEN" \
          -d '{
              "type": "vpc",
-                 "acl_data":{
-                     "vpc_crn":"crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
-                 }
+             "permitted_network":{
+                 "vpc_crn":"crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+             }
          }'
 ```
 {:pre}
@@ -98,29 +98,30 @@ curl -X POST \
 ```json
 {
     "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
-        "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-        "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-        "acl_data": {
-            "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
-        },
-        "type": "vpc"
+    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "permitted_network": {
+        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+    },
+    "type": "vpc",
+    "state": "ACTIVE"
 }
 ```
 {:pre}
 
-For future requests, the ID in the response is referenced as **`Permitted_Network_ID`**.
+For future requests, the ID in the response is referenced as **`PERMITTED_NETWORK_ID`**.
 {:note}
 
-### Listing a permitted network
+### Retrieve a permitted network
 {: #get-permitted-network-api}
 
-List a specific permitted network from your instance using the permitted network ID.
+Retrieve a specific permitted network from your instance using the permitted network ID.
 
 **Request**
 
 ```bash
 curl -X GET \
-         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/acls/$ACL_ID \
+         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks/$PERMITTED_NETWORK_ID \
          -H "Authorization: $TOKEN"
 ```
 {:pre}
@@ -130,12 +131,13 @@ curl -X GET \
 ```json
 {
     "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
-        "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-        "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-        "acl_data": {
-            "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
-        },
-        "type": "vpc"
+    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "permitted_network": {
+        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+    },
+    "type": "vpc",
+    "state": "ACTIVE"
 }
 ```
 {:screen}
@@ -149,7 +151,7 @@ List all permitted networks for your DNS zone.
 
 ```bash
 curl -X GET \
-         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/acls \
+         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks \
          -H "Authorization: $TOKEN"
 ```
 {:pre}
@@ -158,16 +160,17 @@ curl -X GET \
 
 ```json
 {
-    "acls": [
-    {
-        "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
+    "permitted_networks": [
+        {
+            "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
             "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
             "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-            "acl_data": {
+            "permitted_network": {
                 "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
             },
-            "type": "vpc"
-    }
+            "type": "vpc",
+            "state": "ACTIVE"
+        }
     ]
 }
 ```
@@ -182,13 +185,25 @@ Delete a specific permitted network from your instance, and unlink VPC from a zo
 
 ```bash
 curl -X DELETE \
-         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/acls/$ACL_ID \
+         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks/$PERMITTED_NETWORK_ID \
          -H "Authorization: $TOKEN"
 ```
 {:pre}
 
 **Response**
+```json
+{
+    "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
+    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "permitted_network": {
+        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+    },
+    "type": "vpc",
+    "state": "PENDING_REMOVE"
+}
 ```
-         HTTP 204 returned, no content in response
-```
-{:screen}
+{:pre}
+
+Removing a permitted network can take up to 5 minutes. You cannot add the VPC back to the DNS zone's permitted network until the removal operation is complete.
+{:note}
