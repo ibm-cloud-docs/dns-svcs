@@ -85,12 +85,14 @@ This section describes how to set up a DNS instance, DNS zones, permitted networ
 
 To verify that your instance, zone, and record are performing correctly, run the following **dig** command:
 
-```dig @161.26.0.7 <Record type> <record name>```
+```dig @161.26.0.7 <Record type> <record name>
+```
 {:pre}
 
 Example:
 
-```dig @161.26.0.7 A xyz.example.com```
+```dig @161.26.0.7 A xyz.example.com
+```
 {:pre}
 
 ## Using the API
@@ -238,10 +240,12 @@ curl -X POST \
 
 To verify that your instance, zone, and record are performing correctly, run the following **dig** command:
 
-```dig @161.26.0.7 <Record type> <record name>```
+```dig @161.26.0.7 <Record type> <record name>
+```
 {:pre}
 
 Example:
 
-```dig @161.26.0.7 A xyz.example.com```
+```dig @161.26.0.7 A xyz.example.com
+```
 {:pre}
