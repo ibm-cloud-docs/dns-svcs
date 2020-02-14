@@ -50,17 +50,17 @@ Follow these steps to modify the DHCP client configuration in CentOS 7.x.
 
 1. Create the file `/etc/dhcp/dhclient.conf` and write the following contents:
 
-```
-supersede domain-name-servers 161.26.0.7, 161.26.0.8;
-```
-{:pre}
+  ```
+  supersede domain-name-servers 161.26.0.7, 161.26.0.8;
+  ```
+  {:pre}
 
 2. Next run the following command to release the current lease and stop the running DHCP client. Then restart the DHCP client.
 
-```console
-dhclient -v -r eth0; dhclient -v eth0
-```
-{:pre}
+  ```console
+  dhclient -v -r eth0; dhclient -v eth0
+  ```
+  {:pre}
 
 
 ### Configuring Ubuntu Linux 18.04 LTS Bionic Beaver
@@ -70,17 +70,17 @@ Follow these steps to modify the DHCP client configuration in Ubuntu Linux 18.04
 
 1. Open the `/etc/dhcp/dhclient.conf` file and add the line:
 
-```
-supersede domain-name-servers 161.26.0.7, 161.26.0.8;
-```
-{:pre}
+  ```
+  supersede domain-name-servers 161.26.0.7, 161.26.0.8;
+  ```
+  {:pre}
 
 2. Run the following command to release the current lease and stop the running DHCP client. Then restart the DHCP client.
 
-```console
-dhclient -v -r; dhclient -v
-```
-{:pre}
+  ```console
+  dhclient -v -r; dhclient -v
+  ```
+  {:pre}
 
 If you are still unable to resolve with the new configuration, flush all DNS resource record caches the `systemd` service maintains locally, and try again.
 
