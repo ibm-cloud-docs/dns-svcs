@@ -81,7 +81,7 @@ A given instance can have multiple DNS zones with the same name. The label helps
 {: faq}
 
 - Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: new_window}.
-- Click the "overflow" menu ![overflow menu icon](/icons/actions-icon-vertical.svg "overflow menu icon") in the final column and select "Delete".
+- Click the "overflow" menu ![overflow menu icon](../../icons/actions-icon-vertical.svg "overflow menu icon") in the final column and select "Delete".
 
 ## Why can't I delete a {{site.data.keyword.dns_short}} instance?
 {: faq}
@@ -101,20 +101,15 @@ If the VPC is deleted, the corresponding permitted network will also be deleted 
 
 ## What do the different zone states mean?
 {: faq}
-* Pending_Network_Add or Pending (UI)
-   When a DNS zone is added to the instance it will be in `PENDING_NETWORK_ADD`. In this state Resource Records can be added, deleted or updated. Since the zone does not have any permitted networks, the zone will not be served by the resolvers in any region.
 
-* Active
-   When a domain has one or more permitted networks added then the domain state changes to `ACTIVE` and the domain will be served by the resolver from all the regions.
+  * **Pending**: When a DNS zone is added to the instance it will be in `PENDING_NETWORK_ADD`. In this state Resource Records can be added, deleted or updated. Since the zone does not have any permitted networks, the zone will not be served by the resolvers in any region.
+  * **Active**: When a domain has one or more permitted networks added then the domain state changes to `ACTIVE` and the domain will be served by the resolver from all the regions.
+  * **Disabled**: In this state the zone will not be served and all control path operations will be disabled except deleting the zone.
 
-* Disabled
-  In this state the zone will not be served and all control path operations will be disabled except deleting the zone.
-
-
-## Can I use any arbitrary name for the zone?
+## Can I use any name for the zone?
 {: faq}
 
-In general, yes. Certain IBM owned or IBM specific DNS zone names are restricted, in other words, they can't be created in Private DNS. This includes `ibm.com`, `bluemix.net`, `softlayer.com`, `appdomain.cloud`, and a few others. The zone names must be 2-level deep (for example, `example.com`). After the zone has been added, hostnames within the zone can be multiple levels deep, depending on your needs (for example, you can add records for `hostname.example.com`, or `hostname.subdomain.example.com`, etc.).
+In general, yes. Certain IBM owned or IBM specific DNS zone names are restricted, in other words, they can't be created in Private DNS. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list. The zone names must be 2-level deep (for example, `example.com`). After the zone has been added, hostnames within the zone can be multiple levels deep, depending on your needs (for example, you can add records for `hostname.example.com`, or `hostname.subdomain.example.com`, and so on).
 
 ## Can I create two DNS zones with the same name?
 {: faq}

@@ -40,12 +40,26 @@ DNS zones can be managed through the {{site.data.keyword.cloud}} console, or the
 
   1. From the Resource page, select the desired {{site.data.keyword.dns_short}} instance.
   2. Click the **Create Zone** button on the **DNS Zones** page.
-  3. In the panel that appears, enter your zone name in the **Name** field. Optionally, enter **Label** and **Description** fields.
+  3. In the panel that appears, enter your zone name in the **Name** field. Optionally, enter **Label** and **Description** fields. See [Restricted DNS zone names](#restricted-dns-zone-names) for information about what names are not permitted.
   5. Click **Create Zone**.
 
 If the zone creation is successful, you are directed to the Zone Details page.
 
 If the zone creation is unsuccessful, an error notification appears with information about what caused the error.
+
+#### Restricted DNS zone names
+{:#restricted-dns-zone-names}
+
+The following DNS zone names are not permitted.
+  * `ibm.com`
+  * `softlayer.com`
+  * `bluemix.net`
+  * `softlayer.local`
+  * `mybluemix.net`
+  * `networklayer.com`
+  * `ibmcloud.com`
+  * `pdnsibm.net`
+  * `appdomain.cloud`
 
 ### Editing a DNS zone
 {:#edit-dns-zone-ui}
