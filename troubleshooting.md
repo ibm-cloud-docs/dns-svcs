@@ -36,7 +36,7 @@ Troubleshooting is a systematic approach to solving a problem. The goal of troub
   * Verify {{site.data.keyword.dns_short}} is configured correctly and that access to `161.26.0.7` and `161.26.0.8` is available from within the virtual server instance.
     ```console
     $ dig @161.26.0.7 yourzone.com
-    ````
+    ```
     {:pre}
   * Verify the server you are sending the request from is configured to use one of these DNS resolvers: `161.26.0.7` or `161.26.0.8`.
   * Verify the server you are sending the request from is part of a VPC that has been added as a permitted network to the DNS zone.

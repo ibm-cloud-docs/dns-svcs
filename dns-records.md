@@ -90,7 +90,7 @@ Required Fields:
 #### PTR Type record
 {:#ptr-record}
 
-To add this record type, an existing A or AAAA record must be created beforehand that is not already associated with another PTR record. Select an existing record from the list menu. Specify a **TTL** value from the list menu, with a default value of `15 min`.
+To add this record type, you must have an existing A or AAAA record that is not already associated with another PTR record. Select an existing record from the list menu. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
 Required Fields:
 * Select existing record

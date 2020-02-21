@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-25"
+  years: 2020
+lastupdated: "2020-02-21"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -52,10 +52,10 @@ DNSSec allows resolvers to cryptographically verify the data received from autho
 
 {{site.data.keyword.dns_short}} is a global service and can be used from permitted networks in any {{site.data.keyword.cloud_notm}} region.
 
-## How do I update my Virtual Server Instance to use Private DNS for Name resolution?
+## How do I update my Virtual Server Instance to use Private DNS for name resolution?
 {: faq}
 
-This is operating system specific. For example, on some Linux distributions the `/etc/resolv.conf` file contains the IP address of the DNS resolver. This file should be updated with the IP address of the Private DNS Name Servers, `161.26.0.7` and `161.26.0.8`. The configuration can also be updated through Cloud Init, where supported. Consult your operating system manuals for instructions on how to update DNS resolvers. See [Detailed steps](/docs/dns-svcs?topic=dns-svcs-updating-dns-resolver) to learn how to update configuration to use Private DNS Resolvers, for different distros.
+This is operating system specific. For example, on some Linux distributions the `/etc/resolv.conf` file contains the IP address of the DNS resolver. This file should be updated with the IP address of the Private DNS name servers, `161.26.0.7` and `161.26.0.8`. The configuration can also be updated through Cloud Init, where supported. Consult your operating system manuals for instructions on how to update DNS resolvers. See [Detailed steps](/docs/dns-svcs?topic=dns-svcs-updating-dns-resolver) to learn how to update configuration to use Private DNS Resolvers, for different distros.
 
 ## When creating a DNS zone, what is the purpose of the `Label` field?
 {: faq}
@@ -81,7 +81,7 @@ A given instance can have multiple DNS zones with the same name. The label helps
 {: faq}
 
 - Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: new_window}.
-- Click the "overflow" menu ![overflow menu icon](../../icons/actions-icon-vertical.svg "overflow menu icon") in the final column and select "Delete".
+- Click the "overflow" menu ![overflow menu icon](../../icons/actions-icon-vertical.svg "Overflow menu icon") in the final column and select "Delete".
 
 ## Why can't I delete a {{site.data.keyword.dns_short}} instance?
 {: faq}
@@ -102,14 +102,14 @@ If the VPC is deleted, the corresponding permitted network will also be deleted 
 ## What do the different zone states mean?
 {: faq}
 
-  * **Pending**: When a DNS zone is added to the instance it will be in `PENDING_NETWORK_ADD`. In this state Resource Records can be added, deleted or updated. Since the zone does not have any permitted networks, the zone will not be served by the resolvers in any region.
+  * **Pending**: When a DNS zone is added to the instance it will be in `Pending`. In this state Resource Records can be added, deleted or updated. Since the zone does not have any permitted networks, the zone will not be served by the resolvers in any region.
   * **Active**: When a domain has one or more permitted networks added then the domain state changes to `ACTIVE` and the domain will be served by the resolver from all the regions.
   * **Disabled**: In this state the zone will not be served and all control path operations will be disabled except deleting the zone.
 
 ## Can I use any name for the zone?
 {: faq}
 
-In general, yes. Certain IBM owned or IBM specific DNS zone names are restricted, in other words, they can't be created in Private DNS. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list. The zone names must be 2-level deep (for example, `example.com`). After the zone has been added, hostnames within the zone can be multiple levels deep, depending on your needs (for example, you can add records for `hostname.example.com`, or `hostname.subdomain.example.com`, and so on).
+In general, yes. Certain IBM-owned or IBM-specific DNS zone names are restricted, in other words, they can't be created in Private DNS. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list. The zone names must be 2-level deep (for example, `example.com`). After the zone has been added, hostnames within the zone can be multiple levels deep, depending on your needs (for example, you can add records for `hostname.example.com`, or `hostname.subdomain.example.com`, and so on).
 
 ## Can I create two DNS zones with the same name?
 {: faq}
