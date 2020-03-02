@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2019, 2020
-lastupdated: "2020-1-15"
+lastupdated: "2020-2-24"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -45,7 +45,7 @@ These steps enable you to query any record added to the zone from the permitted 
 ## Before you begin
 {:#before-you-begin-getting-started}
 
-1. To use {{site.data.keyword.dns_short}} you must have a VPC in the {{site.data.keyword.cloud_notm}}. Follow this link to [Create the VPC](/docs/vpc-on-classic?topic=vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console) using the console, or [create the VPC using a CLI](/docs/vpc-on-classic?topic=vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-cli).
+1. To use {{site.data.keyword.dns_short}}, you must have a VPC in the {{site.data.keyword.cloud_notm}}. Follow this link to [Create a VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console) using the {{site.data.keyword.cloud_notm}} console, or [create a VPC using the CLI](/docs/vpc?topic=vpc-creating-a-vpc-using-cli).
 1. Create a virtual server instance (VSI) within the VPC.
 1. The VSI on the VPC must be configured to use the private DNS resolvers (161.26.0.7, 161.26.0.8). For example, on some Linux distributions, this is done by editing the file `/etc/resolv.conf`. It may also be possible to override the default DNS resolvers using `cloud-init` during server boot up. Consult your operating system manuals for more information. When editing configuration files, ensure that you keep a backup copy of the existing configuration in case it needs to be restored.
 
