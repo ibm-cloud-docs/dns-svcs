@@ -45,6 +45,9 @@ DNS zones can be managed through the {{site.data.keyword.cloud}} console, or the
 
 If the zone creation is successful, you are directed to the Zone Details page.
 
+Newly added zones have a pending state until you add permitted networks to the zone. The zone becomes active after permitted networks are added.
+{:note}
+
 If the zone creation is unsuccessful, an error notification appears with information about what caused the error.
 
 #### Restricted DNS zone names
