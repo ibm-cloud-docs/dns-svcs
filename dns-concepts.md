@@ -37,8 +37,6 @@ A DNS zone is a collection of resource records, which belongs to a single parent
 
 See [Managing DNS zones](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones) for more information on how to manage DNS zones.
 
-You can only add two-level zones using {{site.data.keyword.dns_full}}. For instance, `example.com` is allowed, while `subdomain.example.com` is not. However, you can define subdomains within an added zone (for example, `subdomain.example.com`, `hostname.example.com`, or `hostname.subdomain.example.com` are all valid names within the zone `example.com`).
-
 ## Permitted networks
 {: #permitted-networks}
 

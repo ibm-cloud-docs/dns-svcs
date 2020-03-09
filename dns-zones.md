@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-25"
+  years: 2019, 2020
+lastupdated: "2020-03-09"
 
-keywords: dns-svcs, DNS Services, Private DNS
+keywords: dns-svcs, DNS Services, Private DNS, wildcard, dns zones, restricted zones
 
 subcollection: dns-svcs
 
@@ -30,6 +30,47 @@ subcollection: dns-svcs
 
 You must have an {{site.data.keyword.dns_full}} instance before managing DNS zones. Refer to [Create a {{site.data.keyword.dns_short}} instance](/docs/dns-svcs?topic=dns-svcs-getting-started#step-1-create-dns-services-instance) for more information.
 
+A zone can have an arbitrary number of levels, but not fewer than two. For example, `ibm.austin.texas.example.com` is a valid zone name, but `com` is not.
+
+You can have multiple zones where one is a suffix to another. For example, `sub.domain.example.com` and `domain.example.com` can co-exist.
+
+You can also define subdomains within an added zone. For example, the following are all valid names within the zone `domain.example.com`.
+  * `subdomain.domain.example.com` 
+  * `hostname.domain.example.com`
+  * `hostname.subdomain.domain.example.com` 
+  
+The name `host.sub.domain.example.com` might be `host.sub` within the zone `domain.example.com`. It might also be `host.sub.domain` within the zone `example.com`. Both can exist at the same time, and are separate.  
+
+## Known limitations
+{: #multi-level-limitations}
+
+The DNS resolver always looks for a record from the longest matching zone, even though the record might not exist in the longest matching zone but does exist in another non-longest matching zone.
+
+Let's say we have two zones, `domain.example.com` and `example.com`.
+
+Records for `example.com`
+
+``` 
+ {
+      myhost.domain.example.com A 1.1.1.1
+      me.domain.example.com A 8.8.8.8
+  }
+```
+{:screen}
+
+Records for `domain.example.com`
+
+```
+  {
+      myhost.domain.example.com A 2.2.2.2
+  }
+```
+{: screen}
+
+If a user queries for `myhost.domain.example.com`, the expected result (which is 2.2.2.2) should come from `domain.example.com`, because `domain.example.com` is the longest match with the user query.
+
+If they queried for `me.domain.example.com` instead, the resolver searches only the longest matching zone. Because `me.domain.example.com` does not exist in `domain.example.com`, the result is an `NXDOMAIN`. 
+
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: #managing-dns-zones-ui}
 DNS zones can be managed through the {{site.data.keyword.cloud}} console, or the API. The following sections cover the console usage.
@@ -52,6 +93,8 @@ If the zone creation is unsuccessful, an error notification appears with informa
 
 #### Restricted DNS zone names
 {:#restricted-dns-zone-names}
+
+Subdomains to any of the restricted 2-level zones are not permitted. For example, `my.host.ibm.com` is a subdomain to `ibm.com`. Therefore, `my.host.ibm.com` is also a restricted zone.
 
 The following DNS zone names are not permitted.
   * `ibm.com`
