@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-19"
+  years: 2019, 2020
+lastupdated: "2020-03-11"
 
 keywords: known issues, DNS Services
 
@@ -26,3 +26,5 @@ This section details some of the known limitations of {{site.data.keyword.dns_sh
 {:shortdesc}
 
  * This service is supported for VPCs (Gen1) that are created after 10/8/2019. To use the service for VPCs created prior to that, follow [this process](https://www.ibm.com/support/pages/node/1086243) to open a support case.
+
+ * The UI can display a maximum of 1000 resource records. If you have more than 1000, use the [API](https://{DomainName}/apidocs/dns-svcs/records) or [CLI](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#list-resource-record) to get all resource records.

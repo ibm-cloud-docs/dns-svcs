@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-02-21"
+lastupdated: "2020-03-10"
 
-keywords: dns-svcs, DNS Services, Private DNS
+keywords: dns-svcs, DNS Services, Private DNS, FAQ, frequently asked questions
 
 subcollection: dns-svcs
 
@@ -65,23 +65,24 @@ A given instance can have multiple DNS zones with the same name. The label helps
 ## How many private zones are supported?
 {: faq}
 
-10 per service instance
+{{site.data.keyword.dns_short}} supports 10 private zones per service instance.
 
 ## How many permitted networks are supported?
 {: faq}
 
-10 per DNS zone
+{{site.data.keyword.dns_short}} supports 10 permitted networks per DNS zone.
 
 ## How many DNS records are supported?
 {: faq}
 
-3500 per DNS zone
+{{site.data.keyword.dns_short}} supports 3500 DNS records per DNS zone.
 
 ## How do I delete my {{site.data.keyword.dns_short}} instance?
 {: faq}
 
-- Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: new_window}.
-- Click the "overflow" menu ![overflow menu icon](../../icons/actions-icon-vertical.svg "Overflow menu icon") in the final column and select "Delete".
+To delete a {{site.data.keyword.dns_short}} instance, 
+  - Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: new_window}.
+  - Click the "overflow" menu ![overflow menu icon](../../icons/actions-icon-vertical.svg "Overflow menu icon") in the final column and select "Delete".
 
 ## Why can't I delete a {{site.data.keyword.dns_short}} instance?
 {: faq}
@@ -102,14 +103,15 @@ If the VPC is deleted, the corresponding permitted network will also be deleted 
 ## What do the different zone states mean?
 {: faq}
 
-  * **Pending**: When a DNS zone is added to the instance it will be in `Pending`. In this state Resource Records can be added, deleted or updated. Since the zone does not have any permitted networks, the zone will not be served by the resolvers in any region.
+The zone states definitions are as follows.
+* **Pending**: When a DNS zone is added to the instance it will be in `Pending`. In this state Resource Records can be added, deleted or updated. Since the zone does not have any permitted networks, the zone will not be served by the resolvers in any region.
   * **Active**: When a domain has one or more permitted networks added then the domain state changes to `ACTIVE` and the domain will be served by the resolver from all the regions.
   * **Disabled**: In this state the zone will not be served and all control path operations will be disabled except deleting the zone.
 
 ## Can I use any name for the zone?
 {: faq}
 
-In general, yes. Certain IBM-owned or IBM-specific DNS zone names are restricted, in other words, they can't be created in Private DNS. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list. The zone names must be 2-level deep (for example, `example.com`). After the zone has been added, hostnames within the zone can be multiple levels deep, depending on your needs (for example, you can add records for `hostname.example.com`, or `hostname.subdomain.example.com`, and so on).
+In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-specific DNS zone names are restricted, in other words, they can't be created in Private DNS. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list. The zone names must be 2-level deep (for example, `example.com`). After the zone has been added, hostnames within the zone can be multiple levels deep, depending on your needs (for example, you can add records for `hostname.example.com`, or `hostname.subdomain.example.com`, and so on).
 
 ## Can I create two DNS zones with the same name?
 {: faq}
@@ -119,10 +121,15 @@ Creating two DNS Zones with the same name is allowed. Use label and description 
 ## Can I add the same permitted network (for example, a VPC) to two DNS zones of the same name?
 {: faq}
 
-Adding the same VPC to two DNS zones of the same name is not allowed.
+No, adding the same permitted network (for example, a VPC) to two DNS zones of the same name is not allowed.
 
 
 ## What are the authoritative servers for the private DNS zones? Can I resolve the private DNS zones iteratively?
 {: faq}
 
-Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authoritative servers for private DNS zones. Clients must send their recursive DNS queries to the DNS resolvers that the service provides. The service does not allow iterative resolution of private DNS zones.
+Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authoritative servers for private DNS zones. Clients must send their recursive DNS queries to the DNS resolvers provided by the service. The service does not allow iterative resolution of private DNS zones.
+
+## Can I create a DNS zone with same name as a Public DNS zone?
+{: faq}
+
+{{site.data.keyword.dns_short}} allows creating a private DNS zone that can have the same name as the public DNS zone. See a [detailed explanation](/docs/dns-svcs?topic=dns-svcs-use-cases#using-dns-services-with-split-horizon-capabilities) of this scenario, referred to as Split Horizon.

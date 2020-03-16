@@ -4,7 +4,7 @@ copyright:
   years: 2019, 2020
 lastupdated: "2020-01-15"
 
-keywords: dns-svcs, DNS Services, Private DNS
+keywords: dns-svcs, DNS Services, Private DNS, DNS records, wildcard records
 
 subcollection: dns-svcs
 
@@ -27,6 +27,9 @@ subcollection: dns-svcs
 
 # Managing DNS records
 {:#managing-dns-records}
+
+DNS records make the connection between human-readable names and IP addresses. We cover how to manage DNS records in the following sections. 
+{: shortdesc}
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: #managing-dns-records-ui}

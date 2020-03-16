@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-02-24"
+lastupdated: "2020-03-11"
 
 keywords: IBM Cloud DNS Services, DNS Activity Tracker events
 
@@ -41,6 +41,7 @@ The following table lists the actions that are related to DNS zones and generate
 
 |Action|Description|
 |---|---|  
+|dns-svcs.zones.read  |Get a DNS zone.   |
 |dns-svcs.zones.create|Create a DNS zone.|
 |dns-svcs.zones.update|Update a DNS zone.|
 |dns-svcs.zones.delete|Delete a DNS zone.|
@@ -52,9 +53,10 @@ The following table lists the actions that are related to resource records and g
 
 |Action|Description|
 |---|---|  
-|dns-svcs.dns_records.create|Create a resource record.|
-|dns-svcs.dns_records.update|Update a resource record.|
-|dns-svcs.dns_records.delete|Delete a resource record.|
+|dns-svcs.resource_records.read  |Get a resource record.   |
+|dns-svcs.resource_records.create|Create a resource record.|
+|dns-svcs.resource_records.update|Update a resource record.|
+|dns-svcs.resource_records.delete|Delete a resource record.|
 
 ## List of events: Permitted Networks
 {: #events_permitted_networks}
@@ -63,6 +65,7 @@ The following table lists the actions that are related to permitted networks and
 
 |Action|Description|
 |---|---|  
+|dns-svcs.permitted_networks.read  |Get a permitted network from DNS zone.|
 |dns-svcs.permitted_networks.create|Add a permitted network to DNS zone.|
 |dns-svcs.permitted_networks.delete|Remove a permitted network from DNS zone.|
 

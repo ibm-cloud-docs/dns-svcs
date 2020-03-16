@@ -21,6 +21,7 @@ DNS Services (Beta)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    responsibilities.md
     at-events.md
     dns-svcs-api.md
     /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
