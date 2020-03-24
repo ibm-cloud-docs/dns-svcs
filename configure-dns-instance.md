@@ -44,6 +44,8 @@ This section describes how to set up a DNS instance, DNS zones, permitted networ
 
    You are redirected to the {{site.data.keyword.dns_short}} instance page showing **DNS Zones** information.
 
+   If your account is enabled for the experimental {{site.data.keyword.dns_short}}, it appears in the [experimental catalog](https://{DomainName}/catalog/labs). You can also navigate directly to the {{site.data.keyword.dns_short}} instance creation by going to the [{{site.data.keyword.dns_short}} catalog entry](https://{DomainName}/catalog/services/dns-services).
+
 ### Creating a DNS zone
 {: #creating-a-dns-zone}
 
@@ -101,7 +103,12 @@ Example:
 ### Creating a DNS instance
 {: #creating-dns-instance-api}
 
-If your account is enabled for the experimental {{site.data.keyword.dns_short}}, it appears in the [experimental catalog](https://{DomainName}/catalog/labs). You can also navigate directly to the {{site.data.keyword.dns_short}} instance creation by going to the [{{site.data.keyword.dns_short}} catalog entry](https://{DomainName}/catalog/services/dns-services).
+See the [create a new resource instance](https://{DomainName}/apidocs/resource-controller/resource-controller#create-provision-a-new-resource-instance) documentation for the {{site.data.keyword.dns_short}} Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set to the following to create an instance of the Beta (free) plan:
+
+```
+"resource_group": "aef66560191746fe804b9a66874f62b1",
+"resource_plan_id": "dc1460a6-37bd-4e2b-8180-d0f86ff39baa",
+```
 
 See the [{{site.data.keyword.dns_short}} API reference](/docs/dns-svcs?topic=dns-svcs-dns-svcs-api) documentation for more information on using the API.
 

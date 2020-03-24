@@ -25,7 +25,7 @@ subcollection: dns-svcs
 {:download: .download}
 
 
-# {{site.data.keyword.dns_short}} {{site.data.keyword.cloudaccesstrailshort}} Events
+# {{site.data.keyword.dns_short}} {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
 
 Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.dns_full}} in the {{site.data.keyword.cloud}}.
@@ -34,7 +34,7 @@ Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users an
 The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. For more information, see [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started).
 
 
-## List of events: DNS Zones
+## List of events: DNS zones
 {: #events_dns_zones}
 
 The following table lists the actions that are related to DNS zones and generate an event.
@@ -46,7 +46,7 @@ The following table lists the actions that are related to DNS zones and generate
 |dns-svcs.zones.update|Update a DNS zone.|
 |dns-svcs.zones.delete|Delete a DNS zone.|
 
-## List of events: Resource Records
+## List of events: resource records
 {: #events_resource_record}
 
 The following table lists the actions that are related to resource records and generate an event.
@@ -58,7 +58,7 @@ The following table lists the actions that are related to resource records and g
 |dns-svcs.resource_records.update|Update a resource record.|
 |dns-svcs.resource_records.delete|Delete a resource record.|
 
-## List of events: Permitted Networks
+## List of events: permitted networks
 {: #events_permitted_networks}
 
 The following table lists the actions that are related to permitted networks and generate an event.

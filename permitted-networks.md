@@ -200,7 +200,7 @@ curl -X DELETE \
         "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
     },
     "type": "vpc",
-    "state": "PENDING_REMOVE"
+    "state": "REMOVAL_IN_PROGRESS"
 }
 ```
 {:pre}

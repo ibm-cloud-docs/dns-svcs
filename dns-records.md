@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-03-18"
 
 keywords: dns-svcs, DNS Services, Private DNS, DNS records, wildcard records
 
@@ -46,7 +46,7 @@ You can use the **Type** menu to select the type of record that you want to crea
 
 When you enter a name in the Name field, a domain name is automatically appended if you did not add one manually. For example, if you type `www` or `www.example.com` in the Name field, the API handles both entries as `www.example.com`. If you enter the exact domain name into the name field, then it won't append to itself (for example, `example.com` is handled as `example.com`). However, the list of DNS records only shows the names, without the domain name added on. As a result, `www.example.com` displays as `www` and `example.com` as `example.com`.
 
-The default value of TTL is `15 min`, but users can change it.
+The minimum supported TTL value is `1 min` and the maximum is `12 hours`. The default value of TTL is `15 min`, but users can change it.
 {:note}
 
 #### A Type record
