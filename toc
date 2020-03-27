@@ -9,7 +9,6 @@ DNS Services (Beta)
     overview.md
     dns-concepts.md
     use-cases.md
-    [What is DNS?](https://www.ibm.com/cloud/learn/dns)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -20,7 +19,7 @@ DNS Services (Beta)
     resolver-config.md
     output-dns-config.md
     wildcard-support.md
-    
+
     {: .topicgroup}
     Enhancing security for DNS Services
         iam.md
