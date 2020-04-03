@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-25"
+lastupdated: "2020-04-03"
 
 keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc
 
@@ -105,7 +105,9 @@ dig @161.26.0.7 A xyz.example.com
 ### Creating a DNS instance
 {: #creating-dns-instance-api}
 
-See the [create a new resource instance](https://{DomainName}/apidocs/resource-controller/resource-controller#create-provision-a-new-resource-instance) documentation for the {{site.data.keyword.dns_short}} Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set to the following to create an instance of the Beta (free) plan:
+See the [create a new resource instance](https://{DomainName}/apidocs/resource-controller/resource-controller#create-provision-a-new-resource-instance) documentation for the Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set. Each account can have multiple resource groups, and each resource group has a unique ID.
+
+Set the variables as follows to create an instance of the Beta (free) plan:
 
 ```
 "resource_group": "aef66560191746fe804b9a66874f62b1",
@@ -113,7 +115,10 @@ See the [create a new resource instance](https://{DomainName}/apidocs/resource-c
 ```
 {:codeblock}
 
-See the [{{site.data.keyword.dns_short}} API reference](/docs/dns-svcs?topic=dns-svcs-dns-svcs-api) documentation for more information on using the API.
+See the [Resource Controller API reference](/apidocs/resource-controller/resource-controller) documentation for more information on using the API.
+
+Command lines for instances are using resource controller API, not DNS APIs. These commands are equivalent to commands `ibmcloud resource service-instance`, which provide convenience for DNS users to manage DNS Services instances.
+{:note}
 
 ### Creating a DNS zone
 {: #creating-dns-zone-api}

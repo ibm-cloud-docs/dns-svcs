@@ -48,7 +48,7 @@ Review the following sections for the specific responsibilities for you and for 
 {: #customer-responsibilities}
 
 - Ensure that DNS zones and resource records data is correct and accurate.
-- Take periodic [backups](/docs/dns-svcs?topic=dns-writing-dns-svcs-config-to-file) of your DNS zones and resource records.
+- Take periodic [backups](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file) of your DNS zones and resource records.
 - [Configure your clients](/docs/dns-svcs?topic=dns-svcs-updating-dns-resolver) (for example, the operating system of a virtual server) to use private DNS resolvers.
 
 ## Abuse of {{site.data.keyword.dns_full_notm}}

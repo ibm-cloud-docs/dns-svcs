@@ -41,7 +41,7 @@ Name resolution requests from the Virtual Private Cloud (VPC) are handled in the
 
 When a DNS query for a particular DNS zone is received by the resolver, it identifies the VPC where the DNS query originated and validates that it can access the DNS zone of the DNS query. If the VPC doesn't have access to the DNS zone, the DNS query is forwarded to a public resolver. 
 
-The public resolver that is used for forwarding is also in the {{site.data.keyword.cloud.notm}} private underlay. A public resolver means that it resolves public DNS zones, although it is instantiated in the {{site.data.keyword.cloud.notm}} private network. The public or private resolvers are not accessible from the internet.
+The public resolver that is used for forwarding is also in the {{site.data.keyword.cloud_notm}} private underlay. A public resolver means that it resolves public DNS zones, although it is instantiated in the {{site.data.keyword.cloud_notm}} private network. The public or private resolvers are not accessible from the internet.
 
 Access to the multitenant control plane and data plane infrastructure is strictly controlled and restricted on an as-needed basis to a small number of operations personnel for administrative and troubleshooting purposes.
 
