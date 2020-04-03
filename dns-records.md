@@ -488,7 +488,7 @@ curl -X GET \
 
 ```bash
 curl -X PUT \
-  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records/$RECORD_TAG \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records/$RECORD_ID \
   -H "Authorization: $TOKEN" \
   -d '{
 	"name":"www",
@@ -524,7 +524,7 @@ curl -X PUT \
 
 ```bash
 curl -X DELETE \
-  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records/$RECORD_ID \
   -H "Authorization: $TOKEN"
 ```
 {:pre}
