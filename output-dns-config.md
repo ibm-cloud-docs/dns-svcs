@@ -10,6 +10,23 @@ subcollection: dns-svcs
 
 ---
 
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:term: .term}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
+{:generic: data-hd-programlang="generic"}
+{:download: .download}
+{:DomainName: data-hd-keyref="DomainName"}
+
+---
+
 # Writing your {{site.data.keyword.dns_short}} configuration to a file
 {: #writing-dns-svcs-config-to-file}
 
@@ -42,8 +59,9 @@ Example usage:
 $ ./copy_dns_config.sh my-instance1
 $ ./copy_dns_config.sh my-instance2 ~/dns-output.txt
 ```
+{: pre}
 
-### Script requirements
+## Script requirements
 {: #script-requirements}
 
 * [IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started)
@@ -147,5 +165,5 @@ for zone_id in $(echo "${zone_ids}" | jq -r '.[]'); do
     # list all permitted networks for the zone
     ibmcloud dns permitted-networks $zone_id --output JSON >> $file
 done
-```
-{:codeblock}
+``` 
+{: codeblock}

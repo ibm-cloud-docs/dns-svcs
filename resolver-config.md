@@ -26,7 +26,7 @@ subcollection: dns-svcs
 {:DomainName: data-hd-keyref="DomainName"}
 
 
-# Updating the DNS resolver for different OSes
+# Updating the DNS resolver for different OSs
 {: #updating-dns-resolver}
 
 This document is intended as general guidance only. Refer to your operating system's documentation for full details.

@@ -20,6 +20,7 @@ subcollection: dns-svcs
 {:important: .important}
 {:deprecated: .deprecated}
 {:faq: data-hd-content-type='faq'}
+{:support: data-reuse='support'}
 {:generic: data-hd-programlang="generic"}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -86,6 +87,7 @@ To delete a {{site.data.keyword.dns_short}} instance,
 
 ## Why can't I delete a {{site.data.keyword.dns_short}} instance?
 {: faq}
+{: support}
 
 If a DNS zone has been added to the {{site.data.keyword.dns_short}} instance, the instance cannot be deleted.
 
@@ -110,6 +112,7 @@ The zone states definitions are as follows.
 
 ## Can I use any name for the zone?
 {: faq}
+{: support}
 
 In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-specific DNS zone names are restricted, in other words, they can't be created in Private DNS. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list. The zone names must be 2-level deep (for example, `example.com`). After the zone has been added, hostnames within the zone can be multiple levels deep, depending on your needs (for example, you can add records for `hostname.example.com`, or `hostname.subdomain.example.com`, and so on).
 
@@ -131,5 +134,6 @@ Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authori
 
 ## Can I create a DNS zone with same name as a Public DNS zone?
 {: faq}
+{: support}
 
 {{site.data.keyword.dns_short}} allows creating a private DNS zone that can have the same name as the public DNS zone. See a [detailed explanation](/docs/dns-svcs?topic=dns-svcs-use-cases#using-dns-services-with-split-horizon-capabilities) of this scenario, referred to as Split Horizon.

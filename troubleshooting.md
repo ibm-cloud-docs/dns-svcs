@@ -24,6 +24,8 @@ subcollection: dns-svcs
 {:pre: .pre}
 {:screen: .screen}
 {:download: .download}
+{:support: data-reuse='support'}
+{:help: data-hd-content-type='help'}
 
 # Troubleshooting DNS Services
 {: #troubleshooting-dns-services}
@@ -33,6 +35,9 @@ Troubleshooting is a systematic approach to solving a problem. The goal of troub
 
 ## Unable to perform name resolution with NXDOMAIN error.
 {:#unable-to-perform-name-resolution-with-nxdomain-error}
+{: help}
+{: support}
+
   * Verify {{site.data.keyword.dns_short}} is configured correctly and that access to `161.26.0.7` and `161.26.0.8` is available from within the virtual server instance.
     ```console
     $ dig @161.26.0.7 yourzone.com
@@ -45,11 +50,17 @@ Troubleshooting is a systematic approach to solving a problem. The goal of troub
 
 ## Adding permitted network gave an error that VPC does not have Cloud Service Endpoint (CSE) enabled.
 {:#adding-permitted-network-cse-not-enabled}
+{: help}
+{: support}
+
   * By default, only VPCs created on or after 10/09/2019 are enabled to use with Private DNS.
   * For VPCs created as a permitted network before that date, review https://www.ibm.com/support/pages/node/1086243 to contact IBM Support and get the VPC CSE enabled. You are then able to add this VPC for your DNS zone.
 
 ## Unable to add permitted network
 {:#unable-to-add-permitted-network}
+{: help}
+{: support}
+
 You cannot add duplicate zone and networks combinations. Verify that you are trying to add unique zone and networks combinations.
 
 For example:

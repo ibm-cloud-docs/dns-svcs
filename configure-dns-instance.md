@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-12"
+  years: 2019, 2020
+lastupdated: "2020-03-25"
 
 keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc
 
@@ -87,15 +87,17 @@ This section describes how to set up a DNS instance, DNS zones, permitted networ
 
 To verify that your instance, zone, and record are performing correctly, run the following **dig** command:
 
-```dig @161.26.0.7 <Record type> <record name>
+```
+dig @161.26.0.7 <Record type> <record name>
 ```
 {:pre}
 
 Example:
 
-```dig @161.26.0.7 A xyz.example.com
 ```
-{:pre}
+dig @161.26.0.7 A xyz.example.com
+```
+{:codeblock}
 
 ## Using the API
 {: #setting-up-your-dns-instance-api}
@@ -109,6 +111,7 @@ See the [create a new resource instance](https://{DomainName}/apidocs/resource-c
 "resource_group": "aef66560191746fe804b9a66874f62b1",
 "resource_plan_id": "dc1460a6-37bd-4e2b-8180-d0f86ff39baa",
 ```
+{:codeblock}
 
 See the [{{site.data.keyword.dns_short}} API reference](/docs/dns-svcs?topic=dns-svcs-dns-svcs-api) documentation for more information on using the API.
 
@@ -247,12 +250,14 @@ curl -X POST \
 
 To verify that your instance, zone, and record are performing correctly, run the following **dig** command:
 
-```dig @161.26.0.7 <Record type> <record name>
+```
+dig @161.26.0.7 <Record type> <record name>
 ```
 {:pre}
 
 Example:
 
-```dig @161.26.0.7 A xyz.example.com
 ```
-{:pre}
+dig @161.26.0.7 A xyz.example.com
+```
+{:codeblock}

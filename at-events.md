@@ -25,13 +25,13 @@ subcollection: dns-svcs
 {:download: .download}
 
 
-# {{site.data.keyword.dns_short}} {{site.data.keyword.cloudaccesstrailshort}} events
+# Auditing events for {{site.data.keyword.dns_short}}
 {: #at_events}
 
-Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.dns_full}} in the {{site.data.keyword.cloud}}.
-{:shortdesc}
+As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with the {{site.data.keyword.dns_full}} service in {{site.data.keyword.cloud}}.
+{: shortdesc}
 
-The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. For more information, see [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started).
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 
 ## List of events: DNS zones
@@ -69,10 +69,10 @@ The following table lists the actions that are related to permitted networks and
 |dns-svcs.permitted_networks.create|Add a permitted network to DNS zone.|
 |dns-svcs.permitted_networks.delete|Remove a permitted network from DNS zone.|
 
-## Where to look for the events
+## Viewing events
 {: #ui}
 
-The {{site.data.keyword.dns_short}} {{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} instance in the {{site.data.keyword.cloud_notm}} Dallas region.
+The {{site.data.keyword.dns_short}} {{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} instance in the {{site.data.keyword.cloud_notm}} **Dallas** region.
 
 ## Requesting additional information for an event
 {: #info}

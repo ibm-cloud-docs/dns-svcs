@@ -449,7 +449,7 @@ curl -X GET \
 
 ```bash
 curl -X GET \
-  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records?limit=50&offset=0 \
   -H "Authorization: $TOKEN"
 ```
 {:pre}
@@ -458,6 +458,12 @@ curl -X GET \
 
 ```json
 {
+    "offset": 0,
+    "limit": 50,
+    "total_count": 1,
+    "first": {
+      "href": "https://api.dns-svcs.cloud.ibm.com/v1/instances/ec0c4ee2-5d1f-4066-bcf2-dc9f3122c638/dnszones/example.com:4759caa4-d4fa-4fb9-7848-f463de19b392/resource_records?limit=50"
+    },
     "resource_records": [
         {
             "created_on": "2019-08-30 04:10:25.092468565 +0000 UTC",
