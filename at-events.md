@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-03-11"
+lastupdated: "2020-04-21"
 
 keywords: IBM Cloud DNS Services, DNS Activity Tracker events
 
@@ -72,7 +72,7 @@ The following table lists the actions that are related to permitted networks and
 ## Viewing events
 {: #ui}
 
-The {{site.data.keyword.dns_short}} {{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} instance in the {{site.data.keyword.cloud_notm}} **Dallas** region.
+The {{site.data.keyword.dns_short}} {{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} instance in the {{site.data.keyword.cloud_notm}} **Frankfurt** region.
 
 ## Requesting additional information for an event
 {: #info}
