@@ -26,23 +26,23 @@ subcollection: dns-svcs
 # Understanding DNS concepts
 {: #dns-concepts}
 
-This document contains some concepts and definitions related to the internet's domain name system (DNS) and how it affects your usage of {{site.data.keyword.dns_short}}.
+This document contains some concepts and definitions that are related to the internet's domain name system (DNS) and how it affects your usage of {{site.data.keyword.dns_full}}.
 {:shortdesc}
 
 
 ## DNS zones
 {: #what-is-zone}
 
-A DNS zone is a collection of resource records, which belongs to a single parent instance. All resource records have the zone's domain name as a suffix. You can create, update, delete, get, and list the DNS Zones using `curl` commands.
+A DNS zone is a collection of resource records, which belongs to a single parent instance. All resource records have the zone's domain name as a suffix. You can create, update, delete, get, and list the DNS Zones by using `curl` commands.
 
-See [Managing DNS zones](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones) for more information on how to manage DNS zones.
+See [Managing DNS zones](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones) to learn more about how to manage DNS zones.
 
 ## Permitted networks
 {: #permitted-networks}
 
 Permitted networks are the VPCs that can perform name resolution on the DNS Zone. It is used as an access control mechanism to guarantee that only the VPC that has been added as a permitted network can perform name resolution on the DNS zone.
 
-See [Managing permitted networks](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks) for more information.
+See [Managing permitted networks](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks) to learn more.
 
 ## Resource records (RR)
 {: #what-are-resource-records}
@@ -78,7 +78,7 @@ This record specifies the SMTP mail server for the DNS zone.
 ### SRV (Service Location)
 {: #record-type-srv}
 
-This record specifies the location of the server(s) for a specific protocol and domain.
+This record specifies the location of one or more of the servers for a specific protocol and domain.
 
 ### TXT (Text)
 {: #record-type-tx}
@@ -88,9 +88,9 @@ This record is used to hold descriptive text for a given name.
 ### NS (Name Server)
 {: #record-type-ns}
 
-You cannot create this type of record in DNS zone, but you can query for your DNS zone. The data returned is statically defined and cannot be changed.
+You cannot create this type of record in DNS zone, but you can query for your DNS zone. The data that is returned is statically defined and cannot be changed.
 
 ### SOA (Start of Authority)
 {: #record-type-soa}
 
-You cannot create this type of record in DNS zone, but you can query for your DNS zone. The data returned is statically defined and cannot be changed.
+You cannot create this type of record in DNS zone, but you can query for your DNS zone. The data that is returned is statically defined and cannot be changed.

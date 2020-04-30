@@ -32,7 +32,7 @@ A wildcard DNS record helps match non-existent domain names within a particular 
 * Wildcard record format
   * `<*>.<hostname.zone | zone>`
 
-* Valid wildcard record examples 
+* Valid wildcard record examples
   * `*.example.com 900 IN A 20.20.20.20`
   * `*.foo.example.com 900 MX mailserver.example.com`
 
@@ -44,23 +44,23 @@ A wildcard DNS record helps match non-existent domain names within a particular 
 ## How wildcard records work
 {: #how-wildcard-records-work}
 
-Only use wildcard data if no other resource records match the qname. Similarly, do not use wildcard data if the record type does not match the qtype, even if the resource record matches the qname.
+Use wildcard data only if no other resource records match the Qname. Similarly, do not use wildcard data if the record type does not match the Qtype, even if the resource record matches the Qname.
 
-For example, a type `A` query for the name `www.example.com` is made with wildcard: `*.example.com  900 IN A 20.20.20.20`. 
-  * If there is no resource record of the name `www.example.com`, it matches with the wildcard record. 
-  * The wildcard is matched only if the domain does not exist. 
+For example, a type `A` query for the name `www.example.com` is made with wildcard: `*.example.com  900 IN A 20.20.20.20`.
+  * If there is no resource record of the name `www.example.com`, it matches with the wildcard record.
+  * The wildcard is matched only if the domain does not exist.
 
 ## Limitations
 {: #wildcard-limitations}
 
-* A zone cannot contain more than 5 wildcard records.
-* Only the following wildcard record following types are allowed:
-  * `A` 
-  * `AAAA` 
+* A zone cannot contain more than five wildcard records.
+* Wildcard records are only allowed for the following record types.
+  * `A`
+  * `AAAA`
   * `MX`
-* PTR records are not supported for `A` and `AAAA` type wildcard records. 
+* PTR records are not supported for `A` and `AAAA` type wildcard records.
 
 ## Managing wildcard DNS records
 {: #managing-wildcard-records}
 
-You can manage a wildcard record the same way as any other record. Refer to [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records) for more information on creating, reading, updating, and deleting wildcard records. 
+You can manage a wildcard record the same way as any other record. Refer to [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records) to learn more about creating, reading, updating, and deleting wildcard records. 

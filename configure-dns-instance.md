@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-03"
+lastupdated: "2020-04-13"
 
 keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc
 
@@ -24,35 +24,35 @@ subcollection: dns-svcs
 {:download: .download}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Setting up your DNS instance
+# Setting up your {{site.data.keyword.dns_short}} instance
 {: #setting-up-your-dns-instance}
 
-This section describes how to set up a DNS instance, DNS zones, permitted networks, and resource records.
+This section describes how to set up a {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks, and resource records.
 {:shortdesc}
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: #setting-up-your-dns-instance-ui}
 
-### Creating a DNS instance
+### Creating a {{site.data.keyword.dns_short}} instance
 {: #creating-a-dns-instance}
 
-  1. Open the {{site.data.keyword.cloud_notm}} **Catalog** page.
-  2. Select the **Networking** category.
-  3. Click the **{{site.data.keyword.dns_short}}** tile.  
-     Currently, the default and only available plan is free.
-  4. Enter **Service name** and click **Create**.
+  1. Open the [{{site.data.keyword.cloud_notm}} **Catalog**](https://{DomainName}/catalog/) page.
+  1. Select the **Networking** category.
+  1. Click the **{{site.data.keyword.dns_short}}** tile. 
+  1. Choose a plan.
+  1. Enter **Service name** and click **Create**.
 
    You are redirected to the {{site.data.keyword.dns_short}} instance page showing **DNS Zones** information.
 
-   If your account is enabled for the experimental {{site.data.keyword.dns_short}}, it appears in the [experimental catalog](https://{DomainName}/catalog/labs). You can also navigate directly to the {{site.data.keyword.dns_short}} instance creation by going to the [{{site.data.keyword.dns_short}} catalog entry](https://{DomainName}/catalog/services/dns-services).
+You can also navigate directly to the {{site.data.keyword.dns_short}} instance creation by going to the [{{site.data.keyword.dns_short}} catalog entry](https://{DomainName}/catalog/services/dns-services).
 
 ### Creating a DNS zone
 {: #creating-a-dns-zone}
 
   1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance.
-  2. On the DNS Zones page, click **Create Zone**.
-  3. In the Create Zone panel, enter your zone name. Optionally, enter a label and description.
-  4. Click **Create Zone** in the panel.
+  1. On the DNS Zones page, click **Create zone**.
+  1. In the Create Zone panel, enter your zone name. Optionally, enter a label and description.
+  1. Click **Create zone** in the panel.
 
      If the zone is created successfully, you are redirected to the Zone Details page.
 
@@ -60,11 +60,11 @@ This section describes how to set up a DNS instance, DNS zones, permitted networ
 {: #creating-a-dns-permitted-network}
 
   1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
-  2. Click the **Permitted Networks** tab.
-  3. Click **Add Network**.
-  4. In the Add Network panel, select the region of your VPC from the **Network Region** menu.
-  5. Select the VPC from the **Network** menu that appears.
-  6. Click **Add Network**.
+  1. Click the **Permitted Networks** tab.
+  1. Click **Add network**.
+  1. In the Add Network panel, select the region of your VPC from the **Network Region** menu.
+  1. Select the VPC from the **Network** menu that appears.
+  1. Click **Add network**.
 
   This request adds the VPC network to your zone, thereby giving the network access to the zone.
 
@@ -72,15 +72,15 @@ This section describes how to set up a DNS instance, DNS zones, permitted networ
 {: #creating-an-a-resource-record}
 
   1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
-  2. On the DNS Details page, click the **DNS Records** tab.
-  3. Click **Add Record**.
-  4. In the Add Record panel, select the type of DNS record that you want to add from the **Type** menu.
+  1. On the DNS Details page, click the **DNS Records** tab.
+  1. Click **Add record**.
+  1. In the Add Record panel, select the type of DNS record that you want to add from the **Type** menu.
 
      In this case, select the type **A**.
-  5. Enter the required data for the type of DNS record you selected.
+  1. Enter the required data for the type of DNS record you selected.
 
      In this case, for type **A**, enter **Name** and **IPv4 Address**.
-  6. Click **Add Record** in the panel.
+  1. Click **Add record** in the panel.
 
 ### Verifying the setup
 {: #verifying-the-setup}
@@ -102,22 +102,21 @@ dig @161.26.0.7 A xyz.example.com
 ## Using the API
 {: #setting-up-your-dns-instance-api}
 
-### Creating a DNS instance
+### Creating a {{site.data.keyword.dns_short}} instance
 {: #creating-dns-instance-api}
 
 See the [create a new resource instance](https://{DomainName}/apidocs/resource-controller/resource-controller#create-provision-a-new-resource-instance) documentation for the Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set. Each account can have multiple resource groups, and each resource group has a unique ID.
 
-Set the variables as follows to create an instance of the Beta (free) plan:
+Set the variables as follows to create an instance of the standard plan:
 
 ```
-"resource_group": "aef66560191746fe804b9a66874f62b1",
-"resource_plan_id": "dc1460a6-37bd-4e2b-8180-d0f86ff39baa",
+"resource_plan_id": "2c8fa097-d7c2-4df2-b53e-2efb7874cdf7",
 ```
 {:codeblock}
 
 See the [Resource Controller API reference](/apidocs/resource-controller/resource-controller) documentation for more information on using the API.
 
-Command lines for instances are using resource controller API, not DNS APIs. These commands are equivalent to commands `ibmcloud resource service-instance`, which provide convenience for DNS users to manage DNS Services instances.
+Command lines for instances are using resource controller API, not DNS APIs. These commands are equivalent to commands `ibmcloud resource service-instance`, which provide convenience for DNS users to manage {{site.data.keyword.dns_short}} instances.
 {:note}
 
 ### Creating a DNS zone
@@ -172,7 +171,7 @@ curl -X POST \
 ### Creating a permitted network
 {: #creating-permitted-network-api}
 
-Private DNS allows name resolution only from a VPC that was added to the DNS zone.
+{{site.data.keyword.dns_short}} allows name resolution only from a VPC that was added to the DNS zone.
 
 When a DNS zone gets created, its Status is `PENDING_NETWORK_ADD`. To move the zone to `ACTIVE` state, add an entry for your VPC to the zone's permitted network.
 

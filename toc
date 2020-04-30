@@ -2,13 +2,13 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="dns-svcs" category="network" audience="service" href="/docs/dns-svcs?topic=dns-svcs-getting-started" console-page="/catalog/services/dns-services" product-page="https://www.ibm.com/cloud/network" path="dns-svcs"}
-DNS Services (Beta)
+DNS Services
 
     {: .navgroup id="learn"}
     getting-started.md
     overview.md
+    pricing.md
     dns-concepts.md
-    use-cases.md
     
     {: .topicgroup}
     Related links
@@ -23,6 +23,7 @@ DNS Services (Beta)
     resolver-config.md
     output-dns-config.md
     wildcard-support.md
+    ha-dr.md
 
     {: .topicgroup}
     Enhancing security for DNS Services
@@ -34,8 +35,8 @@ DNS Services (Beta)
     {: .navgroup id="reference"}    
     [DNS Services API reference](https://{DomainName}/apidocs/dns-svcs)    
     /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
+    [GoLang SDK](https://github.com/IBM/dns-svcs-go-sdk)
     responsibilities.md
-    [Go SDK](https://github.com/IBM/dns-svcs-go-sdk)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

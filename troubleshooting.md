@@ -53,7 +53,7 @@ Troubleshooting is a systematic approach to solving a problem. The goal of troub
 {: help}
 {: support}
 
-  * By default, only VPCs created on or after 10/09/2019 are enabled to use with Private DNS.
+  * By default, only VPCs created on or after 10/09/2019 are enabled to use DNS Services.
   * For VPCs created as a permitted network before that date, review https://www.ibm.com/support/pages/node/1086243 to contact IBM Support and get the VPC CSE enabled. You are then able to add this VPC for your DNS zone.
 
 ## Unable to add permitted network

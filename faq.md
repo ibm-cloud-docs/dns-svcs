@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-03-10"
+lastupdated: "2020-04-14"
 
 keywords: dns-svcs, DNS Services, Private DNS, FAQ, frequently asked questions
 
@@ -33,10 +33,22 @@ subcollection: dns-svcs
 Have a question about {{site.data.keyword.dns_full}}? Review frequently asked questions, which provide answers to provisioning concerns, application access, and other common inquiries.
 {:shortdesc}
 
-## How is private DNS different from public DNS?
+## How do I create my own private DNS zone using {{site.data.keyword.dns_short}}?
+{: #faq}
+
+To create your own private DNS zone using {{site.data.keyword.dns_short}}, take the following steps.
+  1. Create a VPC instance.
+  2. Create a {{site.data.keyword.dns_short}} instance.
+  3. Add a DNS zone to the {{site.data.keyword.dns_short}} instance.
+  4. Designate the VPC instance as a permitted network for the DNS zone.
+  5. Add a DNS Resource Record to the DNS zone.
+  6. Configure VPC servers to use {{site.data.keyword.dns_short}} resolvers.
+  7. Verify name resolution of the DNS Resource Record works from within the VPC.
+
+## How is {{site.data.keyword.dns_short}} different from public DNS?
 {: faq}
 
-Private DNS permits name resolution only from permitted VPCs within your {{site.data.keyword.cloud}} account. The DNS zone is not resolvable on the internet.
+{{site.data.keyword.dns_short}} permits name resolution only from permitted VPCs within your {{site.data.keyword.cloud}} account. The DNS zone is not resolvable from the internet.
 
 ## Can I manage publicly available DNS records with this service?
 {: faq}
@@ -53,10 +65,10 @@ DNSSec allows resolvers to cryptographically verify the data received from autho
 
 {{site.data.keyword.dns_short}} is a global service and can be used from permitted networks in any {{site.data.keyword.cloud_notm}} region.
 
-## How do I update my Virtual Server Instance to use Private DNS for name resolution?
+## How do I update my Virtual Server Instance to use {{site.data.keyword.dns_short}} for name resolution?
 {: faq}
 
-This is operating system specific. For example, on some Linux distributions the `/etc/resolv.conf` file contains the IP address of the DNS resolver. This file should be updated with the IP address of the Private DNS name servers, `161.26.0.7` and `161.26.0.8`. The configuration can also be updated through Cloud Init, where supported. Consult your operating system manuals for instructions on how to update DNS resolvers. See [Detailed steps](/docs/dns-svcs?topic=dns-svcs-updating-dns-resolver) to learn how to update configuration to use Private DNS Resolvers, for different distros.
+This is operating system specific. For example, on some Linux distributions the `/etc/resolv.conf` file contains the IP address of the DNS resolver. This file should be updated with the IP address of the {{site.data.keyword.dns_short}} name servers, `161.26.0.7` and `161.26.0.8`. The configuration can also be updated through Cloud Init, where supported. Consult your operating system manuals for instructions on how to update DNS resolvers. See [Updating the DNS resolver for your VSI](/docs/dns-svcs?topic=dns-svcs-updating-dns-resolver) to learn how to update configuration to use {{site.data.keyword.dns_short}} Resolvers, for different distros.
 
 ## When creating a DNS zone, what is the purpose of the `Label` field?
 {: faq}
@@ -81,7 +93,7 @@ A given instance can have multiple DNS zones with the same name. The label helps
 ## How do I delete my {{site.data.keyword.dns_short}} instance?
 {: faq}
 
-To delete a {{site.data.keyword.dns_short}} instance, 
+To delete a {{site.data.keyword.dns_short}} instance,
   - Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: new_window}.
   - Click the "overflow" menu ![overflow menu icon](../../icons/actions-icon-vertical.svg "Overflow menu icon") in the final column and select "Delete".
 
@@ -107,19 +119,29 @@ If the VPC is deleted, the corresponding permitted network will also be deleted 
 
 The zone states definitions are as follows.
 * **Pending**: When a DNS zone is added to the instance it will be in `Pending`. In this state Resource Records can be added, deleted or updated. Since the zone does not have any permitted networks, the zone will not be served by the resolvers in any region.
-  * **Active**: When a domain has one or more permitted networks added then the domain state changes to `ACTIVE` and the domain will be served by the resolver from all the regions.
-  * **Disabled**: In this state the zone will not be served and all control path operations will be disabled except deleting the zone.
+* **Active**: When a domain has one or more permitted networks added then the domain state changes to `ACTIVE` and the domain will be served by the resolver from all the regions.
+* **Disabled**: In this state the zone will not be served and all control path operations will be disabled except deleting the zone.
 
 ## Can I use any name for the zone?
 {: faq}
 {: support}
 
-In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-specific DNS zone names are restricted, in other words, they can't be created in Private DNS. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list. The zone names must be 2-level deep (for example, `example.com`). After the zone has been added, hostnames within the zone can be multiple levels deep, depending on your needs (for example, you can add records for `hostname.example.com`, or `hostname.subdomain.example.com`, and so on).
+In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-specific DNS zone names are restricted, in other words, they can't be created in {{site.data.keyword.dns_short}}. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list.
 
 ## Can I create two DNS zones with the same name?
 {: faq}
 
-Creating two DNS Zones with the same name is allowed. Use label and description to differentiate between the two.
+Creating two DNS Zones with the same name is allowed. Use label and description as described in the following steps to differentiate between the two.
+ 1. Create an instance of {{site.data.keyword.dns_short}}.
+ 2. Create a DNS zone for each environment (for example, production, staging, development, testing). When creating the zone, be sure to include a description indicating what environment the zone is for. The zone name is the same for each zone (for example, `testing.com`).
+    A single {{site.data.keyword.dns_short}} instance can only contain 10 zones.
+    {: note}
+ 3. Add a zone to the instance of {{site.data.keyword.dns_short}}.
+ 4. In each respective zone, add specific VPCs as permitted networks. For example, for a development VPC, create a permitted network with the development VPC ID in the DNS zone for the development environment.
+    While duplicate zone names are allowed in an account, duplicate zones cannot be associated with a single permitted network.
+    {: note}
+ 5. The result is that traffic from the development VPC only sees records from the development DNS zone and similarly for all the other environments. This way, you can use the same zone name in all environments, with the results tailored to each respective environment.
+
 
 ## Can I add the same permitted network (for example, a VPC) to two DNS zones of the same name?
 {: faq}
@@ -127,13 +149,24 @@ Creating two DNS Zones with the same name is allowed. Use label and description 
 No, adding the same permitted network (for example, a VPC) to two DNS zones of the same name is not allowed.
 
 
-## What are the authoritative servers for the private DNS zones? Can I resolve the private DNS zones iteratively?
+## What are the authoritative servers for the {{site.data.keyword.dns_short}} zones? Can I resolve the private DNS zones iteratively?
 {: faq}
 
-Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authoritative servers for private DNS zones. Clients must send their recursive DNS queries to the DNS resolvers provided by the service. The service does not allow iterative resolution of private DNS zones.
+Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authoritative servers for private DNS zones. Clients must send their recursive DNS queries to the DNS resolvers provided by the service. {{site.data.keyword.dns_short}} does not allow iterative resolution of private DNS zones.
 
 ## Can I create a DNS zone with same name as a Public DNS zone?
 {: faq}
 {: support}
 
-{{site.data.keyword.dns_short}} allows creating a private DNS zone that can have the same name as the public DNS zone. See a [detailed explanation](/docs/dns-svcs?topic=dns-svcs-use-cases#using-dns-services-with-split-horizon-capabilities) of this scenario, referred to as Split Horizon.
+{{site.data.keyword.dns_short}} allows creating a private DNS zone that can have the same name as the public DNS zone. See a [detailed explanation](/docs/dns-svcs?topic=dns-svcs-about-dns-services#resolving-dns-names-with-dns-services) of this scenario, referred to as Split Horizon.
+
+## How do I upgrade my plan from free to standard?
+{: faq}
+
+ 1. Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: new_window}.
+ 1. Select the instance of {{site.data.keyword.dns_short}} you want to upgrade.
+ 1. Select **Plan** from the navigation menu.
+ 1. Select **Standard DNS** from the plan table.
+ 1. Click **Save** and then click **OK** when prompted to verify 'Are you sure that you want to change plans?'.
+
+See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-03-23"
+lastupdated: "2020-04-06"
 
 keywords: dns-svcs, DNS Services, Private DNS, dns support script, dns backup script
 
@@ -25,9 +25,7 @@ subcollection: dns-svcs
 {:download: .download}
 {:DomainName: data-hd-keyref="DomainName"}
 
----
-
-# Writing your {{site.data.keyword.dns_short}} configuration to a file
+# Exporting your {{site.data.keyword.dns_short}} configuration
 {: #writing-dns-svcs-config-to-file}
 
 This section describes how to run a script to copy your {{site.data.keyword.dns_full}} instance configuration. It writes the following to a file:

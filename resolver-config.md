@@ -26,13 +26,13 @@ subcollection: dns-svcs
 {:DomainName: data-hd-keyref="DomainName"}
 
 
-# Updating the DNS resolver for different OSs
+# Updating the DNS resolver for your VSI
 {: #updating-dns-resolver}
 
 This document is intended as general guidance only. Refer to your operating system's documentation for full details.
 {:important}
 
-[Generation 1](#updating-dns-resolver-vpcgen1) and [generation 2](#updating-dns-resolver-vpcgen2) VPC virtual server instances have different networking configurations. Refer to the appropriate section for your use case.
+[Generation 1](#updating-dns-resolver-vpcgen1) and [generation 2](#updating-dns-resolver-vpcgen2) VPC virtual server instances (VSI) have different networking configurations. Refer to the appropriate section for your use case.
 {:shortdesc}
 
 Always take backups of your original configuration file before performing any of the following operations.
@@ -66,7 +66,7 @@ Follow these steps to modify the DHCP client configuration in CentOS 7.x.
 ### Configuring Ubuntu Linux 18.04 LTS Bionic Beaver
 {: #updating-dns-resolver-ubuntu-vpcgen2}
 
-Follow these steps to modify the DHCP client configuration in Ubuntu Linux 18.04 LTS Bionic Beaver. It is also necessary to modify `/etc/netplan/50-cloud-init.yaml`.
+Follow these steps to modify the DHCP client configuration in Ubuntu Linux 18.04 LTS Bionic Beaver.
 
 1. Open the `/etc/dhcp/dhclient.conf` file and add the line:
 

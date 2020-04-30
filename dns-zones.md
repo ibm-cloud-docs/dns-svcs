@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-09"
+lastupdated: "2020-04-10"
 
 keywords: dns-svcs, DNS Services, Private DNS, wildcard, dns zones, restricted zones
 
@@ -35,11 +35,11 @@ A zone can have an arbitrary number of levels, but not fewer than two. For examp
 You can have multiple zones where one is a suffix to another. For example, `sub.domain.example.com` and `domain.example.com` can co-exist.
 
 You can also define subdomains within an added zone. For example, the following are all valid names within the zone `domain.example.com`.
-  * `subdomain.domain.example.com` 
+  * `subdomain.domain.example.com`
   * `hostname.domain.example.com`
-  * `hostname.subdomain.domain.example.com` 
-  
-The name `host.sub.domain.example.com` might be `host.sub` within the zone `domain.example.com`. It might also be `host.sub.domain` within the zone `example.com`. Both can exist at the same time, and are separate.  
+  * `hostname.subdomain.domain.example.com`
+
+The name `host.sub.domain.example.com` might be `host.sub` within the zone `domain.example.com`. It might also be `host.sub.domain` within the zone `example.com`. Both can exist at the same time, and are separate.
 
 ## Known limitations
 {: #multi-level-limitations}
@@ -50,7 +50,7 @@ Let's say we have two zones, `domain.example.com` and `example.com`.
 
 Records for `example.com`
 
-``` 
+```
  {
       myhost.domain.example.com A 1.1.1.1
       me.domain.example.com A 8.8.8.8
@@ -126,11 +126,18 @@ The following DNS zone names are not permitted.
 First store the API endpoint in a variable so you can use it in API requests without having to type the full URL. For example, to store the production endpoint in a variable, run this command:
 
 ```bash
-dnssvcs_endpoint=https://api.dns-svcs.cloud.ibm.com
+DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
 ```
 {:pre}
 
 To verify that this variable was saved, run `echo $DNSSVCS_ENDPOINT` and make sure the response is not empty.
+
+### Authentication
+{: #iam-authentication}
+
+The Authorization header is required for each API call. This header is the bearer token for the user, which can be retrieved from IAM (for example, using the `ibmcloud iam oauth-tokens` command).
+
+You must obtain an IAM token and export it into the `$TOKEN` for {{site.data.keyword.dns_short}}.
 
 ### Creating a DNS zone
 {: #create-dns-zone-api}
@@ -194,14 +201,13 @@ curl -X GET \
 {
     "success": true,
     "result": {
-        "id": "ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
+        "id": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
         "created_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
         "modified_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
         "instance_id": "1a34bda8-9c94-4232-bea7-7df163b21d23",
         "name": "example.com",
         "description": "Example zone",
-        "state": "PENDING_NETWORK_ADD",
-        "tag": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079"
+        "state": "PENDING_NETWORK_ADD"
     },
     "errors": [],
     "messages": []
@@ -267,14 +273,13 @@ curl -X GET \
     "success": true,
     "result": [
         {
-            "id": "ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
+            "id": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
             "created_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
             "modified_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
             "instance_id": "1a34bda8-9c94-4232-bea7-7df163b21d23",
             "name": "example.com",
             "description": "Example zone",
-            "state": "PENDING_NETWORK_ADD",
-            "tag": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079"
+            "state": "PENDING_NETWORK_ADD"
         }
     ],
     "errors": [],
@@ -297,14 +302,122 @@ curl -X DELETE \
 
 **Response**
 
-```json
-{
-    "success": true,
-    "result": {
-        "id": "ed10e4b2-8a64-4afa-a4e2-9e60a766d079"
-    },
-    "errors": [],
-    "messages": []
-}
+```
+HTTP/2 204 No Content
 ```
 {:screen}
+
+## Using the CLI
+{: #managing-dns-zones-cli}
+
+Follow these [instructions](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#cli-ref-prereqs) to install DNS Services CLI plugin.
+
+First use `ibmcloud dns instances` command to list the DNS Services instances and then use the `ibmcloud dns instance-target` command to set the target operating DNS Services instance.
+
+```bash
+$ ibmcloud dns instances
+Retrieving service instances for service 'dns-svcs' ...
+OK
+
+Name                 ID                                     Location   State    Service Name
+DNS Services-km      ffffffff-b042-41fd-885e-000000000000   global     active   dns-svcs
+
+$ ibmcloud dns instance-target "DNS Services-km"
+```
+{:pre}
+
+
+### Creating a DNS zone
+{: #create-dns-zone-cli}
+
+Use the `ibmcloud dns zone-create` command followed by the zone name to create a zone.
+
+```bash
+$ ibmcloud dns zone-create example.com
+Creating zone 'example.com' for service instance 'DNS Services-km' ...
+OK
+
+ID            example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae
+Name          example.com
+Description
+Label
+State         PENDING_NETWORK_ADD
+Created On    2020-04-10 07:21:51.774444868 +0000 UTC
+Modified On   2020-04-10 07:21:51.774444868 +0000 UTC
+```
+{:pre}
+
+For future reference, the "ID" in output is used as variable `DNS_ZONE_ID`. Run this command to store it in variable `DNS_ZONE_ID`:
+
+```bash
+DNS_ZONE_ID="example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae"
+```
+{:note}
+
+
+### Getting a DNS zone
+{: #get-dns-zone-cli}
+
+Use the `ibmcloud dns zone` command followed by the zone ID to get details of an existing zone. 
+
+```bash
+$ ibmcloud dns zone $DNS_ZONE_ID
+Getting zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID            example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae
+Name          example.com
+Description
+Label
+State         PENDING_NETWORK_ADD
+Created On    2020-04-10 07:21:51.774444868 +0000 UTC
+Modified On   2020-04-10 07:21:51.774444868 +0000 UTC
+```
+{:pre}
+
+
+### Updating a DNS zone
+{: #update-dns-zone-cli}
+
+Use the `ibmcloud dns zone-update` command followed by the zone ID to update a zone. Specify `-d, --description` to update the description and/or `-l, --label` to update the label of a zone.
+
+```bash
+$ ibmcloud dns zone-update $DNS_ZONE_ID -d "example zone" -l "us-south"
+Updating zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID            example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae
+Name          example.com
+Description   example zone
+Label         us-south
+State         PENDING_NETWORK_ADD
+Created On    2020-04-10 07:21:51.774444868 +0000 UTC
+Modified On   2020-04-10 07:38:36.712131819 +0000 UTC
+```
+{:pre}
+
+### Listing DNS zones
+{: #list-dns-zones-cli}
+
+Use the `ibmcloud dns zones` command to list all zones.
+
+```bash
+$ ibmcloud dns zones
+Listing zones for service instance 'DNS Services-km' ...
+OK
+
+ID                                                      Name               Status
+example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae        example.com        PENDING_NETWORK_ADD
+```
+{:pre}
+
+
+### Deleting a DNS zone
+{: #delete-dns-zone-cli}
+
+Use the `ibmcloud dns zone-delete` followed by the zone ID to delete a zone.
+
+```bash
+
+```
+{:pre}
