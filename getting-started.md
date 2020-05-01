@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-17"
+lastupdated: "2020-04-29"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -25,6 +25,9 @@ subcollection: dns-svcs
 
 # Getting started with {{site.data.keyword.dns_full_notm}}
 {: #getting-started}
+
+We are pleased to announce that {{site.data.keyword.dns_short}} is now generally available. We recommend you upgrade your Beta {{site.data.keyword.dns_short}} instances to the new Standard plan by August 31, 2020. 
+{:important}
 
 {{site.data.keyword.dns_full}} provides private DNS to Virtual Private Cloud (VPC) users. Private DNS zones are resolvable only on {{site.data.keyword.cloud_notm}}, and only from explicitly [permitted networks](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks) in an account. To get started, create a {{site.data.keyword.dns_short}} instance using the {{site.data.keyword.cloud_notm}} console.
 {:shortdesc}
