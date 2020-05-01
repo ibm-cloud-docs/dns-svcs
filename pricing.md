@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-04-30"
 
 keywords: DNS Services, pricing, private DNS, dns-svcs
 
@@ -33,20 +33,20 @@ Pricing for {{site.data.keyword.dns_full}} follows.
 ## Free
 {: #free-plan}
 
-One zone and one million DNS queries are free for an account.
+One DNS zone and one million DNS queries are free for an account.
 
 ## Standard
 {: #standard-plan}
 
-  * Each instance can have up to 10 zones.
-  * Each zone can have up to 10 VPC networks.
-  * Each zone can have up to 3500 DNS records.
+  * Each instance can have up to 10 DNS zones.
+  * Each DNS zone can have up to 10 VPC networks.
+  * Each DNS zone can have up to 3500 DNS records.
   * Multi-tiered
 
-### Zones
+### DNS Zones
 {: #zones-pricing}
 
-The standard price is $0.50 USD per zone.
+The standard price is $0.50 USD per DNS zone.
 
 ### Tiers
 {: #tiers-pricing}
