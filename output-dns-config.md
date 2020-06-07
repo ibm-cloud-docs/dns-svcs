@@ -30,8 +30,8 @@ subcollection: dns-svcs
 
 This section describes how to run a script to copy your {{site.data.keyword.dns_full}} instance configuration. It writes the following to a file:
   * All DNS zones and DNS zone data for an instance.
-  * All resource record data for DNS each zone.
-  * All permitted network data for DNS each zone.
+  * All resource record data for each DNS zone.
+  * All permitted network data for each DNS zone.
 
 This data can be helpful in debugging issues and can be provided to the support team (if configuration data is not considered private) in the case of a support issue. The data can also serve as a backup.  
 
@@ -45,7 +45,7 @@ The basic usage is as follows:
 
 ```console
 $ ./copy_dns_config.sh <instance ID, NAME, or CRN> [path/to/output-file]
-#   Required: <instance ID, NAME, or CRN> 
+#   Required: <instance ID, NAME, or CRN>
 #   Optional: [path/to/output-file]
 ```
 
@@ -62,7 +62,7 @@ $ ./copy_dns_config.sh my-instance2 ~/dns-output.txt
 ## Script requirements
 {: #script-requirements}
 
-* [IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started)
+* [IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
   * You must be logged in to your {{site.data.keyword.cloud_notm}} account.
   * Use `ibmcloud login` to log in.
 * [jq](https://stedolan.github.io/jq/), a command line JSON processor.
@@ -85,10 +85,10 @@ $ ./copy_dns_config.sh my-instance2 ~/dns-output.txt
 # Usage:
 #   ./copy_dns_config.sh <instance ID, NAME, or CRN> [path/to/output-file]
 #
-#   Required: <instance ID, NAME, or CRN> 
+#   Required: <instance ID, NAME, or CRN>
 #   Optional: [path/to/output-file]
 #
-# Examples: 
+# Examples:
 #   ./copy_dns_config.sh my-instance1
 #   ./copy_dns_config.sh my-instance2 ~/dns-output.txt
 #
@@ -163,5 +163,5 @@ for zone_id in $(echo "${zone_ids}" | jq -r '.[]'); do
     # list all permitted networks for the zone
     ibmcloud dns permitted-networks $zone_id --output JSON >> $file
 done
-``` 
+```
 {: codeblock}
