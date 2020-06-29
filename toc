@@ -26,7 +26,7 @@ DNS Services
     ha-dr.md
 
     {: .topicgroup}
-    Enhancing security for DNS Services
+    Enhancing security
         iam.md
         architecture-workload-isolation.md
         at-events.md
@@ -36,6 +36,7 @@ DNS Services
     [DNS Services API reference](https://{DomainName}/apidocs/dns-svcs)    
     /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
     [GoLang SDK](https://github.com/IBM/dns-svcs-go-sdk)
+    [Terraform DNS Services resources](https://{DomainName}/docs/terraform?topic=terraform-dns-resources)
     responsibilities.md
     {: .navgroup-end}
 

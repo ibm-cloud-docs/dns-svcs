@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-13"
+lastupdated: "2020-06-29"
 
 keywords: DNS Resolver, CentOS, RHEL, Ubuntu
 
@@ -53,7 +53,7 @@ Follow these steps to modify the DHCP client configuration in CentOS 7.x.
   ```
   supersede domain-name-servers 161.26.0.7, 161.26.0.8;
   ```
-  {:pre}
+  {:codeblock}
 
 2. Next run the following command to release the current lease and stop the running DHCP client. Then restart the DHCP client.
 
@@ -68,19 +68,60 @@ Follow these steps to modify the DHCP client configuration in CentOS 7.x.
 
 Follow these steps to modify the DHCP client configuration in Ubuntu Linux 18.04 LTS Bionic Beaver.
 
-1. Open the `/etc/dhcp/dhclient.conf` file and add the line:
+1. Ensure your version of netplan is 0.95 or later:
 
-  ```
-  supersede domain-name-servers 161.26.0.7, 161.26.0.8;
-  ```
-  {:pre}
+   ```console
+   dpkg -l |grep netplan
+   ii  netplan.io                      0.98-0ubuntu1~18.04.1               amd64        YAML network configuration abstraction   for various backends
+   ```
+  
+   If your netplan version is earlier than 0.95, upgrade netplan:
 
-2. Run the following command to release the current lease and stop the running DHCP client. Then restart the DHCP client.
+   ```console
+   apt-get update
+   apt-get upgrade
+   ```
+   {:codeblock}
 
-  ```console
-  dhclient -v -r; dhclient -v
-  ```
-  {:pre}
+2. Create the file `/etc/netplan/99-custom-dns.yaml` with the following content:
+
+   If your VSI has more than one ethernet device, add a stanza for each device. This example uses the device name `ens3`. Replace this with the appropriate name for your interface.
+   {:note}
+  
+   ```yaml
+   network:
+       version: 2
+       ethernets:
+           ens3:
+               nameservers:
+                   addresses: [ "161.26.0.7", "161.26.0.8" ]
+               dhcp4-overrides:
+                   use-dns: false
+   ```
+   {:codeblock}
+
+   The `use-dns: false` setting ensures the statically configured DNS servers take precedence for the interface.
+
+3. Apply the changes to netplan:
+
+   ```console
+   netplan apply
+   ```
+   {:codeblock}
+
+4. Open the `/etc/dhcp/dhclient.conf` file and add the line:
+
+   ```
+   supersede domain-name-servers 161.26.0.7, 161.26.0.8;
+   ```
+   {:codeblock}
+
+5. Run the following command to release the current lease and stop the running DHCP client, then restart the DHCP client. Doing this ensures the statically configured DNS servers take precedence globally.
+
+   ```console
+   dhclient -v -r; dhclient -v
+   ```
+   {:pre}
 
 If you are still unable to resolve with the new configuration, flush all DNS resource record caches the `systemd` service maintains locally, and try again.
 
