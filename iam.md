@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2020
 
-lastupdated: "2020-03-01"
+lastupdated: "2020-07-06"
 
 keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc, Access Control Lists, IAM, permitted networks
 
@@ -72,7 +72,7 @@ The following table shows how service access roles map to {{site.data.keyword.dn
 | :------ | :---------------- | :------- |
 | Reader  | A reader can browse a high-level view of DNS zones, resource records, and permitted networks. Readers cannot create, delete or modify any resources under {{site.data.keyword.dns_short}} instances. | View DNS zones, resource records, and permitted networks. |
 | Writer  | A writer can modify DNS zones and resource records, in addition to actions that a reader can perform. | All actions that a reader can perform, also can update DNS zones and resource records. |
-| Manager | A manager can perform all actions that a reader and writer can perform, including the ability to create and delete DNS zones, create and delete resource records, and also add and remove permitted networks. | All actions that a Reader or a Writer can perform, also can create and delete DNS zones. Additionally, can create and delete resource records records, and add or remove permitted networks. |
+| Manager | A manager can perform all actions that a reader and writer can perform, including the ability to create and delete DNS zones, create and delete resource records, and also add and remove permitted networks. | All actions that a Reader or a Writer can perform, also can create and delete DNS zones. Additionally, can create and delete resource records, and add or remove permitted networks. |
 
 ## Working with permitted network (VPC) related IAM access
 {: #permitted-network-vpc-access-roles}
