@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-07-17"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -94,6 +94,6 @@ dig www.example.com
 {: #getting-started-api}
 
 Follow the steps in these detailed guides to use the API for:
-- [Creating a DNS zone](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones-api#managing-dns-zones-api)
-- [Managing permitted networks](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks-api#managing-permitted-networks-api)
-- [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records-api#managing-dns-records-api)
+- [Creating a DNS zone](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#create-dns-zone-api)
+- [Managing permitted networks](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks#managing-permitted-networks-api)
+- [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records#managing-dns-records-api)

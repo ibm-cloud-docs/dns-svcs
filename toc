@@ -17,18 +17,25 @@ DNS Services
     
     {: .navgroup id="howto"}
     configure-dns-instance.md
+    retrieve-instance-id.md
     dns-zones.md
     permitted-networks.md
     dns-records.md
     resolver-config.md
     output-dns-config.md
     wildcard-support.md
-    ha-dr.md
+    
+    {: .topicgroup}
+    High availability and disaster recovery
+        ha-dr.md
+        backup-data.md
 
     {: .topicgroup}
     Enhancing security
         iam.md
         architecture-workload-isolation.md
+        service-connection.md
+        data-security.md
         at-events.md
     {: .navgroup-end}
 

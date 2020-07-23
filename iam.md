@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2020
 
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-21"
 
 keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc, Access Control Lists, IAM, permitted networks
 
@@ -47,7 +47,7 @@ With {{site.data.keyword.cloud_notm}} IAM, you can manage and define access for 
 
 To simplify access, {{site.data.keyword.dns_short}} aligns with {{site.data.keyword.cloud_notm}} IAM roles so that each user has a different view of the service, according to the role the user is assigned. If you are a security admin for your service, you can assign {{site.data.keyword.cloud_notm}} IAM roles that correspond to the specific {{site.data.keyword.dns_full}} permissions you want to grant to members of your team.
 
-This section discusses {{site.data.keyword.cloud_notm}} IAM in the context of {{site.data.keyword.dns_short}}. For complete IAM documentation, see [Managing access](/docs/iam?topic=iam-cloudaccess) in {{site.data.keyword.cloud_notm}}.
+This section discusses {{site.data.keyword.cloud_notm}} IAM in the context of {{site.data.keyword.dns_short}}. For complete IAM documentation, see [Managing access](/docs/account?topic=account-cloudaccess) in {{site.data.keyword.cloud_notm}}.
 {:note}
 
 ### Platform access roles
