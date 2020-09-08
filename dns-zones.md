@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-10"
+lastupdated: "2020-08-14"
 
-keywords: dns-svcs, DNS Services, Private DNS, wildcard, dns zones, restricted zones
+keywords: restricted zones
 
 subcollection: dns-svcs
 

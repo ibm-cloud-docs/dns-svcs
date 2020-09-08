@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-03-30"
+lastupdated: "2020-08-07"
 
-keywords: dns-svcs, DNS Services, Private DNS, continuous delivery, security
+keywords: architecture, workload isolation
 
 subcollection: dns-svcs
 

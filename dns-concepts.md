@@ -2,11 +2,11 @@
 
 copyright:
 
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-12-04"
+lastupdated: "2020-08-13"
 
-keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc, Access Control Lists, permitted networks
+keywords: permitted networks
 
 subcollection: dns-svcs
 

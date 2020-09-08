@@ -4,7 +4,7 @@ copyright:
   years: 2020
 lastupdated: "2020-07-23"
 
-keywords: search terms, comma separated list, keywords
+keywords: backup, restore
 
 subcollection: dns-svcs
 ---

@@ -4,7 +4,7 @@ copyright:
   years: 2019
 lastupdated: "2019-11-25"
 
-keywords: support ticket, IBM Cloud development teams,
+keywords: 
 
 subcollection: dns-svcs
 
@@ -26,4 +26,4 @@ When using a forum to ask a question, tag your question so that it is seen by th
 
 If you have technical questions about {{site.data.keyword.dns_short}}, post your question on [Stack Overflow](https://stackoverflow.com/search?q=dns-svcs+ibm-cloud){: external} and tag your question with "ibm-cloud" and "dns-svcs".
 
-For information about opening an IBM Support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-getting-customer-support). 
+For information about opening an IBM Support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-using-avatar). 
