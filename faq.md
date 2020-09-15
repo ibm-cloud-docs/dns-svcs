@@ -166,7 +166,7 @@ Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authori
 
 The following list addresses potential reasons why your origin status is down.
 * The initial health check might not be complete yet. Wait for the health check interval to pass before checking again.
-* The [security group rules](glb.md link) might not have been added yet.
+* The [security group rules](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#security-groups-glb) might not have been added yet.
 * The application responsible for responding to the health check queries might not be running properly or on the correct port.
 * If you specified HTTPS as your type of health check, make sure that a valid certificate exists on the origin. For a self-signed certificate, you can use the **Don't validate certificate** option for the health check. 
 

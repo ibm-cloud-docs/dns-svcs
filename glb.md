@@ -49,7 +49,7 @@ The following limitations exist during the Beta period of the global load balanc
 * Currently, the only health check method that is supported is `GET`.
 
 ## Use cases and workflows
-{:glb-use-cases}
+{: #glb-use-cases}
 
 The most common use of global load balancers is to direct traffic to healthy origins and distribute loads.
 
@@ -57,7 +57,7 @@ The following workflows are performed from the {{site.data.keyword.dns_short}} z
 {: note}
 
 ### Creating a global load balancer with origin health monitoring
-{:#use-case-no-monitoring}
+{: #use-case-no-monitoring}
 
 Creating a global load balancer with origin health monitoring combines high availability with geographic load balancing for mission-critical applications. This workflow ensures that traffic is routed only to healthy origins.
 
@@ -68,7 +68,7 @@ Follow this workflow to create a global load balancer with origin health monitor
 1. Create a global load balancer. 
 
 ### Creating a global load balancer without origin health monitoring
-{:#use-case-no-monitoring}
+{: #use-case-no-monitoring}
 
 In this configuration, {{site.data.keyword.dns_short}} provides geographical load balancing based on the configured policy, but not high availability features. 
 
@@ -78,7 +78,7 @@ After you create a DNS zone and add a permitted network to it, follow this workf
 1. Create the global load balancer.
 
 ## Creating a health check
-{:#add-a-health-check}
+{: #add-a-health-check}
 
 Create a health check to specify how the origin health is monitored. {{site.data.keyword.dns_short}} supports HTTP and HTTPS monitoring types. After you create a health check, you can add it to a new or existing origin pool. Health checks exist at the instance level, and can be used by any pool in the instance. 
 
@@ -104,7 +104,7 @@ Follow these steps to create a health check:
 1. Click **Create** to save your changes and create the health check.
  
 ## Adding an origin pool
-{:#add-a-pool}
+{: #add-a-pool}
 
 Origin pools group your origins for the load balancer to use. Decide whether you want to create a monitored or unmonitored origin pool. For monitored pools, you must specify the health check to use, and from which subnet the health is monitored. Origin pools exist at the instance level, and can be used by any global load balancer in any DNS zone that is configured in the instance. 
 
@@ -145,7 +145,7 @@ When you first create an origin pool, its status is `Critical` and the origin's 
 {:note}
 
 ### Status definitions
-{:#status-definitions}
+{: #status-definitions}
 
 The following table describes the possible statuses that you might see in your origins, origin pools, and global load balancers. 
 
@@ -160,19 +160,19 @@ The fallback pool status is not taken into account for assessing the health of t
 {:note}
 
 ### Security groups
-{:#security-groups-glb}
+{: #security-groups-glb}
 
 Update the security group of the VPC to allow incoming health check traffic from the IP address that the health checker on the health monitoring subnet is using. Currently, this can be done by allowing traffic for the whole subnet CIDR.
 
 ## Creating a global load balancer
-{:#add-a-load-balancer}
+{: #add-a-load-balancer}
 
 Load balancers help to distribute your proxied traffic across multiple origin pools.
 
 Follow these steps to create a load balancer:
 
 To set up a global load balancer, you must first create a health check and origin pool.
-{: important}
+{:important}
 
 1. From the {{site.data.keyword.dns_short}} zone page, click **Global load balancers**, then click **Load balancers**.  
 1. Click **Create load balancer**.
@@ -184,7 +184,7 @@ To set up a global load balancer, you must first create a health check and origi
 1. Optionally, add or select a **Location policy**. The location policy allows you to associate one or more origin pools for a specific AZ. Any AZ that is not explicitly defined as a location policy uses the default policy.
 
 ## Viewing, editing, or deleting components of a global load balancer
-{:#edit-delete-load-balancer}
+{: #edit-delete-load-balancer}
 
 To view, edit or delete a load balancer, or one of its components, click an action from the overflow menu ![overflow icon](/images/horizontal-overflow-icon.png) on the table row of the load balancer.
 
