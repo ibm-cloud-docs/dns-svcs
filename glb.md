@@ -186,7 +186,7 @@ To set up a global load balancer, you must first create a health check and origi
 ## Viewing, editing, or deleting components of a global load balancer
 {: #edit-delete-load-balancer}
 
-To view, edit or delete a load balancer, or one of its components, click an action from the overflow menu ![overflow icon](/images/horizontal-overflow-icon.png) on the table row of the load balancer.
+To view, edit or delete a load balancer, or one of its components, click an action from the overflow menu ![overflow icon](images/horizontal-overflow-icon.png) on the table row of the load balancer.
 
 The following options are provided for each list.
 
