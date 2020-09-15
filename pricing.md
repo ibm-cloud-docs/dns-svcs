@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-04-30"
+lastupdated: "2020-09-11"
 
-keywords: DNS Services, pricing, private DNS, dns-svcs
+keywords: 
 
 subcollection: dns-svcs
 
@@ -46,7 +46,7 @@ One DNS zone and one million DNS queries are free for an account.
 ### DNS Zones
 {: #zones-pricing}
 
-The standard price is $0.50 USD per DNS zone.
+The standard price is $0.50 USD/month per DNS zone. If an instance does not have the zone for the whole month, the price of the instance's zone is prorated for the portion of the month a zone exists. Zone costs follow the [**dailyproration_avg**](/docs/get-coding?topic=get-coding-meteringintera#metermodel) metering model.
 
 ### Tiers
 {: #tiers-pricing}

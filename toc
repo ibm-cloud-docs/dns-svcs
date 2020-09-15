@@ -22,6 +22,7 @@ DNS Services
     permitted-networks.md
     dns-records.md
     resolver-config.md
+    glb.md
     output-dns-config.md
     wildcard-support.md
     

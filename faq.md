@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-04-14"
+lastupdated: "2020-08-31"
 
-keywords: dns-svcs, DNS Services, Private DNS, FAQ, frequently asked questions
+keywords: 
 
 subcollection: dns-svcs
 
@@ -159,6 +159,46 @@ Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authori
 {: support}
 
 {{site.data.keyword.dns_short}} allows creating a private DNS zone that can have the same name as the public DNS zone. See a [detailed explanation](/docs/dns-svcs?topic=dns-svcs-about-dns-services#resolving-dns-names-with-dns-services) of this scenario, referred to as Split Horizon.
+
+## Why is my origin status down?
+{:#why-origin-status-down}
+{:faq}
+
+The following list addresses potential reasons why your origin status is down.
+* The initial health check might not be complete yet. Wait for the health check interval to pass before checking again.
+* The [security group rules](glb.md link) might not have been added yet.
+* The application responsible for responding to the health check queries might not be running properly or on the correct port.
+* If you specified HTTPS as your type of health check, make sure that a valid certificate exists on the origin. For a self-signed certificate, you can use the **Don't validate certificate** option for the health check. 
+
+## Why is my origin pool status `degraded` or `critical`?
+{:faq}
+
+One or more of the origins in the pool are down. See [Why is my origin status down?](#why-origin-status-down) for more information. 
+
+## Are there any limits on global load balancer usage?
+{:faq}
+
+See [Global load balancers limitations](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#glb-ki) for more information on global load balancer usage.
+
+## What types of health checks are supported?
+{:faq}
+
+HTTP and HTTPS health checks are currently supported.
+
+## What regions can I use for health check monitoring?
+{:faq}
+
+Health checks are currently supported in the following regions:
+* Dallas
+* Washington, D.C.
+* Frankfurt
+* London
+* Tokyo
+
+## How can I disable health check monitoring to the origins? 
+{:faq}
+
+You can disable health check monitoring by disabling the origin.
 
 ## How do I upgrade my plan from free to standard?
 {: faq}
