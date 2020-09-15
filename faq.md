@@ -160,20 +160,10 @@ Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authori
 
 {{site.data.keyword.dns_short}} allows creating a private DNS zone that can have the same name as the public DNS zone. See a [detailed explanation](/docs/dns-svcs?topic=dns-svcs-about-dns-services#resolving-dns-names-with-dns-services) of this scenario, referred to as Split Horizon.
 
-## Why is my origin status down?
-{:#why-origin-status-down}
-{:faq}
-
-The following list addresses potential reasons why your origin status is down.
-* The initial health check might not be complete yet. Wait for the health check interval to pass before checking again.
-* The [security group rules](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#security-groups-glb) might not have been added yet.
-* The application responsible for responding to the health check queries might not be running properly or on the correct port.
-* If you specified HTTPS as your type of health check, make sure that a valid certificate exists on the origin. For a self-signed certificate, you can use the **Don't validate certificate** option for the health check. 
-
 ## Why is my origin pool status `degraded` or `critical`?
 {:faq}
 
-One or more of the origins in the pool are down. See [Why is my origin status down?](#why-origin-status-down) for more information. 
+One or more of the origins in the pool are down. See [Why is my origin status down?](/docs/dns-svcs?topic=dns-svcs-troubleshooting-dns-services#why-origin-status-down) for more information. 
 
 ## Are there any limits on global load balancer usage?
 {:faq}

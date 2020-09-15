@@ -171,7 +171,7 @@ Load balancers help to distribute your proxied traffic across multiple origin po
 
 Follow these steps to create a load balancer:
 
-To set up a global load balancer, you must first create a health check and origin pool.
+To set up a global load balancer, you must first create an origin pool.
 {:important}
 
 1. From the {{site.data.keyword.dns_short}} zone page, click **Global load balancers**, then click **Load balancers**.  
