@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-07-21"
 
-keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc, Access Control Lists, IAM, permitted networks
+keywords: 
 
 subcollection: dns-svcs
 
@@ -27,7 +27,7 @@ subcollection: dns-svcs
 {:download: .download}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Managing IAM and {{site.data.keyword.dns_full_notm}}
+# Managing access with IAM for {{site.data.keyword.dns_full_notm}}
 {: #iam}
 
 {{site.data.keyword.dns_full}} leverages IAM to perform authorization and Authentication.
