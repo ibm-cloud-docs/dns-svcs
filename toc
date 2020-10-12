@@ -11,6 +11,10 @@ DNS Services
     dns-concepts.md
     
     {: .topicgroup}
+    Tutorials
+        /solution-tutorials/solution-tutorials-vpc-tg-dns-iam
+    
+    {: .topicgroup}
     Related links
         [Virtual Private Cloud](https://{DomainName}/docs/vpc?topic=vpc-getting-started)    
     {: .navgroup-end}
@@ -50,7 +54,15 @@ DNS Services
 
     {: .navgroup id="help"}
     faq.md
-    troubleshooting.md
+
+    {: .topicgroup}
+    Troubleshooting
+        ts-nxdomain.md
+        ts-permitted-network.md
+        ts-origin-down.md
+        ts-pool-critical.md
+        ts-cse-enabled.md
+
     known-limitations.md
     getting-help.md
     {: .navgroup-end}

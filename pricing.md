@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-11"
+lastupdated: "2020-09-29"
 
 keywords: 
 
@@ -25,19 +25,14 @@ subcollection: dns-svcs
 {:download: .download}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# {{site.data.keyword.dns_full_notm}} pricing
+# {{site.data.keyword.dns_short}} pricing
 {: #pricing}
 
 Pricing for {{site.data.keyword.dns_full}} follows.
 
-## Free
-{: #free-plan}
-
-One DNS zone and one million DNS queries are free for an account.
-
 ## Standard
 {: #standard-plan}
-
+  * One DNS zone and one million DNS queries are included in an account.
   * Each instance can have up to 10 DNS zones.
   * Each DNS zone can have up to 10 VPC networks.
   * Each DNS zone can have up to 3500 DNS records.

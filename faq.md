@@ -160,10 +160,6 @@ Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authori
 
 {{site.data.keyword.dns_short}} allows creating a private DNS zone that can have the same name as the public DNS zone. See a [detailed explanation](/docs/dns-svcs?topic=dns-svcs-about-dns-services#resolving-dns-names-with-dns-services) of this scenario, referred to as Split Horizon.
 
-## Why is my origin pool status `degraded` or `critical`?
-{:faq}
-
-One or more of the origins in the pool are down. See [Why is my origin status down?](/docs/dns-svcs?topic=dns-svcs-troubleshooting-dns-services#why-origin-status-down) for more information. 
 
 ## Are there any limits on global load balancer usage?
 {:faq}

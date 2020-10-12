@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-06-02"
+lastupdated: "2020-09-30"
 
-keywords: IBM Cloud DNS Services, DNS Activity Tracker events
+keywords: 
 
 subcollection: dns-svcs
 
@@ -33,43 +33,67 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started#getting-started).
 
-Names for auditing events will change on July 1, 2020. The change replaces all underscore (_) characters in the names with dash (-) characters. See the following tables for the changes to each action name, and adjust your {{site.data.keyword.at_full_notm}} views and alerts as needed.
-{:important}
-
-## List of events: DNS zones
+## DNS zone events
 {: #events_dns_zones}
 
 The following table lists the actions that are related to DNS zones and generate an event.
 
-|Action (until July 1, 2020)| Action (starting July 1, 2020)|Description|
-|---|---|---|  
-|dns-svcs.zones.read  |dns-svcs.resource-records.read|Get a DNS zone.   |
-|dns-svcs.zones.create|dns-svcs.resource-records.create|Create a DNS zone.|
-|dns-svcs.zones.update|dns-svcs.resource-records.update|Update a DNS zone.|
-|dns-svcs.zones.delete|dns-svcs.resource-records.delete|Delete a DNS zone.|
+|Action |Description|
+|---|---|  
+|`dns-svcs.zones.read`  |Get or list DNS zones. |
+|`dns-svcs.zones.create`|Create a DNS zone.     |
+|`dns-svcs.zones.update`|Update a DNS zone.     |
+|`dns-svcs.zones.delete`|Delete a DNS zone.     |
+{: caption="Table 1. DNS zones" caption-side="top"}
 
-## List of events: resource records
+## Resource records events
 {: #events_resource_record}
 
 The following table lists the actions that are related to resource records and generate an event.
 
-|Action (until July 1, 2020)| Action (starting July 1, 2020)|Description|
-|---|---|---|
-|dns-svcs.resource_records.read  ||Get a resource record.   |
-|dns-svcs.resource_records.create||Create a resource record.|
-|dns-svcs.resource_records.update||Update a resource record.|
-|dns-svcs.resource_records.delete||Delete a resource record.|
+|Action |Description|
+|---|---|
+|`dns-svcs.resource-records.read`  |Get or list resource records. |
+|`dns-svcs.resource-records.create`|Create a resource record.     |
+|`dns-svcs.resource-records.update`|Update a resource record.     |
+|`dns-svcs.resource-records.delete`|Delete a resource record.     |
+{: caption="Table 2. Resource records" caption-side="top"}
 
-## List of events: permitted networks
+
+## Permitted networks events
 {: #events_permitted_networks}
 
 The following table lists the actions that are related to permitted networks and generate an event.
 
-|Action (until July 1, 2020)| Action (starting July 1, 2020)|Description|
-|---|---|---|  
-|dns-svcs.permitted_networks.read  |dns-svcs.permitted-networks.read|Get a permitted network from DNS zone.|
-|dns-svcs.permitted_networks.create|dns-svcs.permitted-networks.create|Add a permitted network to DNS zone.|
-|dns-svcs.permitted_networks.delete|dns-svcs.permitted-networks.delete|Remove a permitted network from DNS zone.|
+|Action |Description|
+|---|---|  
+|`dns-svcs.permitted-networks.read`  |Get or list permitted networks from DNS zone. |
+|`dns-svcs.permitted-networks.create`|Add a permitted network to DNS zone.          |
+|`dns-svcs.permitted-networks.delete`|Remove a permitted network from DNS zone.     |
+{: caption="Table 3. Permitted networks" caption-side="top"}
+
+
+## Global balancer events
+{: #events_global_load_balancers}
+
+The following table lists the actions that are related to global load balancers and generate an event.
+
+|Action |Description|
+|---|---|
+|`dns-svcs.monitors.read`        |Get or list health monitors. |
+|`dns-svcs.monitors.create`      |Create a health monitor.     |
+|`dns-svcs.monitors.update`      |Update a health monitor.     |
+|`dns-svcs.monitors.delete`      |Delete a health monitor.     |
+|`dns-svcs.pools.read`           |Get or list origin pools.    |
+|`dns-svcs.pools.create`         |Create an origin pool.       |
+|`dns-svcs.pools.update`         |Update an origin pool.       |
+|`dns-svcs.pools.delete`         |Delete an origin pool.       |
+|`dns-svcs.load-balancers.read`  |Get or list load balancers.  |
+|`dns-svcs.load-balancers.create`|Create a load balancer.     |
+|`dns-svcs.load-balancers.update`|Update a load balancer.     |
+|`dns-svcs.load-balancers.delete`|Delete a load balancer.     |
+{: caption="Table 4. Global load balancers" caption-side="top"}
+
 
 ## Viewing events
 {: #ui}
@@ -79,4 +103,4 @@ The {{site.data.keyword.dns_short}} {{site.data.keyword.cloudaccesstrailshort}} 
 ## Requesting additional information for an event
 {: #info}
 
-While monitoring {{site.data.keyword.cloudaccesstrailshort}} events that are generated by the {{site.data.keyword.dns_full_notm}}, if you identify an API request for which you need additional information, then check the `requestData` field in the event. Through June 30, 2020, open an IBM Support case and include the value of the field **X-CORRELATION-ID** that is available in `requestData`. Starting July 1, 2020, open an IBM support case and include the value of the field **requestId** that is available in `requestData`.
+While monitoring {{site.data.keyword.cloudaccesstrailshort}} events that are generated by the {{site.data.keyword.dns_full_notm}}, if you identify an API request for which you need additional information, then check the `requestData` field in the event. Open an IBM Support case and include the value of the field **requestId** that is available in `requestData`.

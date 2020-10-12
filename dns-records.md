@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-18"
+lastupdated: "2020-09-30"
 
-keywords: dns-svcs, DNS Services, Private DNS, DNS records, wildcard records
+keywords: 
 
 subcollection: dns-svcs
 
@@ -49,32 +49,32 @@ When you enter a name in the Name field, a domain name is automatically appended
 The minimum supported TTL value is `1 min` and the maximum is `12 hours`. The default value of TTL is `15 min`, but users can change it.
 {:note}
 
-#### A Type record
+#### A type record
 {:#a-record}
 
 To add this record type, valid values must exist in the **Name** and **IPv4 Address** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
-Required Fields
+Required fields
 * Name
 * IPv4 Address
 * TTL (Default value is 15 min)
 
-#### AAAA Type record
+#### AAAA type record
 {:#aaaa-record}
 
 To add this record type, valid values must exist in the **Name** and **IPv6 Address** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
-Required Fields
+Required fields
 * Name
 * IPv6 Address
 * TTL (Default value is 15 min)
 
-#### CNAME Type record
+#### CNAME type record
 {:#cname-record}
 
 To add this record type, a valid value must exist in the **Name** field and a fully qualified domain name must be in the **Target** (FQDN) field. A **TTL** can also be specified from the list menu, with the default value of `15 min`.
 
-Required Fields
+Required fields
 * Name
 * Target (for CNAME)
 * TTL (Default value is 15 min)
@@ -84,27 +84,27 @@ Required Fields
 
 To add this record type, a valid value must exist in the **Name** field, a fully qualified domain name must be in the **Mail Server** (FQDN) field, and a valid number must exist in the **Priority** field. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
-Required Fields
+Required fields
 * Name
 * Mail Server
 * TTL (Default value is 15 min)
 * Priority (Default value is 1)
 
-#### PTR Type record
+#### PTR type record
 {:#ptr-record}
 
 To add this record type, you must have an existing A or AAAA record that is not already associated with another PTR record. Select an existing record from the list menu. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
-Required Fields
+Required fields
 * Select existing record
 * TTL (Default value is 15 min)
 
-#### SRV Type record
+#### SRV type record
 {:#srv-record}
 
 To add this record type, valid values must exist in the **Name**, **Service Name**, and **Target** fields. Use the list menu to select a **protocol**, which defaults to the UDP protocol. Additionally, you can specify **Priority**, **Weight**, and **Port**. These three fields default to a value of `1`. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
-Required Fields
+Required fields
 * Name
 * Service Name
 * Target
@@ -114,12 +114,15 @@ Required Fields
 * Weight (Default value is 1)
 * Port (Default value is 1)
 
-#### TXT Type record
+#### TXT type record
 {:#txt-record}
 
 To add this record type, valid values must exist in the **Name** and **Content** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
-Required Fields
+For security and privacy reasons, it is recommended that you not use TXT type records for sensitive and confidential data.
+{:important}
+
+Required fields
 * Name
 * Content
 * TTL (Default value is 15 min)
