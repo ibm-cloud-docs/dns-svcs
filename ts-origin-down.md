@@ -46,7 +46,7 @@ Wait for the health check interval to pass before checking again.
 
 Your origin might be down because the security group rules have not been added yet.
 
-Be sure the [security group rules](https://test.cloud.ibm.com/docs/dns-svcs?topic=dns-svcs-global-load-balancers#security-groups-glb) have been added.
+Be sure the [security group rules](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#security-groups-glb) have been added.
 {: tsResolve}
 
 ## Application error
