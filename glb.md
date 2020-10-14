@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-15"
+lastupdated: "2020-10-14"
 
 keywords:  
 
@@ -47,6 +47,7 @@ The following limitations exist during the Beta period of the global load balanc
 * One global load balancer, three health checks, and three origin pools per {{site.data.keyword.dns_short}} instance are allowed.
 * The origin pools can use no more than two subnets for health monitoring per {{site.data.keyword.dns_short}} instance. 
 * Currently, the only health check method that is supported is `GET`.
+* To delete the last DNS zone from the UI, you must first remove all load balancers, origin pools, and health checks. To delete the last DNS zone without removing all origin pools and health checks, use the API or CLI. 
 
 ## Use cases and workflows
 {: #glb-use-cases}
@@ -66,6 +67,9 @@ Follow this workflow to create a global load balancer with origin health monitor
 1. Create a health check.
 1. Create an origin pool.
 1. Create a global load balancer. 
+
+The HTTP and HTTPS health checks use the following HTTP user-agent: `"Mozilla/5.0 (compatible; IBM-Cloud-DNS-Services/1.0; Health-Check/1.0; pool-id=12345678-1234-1234-1234-123456789012)"`. The `pool-id` is set as the load balancer pool for which the health check is configured.
+{: note}
 
 ### Creating a global load balancer without origin health monitoring
 {: #use-case-no-monitoring}
@@ -115,6 +119,7 @@ Before you begin, keep the following considerations in mind when working with or
 * Only origins with IP addresses can be specified.
 * Origin health monitoring continues even when an origin pool is disabled. To disable health monitoring on an origin, you can disable the origin.
 * When creating an origin pool, it can take 1 - 10 minutes for the health check to get initiated, during which time the pool appears in a `Critical` state.
+* You can't delete a subnet that you are using for health monitoring unless you also delete the origin pool that you are monitoring.
 
 You must update your VPC security group to allow traffic from the health monitoring subnet. See [Security groups](#security-groups-glb) for more information.
 {:important}
@@ -182,6 +187,15 @@ To set up a global load balancer, you must first create an origin pool.
 1. Add or select a **Default policy**. A default policy specifies which origin pools are used for all availability zones (AZ) for which a location-based policy is not specified. When multiple pools are selected within a policy, you can change their priority by using the arrow keys in the **Priority** column.
 1. Add or select a **Fallback policy**. A fallback policy specifies the origin pool to use when all other origin pools in the default or location policy are in a critical state. There can be only one origin pool in the fallback policy.
 1. Optionally, add or select a **Location policy**. The location policy allows you to associate one or more origin pools for a specific AZ. Any AZ that is not explicitly defined as a location policy uses the default policy.
+
+### How DNS resolvers prioritize global load balancing pools
+{:#resolver-priority}
+
+The DNS resolver uses the following order to return origins from the origin pool. 
+
+Location policy > Default policy > Fallback policy
+
+The location policy (if one is defined in the AZ), has the highest priority and is used first. If every origin pool in the location policy is down, then the DNS resolver uses origin pools from default policy. If all of the origin pools in the default policy are also down, then the DNS resolver goes to the origin pool designated in the fallback policy. 
 
 ## Viewing, editing, or deleting components of a global load balancer
 {: #edit-delete-load-balancer}
