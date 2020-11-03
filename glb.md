@@ -46,7 +46,6 @@ The following limitations exist during the Beta period of the global load balanc
 * The origin address must be specified by using an IP address and not the hostname.
 * One global load balancer, three health checks, and three origin pools per {{site.data.keyword.dns_short}} instance are allowed.
 * The origin pools can use no more than two subnets for health monitoring per {{site.data.keyword.dns_short}} instance. 
-* Currently, the only health check method that is supported is `GET`.
 * To delete the last DNS zone from the UI, you must first remove all load balancers, origin pools, and health checks. To delete the last DNS zone without removing all origin pools and health checks, use the API or CLI. 
 
 ## Use cases and workflows
@@ -84,7 +83,7 @@ After you create a DNS zone and add a permitted network to it, follow this workf
 ## Creating a health check
 {: #add-a-health-check}
 
-Create a health check to specify how the origin health is monitored. {{site.data.keyword.dns_short}} supports HTTP and HTTPS monitoring types. After you create a health check, you can add it to a new or existing origin pool. Health checks exist at the instance level, and can be used by any pool in the instance. 
+Create a health check to specify how the origin health is monitored. {{site.data.keyword.dns_short}} supports HTTP, HTTPS and TCP monitoring types. After you create a health check, you can add it to a new or existing origin pool. Health checks exist at the instance level, and can be used by any pool in the instance. 
 
 Follow these steps to create a health check:
 
@@ -92,7 +91,7 @@ Follow these steps to create a health check:
 1. Click **Create health check** to start.
 1. In the **Health check name** field, give your health check a name.
 1. Optionally, enter a **Description** for the health check to help you understand what it is monitoring.
-1. Select the **Monitor type**. Choose the protocol to use for the health check. Supported monitor types are HTTP and HTTPS. The default value is `HTTP`.
+1. Select the **Monitor type**. Choose the protocol to use for the health check. Supported monitor types are HTTP, HTTPS, and TCP. The default value is `HTTP`.
    If **HTTPS** is selected, the **Don't validate certificate** checkbox appears after the **Advanced options** section. Select this box when the HTTPS certificate on the origin is not signed by a certificate authority (for instance, a self-signed certificate).
 1. Enter the endpoint **Path** against which to perform the health check. The default value is `/`.
 1. Optionally, enter the **Port** number that you want to use.
