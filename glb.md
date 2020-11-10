@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-14"
+lastupdated: "2020-10-23"
 
 keywords:  
 
@@ -42,11 +42,8 @@ The open beta version of the global load balancer feature offers limited capabil
 
 The following limitations exist during the Beta period of the global load balancing feature:
 
-* The origins must be on the same subnet as the health monitoring subnet.
-* The origin address must be specified by using an IP address and not the hostname.
 * One global load balancer, three health checks, and three origin pools per {{site.data.keyword.dns_short}} instance are allowed.
 * The origin pools can use no more than two subnets for health monitoring per {{site.data.keyword.dns_short}} instance. 
-* To delete the last DNS zone from the UI, you must first remove all load balancers, origin pools, and health checks. To delete the last DNS zone without removing all origin pools and health checks, use the API or CLI. 
 
 ## Use cases and workflows
 {: #glb-use-cases}
@@ -64,8 +61,8 @@ Creating a global load balancer with origin health monitoring combines high avai
 Follow this workflow to create a global load balancer with origin health monitoring:
 
 1. Create a health check.
-1. Create an origin pool.
-1. Create a global load balancer. 
+1. Create an origin pool and specify the health check to use.
+1. Create a global load balancer.
 
 The HTTP and HTTPS health checks use the following HTTP user-agent: `"Mozilla/5.0 (compatible; IBM-Cloud-DNS-Services/1.0; Health-Check/1.0; pool-id=12345678-1234-1234-1234-123456789012)"`. The `pool-id` is set as the load balancer pool for which the health check is configured.
 {: note}
@@ -87,7 +84,7 @@ Create a health check to specify how the origin health is monitored. {{site.data
 
 Follow these steps to create a health check:
 
-1. From the {{site.data.keyword.dns_short}} zone page, click **Global load balancers**, then click **Health checks**. 
+1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Health checks** tab. 
 1. Click **Create health check** to start.
 1. In the **Health check name** field, give your health check a name.
 1. Optionally, enter a **Description** for the health check to help you understand what it is monitoring.
@@ -98,9 +95,13 @@ Follow these steps to create a health check:
    For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.  
    {: note}
 1. In the **Advanced settings** section, select a **Test interval** (in seconds) between each health check. Shorter intervals can improve failover time, but increase load on the origins, as checks come from multiple locations. The default value is `60`.
-1. Choose a **Method** to use for the health check from the list. The default value is `GET`.
+1. Choose a **Method** to use for the health check from the list (HTTP and HTTPS only). The default value is `GET`.
 1. Select a **Timeout** interval (in seconds) for how long to wait before the health check is marked as failed. The default value is `5`.
 1. Select the **Number of retries** to attempt in case there is a timeout before the origin is marked as unhealthy. Retries are attempted immediately. The default value is `1`.
+
+   TCP monitor type options end with this step. Click **Create** to save your changes and create the health check. HTTP and HTTPS monitor types have additional options, which follow.
+   {:note}
+   
 1. Enter the **Expected response codes**, which are the HTTP response codes or code range of the health check. This value must be between `200-299` with wildcards denoted by an `x`.
 1. Optionally, enter a **Response body** which is a case-insensitive substring to match against in the response body. If this string is not found, the origin is marked as unhealthy.
 1. In the optional **Request headers** section, you can add and configure HTTP request headers to send in the health check. Enter a header name and value in the fields provided. Click **Add request header** to configure additional headers.
@@ -109,23 +110,23 @@ Follow these steps to create a health check:
 ## Adding an origin pool
 {: #add-a-pool}
 
-Origin pools group your origins for the load balancer to use. Decide whether you want to create a monitored or unmonitored origin pool. For monitored pools, you must specify the health check to use, and from which subnet the health is monitored. Origin pools exist at the instance level, and can be used by any global load balancer in any DNS zone that is configured in the instance. 
+Origin pools group your origins for the load balancer to use. An origin can be either an IP or a hostname. Decide whether you want to create a monitored or unmonitored origin pool. For monitored pools, you must specify the health check to use, and from which subnet the health is monitored. Origin pools exist at the instance level, and can be used by any global load balancer in any DNS zone that is configured in the instance. 
 
 Before you begin, keep the following considerations in mind when working with origin pools: 
 
 * At least one origin pool is required for each provisioned load balancer. 
 * Origins must be on the same subnet as the subnet specified for health monitoring. 
-* Only origins with IP addresses can be specified.
 * Origin health monitoring continues even when an origin pool is disabled. To disable health monitoring on an origin, you can disable the origin.
 * When creating an origin pool, it can take 1 - 10 minutes for the health check to get initiated, during which time the pool appears in a `Critical` state.
 * You can't delete a subnet that you are using for health monitoring unless you also delete the origin pool that you are monitoring.
+* If a hostname is provided as an origin in a pool, it can be an A, AAAA, or CNAME resource record, as well as another load balancer. However, you might see slower performance when resolving long CNAME chains or load balancers.
 
 You must update your VPC security group to allow traffic from the health monitoring subnet. See [Security groups](#security-groups-glb) for more information.
 {:important}
  
 To create an origin pool, follow these steps:
 
-1. From the {{site.data.keyword.dns_short}} zone page, click **Global load balancers**, then click **Origin pools**. 
+1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Origin pools** tab. 
 1. Click **Create origin pool**. Pools are enabled by default. 
 
    Disabling a pool causes any load balancer that uses it to fail over to the next pool, if any. Disabled pools do not receive traffic. 
@@ -138,7 +139,7 @@ To create an origin pool, follow these steps:
 1. In the **Health monitoring** section, select a **Health check** to determine what method the health check uses, as well as the health check to use for checking origins within this pool. The default value is no health check.
 1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **WDC**, **Frankfurt**, **London**, and **Tokyo**.
 1. Select the **VPC** that contains the subnet from where the health check originates.
-1. Choose a **Subnet (Location)**. Select a subnet and location from the list menu. This defines from which subnet the health check is running.
+1. Choose a **Subnet (Location)**. Select a subnet and location from the list menu. This defines from which subnet the health check is running. You can specify up to two subnets.
    
    The subnet must be from VPC Gen 2.
    {:note}
@@ -178,7 +179,8 @@ Follow these steps to create a load balancer:
 To set up a global load balancer, you must first create an origin pool.
 {:important}
 
-1. From the {{site.data.keyword.dns_short}} zone page, click **Global load balancers**, then click **Load balancers**.  
+1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Load balancers** tab.
+1. Select a DNS zone from the list.
 1. Click **Create load balancer**.
 1. Enter the DNS **Balancer hostname** to associate it with your load balancer. 
 1. Optionally, enter a **Description** for the global load balancer.
@@ -204,17 +206,14 @@ To view, edit or delete a load balancer, or one of its components, click an acti
 The following options are provided for each list.
 
 * Health Checks
-  * **View health check** - Shows a short summary of the health check with a link that takes you to the edit flow.
   * **Edit health check** - Redirects to the edit flow.
   * **Delete health check** - Shows the confirmation dialog box for the deletion flow.
 
 * Origin Pools
-  * **View pool details** - Shows a modal dialog box with information about the pool.
   * **Edit pool** - Redirects to the edit flow.
   * **Delete pool** - Shows the confirmation dialog box for the deletion flow.
 
 * Load Balancers
-  * **View load balancer** - Shows all the pools, the pool's priority, and status.
   * **Edit load balancer** - Redirects to the edit flow.
   * **Delete load balancer** - Shows the confirmation dialog box for the deletion flow.
   

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-29"
+lastupdated: "2020-11-09"
 
-keywords: DNS Resolver, CentOS, RHEL, Ubuntu
+keywords: DNS Resolver
 
 subcollection: dns-svcs
 
@@ -31,6 +31,9 @@ subcollection: dns-svcs
 
 This document is intended as general guidance only. Refer to your operating system's documentation for full details.
 {:important}
+
+Any VPC added to a private DNS zone before November 10, 2020, must configure the virtual server instance to use private DNS resolvers (`161.26.0.7` and `161.26.0.8`). VPCs added after November 11, 2020 are configured automatically with private DNS resolvers. 
+{:note}
 
 [Generation 1](#updating-dns-resolver-vpcgen1) and [generation 2](#updating-dns-resolver-vpcgen2) VPC virtual server instances (VSI) have different networking configurations. Refer to the appropriate section for your use case.
 {:shortdesc}
@@ -74,6 +77,7 @@ Follow these steps to modify the DHCP client configuration in Ubuntu Linux 18.04
    dpkg -l |grep netplan
    ii  netplan.io                      0.98-0ubuntu1~18.04.1               amd64        YAML network configuration abstraction   for various backends
    ```
+   {:codeblock}
   
    If your netplan version is earlier than 0.95, upgrade netplan:
 
