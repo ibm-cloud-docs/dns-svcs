@@ -36,9 +36,7 @@ IBM Log Analysis with LogDNA manages system and application logs in the IBM Clou
 ## Before you begin
 {: #logdna-preparation}
 
-To view health check events in LogDNA, make sure that the following prerequisite is met.
-
-An IBM Log Analysis with LogDNA instance is created in the Frankfurt region in the account.
+To view health check events in LogDNA, make sure that you create an IBM Log Analysis with LogDNA instance in the Frankfurt region in the account.
 
 ## Adding LogDNA
 {:#log-dna-nav}
@@ -48,17 +46,18 @@ From the UI, follow these steps to navigate to the LogDNA service:
 1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Health checks** tab. 
 1. For new logging, click **Add logging** to start creating a new LogDNA instance. 
 1. To view existing LogDNA instances, click **Launch logging**.
-1. IBM Log Analysis with LogDNA opens in a new tab.
 
-## Receiving health check events with IBM Log Analysis with a LogDNA instance
+IBM Log Analysis with LogDNA opens in a new tab.
+
+## Receiving health check events with the IBM Log Analysis with a LogDNA instance
 {: #receiving-health-check-events-logdna}
 
-To view health check events in a LogDNA instance, you must configure the LogDNA instance to receive platform logs with the following steps.
+To view health check events in a LogDNA instance, you must configure the LogDNA instance to receive platform logs with the following steps:
 
 1. In the {{site.data.keyword.cloud_notm}} UI, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**. The Observability dashboard appears.
 1. Select **Logging**. The list of logging instances appears.
-1. Click **Configure platform logs** button.
-1. Select the `Frankfurt` region, and then select one LogDNA instance where you want to receive the platform logs.
+1. Click the **Configure platform logs** button.
+1. Select the `Frankfurt` region, then select one LogDNA instance where you want to receive the platform logs.
 1. Click **Save**.
 
 ### Viewing health check events in the IBM Log Analysis with LogDNA instance
@@ -72,7 +71,7 @@ To search health check events from within the logging instance, enter the health
 
 ![LogDNA source search](images/health-check-type-filter.png)
 
-You can also search the events you want by combining other event fields. For example:
+You can also search for the events you want by combining other event fields. For example:
 
 - Search health check events for a specific DNS Services instance.
 ![search events by CRN](images/health-check-type-filter-crn.png)
@@ -93,11 +92,12 @@ You can also search the events you want by combining other event fields. For exa
 {:#health-check-event-properties}
 
 Health check event records have the following properties:
+
  - `event_time`: The time at which the event was recorded. For example, `2020-10-28T15:04:05.00+0000`.
  - `logSourceCRN`: CRN of the DNS Services instance in which the origin pools and orgin servers were created.
    For example: `crn:v1:bluemix:public:dns-svcs:global:a/bcf1865e99742d38d2d5fc3fb80a5496:85ed7b9d-cd48-4881-b354-52eb1d8e9011::`
  - `type`: The value of this property is `health_check_event` for health check events.
- - `origins`: An array of objects representing the origin servers associated with the orgin pool. For example, 
+ - `origins`: An array of objects representing the origin servers associated with the orgin pool. For example: 
    
    ```
    [
@@ -122,7 +122,7 @@ Health check event records have the following properties:
    ```
    {:codeblock}
 
- - `pool`: An object that represents the orgin pool for which the health check event was generated. For example,
+ - `pool`: An object that represents the orgin pool for which the health check event was generated. For example:
     
     ```
     {
