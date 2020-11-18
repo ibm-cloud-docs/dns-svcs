@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2019, 2020
-lastupdated: "2020-11-09"
+lastupdated: "2020-11-15"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -35,9 +35,7 @@ We are pleased to announce that {{site.data.keyword.dns_short}} is now generally
 ## Before you begin
 {:#before-you-begin-getting-started}
 
-1. To use {{site.data.keyword.dns_short}}, you must have at least one virtual server instance (VSI) in a VPC in the {{site.data.keyword.cloud_notm}}. If you do not have one, learn how to [get started with Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started).
-1. Any VPC added to a private DNS zone before November 10, 2020, must configure the virtual server instance to use private DNS resolvers (`161.26.0.7` and `161.26.0.8`), according to the following instructions. VPCs added after November 11, 2020 are configured automatically with private DNS resolvers. For example, on some Linux distributions, this is done by editing the file `/etc/resolv.conf`. It may also be possible to override the default DNS resolvers using `cloud-init` during server boot up. Consult your operating system manuals for more information. 
-  * When editing configuration files, ensure that you keep a backup copy of the existing configuration in case it needs to be restored. See [Updating the DNS resolver for your VSI](/docs/dns-svcs?topic=dns-svcs-updating-dns-resolver) for examples on how to do this.
+To use {{site.data.keyword.dns_short}}, you must have at least one virtual server instance (VSI) in a VPC in the {{site.data.keyword.cloud_notm}}. If you do not have one, learn how to [get started with Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started).
 
 While the private DNS resolvers are required to resolve private DNS names, they also resolve public DNS names if the request is for a name that is not defined to be in a private DNS zone.
 {:note}

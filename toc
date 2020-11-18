@@ -25,7 +25,6 @@ DNS Services
     dns-zones.md
     permitted-networks.md
     dns-records.md
-    resolver-config.md
     glb.md
     output-dns-config.md
     wildcard-support.md

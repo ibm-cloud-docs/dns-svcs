@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-31"
+lastupdated: "2020-11-16"
 
 keywords: 
 
@@ -38,12 +38,11 @@ Have a question about {{site.data.keyword.dns_full}}? Review frequently asked qu
 
 To create your own private DNS zone using {{site.data.keyword.dns_short}}, take the following steps.
   1. Create a VPC instance.
-  2. Create a {{site.data.keyword.dns_short}} instance.
-  3. Add a DNS zone to the {{site.data.keyword.dns_short}} instance.
-  4. Designate the VPC instance as a permitted network for the DNS zone.
-  5. Add a DNS Resource Record to the DNS zone.
-  6. Configure VPC servers to use {{site.data.keyword.dns_short}} resolvers.
-  7. Verify name resolution of the DNS Resource Record works from within the VPC.
+  1. Create a {{site.data.keyword.dns_short}} instance.
+  1. Add a DNS zone to the {{site.data.keyword.dns_short}} instance.
+  1. Designate the VPC instance as a permitted network for the DNS zone.
+  1. Add a DNS Resource Record to the DNS zone.
+  1. Verify name resolution of the DNS Resource Record works from within the VPC.
 
 ## How is {{site.data.keyword.dns_short}} different from public DNS?
 {: faq}
@@ -64,11 +63,6 @@ DNSSec allows resolvers to cryptographically verify the data received from autho
 {: faq}
 
 {{site.data.keyword.dns_short}} is a global service and can be used from permitted networks in any {{site.data.keyword.cloud_notm}} region.
-
-## How do I update my Virtual Server Instance to use {{site.data.keyword.dns_short}} for name resolution?
-{: faq}
-
-This is operating system specific. For example, on some Linux distributions the `/etc/resolv.conf` file contains the IP address of the DNS resolver. This file should be updated with the IP address of the {{site.data.keyword.dns_short}} name servers, `161.26.0.7` and `161.26.0.8`. The configuration can also be updated through Cloud Init, where supported. Consult your operating system manuals for instructions on how to update DNS resolvers. See [Updating the DNS resolver for your VSI](/docs/dns-svcs?topic=dns-svcs-updating-dns-resolver) to learn how to update configuration to use {{site.data.keyword.dns_short}} Resolvers, for different distros.
 
 ## When creating a DNS zone, what is the purpose of the `Label` field?
 {: faq}

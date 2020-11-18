@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-28"
+lastupdated: "2020-11-16"
 
-keywords: 
+keywords:
 
 subcollection: dns-svcs
 
@@ -25,7 +25,7 @@ subcollection: dns-svcs
 # Why is my origin status down?
 {: #troubleshoot-origin-down}
 {: troubleshoot}
-{: support} 
+{: support}
 
 You checked the status of your origin, and it's down.
 {:shortdesc}
@@ -63,6 +63,14 @@ Verify that the application is running on the correct port, and is operating pro
 Your origin might be down because you specified HTTPS as your type of health check. 
 
 Make sure that a valid certificate exists on the origin. For a self-signed certificate, you can use the **Don't validate certificate** option for the health check.
+{: tsResolve}
+
+## Host header is not set
+{:#host-header}
+
+Your origin might be down because you specified an IP address for the origin and did not set the host header on the health check.
+
+Set the host header. For more information, see [Creating a health check](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#add-a-health-check).
 {: tsResolve}
 
 ## Network interface limit

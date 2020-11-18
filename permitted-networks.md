@@ -36,7 +36,10 @@ This section describes how to manage permitted networks for your {{site.data.key
 ### Adding permitted networks
 {: #adding-permitted-networks-ui}
 
-DNS Services is a global service, therefore you may add permitted networks (for example, a VPC) from any {{site.data.keyword.cloud}} region. This request adds the network to the DNS zone, thereby giving the network access to the zone. You may add up to 10 permitted networks to a DNS zone.
+DNS Services is a global service, therefore you may add permitted networks (for example, a VPC) from any {{site.data.keyword.cloud}} region. This request adds the network to the DNS zone, thereby giving the network access to the zone. You can add up to 10 permitted networks to a DNS zone.
+
+Newly created virtual server instances are automatically configured to use private DNS resolvers (`161.26.0.7` and `161.26.0.8`). Existing virtual server instances can take up to 3 minutes to be configured to use private DNS resolvers.
+{:tip}
 
 1. Select the desired zone from the table on the DNS Zones page.
 1. Select the **Permitted Networks** tab.
