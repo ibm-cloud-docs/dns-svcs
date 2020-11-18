@@ -25,7 +25,12 @@ DNS Services
     dns-zones.md
     permitted-networks.md
     dns-records.md
-    glb.md
+    
+    {: .topicgroup}
+    Global load balancers
+        glb.md
+        health-check-events.md
+    
     output-dns-config.md
     wildcard-support.md
     
