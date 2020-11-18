@@ -51,7 +51,8 @@ DNS Services
     {: .navgroup id="reference"}    
     [DNS Services API reference](https://{DomainName}/apidocs/dns-svcs)    
     /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
-    [GoLang SDK](https://github.com/IBM/dns-svcs-go-sdk)
+    [GoLang SDK](https://github.com/IBM/networking-go-sdk)
+    [Python SDK](https://github.com/IBM/networking-python-sdk)
     [Terraform DNS Services resources](https://{DomainName}/docs/terraform?topic=terraform-dns-resources)
     responsibilities.md
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-29"
+lastupdated: "2020-11-18"
 
 keywords: 
 
@@ -29,6 +29,7 @@ subcollection: dns-svcs
 {: #pricing}
 
 Pricing for {{site.data.keyword.dns_full}} follows.
+{:shortdesc}
 
 ## Standard
 {: #standard-plan}
@@ -41,10 +42,18 @@ Pricing for {{site.data.keyword.dns_full}} follows.
 ### DNS Zones
 {: #zones-pricing}
 
-The standard price is $0.50 USD/month per DNS zone. If an instance does not have the zone for the whole month, the price of the instance's zone is prorated for the portion of the month a zone exists. Zone costs follow the [**dailyproration_avg**](/docs/get-coding?topic=get-coding-meteringintera#metermodel) metering model.
+The standard price is $0.50 USD/month per DNS zone. If an instance does not have the zone for the whole month, the price of the instance's zone is prorated for the portion of the month a zone exists. Zone costs follow the prorated metering model based on usage for the month.
 
 ### Tiers
 {: #tiers-pricing}
 
   * For up to 1 billion DNS queries, the price is $0.60 USD per million DNS queries.
   * For over 1 billion DNS queries, the price is $0.30 USD per million DNS queries.
+
+### Global load balancers
+{: #glb-pricing}
+
+Global load balancers are billed monthly. If an instance does not have the global load balancer for the whole month, the price of the instance's load balancer is prorated for the portion of the month a load balancer exists. Global load balancer costs follow the prorated metering model based on usage for the month.
+  * $25 per global load balancer
+  * $25 per origin pool
+  * $1 per health check

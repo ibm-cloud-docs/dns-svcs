@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-23"
+lastupdated: "2020-11-18"
 
 keywords:  
 
@@ -26,7 +26,7 @@ subcollection: dns-svcs
 {:download: .download}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Working with global load balancers (Beta)
+# Working with global load balancers
 {: #global-load-balancers}
 
 {{site.data.keyword.dns_full}} provides global load balancing as a service that offers you high availability and geographical distribution of your traffic, based on the health of your origin servers and the geographical region where the user request originates.
@@ -34,16 +34,20 @@ subcollection: dns-svcs
 
 For example, in a DNS zone `example.com`, a DNS hostname of `api.example.com` is created as a global load balancer. The hostname `api.example.com` can resolve to different IP addresses based on the location of the requester and the health of the origins. If any or all of the origins (based on policy) are not available in one region, then healthy origins from different regions are returned in response to the DNS query. This ensures a high degree of availability of the hostname `api.example.com`. It also ensures that the load is geographically distributed among different origins and routed regionally.
 
-The open beta version of the global load balancer feature offers limited capabilities so that you can evaluate its functionality. Your assessment helps IBM make beneficial changes before releasing this feature as a GA service.
-{:beta}  
-
 ## Global load balancers limitations
 {: #glb-ki}
 
-The following limitations exist during the Beta period of the global load balancing feature:
+The following limitations exist for the global load balancing feature.
 
-* One global load balancer, three health checks, and three origin pools per {{site.data.keyword.dns_short}} instance are allowed.
-* The origin pools can use no more than two subnets for health monitoring per {{site.data.keyword.dns_short}} instance. 
+* You can have the following, per {{site.data.keyword.dns_short}} instance:
+  * Up to 100 health check monitors
+  * Up to 100 health check subnets
+  * Up to 100 origin pools
+    * Each origin pool can have up to 5 origins
+    * Each origin pool can use no more than 2 subnets for health monitoring
+  * Up to 100 origins
+* Each DNS zone can have a maximum of 25 global load balancers 
+
 
 ## Use cases and workflows
 {: #glb-use-cases}
@@ -54,7 +58,7 @@ The following workflows are performed from the {{site.data.keyword.dns_short}} z
 {: note}
 
 ### Creating a global load balancer with origin health monitoring
-{: #use-case-no-monitoring}
+{: #use-case-with-monitoring}
 
 Creating a global load balancer with origin health monitoring combines high availability with geographic load balancing for mission-critical applications. This workflow ensures that traffic is routed only to healthy origins.
 
@@ -137,7 +141,7 @@ To create an origin pool, follow these steps:
 1. Give the origin a **Name** and **Address**. Click **Add** to add more pools, and move the toggle to switch the pool off or on. Traffic that is directed at this pool is balanced across all currently healthy origins, provided that the pool itself is healthy. Health checks exclude disabled origins.
 1. Select the **Healthy origin threshold**, which is the minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool is marked unhealthy and fails over to the next available pool. The default value is `1`.
 1. In the **Health monitoring** section, select a **Health check** to determine what method the health check uses, as well as the health check to use for checking origins within this pool. The default value is no health check.
-1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **WDC**, **Frankfurt**, **London**, and **Tokyo**.
+1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **WDC**, **Frankfurt**, **London**, **Sydney**, and **Tokyo**.
 1. Select the **VPC** that contains the subnet from where the health check originates.
 1. Choose a **Subnet (Location)**. Select a subnet and location from the list menu. This defines from which subnet the health check is running. You can specify up to two subnets.
    
@@ -172,7 +176,7 @@ Update the security group of the VPC to allow incoming health check traffic from
 ## Creating a global load balancer
 {: #add-a-load-balancer}
 
-Load balancers help to distribute your proxied traffic across multiple origin pools.
+Load balancers help to distribute your traffic across multiple origin pools.
 
 Follow these steps to create a load balancer:
 

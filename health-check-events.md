@@ -36,9 +36,9 @@ IBM Log Analysis with LogDNA manages system and application logs in the IBM Clou
 ## Before you begin
 {: #logdna-preparation}
 
-To view health check events in LogDNA, make sure that the following prerequisites are met.
+To view health check events in LogDNA, make sure that the following prerequisite is met.
 
-* An IBM Log Analysis with LogDNA instance is created in the Frankfurt region in the account.
+An IBM Log Analysis with LogDNA instance is created in the Frankfurt region in the account.
 
 ## Adding LogDNA
 {:#log-dna-nav}
@@ -56,10 +56,10 @@ From the UI, follow these steps to navigate to the LogDNA service:
 To view health check events in a LogDNA instance, you must configure the LogDNA instance to receive platform logs with the following steps.
 
 1. In the {{site.data.keyword.cloud_notm}} UI, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**. The Observability dashboard appears.
-2. Select **Logging**. The list of logging instances appears.
-3. Click **Configure platform logs** button.
-4. Select the `Frankfurt` region, and then select one LogDNA instance where you want to receive the platform logs.
-5. Click **Save**.
+1. Select **Logging**. The list of logging instances appears.
+1. Click **Configure platform logs** button.
+1. Select the `Frankfurt` region, and then select one LogDNA instance where you want to receive the platform logs.
+1. Click **Save**.
 
 ### Viewing health check events in the IBM Log Analysis with LogDNA instance
 {: #viewing-healtch-check-events-logdna}
@@ -68,26 +68,26 @@ To view health check events, use the UI of the LogDNA instance that you configur
 
 For more information, see [Launching the LogDNA web UI through the IBM Cloud UI](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-launch#launch_cloud_ui).
 
-To filter health check events from within the logging instance, enter the health check event type `health_check_event` in the **Search** field.
+To search health check events from within the logging instance, enter the health check event type `health_check_event` in the **Search** field.
 
-![LogDNA Source filter](images/health-check-type-filter.png)
+![LogDNA source search](images/health-check-type-filter.png)
 
-You can also filter the events you want by combining other event fields. For example:
+You can also search the events you want by combining other event fields. For example:
 
-- Filter health check events for a specific DNS Services instance.
-![filter events by CRN](images/health-check-type-filter-crn.png)
+- Search health check events for a specific DNS Services instance.
+![search events by CRN](images/health-check-type-filter-crn.png)
 
-- Filter health check events for a pool by specifying its `name` and its DNS Services instance.
-![filter events by CRN and pool name](images/health-check-type-filter-crn-pool.png)
+- Search health check events for a pool by specifying its `name` and its DNS Services instance.
+![search events by CRN and pool name](images/health-check-type-filter-crn-pool.png)
 
-- Filter health check events for an origin by specifying its `name` and its DNS Services instance.
-![filter events by CRN and origin name](images/health-check-type-filter-crn-origin.png)
+- Search health check events for an origin by specifying its `name` and its DNS Services instance.
+![search events by CRN and origin name](images/health-check-type-filter-crn-origin.png)
 
-- Filter health check events for an origin when its status becomes healthy by specifying its `name` and `overall_health` fields and also its DNS Services instance.
-![filter events by CRN, origin name and health](images/health-check-type-filter-crn-origin-health.png)
+- Search health check events for an origin when its status becomes healthy by specifying its `name` and `overall_health` fields and also its DNS Services instance.
+![search events by CRN, origin name and health](images/health-check-type-filter-crn-origin-health.png)
 
-- Filter health check events for a pool when its status becomes DEGRADED by specifying its `name` and `healthy` fields and also its DNS Services instance.
-![filter events by CRN, pool name and health](images/health-check-type-filter-crn-pool-health.png)
+- Search health check events for a pool when its status becomes DEGRADED by specifying its `name` and `healthy` fields and also its DNS Services instance.
+![search events by CRN, pool name and health](images/health-check-type-filter-crn-pool-health.png)
 
 ## Health check event properties
 {:#health-check-event-properties}
@@ -135,4 +135,3 @@ Health check event records have the following properties:
     }
     ```
     {:codeblock}
-
