@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-11-18"
+lastupdated: "2020-12-08"
 
 keywords:  
 
@@ -96,6 +96,7 @@ Follow these steps to create a health check:
    If **HTTPS** is selected, the **Don't validate certificate** checkbox appears after the **Advanced options** section. Select this box when the HTTPS certificate on the origin is not signed by a certificate authority (for instance, a self-signed certificate).
 1. Enter the endpoint **Path** against which to perform the health check. The default value is `/`.
 1. Optionally, enter the **Port** number that you want to use.
+
    For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.  
    {: note}
 1. In the **Advanced settings** section, select a **Test interval** (in seconds) between each health check. Shorter intervals can improve failover time, but increase load on the origins, as checks come from multiple locations. The default value is `60`.
@@ -118,8 +119,7 @@ Origin pools group your origins for the load balancer to use. An origin can be e
 
 Before you begin, keep the following considerations in mind when working with origin pools: 
 
-* At least one origin pool is required for each provisioned load balancer. 
-* Origins must be on the same subnet as the subnet specified for health monitoring. 
+* At least one origin pool is required for each load balancer.  
 * Origin health monitoring continues even when an origin pool is disabled. To disable health monitoring on an origin, you can disable the origin.
 * When creating an origin pool, it can take 1 - 10 minutes for the health check to get initiated, during which time the pool appears in a `Critical` state.
 * You can't delete a subnet that you are using for health monitoring unless you also delete the origin pool that you are monitoring.
@@ -160,8 +160,8 @@ The following table describes the possible statuses that you might see in your o
 
 |Feature|Status|Definition|
 |:------|:-----|:---------|
-|Origin| `up` `down`|**Up**: The origin is functioning normally. <br/> **Down**: The origin is down. |
-|Origin pool|`healthy` `degraded` `critical` | **Healthy**: All of the origins in the pool are up. <br/>**Degraded**: At least one origin status is down.<br/>**Critical**: The number of healthy origins is less than the healthy origin threshold. For example, if your threshold is `2`, and only one origin is up, the pool status is **Critical**. |
+|Origin| `up` `down`|**Up**: The origin is functioning normally. <br/> **Down**: The origin is down. <br/> At least 50% of the origin's health checks must be up for origin health to remain `healthy`. |
+|Origin pool|`healthy` `degraded` `critical` | **Healthy**: All of the origins in the pool are up. <br/>**Degraded**: At least one origin status is down.<br/>**Critical**: The number of healthy origins in the pool is less than the healthy origin pool threshold. For example, if your threshold is `2`, and only one origin is up, the pool status is **Critical**. |
 |Global load balancer|`healthy` `degraded` `critical` |**Healthy**: All the origin pools that are associated with the global load balancer are healthy. <br/>**Degraded**: At least one of the origin pools is in degraded status.<br/> **Critical**: The global load balancer status is critical when all of the origin pools associated with the global load balancer are critical.|
 {: caption="Table 1. Status definitions for origins, origin pools, and global load balancers" caption-side="top"}
 
