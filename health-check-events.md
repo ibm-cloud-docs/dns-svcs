@@ -54,7 +54,7 @@ IBM Log Analysis with LogDNA opens in a new tab.
 
 To view health check events in a LogDNA instance, you must configure the LogDNA instance to receive platform logs with the following steps:
 
-1. In the {{site.data.keyword.cloud_notm}} UI, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**. The Observability dashboard appears.
+1. In the {{site.data.keyword.cloud_notm}} UI, click the menu icon ![menu icon](../icons/icon_hamburger.svg) and select **Observability**. The Observability dashboard appears.
 1. Select **Logging**. The list of logging instances appears.
 1. Click the **Configure platform logs** button.
 1. Select the `Frankfurt` region, then select one LogDNA instance where you want to receive the platform logs.
@@ -94,10 +94,10 @@ You can also search for the events you want by combining other event fields. For
 Health check event records have the following properties:
 
  - `event_time`: The time at which the event was recorded. For example, `2020-10-28T15:04:05.00+0000`.
- - `logSourceCRN`: CRN of the DNS Services instance in which the origin pools and orgin servers were created.
+ - `logSourceCRN`: CRN of the DNS Services instance in which the origin pools and origin servers were created.
    For example: `crn:v1:bluemix:public:dns-svcs:global:a/bcf1865e99742d38d2d5fc3fb80a5496:85ed7b9d-cd48-4881-b354-52eb1d8e9011::`
  - `type`: The value of this property is `health_check_event` for health check events.
- - `origins`: An array of objects representing the origin servers associated with the orgin pool. For example: 
+ - `origins`: An array of objects representing the origin servers associated with the origin pool. For example: 
    
    ```
    [
@@ -122,7 +122,7 @@ Health check event records have the following properties:
    ```
    {:codeblock}
 
- - `pool`: An object that represents the orgin pool for which the health check event was generated. For example:
+ - `pool`: An object that represents the origin pool for which the health check event was generated. For example:
     
     ```
     {
