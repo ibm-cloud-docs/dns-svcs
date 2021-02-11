@@ -1,0 +1,49 @@
+{
+  "troubleshoot-nxdomain": [
+    "NXDOMAIN error for DNS Services",
+    "NXDOMAIN error on name resolution",
+    "error message NXDOMAIN with DNS Services",
+    "errors out on request to resolve a domain name",
+    "getting message NXDOMAIN"
+  ],
+  "troubleshoot-add-permitted-network": [
+    "can't add a permitted network with DNS Services",
+    "unable to add a permitted network for DNS Services",
+    "adding a permitted network for the DNS fails",
+    "permitted networks not added in DNS for VPC",
+    "zone doesn't have permitted network in DNS Services"
+  ],
+  "troubleshoot-origin-down": [
+    "origin status down following health check in DNS Services",
+    "origin is down after health check in VPC",
+    "checked the status of your origin in DNS Services",
+    "origin in not healthy for DNS VPC",
+    "origin is not functioning normally within VPC"
+  ],
+  "private-zone": [
+    "create my own private DNS zone using DNS Services",
+    "creating private DNS zone for VPC",
+    "create a private DNS",
+    "set up a private DNS",
+    "create a DNS service in VPC",
+    "adding private DNS zone with DNS Services",
+    "using DNS Services to create private DNS zone",
+    "setup DNS Services for VPC"
+  ],
+  "not-for-public": [
+    "using DNS Services or public DNS",
+    "what is DNS Services for VPC",
+    "cannot use DNS Services for publicly available DNS",
+    "is DNS services for private or public name resolution",
+    "what does DNS Services offer for VPC",
+    "Does DNS Services manage public DNS records?",
+    "Does DNS services give public DNS"
+  ],
+  "load-balancer": [
+    "global load balancer usage in VPC",
+    "usage limits for global load balancer in DNS Services",
+    "global load balancing feature limitations for DNS",
+    "global load balancers per DNS Services instance",
+    "working with global load balancer limits within VPC"
+  ]
+}
