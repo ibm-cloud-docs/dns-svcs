@@ -56,7 +56,7 @@ Records for `example.com`
       me.domain.example.com A 8.8.8.8
   }
 ```
-{:screen}
+{:codeblock}
 
 Records for `domain.example.com`
 
@@ -176,7 +176,7 @@ curl -X POST \
     "messages": []
 }
 ```
-{:screen}
+{:codeblock}
 
 For future reference, the "id" in response is used as `DNSZONE_ID`. 
 {:note}
@@ -213,7 +213,7 @@ curl -X GET \
     "messages": []
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Updating a DNS zone
 {: #update-dns-zone-api}
@@ -249,7 +249,7 @@ curl -X PATCH \
   "state": "PENDING_NETWORK_ADD"
 }
 ```
-{:screen}
+{:codeblock}
 
 
 ### Listing DNS zones
@@ -286,7 +286,7 @@ curl -X GET \
     "messages": []
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Deleting a DNS zone
 {: #delete-dns-zone-api}
@@ -305,7 +305,7 @@ curl -X DELETE \
 ```
 HTTP/2 204 No Content
 ```
-{:screen}
+{:codeblock}
 
 ## Using the CLI
 {: #managing-dns-zones-cli}

@@ -185,7 +185,7 @@ curl -X POST \
     }
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Creating type 'SRV' resource record
 {: #create-srv-resource-record-api}
@@ -231,7 +231,7 @@ curl -X POST \
     "protocol": "udp"
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Creating type 'TXT' resource record
 {: #create-txt-resource-record-api}
@@ -267,7 +267,7 @@ curl -X POST \
     }
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Creating type 'MX' resource record
 {: #create-amx-resource-record-api}
@@ -305,7 +305,7 @@ curl -X POST \
     }
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Creating type 'PTR' resource record
 {: #create-ptr-resource-record-api}
@@ -341,7 +341,7 @@ curl -X POST \
     }
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Creating type 'CNAME' resource record
 {: #create-cname-resource-record-api}
@@ -377,7 +377,7 @@ curl -X POST \
     }
 }
 ```
-{:screen}
+{:codeblock}
 
 
 ### Creating type 'AAAA' resource record
@@ -414,7 +414,7 @@ curl -X POST \
     }
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Getting a resource record
 {: #get-resource-record-api}
@@ -443,7 +443,7 @@ curl -X GET \
     }
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Listing resource records
 {: #list-resource-records-api}
@@ -482,7 +482,7 @@ curl -X GET \
     ]
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Updating a resource record
 {: #update-resource-record-api}
@@ -518,7 +518,7 @@ curl -X PUT \
     }
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Deleting a resource record
 {: #delete-resource-record-api}
@@ -537,7 +537,7 @@ curl -X DELETE \
 ```json
 HTTP 204 is returned, no content in response.
 ```
-{:screen}
+{:codeblock}
 
 ## Using the CLI
 {: #managing-dns-records-cli}

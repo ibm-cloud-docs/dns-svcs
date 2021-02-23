@@ -4,7 +4,7 @@ copyright:
   years: 2019, 2020
 lastupdated: "2020-04-13"
 
-keywords: dns, dns-svcs, DNS Services, Private DNS, dns vpc
+keywords:
 
 subcollection: dns-svcs
 
@@ -166,7 +166,7 @@ curl -X POST \
   "label": "us-east"
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Creating a permitted network
 {: #creating-permitted-network-api}
@@ -203,7 +203,7 @@ curl -X POST \
   "type": "vpc"
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Creating an "A" resource record
 {: #creating-resource-records}
@@ -247,7 +247,7 @@ curl -X POST \
    }
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Verifying the setup
 {: #verifying-the-setup-api}

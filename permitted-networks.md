@@ -4,7 +4,7 @@ copyright:
   years: 2019, 2020
 lastupdated: "2020-04-13"
 
-keywords: dns-svcs, DNS Services, Private DNS
+keywords:
 
 subcollection: dns-svcs
 
@@ -110,7 +110,7 @@ curl -X POST \
     "state": "ACTIVE"
 }
 ```
-{:screen}
+{:codeblock}
 
 For future requests, the ID in the response is referenced as **`PERMITTED_NETWORK_ID`**.
 {:note}
@@ -143,7 +143,7 @@ curl -X GET \
     "state": "ACTIVE"
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Listing permitted networks
 {: #list-permitted-networks-api}
@@ -177,7 +177,7 @@ curl -X GET \
     ]
 }
 ```
-{:screen}
+{:codeblock}
 
 ### Removing a permitted network
 {: #removing-permitted-networks-api}
@@ -206,7 +206,7 @@ curl -X DELETE \
     "state": "REMOVAL_IN_PROGRESS"
 }
 ```
-{:screen}
+{:codeblock}
 
 Removing a permitted network can take up to 5 minutes. You cannot add the VPC back to the DNS zone's permitted network until the removal operation is complete.
 {:note}
