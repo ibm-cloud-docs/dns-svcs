@@ -25,6 +25,7 @@ DNS Services
     dns-zones.md
     permitted-networks.md
     dns-records.md
+    private-endpoint.md
     
     {: .topicgroup}
     Global load balancers
