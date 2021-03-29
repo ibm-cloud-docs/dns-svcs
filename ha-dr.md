@@ -32,13 +32,14 @@ subcollection: dns-svcs
 All {{site.data.keyword.cloud}} general availability (GA) offerings have a Service Level Agreement of 99.99% availability. {{site.data.keyword.dns_full}} is a GA service that is offered globally. The public API endpoints for DNS configuration are available globally through a global load balancer in three MZRs (Multi Zone Regions) of {{site.data.keyword.cloud_notm}}, providing high availability. The regions are **Dallas**, **WDC**, and **Frankfurt**. If one region experiences an outage, the global load balancer ensures that the API traffic gets routed to another region. For instance, if the **Dallas** region experiences an outage, requests get routed to the geographically nearest region, in this case, **WDC**.
 
 
-The DNS resolvers are distributed around the world in six MZRs for optimizing latencies and providing high availability. If one region experiences an outage, the DNS resolvers route DNS requests to another region.
+The DNS resolvers are distributed around the world in multiple MZRs for optimizing latencies and providing high availability. If one region experiences an outage, the DNS resolvers route DNS requests to another region.
 The data is replicated to the following regions for latency optimization and high availability:
 
-* Dallas 
-* WDC 
-* London 
-* Frankfurt 
+* Dallas
+* Washington, DC
+* London
+* Frankfurt
+* Osaka
 * Tokyo
 * Sydney
 
