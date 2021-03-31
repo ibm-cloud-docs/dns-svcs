@@ -31,15 +31,15 @@ subcollection: dns-svcs
 When using global load balancing, you can create a health check to specify how the origin's health is monitored. Health check events are status changes from monitored origin pools and their associated origin servers. If an origin's status changes, a new event is recorded with the event's description.
 {:shortdesc}
 
-{{site.data.keyword.loganalysisfull}} manages system and application logs in the IBM Cloud. You can use this service to access health check events for your origin pools and origin servers. For more information, see the [Getting started tutorial](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-getting-started) for {{site.data.keyword.loganalysislong_notm}} .
+{{site.data.keyword.loganalysisfull}} manages system and application logs in the IBM Cloud. You can use this service to access health check events for your origin pools and origin servers. For more information, see the [Getting started tutorial](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-getting-started) for {{site.data.keyword.loganalysislong_notm}}.
 
 ## Before you begin
-{: #logdna-preparation}
+{: #loganalysis-preparation}
 
 To view health check events in {{site.data.keyword.loganalysisshort}}, make sure that you create an {{site.data.keyword.loganalysislong_notm}} instance in the Frankfurt region in the account.
 
 ## Adding {{site.data.keyword.loganalysisshort}}
-{:#log-dna-nav}
+{:#loganalysis-nav}
 
 From the UI, follow these steps to navigate to the {{site.data.keyword.loganalysisshort}} service:
 
@@ -50,7 +50,7 @@ From the UI, follow these steps to navigate to the {{site.data.keyword.loganalys
 {{site.data.keyword.loganalysislong_notm}} opens in a new tab.
 
 ## Receiving health check events with the {{site.data.keyword.loganalysisshort}} instance
-{: #receiving-health-check-events-logdna}
+{: #receiving-health-check-events-loganalysis}
 
 To view health check events in a {{site.data.keyword.loganalysisshort}} instance, you must configure the {{site.data.keyword.loganalysisshort}} instance to receive platform logs with the following steps:
 
@@ -61,7 +61,7 @@ To view health check events in a {{site.data.keyword.loganalysisshort}} instance
 1. Click **Save**.
 
 ### Viewing health check events in the {{site.data.keyword.loganalysisshort}} instance
-{: #viewing-healtch-check-events-logdna}
+{: #viewing-healtch-check-events-loganalysis}
 
 To view health check events, use the UI of the {{site.data.keyword.loganalysisshort}} instance that you configured to receive the platform logs in the previous steps.
 
