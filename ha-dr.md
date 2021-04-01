@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-23"
+lastupdated: "2021-04-01"
 
 keywords: HA for DNS Services, DR for DNS Services, high availability for DNS Services, disaster recovery for DNS Services, failover for DNS Services
 
@@ -29,7 +29,7 @@ subcollection: dns-svcs
 # Understanding high availability and disaster recovery for {{site.data.keyword.dns_short}}
 {: #ha-dr}
 
-All {{site.data.keyword.cloud}} general availability (GA) offerings have a Service Level Agreement of 99.99% availability. {{site.data.keyword.dns_full}} is a GA service that is offered globally. The public API endpoints for DNS configuration are available globally through a global load balancer in three MZRs (Multi Zone Regions) of {{site.data.keyword.cloud_notm}}, providing high availability. The regions are **Dallas**, **WDC**, and **Frankfurt**. If one region experiences an outage, the global load balancer ensures that the API traffic gets routed to another region. For instance, if the **Dallas** region experiences an outage, requests get routed to the geographically nearest region, in this case, **WDC**.
+All {{site.data.keyword.cloud}} general availability (GA) offerings have a Service Level Agreement of 99.99% availability. {{site.data.keyword.dns_full}} is a GA service that is offered globally. The public API endpoints for DNS configuration are available globally through a global load balancer in three MZRs (Multi Zone Regions) of {{site.data.keyword.cloud_notm}}, providing high availability. The regions are **Dallas** and **WDC**. If one region experiences an outage, the global load balancer ensures that the API traffic gets routed to another region. For instance, if the **Dallas** region experiences an outage, requests get routed to the geographically nearest region, in this case, **WDC**.
 
 
 The DNS resolvers are distributed around the world in multiple MZRs for optimizing latencies and providing high availability. If one region experiences an outage, the DNS resolvers route DNS requests to another region.
