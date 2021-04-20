@@ -54,7 +54,7 @@ DNS Services
     /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
     [GoLang SDK](https://github.com/IBM/networking-go-sdk)
     [Python SDK](https://github.com/IBM/networking-python-sdk)
-    [Terraform DNS Services resources](https://{DomainName}/docs/terraform?topic=terraform-dns-resources)
+    [Terraform DNS Services resources](https://{DomainName}/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-dns-resources)
     responsibilities.md
     {: .navgroup-end}
 

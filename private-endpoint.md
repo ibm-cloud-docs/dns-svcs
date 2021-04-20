@@ -76,7 +76,7 @@ api.private.dns-svcs.cloud.ibm.com
 ``` 
 {:pre}
 
-For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/cis?code=go).  
+For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/dns-svcs?code=go).  
 
 ### Using Terraform
 {: #terrform-dns-svcs}

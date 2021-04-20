@@ -4,7 +4,7 @@ copyright:
   years: 2020
 lastupdated: "2020-11-16"
 
-keywords: 
+keywords:
 
 subcollection: dns-svcs
 
@@ -34,8 +34,8 @@ Have a question about {{site.data.keyword.dns_full}}? Review frequently asked qu
 {:shortdesc}
 
 ## How do I create my own private DNS zone using {{site.data.keyword.dns_short}}?
-{: #private-zone} 
-{: faq} 
+{: #private-zone}
+{: faq}
 
 To create your own private DNS zone using {{site.data.keyword.dns_short}}, take the following steps.
   1. Create a VPC instance.
@@ -46,7 +46,7 @@ To create your own private DNS zone using {{site.data.keyword.dns_short}}, take 
   1. Verify name resolution of the DNS Resource Record works from within the VPC.
 
 ## How is {{site.data.keyword.dns_short}} different from public DNS?
-{: #not-for-public} 
+{: #not-for-public}
 {: faq}
 
 {{site.data.keyword.dns_short}} permits name resolution only from permitted VPCs within your {{site.data.keyword.cloud}} account. The DNS zone is not resolvable from the internet.
@@ -158,7 +158,7 @@ Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authori
 
 
 ## Are there any limits on global load balancer usage?
-{: #load-balancer} 
+{: #load-balancer}
 {:faq}
 
 See [Global load balancers limitations](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#glb-ki) for more information on global load balancer usage.
@@ -174,11 +174,13 @@ HTTP and HTTPS health checks are currently supported.
 Health checks are currently supported in the following regions:
 * Dallas
 * Washington, D.C.
-* Frankfurt
 * London
+* Frankfurt
+* Osaka
 * Tokyo
+* Sydney
 
-## How can I disable health check monitoring to the origins? 
+## How can I disable health check monitoring to the origins?
 {:faq}
 
 You can disable health check monitoring by disabling the origin.

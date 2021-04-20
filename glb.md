@@ -4,7 +4,7 @@ copyright:
   years: 2020
 lastupdated: "2020-12-08"
 
-keywords:  
+keywords:
 
 subcollection: dns-svcs
 
@@ -46,7 +46,7 @@ The following limitations exist for the global load balancing feature.
     * Each origin pool can have up to 5 origins
     * Each origin pool can use no more than 2 subnets for health monitoring
   * Up to 100 origins
-* Each DNS zone can have a maximum of 25 global load balancers 
+* Each DNS zone can have a maximum of 25 global load balancers
 
 
 ## Use cases and workflows
@@ -54,7 +54,7 @@ The following limitations exist for the global load balancing feature.
 
 The most common use of global load balancers is to direct traffic to healthy origins and distribute loads.
 
-The following workflows are performed from the {{site.data.keyword.dns_short}} zone dashboard. Navigate to the **Global load balancers** tab to view your [load balancers](#x2788902){: term}, origin pools, and [health checks](#x4571658){: term}. 
+The following workflows are performed from the {{site.data.keyword.dns_short}} zone dashboard. Navigate to the **Global load balancers** tab to view your [load balancers](#x2788902){: term}, origin pools, and [health checks](#x4571658){: term}.
 {: note}
 
 ### Creating a global load balancer with origin health monitoring
@@ -74,7 +74,7 @@ The HTTP and HTTPS health checks use the following HTTP user-agent: `"Mozilla/5.
 ### Creating a global load balancer without origin health monitoring
 {: #use-case-no-monitoring}
 
-In this configuration, {{site.data.keyword.dns_short}} provides geographical load balancing based on the configured policy, but not high availability features. 
+In this configuration, {{site.data.keyword.dns_short}} provides geographical load balancing based on the configured policy, but not high availability features.
 
 After you create a DNS zone and add a permitted network to it, follow this workflow to create a global load balancer:
 
@@ -84,11 +84,11 @@ After you create a DNS zone and add a permitted network to it, follow this workf
 ## Creating a health check
 {: #add-a-health-check}
 
-Create a health check to specify how the origin health is monitored. {{site.data.keyword.dns_short}} supports HTTP, HTTPS and TCP monitoring types. After you create a health check, you can add it to a new or existing origin pool. Health checks exist at the instance level, and can be used by any pool in the instance. 
+Create a health check to specify how the origin health is monitored. {{site.data.keyword.dns_short}} supports HTTP, HTTPS and TCP monitoring types. After you create a health check, you can add it to a new or existing origin pool. Health checks exist at the instance level, and can be used by any pool in the instance.
 
 Follow these steps to create a health check:
 
-1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Health checks** tab. 
+1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Health checks** tab.
 1. Click **Create health check** to start.
 1. In the **Health check name** field, give your health check a name.
 1. Optionally, enter a **Description** for the health check to help you understand what it is monitoring.
@@ -97,7 +97,7 @@ Follow these steps to create a health check:
 1. Enter the endpoint **Path** against which to perform the health check. The default value is `/`.
 1. Optionally, enter the **Port** number that you want to use.
 
-   For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.  
+   For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.
    {: note}
 1. In the **Advanced settings** section, select a **Test interval** (in seconds) between each health check. Shorter intervals can improve failover time, but increase load on the origins, as checks come from multiple locations. The default value is `60`.
 1. Choose a **Method** to use for the health check from the list (HTTP and HTTPS only). The default value is `GET`.
@@ -106,20 +106,20 @@ Follow these steps to create a health check:
 
    TCP monitor type options end with this step. Click **Create** to save your changes and create the health check. HTTP and HTTPS monitor types have additional options, which follow.
    {:note}
-   
+
 1. Enter the **Expected response codes**, which are the HTTP response codes or code range of the health check. This value must be between `200-299` with wildcards denoted by an `x`.
 1. Optionally, enter a **Response body** which is a case-insensitive substring to match against in the response body. If this string is not found, the origin is marked as unhealthy.
 1. In the optional **Request headers** section, you can add and configure HTTP request headers to send in the health check. Enter a header name and value in the fields provided. Click **Add request header** to configure additional headers.
 1. Click **Create** to save your changes and create the health check.
- 
+
 ## Adding an origin pool
 {: #add-a-pool}
 
-Origin pools group your origins for the load balancer to use. An origin can be either an IP or a hostname. Decide whether you want to create a monitored or unmonitored origin pool. For monitored pools, you must specify the health check to use, and from which subnet the health is monitored. Origin pools exist at the instance level, and can be used by any global load balancer in any DNS zone that is configured in the instance. 
+Origin pools group your origins for the load balancer to use. An origin can be either an IP or a hostname. Decide whether you want to create a monitored or unmonitored origin pool. For monitored pools, you must specify the health check to use, and from which subnet the health is monitored. Origin pools exist at the instance level, and can be used by any global load balancer in any DNS zone that is configured in the instance.
 
-Before you begin, keep the following considerations in mind when working with origin pools: 
+Before you begin, keep the following considerations in mind when working with origin pools:
 
-* At least one origin pool is required for each load balancer.  
+* At least one origin pool is required for each load balancer.
 * Origin health monitoring continues even when an origin pool is disabled. To disable health monitoring on an origin, you can disable the origin.
 * When creating an origin pool, it can take 1 - 10 minutes for the health check to get initiated, during which time the pool appears in a `Critical` state.
 * You can't delete a subnet that you are using for health monitoring unless you also delete the origin pool that you are monitoring.
@@ -127,36 +127,36 @@ Before you begin, keep the following considerations in mind when working with or
 
 You must update your VPC security group to allow traffic from the health monitoring subnet. See [Security groups](#security-groups-glb) for more information.
 {:important}
- 
+
 To create an origin pool, follow these steps:
 
-1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Origin pools** tab. 
-1. Click **Create origin pool**. Pools are enabled by default. 
+1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Origin pools** tab.
+1. Click **Create origin pool**. Pools are enabled by default.
 
-   Disabling a pool causes any load balancer that uses it to fail over to the next pool, if any. Disabled pools do not receive traffic. 
+   Disabling a pool causes any load balancer that uses it to fail over to the next pool, if any. Disabled pools do not receive traffic.
    {: note}
 1. Enter a **Name** for the pool. Only alphanumeric characters, hyphens, and underscores are allowed.
 1. Optionally, enter a **Description** for the origin pool.
-1. Enable **Origins** to add to the list of origins within this pool. 
+1. Enable **Origins** to add to the list of origins within this pool.
 1. Give the origin a **Name** and **Address**. Click **Add** to add more pools, and move the toggle to switch the pool off or on. Traffic that is directed at this pool is balanced across all currently healthy origins, provided that the pool itself is healthy. Health checks exclude disabled origins.
 1. Select the **Healthy origin threshold**, which is the minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool is marked unhealthy and fails over to the next available pool. The default value is `1`.
 1. In the **Health monitoring** section, select a **Health check** to determine what method the health check uses, as well as the health check to use for checking origins within this pool. The default value is no health check.
-1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **WDC**, **Frankfurt**, **London**, **Sydney**, and **Tokyo**.
+1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **WDC**, **London**, **Frankfurt**, **Osaka**, **Tokyo**, and **Sydney**.
 1. Select the **VPC** that contains the subnet from where the health check originates.
 1. Choose a **Subnet (Location)**. Select a subnet and location from the list menu. This defines from which subnet the health check is running. You can specify up to two subnets.
-   
+
    The subnet must be from VPC Gen 2.
    {:note}
 
 1. Click **Create** to save your changes and create your origin pool.
-   
+
 When you first create an origin pool, its status is `Critical` and the origin's status is `Down` because the initial health check has not completed yet. The status updates after the health check for the origin completes successfully.
 {:note}
 
 ### Status definitions
 {: #status-definitions}
 
-The following table describes the possible statuses that you might see in your origins, origin pools, and global load balancers. 
+The following table describes the possible statuses that you might see in your origins, origin pools, and global load balancers.
 
 |Feature|Status|Definition|
 |:------|:-----|:---------|
@@ -165,7 +165,7 @@ The following table describes the possible statuses that you might see in your o
 |Global load balancer|`healthy` `degraded` `critical` |**Healthy**: All the origin pools that are associated with the global load balancer are healthy. <br/>**Degraded**: At least one of the origin pools is in degraded status.<br/> **Critical**: The global load balancer status is critical when all of the origin pools associated with the global load balancer are critical.|
 {: caption="Table 1. Status definitions for origins, origin pools, and global load balancers" caption-side="top"}
 
-The fallback pool status is not taken into account for assessing the health of the global load balancer. 
+The fallback pool status is not taken into account for assessing the health of the global load balancer.
 {:note}
 
 ### Security groups
@@ -186,9 +186,9 @@ To set up a global load balancer, you must first create an origin pool.
 1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Load balancers** tab.
 1. Select a DNS zone from the list.
 1. Click **Create load balancer**.
-1. Enter the DNS **Balancer hostname** to associate it with your load balancer. 
+1. Enter the DNS **Balancer hostname** to associate it with your load balancer.
 1. Optionally, enter a **Description** for the global load balancer.
-1. Select the **TTL** (time-to-live) of the DNS entry for the IP address returned by this load balancer. 
+1. Select the **TTL** (time-to-live) of the DNS entry for the IP address returned by this load balancer.
 1. Add or select a **Default policy**. A default policy specifies which origin pools are used for all availability zones (AZ) for which a location-based policy is not specified. When multiple pools are selected within a policy, you can change their priority by using the arrow keys in the **Priority** column.
 1. Add or select a **Fallback policy**. A fallback policy specifies the origin pool to use when all other origin pools in the default or location policy are in a critical state. There can be only one origin pool in the fallback policy.
 1. Optionally, add or select a **Location policy**. The location policy allows you to associate one or more origin pools for a specific AZ. Any AZ that is not explicitly defined as a location policy uses the default policy.
@@ -196,11 +196,11 @@ To set up a global load balancer, you must first create an origin pool.
 ### How DNS resolvers prioritize global load balancing pools
 {:#resolver-priority}
 
-The DNS resolver uses the following order to return origins from the origin pool. 
+The DNS resolver uses the following order to return origins from the origin pool.
 
 Location policy > Default policy > Fallback policy
 
-The location policy (if one is defined in the AZ), has the highest priority and is used first. If every origin pool in the location policy is down, then the DNS resolver uses origin pools from default policy. If all of the origin pools in the default policy are also down, then the DNS resolver goes to the origin pool designated in the fallback policy. 
+The location policy (if one is defined in the AZ), has the highest priority and is used first. If every origin pool in the location policy is down, then the DNS resolver uses origin pools from default policy. If all of the origin pools in the default policy are also down, then the DNS resolver goes to the origin pool designated in the fallback policy.
 
 ## Viewing, editing, or deleting components of a global load balancer
 {: #edit-delete-load-balancer}
@@ -220,4 +220,3 @@ The following options are provided for each list.
 * Load Balancers
   * **Edit load balancer** - Redirects to the edit flow.
   * **Delete load balancer** - Shows the confirmation dialog box for the deletion flow.
-  
