@@ -144,10 +144,6 @@ To create an origin pool, follow these steps:
 1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **WDC**, **London**, **Frankfurt**, **Osaka**, **Tokyo**, and **Sydney**.
 1. Select the **VPC** that contains the subnet from where the health check originates.
 1. Choose a **Subnet (Location)**. Select a subnet and location from the list menu. This defines from which subnet the health check is running. You can specify up to two subnets.
-
-   The subnet must be from VPC Gen 2.
-   {:note}
-
 1. Click **Create** to save your changes and create your origin pool.
 
 When you first create an origin pool, its status is `Critical` and the origin's status is `Down` because the initial health check has not completed yet. The status updates after the health check for the origin completes successfully.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-17"
+  years: 2019, 2021
+lastupdated: "2021-04-26"
 
 keywords: dns-svcs, DNS Services, Private DNS, split horizons
 
@@ -84,3 +84,20 @@ If the name resolution request for `www.example.com` originated from a client in
 |DNS zones |10 per service instance|
 |DNS records| 3500 per DNS zone|
 |Permitted networks| 10 per DNS zone|
+|Global load balancers| 25 per DNS zone|
+{: caption="Table 1. DNS Services limitations" caption-side="top"}
+
+## DNS Services Supported Regions
+{: #supported-regions}
+
+| Region | Data replication region | [Health check region](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#add-a-pool) | Permitted networks |
+| ------ | ------------- | --- |-------------------|
+| DAL | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| WDC | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| LON | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| FRA | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| OSA | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| TOK | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| TOR | | | ![check icon](../icons/checkmark-icon.svg) |
+| SYD | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+{: caption="Table 2. Regions supported by DNS Services" caption-side="top"}
