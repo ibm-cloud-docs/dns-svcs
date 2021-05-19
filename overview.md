@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-11"
 
-keywords: dns-svcs, DNS Services, Private DNS, split horizons
+keywords:
 
 subcollection: dns-svcs
 
@@ -55,7 +55,12 @@ Resource records and zones that are configured through {{site.data.keyword.dns_s
   * Accessible only from machines that you authorize on the {{site.data.keyword.cloud_notm}} private network.
   * Resolvable only via the resolvers provided by the service.
 
+## Clock synchronization
+{: #clock-sync}
 
+ISO 27001 requires that clocks of all relevant information processing systems within an organization or security domain must be synchronized with a single reference time source. {{site.data.keyword.dns_short}} synchronizes the systems with a Network Time Protocol (NTP) server to ensure that all time-based activities occur synchronously everywhere on the network.
+
+IBM {{site.data.keyword.dns_short}} uses an internal NTP server `servertime.service.softlayer.com`.
 
 ## Resolving DNS names with {{site.data.keyword.dns_short}}
 {: #resolving-dns-names-with-dns-services}
