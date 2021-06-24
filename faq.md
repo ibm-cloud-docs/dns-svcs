@@ -110,6 +110,12 @@ If a network has been added to a zone, the zone cannot be deleted until the perm
 If the VPC is deleted, the corresponding permitted network will also be deleted from the DNS zones of your instance.
 
 
+## Why can I still resolve my resource records after I deleted its associated zone or permitted network?
+{: faq}
+
+To maintain a level of performance while resolving DNS queries, DNS Services resolvers cache data related to permitted networks for a period of time. Changes made to a permitted network might not have propagated until the previously cached data expires. See [Known limitations](/docs/dns-svcs?topic=dns-svcs-known-limitations) for more details.
+
+
 ## What do the different zone states mean?
 {: faq}
 
