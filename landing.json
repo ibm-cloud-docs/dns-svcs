@@ -1,0 +1,48 @@
+{
+    "title": "DNS Services docs",
+    "lastupdated": "2021-07-08",
+    "introduction": "IBM Cloud DNS Services provides private DNS to Virtual Private Cloud (VPC) users.",
+    "section_devtools": {
+      "api": "/apidocs/dns-svcs", 
+      "cli": "/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands", 
+      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_glb"
+    },
+    "section_recommended": [
+      {
+        "title": "Getting started with DNS Services",
+        "description": "Instructions for setting up a DNS Services instance.",
+        "href": "/docs/dns-svcs?topic=dns-svcs-getting-started"
+      },
+      {
+        "title": "About DNS Services",
+        "description": "Learn about DNS in general, and see a DNS Services overview.",
+        "href": "/docs/dns-svcs?topic=dns-svcs-about-dns-services"
+      },
+      {
+        "title": "DNS Services pricing",
+        "description": "See the pricing for DNS Services features.",
+        "href": "/docs/dns-svcs?topic=dns-svcs-pricing"
+      }
+    ],
+    "section_learn": {
+      "developer": "https://developer.ibm.com/depmodels/cloud/",
+      "architecture": "https://www.ibm.com/cloud/architecture",
+      "training": "https://www.ibm.com/training/cloud",
+      "community": "https://community.ibm.com/community/user/publiccloud/home"
+    },
+    "section_updates": {
+      "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes",
+      "tiles": [
+        {
+          "date": "18 May 2021",
+          "title": "Add service clock synchronization information",
+          "description": "Information about synchronizing the service clock has been added."
+        },
+        {
+          "date": "29 March 2021",
+          "title": "Add Osaka region",
+          "description": "Added the Osaka region to list of available DNS Services resolver regions."
+        }
+      ]
+    }
+  }

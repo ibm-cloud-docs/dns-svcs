@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="dns-svcs" category="network_vpc" audience="service" href="/docs/dns-svcs?topic=dns-svcs-getting-started" console-page="/catalog/services/dns-services" product-page="https://www.ibm.com/cloud/network" path="dns-svcs"}
+{: .toc subcollection="dns-svcs" category="network_vpc" audience="service" href="/docs/dns-svcs" console-page="/catalog/services/dns-services" product-page="https://www.ibm.com/cloud/network" path="dns-svcs"}
 DNS Services
 
     {: .navgroup id="learn"}
@@ -13,6 +13,8 @@ DNS Services
     {: .topicgroup}
     Tutorials
         /solution-tutorials/solution-tutorials-vpc-tg-dns-iam
+    
+    release-notes.md
     
     {: .topicgroup}
     Related links
