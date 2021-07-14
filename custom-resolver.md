@@ -36,13 +36,13 @@ subcollection: dns-svcs
 This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
 {: beta}
 
-A private DNS custom resolver extends {{site.data.keyword.dns_full}}'s capability to meet the needs of a Hybrid Cloud environment by enabling resolution of the IBM Cloud VPC hostnames from on-premises DNS resolvers, and also enables the  resolution of on-premises hostnames from the IBM Cloud. 
+A private DNS custom resolver extends {{site.data.keyword.dns_full}}'s capability to meet the needs of a hybrid cloud environment by enabling resolution of the {{site.data.keyword.cloud_notm}} VPC hostnames from on-premises DNS resolvers, and also enables the  resolution of on-premises hostnames from the {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
 Key features of the custom resolver:
 
 * Extends DNS resolutions to resolvers residing on-premises
-* Allows for resolution fallback to an alternative mechanism if the primary method is not available
+* Allows for resolution fallback to a secondary resolver (if one is configured) when the primary resolver is not available
 
 ## Custom resolver overview
 {: #custom-resolver-overview}
