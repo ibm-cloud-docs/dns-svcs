@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-08"
+lastupdated: "2021-07-13"
 
 keywords:
 subcollection: dns-svcs
@@ -33,6 +33,15 @@ subcollection: dns-svcs
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {:shortdesc}
+
+## 14 July 2021
+{: #14-july-2021}
+
+* Add the custom resolver beta feature for UI, CLI, and API.
+* Add import and export of resource records for the CLI and API.
+* Add Sao Paulo region support for permitted networks.
+
+
 
 ## 18 May 2021
 {: #18-may-2021}

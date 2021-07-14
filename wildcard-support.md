@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-03-16"
+  years: 2020, 2021
+lastupdated: "2021-07-14"
 
-keywords: dns-svcs, DNS Services, Private DNS, wildcard, wildcard records
+keywords: wildcard records
 
 subcollection: dns-svcs
 
@@ -59,6 +59,9 @@ For example, a type `A` query for the name `www.example.com` is made with wildca
   * `AAAA`
   * `MX`
 * PTR records are not supported for `A` and `AAAA` type wildcard records.
+* [Importing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#import-resource-records-api) does not support wildcard records.
+* To avoid causing conflicts when importing a DNS zone file, do not create or delete DNS records until the import is complete.
+* When importing a DNS zone file, ensure that no other import operations occur that might cause a conflict.
 
 ## Managing wildcard DNS records
 {: #managing-wildcard-records}

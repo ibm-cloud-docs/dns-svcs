@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-09-30"
+  years: 2019, 2021
+lastupdated: "2021-07-13"
 
 keywords: 
 
@@ -536,6 +536,68 @@ curl -X DELETE \
 
 ```json
 HTTP 204 is returned, no content in response.
+```
+{:codeblock}
+
+### Importing bulk resource records from a DNS zone file
+{: #import-resource-records-api}
+
+**Request**
+
+```bash
+curl -X POST \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/import_resource_records --form "file=@./bind.cfg" \
+  -H "Authorization: $TOKEN"
+```
+{:pre}
+
+**Response**
+
+```json
+{
+    "total_records_parsed": 17,
+    "records_added": 17, 
+    "records_failed": 0,  
+    "records_added_by_type": {
+        "A": 10,      
+        "AAAA": 2,     
+        "CNAME": 4,
+        "SRV": 0,
+        "TXT": 0,
+        "MX": 0,
+        "PTR": 1
+    },
+    "records_failed_by_type": {
+        "A": 0,      
+        "AAAA": 0,    
+        "CNAME": 0,
+        "SRV": 0,
+        "TXT": 0,
+        "MX": 0,
+        "PTR": 0
+    },
+    "message": null,
+    "errors": null
+}
+```
+{:codeblock}
+
+### Exporting bulk resource records to a DNS zone file
+{: #export-resource-records-api}
+
+**Request**
+
+```bash
+curl -X GET \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/export_resource_records -o dns_records.cfg \
+  -H "Authorization: $TOKEN"
+```
+{:pre}
+
+**Response**
+
+```json
+HTTP 200 is returned with zone file content in byte format
 ```
 {:codeblock}
 
