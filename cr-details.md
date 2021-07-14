@@ -78,7 +78,7 @@ Where:
 {: api}
 
 ### Get details of a single custom resolver
-{: #api-details-cr}
+{: #api-details}
 
 To get the details of a custom resolver using the API, follow these steps:
 
