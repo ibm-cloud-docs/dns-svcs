@@ -58,21 +58,21 @@ The status of a newly-created custom resolver is initially `Critical` because th
 {: note}
 
 The following status definitions apply to the resolver locations:
-  * **Up** - when the resolver location is functioning.
-  * **Down** - when the resolver location is not functioning.
+* **Up** - when the resolver location is functioning.
+* **Down** - when the resolver location is not functioning.
 
 The following status definitions apply to the custom resolver:
-  * **Healthy** - when all resolver locations are `Up`, the status is `Healthy`.
-  * **Degraded** - when there is more than one resolver location, and one is `Up` but another is `Down`, then the status changes to `Degraded`.
-  * **Critical** - when all resolver locations are `Down`, the status changes to `Critical`.
-  
+* **Healthy** - when all resolver locations are `Up`, the status is `Healthy`.
+* **Degraded** - when there is more than one resolver location, and one is `Up` but another is `Down`, then the status changes to `Degraded`.
+* **Critical** - when all resolver locations are `Down`, the status changes to `Critical`.
+
 ## Custom resolvers limitations
 {: #cr-limits}
 
 The following limitations exist for the custom resolvers feature:
 
-  * Each VPC can have a maximum of one custom resolver.
-  * Each custom resolver can have a maximum of 2 locations.
-  * Each custom resolver can have a maximum of 15 forwarding rules.
-  * You cannot delete the subnet used for the custom resolver.
-  * For the beta period, you must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location virtual server instance.
+* Each VPC can have a maximum of one custom resolver.
+* Each custom resolver can have a maximum of 2 locations, either within the same subnet or in different subnets.
+* Each custom resolver can have a maximum of 15 forwarding rules.
+* You cannot delete the subnet used for the custom resolver.
+* For the beta period, you must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location virtual server instance.

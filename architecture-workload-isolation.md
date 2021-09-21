@@ -26,12 +26,12 @@ subcollection: dns-svcs
 
 
 # About {{site.data.keyword.dns_short}} architecture and workload isolation
-{:#architecture-workload-isolation}
+{: #architecture-workload-isolation}
 
 Review the following sample architecture for {{site.data.keyword.dns_full}} to learn about different isolation levels so that you can choose the solution that best meets your needs.
 
 ## Data isolation
-{:#data-isolation}
+{: #data-isolation}
 
 {{site.data.keyword.dns_short}} is a multitenant service, sharing the infrastructure among all customers. {{site.data.keyword.dns_short}} uses a Cloudant database to store customer-provided Domain Name System (DNS) configuration information. The data is encrypted at rest in Cloudant. Data is also encrypted in transit through SSL from the API endpoints within the control plane to the database.
 

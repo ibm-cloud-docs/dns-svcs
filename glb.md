@@ -30,7 +30,7 @@ subcollection: dns-svcs
 {: #global-load-balancers}
 
 {{site.data.keyword.dns_full}} provides global load balancing as a service that offers you high availability and geographical distribution of your traffic, based on the health of your origin servers and the geographical region where the user request originates.
-{:shortdesc}
+{: shortdesc}
 
 For example, in a DNS zone `example.com`, a DNS hostname of `api.example.com` is created as a global load balancer. The hostname `api.example.com` can resolve to different IP addresses based on the location of the requester and the health of the origins. If any or all of the origins (based on policy) are not available in one region, then healthy origins from different regions are returned in response to the DNS query. This ensures a high degree of availability of the hostname `api.example.com`. It also ensures that the load is geographically distributed among different origins and routed regionally.
 
@@ -40,12 +40,12 @@ For example, in a DNS zone `example.com`, a DNS hostname of `api.example.com` is
 The following limitations exist for the global load balancing feature.
 
 * You can have the following, per {{site.data.keyword.dns_short}} instance:
-  * Up to 100 health check monitors
-  * Up to 100 health check subnets
-  * Up to 100 origin pools
-    * Each origin pool can have up to 5 origins
-    * Each origin pool can use no more than 2 subnets for health monitoring
-  * Up to 100 origins
+    * Up to 100 health check monitors
+    * Up to 100 health check subnets
+    * Up to 100 origin pools
+        * Each origin pool can have up to 5 origins
+        * Each origin pool can use no more than 2 subnets for health monitoring
+    * Up to 100 origins
 * Each DNS zone can have a maximum of 25 global load balancers
 
 
@@ -93,19 +93,19 @@ Follow these steps to create a health check:
 1. In the **Health check name** field, give your health check a name.
 1. Optionally, enter a **Description** for the health check to help you understand what it is monitoring.
 1. Select the **Monitor type**. Choose the protocol to use for the health check. Supported monitor types are HTTP, HTTPS, and TCP. The default value is `HTTP`.
-   If **HTTPS** is selected, the **Don't validate certificate** checkbox appears after the **Advanced options** section. Select this box when the HTTPS certificate on the origin is not signed by a certificate authority (for instance, a self-signed certificate).
+    If **HTTPS** is selected, the **Don't validate certificate** checkbox appears after the **Advanced options** section. Select this box when the HTTPS certificate on the origin is not signed by a certificate authority (for instance, a self-signed certificate).
 1. Enter the endpoint **Path** against which to perform the health check. The default value is `/`.
 1. Optionally, enter the **Port** number that you want to use.
 
-   For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.
-   {: note}
+    For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.
+    {: note}
 1. In the **Advanced settings** section, select a **Test interval** (in seconds) between each health check. Shorter intervals can improve failover time, but increase load on the origins, as checks come from multiple locations. The default value is `60`.
 1. Choose a **Method** to use for the health check from the list (HTTP and HTTPS only). The default value is `GET`.
 1. Select a **Timeout** interval (in seconds) for how long to wait before the health check is marked as failed. The default value is `5`.
 1. Select the **Number of retries** to attempt in case there is a timeout before the origin is marked as unhealthy. Retries are attempted immediately. The default value is `1`.
 
-   TCP monitor type options end with this step. Click **Create** to save your changes and create the health check. HTTP and HTTPS monitor types have additional options, which follow.
-   {:note}
+    TCP monitor type options end with this step. Click **Create** to save your changes and create the health check. HTTP and HTTPS monitor types have additional options, which follow.
+    {: note}
 
 1. Enter the **Expected response codes**, which are the HTTP response codes or code range of the health check. This value must be between `200-299` with wildcards denoted by an `x`.
 1. Optionally, enter a **Response body** which is a case-insensitive substring to match against in the response body. If this string is not found, the origin is marked as unhealthy.
@@ -126,15 +126,15 @@ Before you begin, keep the following considerations in mind when working with or
 * If a hostname is provided as an origin in a pool, it can be an A, AAAA, or CNAME resource record, as well as another load balancer. However, you might see slower performance when resolving long CNAME chains or load balancers.
 
 You must update your VPC security group to allow traffic from the health monitoring subnet. See [Security groups](#security-groups-glb) for more information.
-{:important}
+{: important}
 
 To create an origin pool, follow these steps:
 
 1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Origin pools** tab.
 1. Click **Create origin pool**. Pools are enabled by default.
 
-   Disabling a pool causes any load balancer that uses it to fail over to the next pool, if any. Disabled pools do not receive traffic.
-   {: note}
+    Disabling a pool causes any load balancer that uses it to fail over to the next pool, if any. Disabled pools do not receive traffic.
+    {: note}
 1. Enter a **Name** for the pool. Only alphanumeric characters, hyphens, and underscores are allowed.
 1. Optionally, enter a **Description** for the origin pool.
 1. Enable **Origins** to add to the list of origins within this pool.
@@ -147,7 +147,7 @@ To create an origin pool, follow these steps:
 1. Click **Create** to save your changes and create your origin pool.
 
 When you first create an origin pool, its status is `Critical` and the origin's status is `Down` because the initial health check has not completed yet. The status updates after the health check for the origin completes successfully.
-{:note}
+{: note}
 
 ### Status definitions
 {: #status-definitions}
@@ -156,13 +156,13 @@ The following table describes the possible statuses that you might see in your o
 
 |Feature|Status|Definition|
 |:------|:-----|:---------|
-|Origin| `up` `down`|**Up**: The origin is functioning normally. <br/> **Down**: The origin is down. <br/> At least 50% of the origin's health checks must be up for origin health to remain `healthy`. |
-|Origin pool|`healthy` `degraded` `critical` | **Healthy**: All of the origins in the pool are up. <br/>**Degraded**: At least one origin status is down.<br/>**Critical**: The number of healthy origins in the pool is less than the healthy origin pool threshold. For example, if your threshold is `2`, and only one origin is up, the pool status is **Critical**. |
-|Global load balancer|`healthy` `degraded` `critical` |**Healthy**: All the origin pools that are associated with the global load balancer are healthy. <br/>**Degraded**: At least one of the origin pools is in degraded status.<br/> **Critical**: The global load balancer status is critical when all of the origin pools associated with the global load balancer are critical.|
+|Origin| `up` `down`|**Up**: The origin is functioning normally.  \n **Down**: The origin is down.  \n At least 50% of the origin's health checks must be up for origin health to remain `healthy`. |
+|Origin pool|`healthy` `degraded` `critical` | **Healthy**: All of the origins in the pool are up.  \n **Degraded**: At least one origin status is down.  \n **Critical**: The number of healthy origins in the pool is less than the healthy origin pool threshold. For example, if your threshold is `2`, and only one origin is up, the pool status is **Critical**. |
+|Global load balancer|`healthy` `degraded` `critical` |**Healthy**: All the origin pools that are associated with the global load balancer are healthy.  \n **Degraded**: At least one of the origin pools is in degraded status.  \n **Critical**: The global load balancer status is critical when all of the origin pools associated with the global load balancer are critical.|
 {: caption="Table 1. Status definitions for origins, origin pools, and global load balancers" caption-side="top"}
 
 The fallback pool status is not taken into account for assessing the health of the global load balancer.
-{:note}
+{: note}
 
 ### Security groups
 {: #security-groups-glb}
@@ -177,7 +177,7 @@ Load balancers help to distribute your traffic across multiple origin pools.
 Follow these steps to create a load balancer:
 
 To set up a global load balancer, you must first create an origin pool.
-{:important}
+{: important}
 
 1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Load balancers** tab.
 1. Select a DNS zone from the list.
@@ -190,7 +190,7 @@ To set up a global load balancer, you must first create an origin pool.
 1. Optionally, add or select a **Location policy**. The location policy allows you to associate one or more origin pools for a specific AZ. Any AZ that is not explicitly defined as a location policy uses the default policy.
 
 ### How DNS resolvers prioritize global load balancing pools
-{:#resolver-priority}
+{: #resolver-priority}
 
 The DNS resolver uses the following order to return origins from the origin pool.
 
@@ -206,13 +206,13 @@ To view, edit or delete a load balancer, or one of its components, click an acti
 The following options are provided for each list.
 
 * Health Checks
-  * **Edit health check** - Redirects to the edit flow.
-  * **Delete health check** - Shows the confirmation dialog box for the deletion flow.
+    * **Edit health check** - Redirects to the edit flow.
+    * **Delete health check** - Shows the confirmation dialog box for the deletion flow.
 
 * Origin Pools
-  * **Edit pool** - Redirects to the edit flow.
-  * **Delete pool** - Shows the confirmation dialog box for the deletion flow.
+    * **Edit pool** - Redirects to the edit flow.
+    * **Delete pool** - Shows the confirmation dialog box for the deletion flow.
 
 * Load Balancers
-  * **Edit load balancer** - Redirects to the edit flow.
-  * **Delete load balancer** - Shows the confirmation dialog box for the deletion flow.
+    * **Edit load balancer** - Redirects to the edit flow.
+    * **Delete load balancer** - Shows the confirmation dialog box for the deletion flow.

@@ -23,34 +23,39 @@ subcollection: dns-svcs
 {:pre: .pre}
 {:screen: .screen}
 {:download: .download}
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 
 # Managing DNS records
-{:#managing-dns-records}
+{: #managing-dns-records}
 
 DNS records make the connection between human-readable names and IP addresses. We cover how to manage DNS records in the following sections.
 {: shortdesc}
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: #managing-dns-records-ui}
+{: ui}
+
 Manage DNS records from the {{site.data.keyword.cloud}} console, or the API. The following sections cover the console usage.
-{:shortdesc}
+
 
 ### Adding DNS records
-{:#adding-dns-records}
+{: #adding-dns-records}
 
-  1. From the DNS zones table, click the zone name to which you want to add record(s). More details about the selected zone appear.
-  2. Click **Add Record** to display a panel where you can create a record.
+1. From the DNS zones table, click the zone name to which you want to add record(s). More details about the selected zone appear.
+2. Click **Add Record** to display a panel where you can create a record.
 
 You can use the **Type** menu to select the type of record that you want to create. Each DNS record type has a Name and Time-To-Live (TTL) associated with it.
 
 When you enter a name in the Name field, a domain name is automatically appended if you did not add one manually. For example, if you type `www` or `www.example.com` in the Name field, the API handles both entries as `www.example.com`. If you enter the exact domain name into the name field, then it won't append to itself (for example, `example.com` is handled as `example.com`). However, the list of DNS records shows only the names, without the domain name added on. As a result, `www.example.com` displays as `www` and `example.com` as `example.com`.
 
 The minimum supported TTL value is `1 min` and the maximum is `12 hours`. The default value of TTL is `15 min`, but users can change it.
-{:note}
+{: note}
 
 #### A type record
-{:#a-record}
+{: #a-record}
 
 To add this record type, valid values must exist in the **Name** and **IPv4 Address** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -60,7 +65,7 @@ Required fields
 * TTL (Default value is 15 min)
 
 #### AAAA type record
-{:#aaaa-record}
+{: #aaaa-record}
 
 To add this record type, valid values must exist in the **Name** and **IPv6 Address** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -70,7 +75,7 @@ Required fields
 * TTL (Default value is 15 min)
 
 #### CNAME type record
-{:#cname-record}
+{: #cname-record}
 
 To add this record type, a valid value must exist in the **Name** field and a fully qualified domain name must be in the **Target** (FQDN) field. A **TTL** can also be specified from the list menu, with the default value of `15 min`.
 
@@ -80,7 +85,7 @@ Required fields
 * TTL (Default value is 15 min)
 
 #### MX Type record
-{:#mx-record}
+{: #mx-record}
 
 To add this record type, a valid value must exist in the **Name** field, a fully qualified domain name must be in the **Mail Server** (FQDN) field, and a valid number must exist in the **Priority** field. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -91,7 +96,7 @@ Required fields
 * Priority (Default value is 1)
 
 #### PTR type record
-{:#ptr-record}
+{: #ptr-record}
 
 To add this record type, you must have an existing A or AAAA record that is not already associated with another PTR record. Select an existing record from the list menu. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -100,7 +105,7 @@ Required fields
 * TTL (Default value is 15 min)
 
 #### SRV type record
-{:#srv-record}
+{: #srv-record}
 
 To add this record type, valid values must exist in the **Name**, **Service Name**, and **Target** fields. Use the list menu to select a **protocol**, which defaults to the UDP protocol. Additionally, you can specify **Priority**, **Weight**, and **Port**. These three fields default to a value of `1`. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -115,12 +120,12 @@ Required fields
 * Port (Default value is 1)
 
 #### TXT type record
-{:#txt-record}
+{: #txt-record}
 
 To add this record type, valid values must exist in the **Name** and **Content** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
 For security and privacy reasons, it is recommended that you not use TXT type records for sensitive and confidential data.
-{:important}
+{: important}
 
 Required fields
 * Name
@@ -128,24 +133,25 @@ Required fields
 * TTL (Default value is 15 min)
 
 ### Updating DNS records
-{:#updating-dns-records}
+{: #updating-dns-records}
 
 In each record row, click the **Edit** icon to open a panel where you can update the record.
 
 ### Deleting DNS records
-{:#deleting-dns-records}
+{: #deleting-dns-records}
 
 In each record row, click the **Delete** icon to open a panel where you can confirm the delete process.
 
 ## Using the API
 {: #managing-dns-records-api}
+{: api}
 
 First store the API endpoint in a variable so you can use it in API requests without having to type the full URL. For example, to store the production endpoint in a variable, run this command:
 
 ```bash
 DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
 ```
-{:pre}
+{: pre}
 
 To verify that this variable was saved, run `echo $DNSSVCS_ENDPOINT` and ensure that the response is not empty.
 
@@ -159,15 +165,15 @@ curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
   -H "Authorization: $TOKEN" \
   -d '{
-	"name":"www.example.com",
-	"type":"A",
-	"rdata": {
+    "name":"www.example.com",
+    "type":"A",
+    "rdata": {
             "ip":"1.2.6.7"
         },
- 	"ttl":300
+    "ttl":300
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -185,7 +191,7 @@ curl -X POST \
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Creating type 'SRV' resource record
 {: #create-srv-resource-record-api}
@@ -197,19 +203,19 @@ curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
   -H "Authorization: $TOKEN" \
   -d '{
-	"type": "SRV",
-	"name": "example.com",
-	"service": "srv",
-	"protocol": "udp",
-	"rdata": {
-		"priority": 100,
-		"weight": 100,
-		"port": 8000,
-		"target": "siphost.com"
-	}
+    "type": "SRV",
+    "name": "example.com",
+    "service": "srv",
+    "protocol": "udp",
+    "rdata": {
+        "priority": 100,
+        "weight": 100,
+        "port": 8000,
+        "target": "siphost.com"
+    }
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -231,7 +237,7 @@ curl -X POST \
     "protocol": "udp"
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Creating type 'TXT' resource record
 {: #create-txt-resource-record-api}
@@ -243,14 +249,14 @@ curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
   -H "Authorization: $TOKEN" \
   -d '{
-	"type": "TXT",
-	"name": "txt.example.com",
-	"rdata": {
-		"txtdata": "txt strings"
-	}
+    "type": "TXT",
+    "name": "txt.example.com",
+    "rdata": {
+        "txtdata": "txt strings"
+    }
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -267,7 +273,7 @@ curl -X POST \
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Creating type 'MX' resource record
 {: #create-amx-resource-record-api}
@@ -279,15 +285,15 @@ curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
   -H "Authorization: $TOKEN" \
   -d '{
-	"type": "MX",
-	"name": "mx1.example.com",
-	"rdata": {
-		"exchange": "mailserver.example.com",
-		"preference": 10
-	}
+    "type": "MX",
+    "name": "mx1.example.com",
+    "rdata": {
+        "exchange": "mailserver.example.com",
+        "preference": 10
+    }
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -305,7 +311,7 @@ curl -X POST \
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Creating type 'PTR' resource record
 {: #create-ptr-resource-record-api}
@@ -317,14 +323,14 @@ curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
   -H "Authorization: $TOKEN" \
   -d '{
-	"type": "PTR",
-	"name": "192.168.10.100",
-	"rdata": {
-	   "ptrdname": "www1.example.com"
-	}
+    "type": "PTR",
+    "name": "192.168.10.100",
+    "rdata": {
+       "ptrdname": "www1.example.com"
+    }
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -341,7 +347,7 @@ curl -X POST \
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Creating type 'CNAME' resource record
 {: #create-cname-resource-record-api}
@@ -353,14 +359,14 @@ curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
   -H "Authorization: $TOKEN" \
   -d '{
-	"type": "CNAME",
-	"name": "cname.example.com",
-	"rdata": {
-	   "cname": "clientinterface.com"
-	}
+    "type": "CNAME",
+    "name": "cname.example.com",
+    "rdata": {
+       "cname": "clientinterface.com"
+    }
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -377,7 +383,7 @@ curl -X POST \
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 
 ### Creating type 'AAAA' resource record
@@ -390,14 +396,14 @@ curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records \
   -H "Authorization: $TOKEN" \
   -d '{
-	"type": "AAAA",
-	"name": "test.example.com",
-	"rdata": {
-	   "ip": "8000::2000"
-	}
+    "type": "AAAA",
+    "name": "test.example.com",
+    "rdata": {
+       "ip": "8000::2000"
+    }
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -414,7 +420,7 @@ curl -X POST \
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Getting a resource record
 {: #get-resource-record-api}
@@ -426,7 +432,7 @@ curl -X GET \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records/$RECORD_ID \
   -H "Authorization: $TOKEN"
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -443,7 +449,7 @@ curl -X GET \
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Listing resource records
 {: #list-resource-records-api}
@@ -455,7 +461,7 @@ curl -X GET \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records?limit=50&offset=0 \
   -H "Authorization: $TOKEN"
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -482,7 +488,7 @@ curl -X GET \
     ]
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Updating a resource record
 {: #update-resource-record-api}
@@ -494,14 +500,14 @@ curl -X PUT \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records/$RECORD_ID \
   -H "Authorization: $TOKEN" \
   -d '{
-	"name":"www",
-	"rdata": {
+    "name":"www",
+    "rdata": {
             "ip":"7.7.7.7"
         },
- 	"ttl":300
+    "ttl":300
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -518,7 +524,7 @@ curl -X PUT \
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Deleting a resource record
 {: #delete-resource-record-api}
@@ -530,14 +536,14 @@ curl -X DELETE \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/resource_records/$RECORD_ID \
   -H "Authorization: $TOKEN"
 ```
-{:pre}
+{: pre}
 
 **Response**
 
 ```json
 HTTP 204 is returned, no content in response.
 ```
-{:codeblock}
+{: codeblock}
 
 ### Importing bulk resource records from a DNS zone file
 {: #import-resource-records-api}
@@ -549,7 +555,7 @@ curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/import_resource_records --form "file=@./bind.cfg" \
   -H "Authorization: $TOKEN"
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -580,7 +586,7 @@ curl -X POST \
     "errors": null
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Exporting bulk resource records to a DNS zone file
 {: #export-resource-records-api}
@@ -592,17 +598,18 @@ curl -X GET \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/export_resource_records -o dns_records.cfg \
   -H "Authorization: $TOKEN"
 ```
-{:pre}
+{: pre}
 
 **Response**
 
 ```json
 HTTP 200 is returned with zone file content in byte format
 ```
-{:codeblock}
+{: codeblock}
 
 ## Using the CLI
 {: #managing-dns-records-cli}
+{: cli}
 
 First use the `ibmcloud dns instance-target` command to set the target operating DNS Services instance.
 
@@ -622,7 +629,7 @@ Store the zone ID in a variable so you can use it in following commands without 
 ```bash
 DNS_ZONE_ID="example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae"
 ```
-{:pre}
+{: pre}
 
 ### Creating type `A` resource record
 {: #create-resource-record-cli}
@@ -643,7 +650,7 @@ TTL           900
 Data
     ip        192.168.1.100
 ```
-{:pre}
+{: pre}
 
 ### Creating type 'SRV' resource record
 {: #create-srv-resource-record-cli}
@@ -667,7 +674,7 @@ Data
     target     media.example.com
     weight     10
 ```
-{:pre}
+{: pre}
 
 ### Creating type 'TXT' resource record
 {: #create-txt-resource-record-cli}
@@ -688,7 +695,7 @@ TTL           900
 Data
     text      This is a text record.
 ```
-{:pre}
+{: pre}
 
 ### Creating type 'MX' resource record
 {: #create-amx-resource-record-cli}
@@ -710,7 +717,7 @@ Data
     preference   10
     exchange     exchange.example.com
 ```
-{:pre}
+{: pre}
 
 
 ### Creating type 'PTR' resource record
@@ -732,7 +739,7 @@ TTL            900
 Data
     ptrdname   www.example.com
 ```
-{:pre}
+{: pre}
 
 
 ### Creating type 'CNAME' resource record
@@ -754,7 +761,7 @@ TTL           900
 Data
     cname     www.example.com
 ```
-{:pre}
+{: pre}
 
 
 ### Creating type 'AAAA' resource record
@@ -776,7 +783,7 @@ TTL           900
 Data
     ip        2019::2020
 ```
-{:pre}
+{: pre}
 
 ### Getting a resource record
 {: #get-resource-record-cli}
@@ -797,7 +804,7 @@ TTL           900
 Data
     ip        192.168.1.100
 ```
-{:pre}
+{: pre}
 
 
 ### Listing resource records
@@ -818,7 +825,7 @@ SRV:c7c8938b-87c7-4aee-95fa-63f28452c8d4     _sip._tcp.video.example.com   SRV  
 A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6       www.example.com               A       900
 PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6     192.168.1.100                 PTR     900
 ```
-{:pre}
+{: pre}
 
 
 ### Updating a resource record
@@ -840,7 +847,7 @@ TTL           900
 Data
     ip        10.10.1.1
 ```
-{:pre}
+{: pre}
 
 
 ### Deleting a resource record
@@ -854,4 +861,4 @@ Really delete resource record 'PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone
 Deleting resource record 'PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
 OK
 ```
-{:pre}
+{: pre}

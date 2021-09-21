@@ -20,7 +20,7 @@ subcollection: dns-svcs
 {: #gettinghelp}
 
 If you have problems or questions when using {{site.data.keyword.dns_full}}, you can get help by searching for information or by asking questions through a forum. You can also open an [IBM Support case](https://cloud.ibm.com/unifiedsupport/supportcenter).
-{:shortdesc}
+{: shortdesc}
 
 When using a forum to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 

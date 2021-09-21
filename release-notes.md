@@ -32,7 +32,7 @@ subcollection: dns-svcs
 {: #release-notes}
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
-{:shortdesc}
+{: shortdesc}
 
 ## 14 July 2021
 {: #14-july-2021}

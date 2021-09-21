@@ -30,16 +30,16 @@ subcollection: dns-svcs
 A wildcard DNS record helps match non-existent domain names within a particular DNS Zone. Wildcard domain names always contain an asterisk label, which is the `*` character only. In order for a domain name to be considered a wildcard domain name, the asterisk label must be the lowest (or first) label. An asterisk in any other place is not treated as a wildcard.
 
 * Wildcard record format
-  * `<*>.<hostname.zone | zone>`
+    * `<*>.<hostname.zone | zone>`
 
 * Valid wildcard record examples
-  * `*.example.com 900 IN A 20.20.20.20`
-  * `*.foo.example.com 900 MX mailserver.example.com`
+    * `*.example.com 900 IN A 20.20.20.20`
+    * `*.foo.example.com 900 MX mailserver.example.com`
 
 * Invalid wildcard record examples
-  * `foo.*.example.com 900 IN A 20.20.20.20`
-  * `foo*.example.com 900 MX mailserver.example.com`
-  * `*foo.example.com 900 IN A 1.2.3.4`
+    * `foo.*.example.com 900 IN A 20.20.20.20`
+    * `foo*.example.com 900 MX mailserver.example.com`
+    * `*foo.example.com 900 IN A 1.2.3.4`
 
 ## How wildcard records work
 {: #how-wildcard-records-work}
@@ -47,17 +47,17 @@ A wildcard DNS record helps match non-existent domain names within a particular 
 Use wildcard data only if no other resource records match the Qname. Similarly, do not use wildcard data if the record type does not match the Qtype, even if the resource record matches the Qname.
 
 For example, a type `A` query for the name `www.example.com` is made with wildcard: `*.example.com  900 IN A 20.20.20.20`.
-  * If there is no resource record of the name `www.example.com`, it matches with the wildcard record.
-  * The wildcard is matched only if the domain does not exist.
+* If there is no resource record of the name `www.example.com`, it matches with the wildcard record.
+* The wildcard is matched only if the domain does not exist.
 
 ## Limitations
 {: #wildcard-limitations}
 
 * A zone cannot contain more than five wildcard records.
 * Wildcard records are only allowed for the following record types.
-  * `A`
-  * `AAAA`
-  * `MX`
+    * `A`
+    * `AAAA`
+    * `MX`
 * PTR records are not supported for `A` and `AAAA` type wildcard records.
 * [Importing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#import-resource-records-api) does not support wildcard records.
 * To avoid causing conflicts when importing a DNS zone file, do not create or delete DNS records until the import is complete.

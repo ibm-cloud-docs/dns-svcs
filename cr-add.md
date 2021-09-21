@@ -39,7 +39,7 @@ This custom resolver feature is available to {{site.data.keyword.dns_short}} use
 {: beta}
 
 You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
-{:shortdesc}
+{: shortdesc}
 
 ## Creating a custom resolver using the UI
 {: #create-cr}
@@ -55,8 +55,8 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, take the following 
 1. Select a subnet from the list menu.
 1. Click **Add+** if you want to add another subnet.
 
-   Each subnet can have only one custom resolver.
-   {:note}
+    Each VPC can have only one custom resolver.
+    {: note}
 
 1. Click **Create**.
 
@@ -72,11 +72,11 @@ To create a custom resolver using the CLI, run the following command:
 
 Where:
 
- - **-n, --name** is the name of the custom resolver.
- - **-d, --description** is the descriptive text of the custom resolver.
- - **--location** is the location where the custom resolver is running. The location subnet CRN is required. For example: `--location subnet1,enable  --location subnet2,disable`
- - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
- - **--output** specifies output format. Currently, JSON is the only supported format.
+- **-n, --name** is the name of the custom resolver.
+- **-d, --description** is the descriptive text of the custom resolver.
+- **--location** is the location where the custom resolver is running. The location subnet CRN is required. For example: `--location subnet1,enable  --location subnet2,disable`
+- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
+- **--output** specifies output format. Currently, JSON is the only supported format.
 
 ## Create a custom resolver using the API
 {: #api-create-cr}
@@ -86,8 +86,8 @@ To add a custom resolver using the API, follow these steps:
 
 1. Set up your API environment with the correct variables.
 1. Store the following values in variables to be used in the API command:
-   * `instance_id`, which is the unique identifier of a service instance.
-   * `X-Correlation-ID`, which is a string that uniquely identifies a request.
+    * `instance_id`, which is the unique identifier of a service instance.
+    * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all viariables are initiated, add your custom resolver:
 
 ```
@@ -102,7 +102,7 @@ To add a custom resolver using the API, follow these steps:
   ]
 }
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Next steps

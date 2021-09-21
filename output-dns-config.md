@@ -29,14 +29,14 @@ subcollection: dns-svcs
 {: #writing-dns-svcs-config-to-file}
 
 This section describes how to run a script to copy your {{site.data.keyword.dns_full}} instance configuration. It writes the following to a file:
-  * All DNS zones and DNS zone data for an instance.
-  * All resource record data for each DNS zone.
-  * All permitted network data for each DNS zone.
+* All DNS zones and DNS zone data for an instance.
+* All resource record data for each DNS zone.
+* All permitted network data for each DNS zone.
 
 This data can be helpful in debugging issues and can be provided to the support team (if configuration data is not considered private) in the case of a support issue. The data can also serve as a backup.  
 
 This data is "export only" and does not work to import a configuration.
-{:note}
+{: note}
 
 ## Usage
 {: #usage}
@@ -48,6 +48,7 @@ $ ./copy_dns_config.sh <instance ID, NAME, or CRN> [path/to/output-file]
 #   Required: <instance ID, NAME, or CRN>
 #   Optional: [path/to/output-file]
 ```
+{: #codeblock}
 
 Where `<instance ID, NAME, or CRN>` is replaced by the relevant {{site.data.keyword.dns_short}} instance ID, NAME, or CRN. Optionally, pass a path to an output file as the second argument. If no output file argument is given the output is written to a file in the current directory.
 
@@ -63,11 +64,11 @@ $ ./copy_dns_config.sh my-instance2 ~/dns-output.txt
 {: #script-requirements}
 
 * [IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
-  * You must be logged in to your {{site.data.keyword.cloud_notm}} account.
-  * Use `ibmcloud login` to log in.
+    * You must be logged in to your {{site.data.keyword.cloud_notm}} account.
+    * Use `ibmcloud login` to log in.
 * [jq](https://stedolan.github.io/jq/), a command line JSON processor.
-  * `$ brew install jq # macOS`
-  * `$ apt-get install jq # Ubuntu`
+    * `$ brew install jq # macOS`
+    * `$ apt-get install jq # Ubuntu`
 
 ## The script
 {: #the-script}

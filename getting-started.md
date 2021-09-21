@@ -27,15 +27,15 @@ subcollection: dns-svcs
 {: #getting-started}
 
 {{site.data.keyword.dns_full}} provides private DNS to Virtual Private Cloud (VPC) users. Private DNS zones are resolvable only on {{site.data.keyword.cloud_notm}}, and only from explicitly [permitted networks](/docs/dns-svcs?topic=dns-svcs-dns-concepts#permitted-networks) in an account. To get started, create a {{site.data.keyword.dns_short}} instance using the {{site.data.keyword.cloud_notm}} console.
-{:shortdesc}
+{: shortdesc}
 
 ## Before you begin
-{:#before-you-begin-getting-started}
+{: #before-you-begin-getting-started}
 
 To use {{site.data.keyword.dns_short}}, you must have at least one virtual server instance (VSI) in a VPC in the {{site.data.keyword.cloud_notm}}. If you do not have one, learn how to [get started with Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started).
 
 While the private DNS resolvers are required to resolve private DNS names, they also resolve public DNS names if the request is for a name that is not defined to be in a private DNS zone.
-{:note}
+{: note}
 
 ## Step 1: Create a {{site.data.keyword.dns_short}} instance
 {: #step-1-create-dns-services-instance}
@@ -56,7 +56,7 @@ While the private DNS resolvers are required to resolve private DNS names, they 
 
 
 ## Step 3: Add a VPC as a permitted network to the DNS zone
-{:#step-3-add-vpc-as-permitted-network-to-dns-zone}
+{: #step-3-add-vpc-as-permitted-network-to-dns-zone}
 
 1. Select the zone from the table on the DNS Zones page.
 1. Select the **Permitted networks** tab.
@@ -67,7 +67,7 @@ While the private DNS resolvers are required to resolve private DNS names, they 
 Resources in the VPC can resolve records associated with the DNS zone (see [Step 4](#step-4-add-dns-resource-records) to add records to the DNS zone). The DHCP server returns the DNS servers (`161.26.0.7` and `161.26.0.8`) provided by {{site.data.keyword.dns_short}} in its responses. If you have DHCP disabled on a server in the VPC, it is your responsibility to configure the DNS server IP addresses statically on that server, according to your operating system's documentation.
 
 ## Step 4: Add DNS resource records
-{:#step-4-add-dns-resource-records}
+{: #step-4-add-dns-resource-records}
 
 1. Select the zone from the table on the DNS Zones page.
 1. Select the **DNS records** tab.
@@ -77,14 +77,14 @@ Resources in the VPC can resolve records associated with the DNS zone (see [Step
 1. Click **Add record**.
 
 ## Step 5: Verify that DNS name resolution works from the VPC
-{:#step-5-test-if-the-dns-name-resolution-works}
+{: #step-5-test-if-the-dns-name-resolution-works}
 
 Test whether the zone resolution works using a **`dig`** from the VSI on your VPC. The following command should yield a resolution as the result.
 
 ```shell
 dig www.example.com
 ```
-{:pre}
+{: pre}
 
 ## Next Steps
 {: #getting-started-api}

@@ -28,7 +28,7 @@ subcollection: dns-svcs
 {: #setting-up-your-dns-instance}
 
 This section describes how to set up a {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks, and resource records.
-{:shortdesc}
+{: shortdesc}
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: #setting-up-your-dns-instance-ui}
@@ -36,11 +36,11 @@ This section describes how to set up a {{site.data.keyword.dns_full}} instance, 
 ### Creating a {{site.data.keyword.dns_short}} instance
 {: #creating-a-dns-instance}
 
-  1. Open the [{{site.data.keyword.cloud_notm}} **Catalog**](https://{DomainName}/catalog/) page.
-  1. Select the **Networking** category.
-  1. Click the **{{site.data.keyword.dns_short}}** tile. 
-  1. Choose a plan.
-  1. Enter **Service name** and click **Create**.
+1. Open the [{{site.data.keyword.cloud_notm}} **Catalog**](https://{DomainName}/catalog/) page.
+1. Select the **Networking** category.
+1. Click the **{{site.data.keyword.dns_short}}** tile. 
+1. Choose a plan.
+1. Enter **Service name** and click **Create**.
 
    You are redirected to the {{site.data.keyword.dns_short}} instance page showing **DNS Zones** information.
 
@@ -49,38 +49,35 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
 ### Creating a DNS zone
 {: #creating-a-dns-zone}
 
-  1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance.
-  1. On the DNS Zones page, click **Create zone**.
-  1. In the Create Zone panel, enter your zone name. Optionally, enter a label and description.
-  1. Click **Create zone** in the panel.
-
-     If the zone is created successfully, you are redirected to the Zone Details page.
+1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance.
+1. On the DNS Zones page, click **Create zone**.
+1. In the Create Zone panel, enter your zone name. Optionally, enter a label and description.
+1. Click **Create zone** in the panel.
+   If the zone is created successfully, you are redirected to the Zone Details page.
 
 ### Creating a permitted network
 {: #creating-a-dns-permitted-network}
 
-  1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
-  1. Click the **Permitted Networks** tab.
-  1. Click **Add network**.
-  1. In the Add Network panel, select the region of your VPC from the **Network Region** menu.
-  1. Select the VPC from the **Network** menu that appears.
-  1. Click **Add network**.
+1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
+1. Click the **Permitted Networks** tab.
+1. Click **Add network**.
+1. In the Add Network panel, select the region of your VPC from the **Network Region** menu.
+1. Select the VPC from the **Network** menu that appears.
+1. Click **Add network**.
 
-  This request adds the VPC network to your zone, thereby giving the network access to the zone.
+   This request adds the VPC network to your zone, thereby giving the network access to the zone.
 
 ### Creating an "A" resource record
 {: #creating-an-a-resource-record}
 
-  1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
-  1. On the DNS Details page, click the **DNS Records** tab.
-  1. Click **Add record**.
-  1. In the Add Record panel, select the type of DNS record that you want to add from the **Type** menu.
-
-     In this case, select the type **A**.
-  1. Enter the required data for the type of DNS record you selected.
-
-     In this case, for type **A**, enter **Name** and **IPv4 Address**.
-  1. Click **Add record** in the panel.
+1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
+1. On the DNS Details page, click the **DNS Records** tab.
+1. Click **Add record**.
+1. In the Add Record panel, select the type of DNS record that you want to add from the **Type** menu.
+   In this case, select the type **A**.
+1. Enter the required data for the type of DNS record you selected.
+   In this case, for type **A**, enter **Name** and **IPv4 Address**.
+1. Click **Add record** in the panel.
 
 ### Verifying the setup
 {: #verifying-the-setup}
@@ -90,14 +87,14 @@ To verify that your instance, zone, and record are performing correctly, run the
 ```
 dig @161.26.0.7 <Record type> <record name>
 ```
-{:pre}
+{: pre}
 
 Example:
 
 ```
 dig @161.26.0.7 A xyz.example.com
 ```
-{:codeblock}
+{: codeblock}
 
 ## Using the API
 {: #setting-up-your-dns-instance-api}
@@ -112,12 +109,12 @@ Set the variables as follows to create an instance of the standard plan:
 ```
 "resource_plan_id": "2c8fa097-d7c2-4df2-b53e-2efb7874cdf7",
 ```
-{:codeblock}
+{: codeblock}
 
 See the [Resource Controller API reference](/apidocs/resource-controller/resource-controller) documentation for more information on using the API.
 
 Command lines for instances are using resource controller API, not DNS APIs. These commands are equivalent to commands `ibmcloud resource service-instance`, which provide convenience for DNS users to manage {{site.data.keyword.dns_short}} instances.
-{:note}
+{: note}
 
 ### Creating a DNS zone
 {: #creating-dns-zone-api}
@@ -129,7 +126,7 @@ Store the API endpoint in a variable so you can use it in API requests without h
 ```bash
 DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
 ```
-{:pre}
+{: pre}
 
 To verify that this variable is saved, run `echo $DNSSVCS_ENDPOINT` and ensure the response is not empty.
 
@@ -150,10 +147,11 @@ curl -X POST \
         "label": "us-east"
   }'
 ```
-{:pre}
+{: pre}
 
 
 **Response**
+
 ```json
 {
   "id": "example.com:2d0f862b-67cc-41f3-b6a2-59860d0aa90e",
@@ -166,7 +164,7 @@ curl -X POST \
   "label": "us-east"
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Creating a permitted network
 {: #creating-permitted-network-api}
@@ -178,6 +176,7 @@ When a DNS zone gets created, its Status is `PENDING_NETWORK_ADD`. To move the z
 By adding your VPC to your zone's permitted network, compute instances on your VPC can access these resource records.
 
 **Request**
+
 ```bash
 curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/acls \
@@ -189,9 +188,10 @@ curl -X POST \
         }
   }'
 ```
-{:pre}
+{: pre}
 
 **Response**
+
 ```json
 {
   "id": "fecd0173-3919-456b-b202-3029dfa1b0f7",
@@ -203,7 +203,7 @@ curl -X POST \
   "type": "vpc"
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Creating an "A" resource record
 {: #creating-resource-records}
@@ -230,7 +230,7 @@ curl -X POST \
         "ttl":300
   }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -247,7 +247,7 @@ curl -X POST \
    }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Verifying the setup
 {: #verifying-the-setup-api}
@@ -257,11 +257,11 @@ To verify that your instance, zone, and record are performing correctly, run the
 ```
 dig @161.26.0.7 <Record type> <record name>
 ```
-{:pre}
+{: pre}
 
 Example:
 
 ```
 dig @161.26.0.7 A xyz.example.com
 ```
-{:codeblock}
+{: codeblock}

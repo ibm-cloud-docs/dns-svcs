@@ -27,7 +27,7 @@ subcollection: dns-svcs
 {: #dns-concepts}
 
 This document contains some concepts and definitions that are related to the internet's domain name system (DNS) and how it affects your usage of {{site.data.keyword.dns_full}}.
-{:shortdesc}
+{: shortdesc}
 
 
 ## DNS zones

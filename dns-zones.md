@@ -26,7 +26,7 @@ subcollection: dns-svcs
 
 
 # Managing DNS zones
-{:#managing-dns-zones}
+{: #managing-dns-zones}
 
 You must have an {{site.data.keyword.dns_full}} instance before managing DNS zones. Refer to [Create a {{site.data.keyword.dns_short}} instance](/docs/dns-svcs?topic=dns-svcs-getting-started#step-1-create-dns-services-instance) for more information.
 
@@ -35,9 +35,9 @@ A zone can have an arbitrary number of levels, but not fewer than two. For examp
 You can have multiple zones where one is a suffix to another. For example, `sub.domain.example.com` and `domain.example.com` can co-exist.
 
 You can also define subdomains within an added zone. For example, the following are all valid names within the zone `domain.example.com`.
-  * `subdomain.domain.example.com`
-  * `hostname.domain.example.com`
-  * `hostname.subdomain.domain.example.com`
+* `subdomain.domain.example.com`
+* `hostname.domain.example.com`
+* `hostname.subdomain.domain.example.com`
 
 The name `host.sub.domain.example.com` might be `host.sub` within the zone `domain.example.com`. It might also be `host.sub.domain` within the zone `example.com`. Both can exist at the same time, and are separate.
 
@@ -56,7 +56,7 @@ Records for `example.com`
       me.domain.example.com A 8.8.8.8
   }
 ```
-{:codeblock}
+{: screen}
 
 Records for `domain.example.com`
 
@@ -73,52 +73,53 @@ If they queried for `me.domain.example.com` instead, the resolver searches only 
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: #managing-dns-zones-ui}
+
 DNS zones can be managed through the {{site.data.keyword.cloud}} console, or the API. The following sections cover the console usage.
-{:shortdesc}
+{: shortdesc}
 
 ### Creating a DNS zone
-{:#create-dns-zone-ui}
+{: #create-dns-zone-ui}
 
-  1. From the Resource page, select the desired {{site.data.keyword.dns_short}} instance.
-  2. Click the **Create Zone** button on the **DNS Zones** page.
-  3. In the panel that appears, enter your zone name in the **Name** field. Optionally, enter **Label** and **Description** fields. See [Restricted DNS zone names](#restricted-dns-zone-names) for information about what names are not permitted.
-  5. Click **Create Zone**.
+1. From the Resource page, select the desired {{site.data.keyword.dns_short}} instance.
+2. Click the **Create Zone** button on the **DNS Zones** page.
+3. In the panel that appears, enter your zone name in the **Name** field. Optionally, enter **Label** and **Description** fields. See [Restricted DNS zone names(#restricted-dns-zone-names) for information about what names are not permitted.
+5. Click **Create Zone**.
 
 If the zone creation is successful, you are directed to the Zone Details page.
 
 Newly added zones have a pending state until you add permitted networks to the zone. The zone becomes active after permitted networks are added.
-{:note}
+{: note}
 
 If the zone creation is unsuccessful, an error notification appears with information about what caused the error.
 
 #### Restricted DNS zone names
-{:#restricted-dns-zone-names}
+{: #restricted-dns-zone-names}
 
 Subdomains to any of the restricted 2-level zones are not permitted. For example, `my.host.ibm.com` is a subdomain to `ibm.com`. Therefore, `my.host.ibm.com` is also a restricted zone.
 
 The following DNS zone names are not permitted.
-  * `ibm.com`
-  * `softlayer.com`
-  * `bluemix.net`
-  * `softlayer.local`
-  * `mybluemix.net`
-  * `networklayer.com`
-  * `ibmcloud.com`
-  * `pdnsibm.net`
-  * `appdomain.cloud`
+* `ibm.com`
+* `softlayer.com`
+* `bluemix.net`
+* `softlayer.local`
+* `mybluemix.net`
+* `networklayer.com`
+* `ibmcloud.com`
+* `pdnsibm.net`
+* `appdomain.cloud`
 
 ### Editing a DNS zone
-{:#edit-dns-zone-ui}
+{: #edit-dns-zone-ui}
 
-  1. From the **DNS Zones** page, select your zone. **Label** and **Description** options appear.
-  2. Click the edit icon for **Label**, then enter the label and click **Save**.
-  3. Click the edit icon for **Description**, then enter the description and click **Save**.
+1. From the **DNS Zones** page, select your zone. **Label** and **Description** options appear.
+2. Click the edit icon for **Label**, then enter the label and click **Save**.
+3. Click the edit icon for **Description**, then enter the description and click **Save**.
 
 ### Deleting a DNS zone
-{:#delete-dns-zone-ui}
+{: #delete-dns-zone-ui}
 
-  1. From the **DNS Zones** page, click the delete icon from the row for the zone you wish to delete. A confirmation dialog appears.
-  2. Click **Delete** button.
+1. From the **DNS Zones** page, click the delete icon from the row for the zone you wish to delete. A confirmation dialog appears.
+2. Click **Delete** button.
 
 ## Using the API
 {: #managing-dns-zones-api}
@@ -128,7 +129,7 @@ First store the API endpoint in a variable so you can use it in API requests wit
 ```bash
 DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
 ```
-{:pre}
+{: pre}
 
 To verify that this variable was saved, run `echo $DNSSVCS_ENDPOINT` and make sure the response is not empty.
 
@@ -155,7 +156,7 @@ curl -X POST \
 	"description": "Example zone"
 }'
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -176,10 +177,10 @@ curl -X POST \
     "messages": []
 }
 ```
-{:codeblock}
+{: codeblock}
 
 For future reference, the "id" in response is used as `DNSZONE_ID`. 
-{:note}
+{: note}
 
 ### Getting a DNS zone
 {: #get-dns-zone-api}
@@ -193,7 +194,7 @@ curl -X GET \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID \
   -H "Authorization: $TOKEN"
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -213,7 +214,7 @@ curl -X GET \
     "messages": []
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Updating a DNS zone
 {: #update-dns-zone-api}
@@ -233,7 +234,7 @@ curl -X PATCH \
 }'
 
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -249,7 +250,7 @@ curl -X PATCH \
   "state": "PENDING_NETWORK_ADD"
 }
 ```
-{:codeblock}
+{: codeblock}
 
 
 ### Listing DNS zones
@@ -264,7 +265,7 @@ curl -X GET \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones \
   -H "Authorization: $TOKEN"
 ```
-{:pre}
+{: pre}
 
 **Response**
 
@@ -286,7 +287,7 @@ curl -X GET \
     "messages": []
 }
 ```
-{:codeblock}
+{: codeblock}
 
 ### Deleting a DNS zone
 {: #delete-dns-zone-api}
@@ -298,14 +299,14 @@ curl -X DELETE \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID \
   -H "Authorization: $TOKEN"
 ```
-{:pre}
+{: pre}
 
 **Response**
 
 ```
 HTTP/2 204 No Content
 ```
-{:codeblock}
+{: codeblock}
 
 ## Using the CLI
 {: #managing-dns-zones-cli}
@@ -324,7 +325,7 @@ DNS Services-km      ffffffff-b042-41fd-885e-000000000000   global     active   
 
 $ ibmcloud dns instance-target "DNS Services-km"
 ```
-{:pre}
+{: pre}
 
 
 ### Creating a DNS zone
@@ -345,14 +346,14 @@ State         PENDING_NETWORK_ADD
 Created On    2020-04-10 07:21:51.774444868 +0000 UTC
 Modified On   2020-04-10 07:21:51.774444868 +0000 UTC
 ```
-{:pre}
+{: pre}
 
 For future reference, the "ID" in output is used as variable `DNS_ZONE_ID`. Run this command to store it in variable `DNS_ZONE_ID`:
 
 ```bash
 DNS_ZONE_ID="example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae"
 ```
-{:note}
+{: codeblock}
 
 
 ### Getting a DNS zone
@@ -373,7 +374,7 @@ State         PENDING_NETWORK_ADD
 Created On    2020-04-10 07:21:51.774444868 +0000 UTC
 Modified On   2020-04-10 07:21:51.774444868 +0000 UTC
 ```
-{:pre}
+{: pre}
 
 
 ### Updating a DNS zone
@@ -394,7 +395,7 @@ State         PENDING_NETWORK_ADD
 Created On    2020-04-10 07:21:51.774444868 +0000 UTC
 Modified On   2020-04-10 07:38:36.712131819 +0000 UTC
 ```
-{:pre}
+{: pre}
 
 ### Listing DNS zones
 {: #list-dns-zones-cli}
@@ -409,7 +410,7 @@ OK
 ID                                                      Name               Status
 example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae        example.com        PENDING_NETWORK_ADD
 ```
-{:pre}
+{: pre}
 
 
 ### Deleting a DNS zone
@@ -420,4 +421,4 @@ Use the `ibmcloud dns zone-delete` followed by the zone ID to delete a zone.
 ```bash
 
 ```
-{:pre}
+{: pre}

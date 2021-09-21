@@ -37,7 +37,7 @@ This custom resolver feature is available to {{site.data.keyword.dns_short}} use
 {: beta}
 
 You can update custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API. 
-{:shortdesc}
+{: shortdesc}
 
 ## Updating a custom resolver using the UI
 {: #ui-update-cr}
@@ -58,13 +58,13 @@ To update a custom resolver using the CLI, run the following command:
 `ibmcloud dns custom-resolver-update RESOLVER_ID [--name NAME] [--enabled true|false] [--description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
- 
- - **RESOLVER_ID** is the ID of custom resolver.
- - **-n, --name** is the name of the custom resolver.
- - **-d, --description** is the descriptive text of the custom resolver.
- - **--enabled** determines whether to enable the custom resolver.
- - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
- - **--output** specifies output format. Currently, JSON is the only supported format.
+
+- **RESOLVER_ID** is the ID of custom resolver.
+- **-n, --name** is the name of the custom resolver.
+- **-d, --description** is the descriptive text of the custom resolver.
+- **--enabled** determines whether to enable the custom resolver.
+- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
+- **--output** specifies output format. Currently, JSON is the only supported format.
 
 ## Update a custom resolver using the API
 {: #api-update-cr}
@@ -74,19 +74,19 @@ To update a custom resolver using the API, follow these steps:
 
 1. Set up your API environment with the correct variables.
 1. Store the following values in variables to be used in the API command:
-   * `instance_id`, which is the unique identifier of a service instance.
-   * `resolver_id`, which is the unique identifier of a custom resolver.
-   * `X-Correlation-ID`, which is a string that uniquely identifies a request.
+    * `instance_id`, which is the unique identifier of a service instance.
+    * `resolver_id`, which is the unique identifier of a custom resolver.
+    * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all viariables are initiated, update your custom resolver:
 
-```
-{
-  "name": "my-resolver",
-  "description": "custom resolver",
-  "enabled": false
-}
-```
-{:codeblock}
+    ```
+    {
+      "name": "my-resolver",
+      "description": "custom resolver",
+      "enabled": false
+    }
+    ```
+    {: codeblock}
 
 
 ## Next steps

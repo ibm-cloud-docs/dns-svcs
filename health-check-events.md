@@ -26,10 +26,10 @@ subcollection: dns-svcs
 {:DomainName: data-hd-keyref="DomainName"}
 
 # Viewing health check events
-{:#health-check-events}
+{: #health-check-events}
 
 When using global load balancing, you can create a health check to specify how the origin's health is monitored. Health check events are status changes from monitored origin pools and their associated origin servers. If an origin's status changes, a new event is recorded with the event's description.
-{:shortdesc}
+{: shortdesc}
 
 {{site.data.keyword.loganalysisfull}} manages system and application logs in the IBM Cloud. You can use this service to access health check events for your origin pools and origin servers. For more information, see the [Getting started tutorial](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-getting-started) for {{site.data.keyword.loganalysislong_notm}}.
 
@@ -39,7 +39,7 @@ When using global load balancing, you can create a health check to specify how t
 To view health check events in {{site.data.keyword.loganalysisshort}}, make sure that you create an {{site.data.keyword.loganalysislong_notm}} instance in the Frankfurt region in the account.
 
 ## Adding {{site.data.keyword.loganalysisshort}}
-{:#loganalysis-nav}
+{: #loganalysis-nav}
 
 From the UI, follow these steps to navigate to the {{site.data.keyword.loganalysisshort}} service:
 
@@ -89,41 +89,41 @@ You can also search for the events you want by combining other event fields. For
 ![search events by CRN, pool name and health](images/health-check-type-filter-crn-pool-health.png)
 
 ## Health check event properties
-{:#health-check-event-properties}
+{: #health-check-event-properties}
 
 Health check event records have the following properties:
 
- - `event_time`: The time at which the event was recorded. For example, `2020-10-28T15:04:05.00+0000`.
- - `logSourceCRN`: CRN of the {{site.data.keyword.dns_short}} instance in which the origin pools and origin servers were created.
-   For example: `crn:v1:bluemix:public:dns-svcs:global:a/bcf1865e99742d38d2d5fc3fb80a5496:85ed7b9d-cd48-4881-b354-52eb1d8e9011::`
- - `type`: The value of this property is `health_check_event` for health check events.
- - `origins`: An array of objects representing the origin servers associated with the origin pool. For example: 
-   
-   ```
-   [
-        {
-            "name": "web-server1",
-            "address": "10.240.0.4",
-            "enabled": true,
-            "healthy": true,
-            "overall_health": true,
-            "health_failure_reason": "SUCCESS",
-            "changed": true
-        },
-        {
-            "name": "web-server2",
-            "address": "10.240.100.4",
-            "enabled": true,
-            "overall_health": false,
-            "health_failure_reason": "CONNECTION_ERROR",
-            "changed": false
-        }
-    ]
-   ```
-   {:codeblock}
+- `event_time`: The time at which the event was recorded. For example, `2020-10-28T15:04:05.00+0000`.
+- `logSourceCRN`: CRN of the {{site.data.keyword.dns_short}} instance in which the origin pools and origin servers were created.
+    For example: `crn:v1:bluemix:public:dns-svcs:global:a/bcf1865e99742d38d2d5fc3fb80a5496:85ed7b9d-cd48-4881-b354-52eb1d8e9011::`
+- `type`: The value of this property is `health_check_event` for health check events.
+- `origins`: An array of objects representing the origin servers associated with the origin pool. For example: 
 
- - `pool`: An object that represents the origin pool for which the health check event was generated. For example:
-    
+    ```
+    [
+         {
+             "name": "web-server1",
+             "address": "10.240.0.4",
+             "enabled": true,
+             "healthy": true,
+             "overall_health": true,
+             "health_failure_reason": "SUCCESS",
+             "changed": true
+         },
+         {
+             "name": "web-server2",
+             "address": "10.240.100.4",
+             "enabled": true,
+             "overall_health": false,
+             "health_failure_reason": "CONNECTION_ERROR",
+             "changed": false
+         }
+     ]
+    ```
+    {: codeblock}
+
+- `pool`: An object that represents the origin pool for which the health check event was generated. For example:
+
     ```
     {
         "id": "987f3f96-c077-4124-87eb-846dc026e383",
@@ -134,4 +134,4 @@ Health check event records have the following properties:
         "changed": false
     }
     ```
-    {:codeblock}
+    {: codeblock}

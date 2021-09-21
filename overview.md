@@ -29,7 +29,7 @@ subcollection: dns-svcs
 {: #about-dns-services}
 
 To better understand {{site.data.keyword.dns_full}}, it helps to know more about DNS in general.
-{:shortdesc}
+{: shortdesc}
 
 ## DNS overview
 {: #dns-overview}
@@ -42,18 +42,18 @@ That way, people can use human friendly domain names instead of obscure, hard-to
 {: dns-services-overview}
 
 {{site.data.keyword.dns_short}} allow you to
-  * Create private DNS zones that are collections for holding domain names.
-  * Create DNS resource records under these DNS zones.
-  * Specify access controls used for the DNS resolution of resource records on a zone-wide level.
+* Create private DNS zones that are collections for holding domain names.
+* Create DNS resource records under these DNS zones.
+* Specify access controls used for the DNS resolution of resource records on a zone-wide level.
 
 {{site.data.keyword.dns_short}} also maintains its own worldwide set of DNS resolvers. Instances that are provisioned under {{site.data.keyword.cloud_notm}} on an {{site.data.keyword.cloud_notm}} network can use resource records that are configured through
 {{site.data.keyword.dns_full_notm}} by querying {{site.data.keyword.dns_short}} resolvers.
 
 Resource records and zones that are configured through {{site.data.keyword.dns_short}} are
-  * Separated from the wider, public DNS and their publicly accessible records.
-  * Hidden from machines outside of and not part of the {{site.data.keyword.cloud_notm}} private network.
-  * Accessible only from machines that you authorize on the {{site.data.keyword.cloud_notm}} private network.
-  * Resolvable only via the resolvers provided by the service.
+* Separated from the wider, public DNS and their publicly accessible records.
+* Hidden from machines outside of and not part of the {{site.data.keyword.cloud_notm}} private network.
+* Accessible only from machines that you authorize on the {{site.data.keyword.cloud_notm}} private network.
+* Resolvable only via the resolvers provided by the service.
 
 ## Clock synchronization
 {: #clock-sync}

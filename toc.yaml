@@ -1,0 +1,132 @@
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: dns-svcs
+    version: 2
+    category: network_vpc
+    audience: service
+    href: /docs/dns-svcs
+    console-page: /catalog/services/dns-services
+    product-page: https://www.ibm.com/cloud/dns
+    path: dns-svcs
+    label: DNS Services
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+    - navgroup:
+        id: learn
+        topics:
+        - getting-started.md
+        - overview.md
+        - pricing.md
+        - dns-concepts.md
+        - topicgroup:
+            label: Related links
+            topics:
+            - link:
+                label: Getting started with Virtual Private Cloud (VPC)
+                href: https://{DomainName}/docs/vpc?topic=vpc-getting-started
+
+    - navgroup:
+        id: tutorial
+        topics:
+        - topicgroup:
+            label: Team based privacy using IAM, VPC, Transit Gateway and DNS
+            topics:
+            - /solution-tutorials/solution-tutorials-vpc-tg-dns-iam
+
+    - navgroup:
+        id: howto
+        topics:
+        - configure-dns-instance.md
+        - retrieve-instance-id.md
+        - dns-zones.md
+        - permitted-networks.md
+        - dns-records.md
+        - private-endpoint.md
+        - topicgroup:
+            label: Global load balancers
+            topics:
+            - glb.md
+            - health-check-events.md
+        - topicgroup:
+            label: Custom resolvers (Beta)
+            topics:
+            - custom-resolver.md
+            - topicgroup:
+                label: Creating and managing custom resolvers
+                topics:
+                - cr-add.md
+                - cr-update.md
+                - cr-details.md
+                - cr-delete.md
+            - topicgroup:
+                label: Creating and managing resolver locations
+                topics:
+                - cr-add-res-loc.md
+                - cr-res-loc-update.md
+                - cr-res-loc-delete.md
+            - topicgroup:
+                label: Creating and managing custom resolver forwarding rules
+                topics:
+                - cr-create-fwd-rules.md
+                - cr-update-fwd-rules.md
+                - cr-details-fwd-rules.md
+                - cr-delete-fwd-rules.md
+            - custom-resolver-use-cases.md
+        - output-dns-config.md
+        - wildcard-support.md
+        - topicgroup:
+            label: High availability and disaster recovery
+            topics:
+            - ha-dr.md
+            - backup-data.md
+        - topicgroup:
+            label: Enhancing security
+            topics:
+            - iam.md
+            - architecture-workload-isolation.md
+            - service-connection.md
+            - data-security.md
+            - at-events.md
+        - terraform.md
+
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your command line reference docs should be included in the Reference navigation group.
+    - navgroup:
+        id: reference
+        topics:
+        - link:
+            label: DNS Services API
+            href: https://cloud.ibm.com/apidocs/dns-svcs
+        - topicgroup:
+            label: SDKs
+            links:
+            - link:
+                label: GoLang SDK
+                href: https://github.com/IBM/networking-go-sdk
+            - link:
+                label: Python SDK
+                href: https://github.com/IBM/networking-python-sdk
+        - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
+        - link:
+            label: Terraform reference
+            href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_custom_resolver
+        - responsibilities.md
+
+    - navgroup:
+        id: help
+        topics:
+        - faq.md
+        - topicgroup:
+            label: Troubleshooting
+            topics:
+            - ts-nxdomain.md
+            - ts-permitted-network.md
+            - ts-origin-down.md
+            - ts-pool-critical.md
+            - ts-cse-enabled.md
+        - known-limitations.md
+        - getting-help.md
+        - release-notes.md

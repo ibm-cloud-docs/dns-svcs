@@ -59,10 +59,10 @@ To delete a resolver location using the CLI, run the following command:
 
 Where:
 
- - **RESOLVER_ID** is the ID of custom resolver.
- - **LOCATION_ID** is the ID of the custom resolver location.
- - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
- - **-f, --force** deletes the resolver location without prompting for confirmation.
+- **RESOLVER_ID** is the ID of custom resolver.
+- **LOCATION_ID** is the ID of the custom resolver location.
+- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
+- **-f, --force** deletes the resolver location without prompting for confirmation.
 
 
 ## Deleting a resolver location using the API
@@ -73,14 +73,13 @@ To delete a custom resolver location using the API, follow these steps:
 
 1. Set up your API environment with the correct variables.
 1. Store the following values in variables to be used in the API command:
-   * `instance_id`, which is the unique identifier of a service instance.
-   * `resolver_id`, which is the unique identifier of a custom resolver.
-   * `location_id`, which is the custom resolver location ID.
-   * `X-Correlation-ID`, which is a string that uniquely identifies a request.
+    * `instance_id`, which is the unique identifier of a service instance.
+    * `resolver_id`, which is the unique identifier of a custom resolver.
+    * `location_id`, which is the custom resolver location ID.
+    * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all viariables are initiated, get the details of your custom resolver:
 
-   ```
-   curl -X DELETE https://api.dns-svcs.cloud.ibm.com/v1/instances/2be5d4a7-78f0-4c62-a957-41dc15342777/custom_resolvers/ddbe7a53-7971-46dc-b021-420335c31562/locations/bf6b4f83-bf0b-47c2-8bdf-e7fbd92db2c6 -H 'Authorization: Bearer xxxxxx'
-   ```
-   {:codeblock}
-   
+    ```
+    curl -X DELETE https://api.dns-svcs.cloud.ibm.com/v1/instances/2be5d4a7-78f0-4c62-a957-41dc15342777/custom_resolvers/ddbe7a53-7971-46dc-b021-420335c31562/locations/ bf6b4f83-bf0b-47c2-8bdf-e7fbd92db2c6 -H 'Authorization: Bearer xxxxxx'
+    ```
+    {: codeblock}

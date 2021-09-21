@@ -25,14 +25,14 @@ subcollection: dns-svcs
 # Why did I get an error when adding a permitted network to a VPC?
 {: #troubleshoot-cse-enabled}
 {: troubleshoot}
-{: support} 
+{: support}
 
 You tried to add a permitted network, but got an error that the VPC does not have Cloud Service Endpoint (CSE) enabled.
-{:shortdesc}
+{: shortdesc}
 
 You are unable to add a permitted network to a VPC.
 {: tsSymptoms}
-  
+
 By default, only VPCs created on or after 10/09/2019 are enabled to use DNS Services.
 {: tsCauses}
 

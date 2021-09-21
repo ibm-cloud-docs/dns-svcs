@@ -44,21 +44,21 @@ After creating an endpoint gateway for {{site.data.keyword.dns_short}}, follow t
 
 1. Update the {{site.data.keyword.cloud_notm}} CLI to the latest version:
 
-   ```sh
-   ibmcloud update
-   ```
-   {: pre}
-   
+    ```sh
+    ibmcloud update
+    ```
+    {: pre}
+
 1. Update the {{site.data.keyword.dns_short}} CLI plug-in:
 
-   ```sh
-   ibmcloud plugin update dns-svcs-cli
-   ```
-   {: pre}
+    ```sh
+    ibmcloud plugin update dns-svcs-cli
+    ```
+    {: pre}
 
 ### Using the API 
 {: #vpe-setup-api}
- 
+
 After creating an endpoint gateway for the {{site.data.keyword.dns_short}} instance, use the service endpoint's FQDN `api.private.dns-svcs.cloud.ibm.com` in the URL to access the service. For example:
 
 ```sh
@@ -74,9 +74,9 @@ After creating an endpoint gateway for the {{site.data.keyword.dns_short}} servi
 ```
 api.private.dns-svcs.cloud.ibm.com
 ``` 
-{:pre}
+{: pre}
 
-For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/dns-svcs?code=go).  
+For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/dns-svcs?code=go).
 
 ### Using Terraform
 {: #terrform-dns-svcs}
