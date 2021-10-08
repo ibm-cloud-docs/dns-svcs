@@ -33,13 +33,13 @@ subcollection: dns-svcs
 # Adding custom resolver forwarding rules
 {: #cr-fwd-rules-add}
 
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
+This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
 {: beta}
 
-Use forwarding rules to configure where the DNS queries should be forwarded to for resolution. 
+Use forwarding rules to configure where the DNS queries should be forwarded to for resolution.
 {: shortdesc}
 
-Custom resolvers support three types of forwarding rules: 
+Custom resolvers support three types of forwarding rules:
 
 * **DNS Zone** rules apply for a zone name.
 * **Hostname** rules apply for a given hostname.
@@ -89,7 +89,7 @@ To create a custom resolver forwarding rule using the API, follow these steps:
     * `instance_id`, which is the unique identifier of a service instance.
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, create your custom resolver forwarding rule:
+1. When all variables are initiated, create your custom resolver forwarding rule:
 
     ```
     {

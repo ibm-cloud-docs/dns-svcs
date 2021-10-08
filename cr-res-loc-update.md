@@ -74,7 +74,7 @@ To update a custom resolver location using the API, follow these steps:
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `location_id`, which is the custom resolver location ID.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, get the details of your custom resolver:
+1. When all variables are initiated, get the details of your custom resolver:
 
     ```
     {

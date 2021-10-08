@@ -79,7 +79,7 @@ To add a custom resolver location using the API, follow these steps:
     * `instance_id`, which is the unique identifier of a service instance.
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, get the details of your custom resolver:
+1. When all variables are initiated, get the details of your custom resolver:
 
     ```
     {

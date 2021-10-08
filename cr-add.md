@@ -88,7 +88,7 @@ To add a custom resolver using the API, follow these steps:
 1. Store the following values in variables to be used in the API command:
     * `instance_id`, which is the unique identifier of a service instance.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, add your custom resolver:
+1. When all variables are initiated, add your custom resolver:
 
 ```
 {

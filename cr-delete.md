@@ -33,7 +33,7 @@ subcollection: dns-svcs
 # Deleting a custom resolver
 {: #cr-delete}
 
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
+This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
 {: beta}
 
 You can delete a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
@@ -43,14 +43,14 @@ You can delete a custom resolver in {{site.data.keyword.dns_full}} by using the 
 {: #ui-cr-delete}
 {: ui}
 
-You can delete your custom resolver with the UI in two ways. 
+You can delete your custom resolver with the UI in two ways.
 
-To delete a custom resolver from the custom resolver list view: 
+To delete a custom resolver from the custom resolver list view:
 1. Click the overflow icon next to the custom resolver you want to delete.
 1. Select **Delete**.
 1. Click **Delete** in the confirmation dialog that appears.
 
-To delete a custom resolver from the custom resolver details view: 
+To delete a custom resolver from the custom resolver details view:
 1. Select the custom resolver you want to delete to open the details page.
 1. Click **Delete resolver**.
 1. Click **Delete** in the confirmation dialog that appears.
@@ -81,8 +81,8 @@ To delete a custom resolver using the API, follow these steps:
     * `instance_id`, which is the unique identifier of a service instance.
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, update your custom resolver.
-    
+1. When all variables are initiated, update your custom resolver.
+
     ```
     curl -X DELETE https://api.dns-svcs.cloud.ibm.com/v1/instances/2be5d4a7-78f0-4c62-a957-41dc15342777/custom_resolvers/ddbe7a53-7971-46dc-b021-420335c31562 -H 'Authorization: Bearer xxxxxx'
     ```

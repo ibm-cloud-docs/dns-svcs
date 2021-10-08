@@ -33,7 +33,7 @@ subcollection: dns-svcs
 # Viewing custom resolver details
 {: #details-cr}
 
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
+This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
 {: beta}
 
 You view details of a single custom resolver and view a list of all custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
@@ -43,7 +43,7 @@ You view details of a single custom resolver and view a list of all custom resol
 {: #ui-details-cr}
 {: ui}
 
-To view the details of a custom resolver using the UI, navigate to the custom resolver details page. There, you can view information about a specific custom resolver by clicking on the custom resolver ID. 
+To view the details of a custom resolver using the UI, navigate to the custom resolver details page. There, you can view information about a specific custom resolver by clicking on the custom resolver ID.
 
 From the custom resolver tab, you can view a list of all custom resolvers.
 
@@ -87,7 +87,7 @@ To get the details of a custom resolver using the API, follow these steps:
     * `instance_id`, which is the unique identifier of a service instance.
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, get the details of your custom resolver:
+1. When all variables are initiated, get the details of your custom resolver:
 
     ```
     {
@@ -120,7 +120,7 @@ To list all custom resolvers using the API, follow these steps:
 1. Store the following values in variables to be used in the API command:
     * `instance_id`, which is the unique identifier of a service instance.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, list your custom resolvers:
+1. When all variables are initiated, list your custom resolvers:
 
     ```
     {

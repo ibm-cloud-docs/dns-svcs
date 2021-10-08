@@ -33,7 +33,7 @@ subcollection: dns-svcs
 # Viewing details of custom resolver forwarding rules
 {: #cr-fwd-rules-detail}
 
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
+This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
 {: beta}
 
 You view details of a single custom resolver forwarding rule and view a list of all custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
@@ -88,7 +88,7 @@ To view the details of a custom resolver forwarding rule using the API, follow t
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `rule_id`, which is the unique identifier of a forwarding rule.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, view the details of your custom resolver forwarding rule:
+1. When all variables are initiated, view the details of your custom resolver forwarding rule:
 
     ```
     {
@@ -116,7 +116,7 @@ To view the details of a custom resolver forwarding rule using the API, follow t
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `rule_id`, which is the unique identifier of a forwarding rule.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, view the list of your custom resolver forwarding rule:
+1. When all variables are initiated, view the list of your custom resolver forwarding rule:
 
     ```
     {

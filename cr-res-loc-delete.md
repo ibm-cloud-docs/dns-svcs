@@ -77,7 +77,7 @@ To delete a custom resolver location using the API, follow these steps:
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `location_id`, which is the custom resolver location ID.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, get the details of your custom resolver:
+1. When all variables are initiated, get the details of your custom resolver:
 
     ```
     curl -X DELETE https://api.dns-svcs.cloud.ibm.com/v1/instances/2be5d4a7-78f0-4c62-a957-41dc15342777/custom_resolvers/ddbe7a53-7971-46dc-b021-420335c31562/locations/ bf6b4f83-bf0b-47c2-8bdf-e7fbd92db2c6 -H 'Authorization: Bearer xxxxxx'

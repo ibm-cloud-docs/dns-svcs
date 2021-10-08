@@ -11,7 +11,7 @@ subcollection: dns-svcs
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"} 
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -33,10 +33,10 @@ subcollection: dns-svcs
 # Updating custom resolver forwarding rules
 {: #cr-fwd-rules-update}
 
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
+This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
 {: beta}
 
-You can update custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API. 
+You can update custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
 Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
@@ -86,7 +86,7 @@ To update a custom resolver forwarding rule using the API, follow these steps:
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `rule_id`, which is the unique identifier of a forwarding rule.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, update your custom resolver forwarding rule:
+1. When all variables are initiated, update your custom resolver forwarding rule:
 
     ```
     {

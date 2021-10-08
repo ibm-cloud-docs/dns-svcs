@@ -33,10 +33,10 @@ subcollection: dns-svcs
 # Deleting custom resolver forwarding rules
 {: #cr-fwd-rules-delete}
 
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
+This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
 {: beta}
 
-You can delete custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API. 
+You can delete custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
 ## Deleting custom resolver forwarding rules using the UI
@@ -78,8 +78,8 @@ To delete a custom resolver forwarding rule using the API, follow these steps:
     * `resolver_id`, which is the unique identifier of a custom resolver.
     * `rule_id`, which is the unique identifier of a forwarding rule.
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
-1. When all viariables are initiated, delete your custom resolver forwarding rule:
- 
+1. When all variables are initiated, delete your custom resolver forwarding rule:
+
     ```
     curl -X DELETE https://api.dns-svcs.cloud.ibm.com/v1/instances/2be5d4a7-78f0-4c62-a957-41dc15342777/custom_resolvers/ddbe7a53-7971-46dc-b021-420335c31562/forwarding_rules/80b7d905-b2fd-416f-9e0c-b2e554125a4c -H 'Authorization: Bearer xxxxxx'
     ```
