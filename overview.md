@@ -10,20 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:generic: data-hd-programlang="generic"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # About {{site.data.keyword.dns_short}}
 {: #about-dns-services}
@@ -39,7 +26,7 @@ Computers on a network can find one another by IP addresses. To make it easier t
 That way, people can use human friendly domain names instead of obscure, hard-to-remember, machine-oriented data.
 
 ## {{site.data.keyword.dns_short}} overview
-{: dns-services-overview}
+{: #dns-services-overview}
 
 {{site.data.keyword.dns_short}} allow you to
 * Create private DNS zones that are collections for holding domain names.

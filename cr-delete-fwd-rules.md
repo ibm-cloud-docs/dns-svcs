@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,31 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Deleting custom resolver forwarding rules
 {: #cr-fwd-rules-delete}
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
-{: beta}
 
 You can delete custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
@@ -44,8 +23,8 @@ You can delete custom resolver forwarding rules in {{site.data.keyword.dns_full}
 {: ui}
 
 To delete a forwarding rule:
- 1. Navigate to the custom resolver details page.
- 1. Click the overflow menu next to the rule you want to delete.
+ 1. Navigate to the custom resolver details page and select the **Forwarding rules** tab.
+ 1. Click the overflow menu next to the rule that you want to delete.
  1. Select **Delete**.
 
     You cannot delete the default rule.
@@ -63,7 +42,7 @@ Where:
 
 - **RESOLVER_ID** is the ID of custom resolver.
 - **RULE_ID** is the ID of custom resolver forwarding rule.
-- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
+- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **-f, --force** deletes the custom resolver forwarding rule without prompting for confirmation.
 
 ## Deleting custom resolver forwarding rules using the API
@@ -80,7 +59,7 @@ To delete a custom resolver forwarding rule using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, delete your custom resolver forwarding rule:
 
-    ```
+    ```curl
     curl -X DELETE https://api.dns-svcs.cloud.ibm.com/v1/instances/2be5d4a7-78f0-4c62-a957-41dc15342777/custom_resolvers/ddbe7a53-7971-46dc-b021-420335c31562/forwarding_rules/80b7d905-b2fd-416f-9e0c-b2e554125a4c -H 'Authorization: Bearer xxxxxx'
     ```
     {: codeblock}

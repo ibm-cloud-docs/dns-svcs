@@ -10,20 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:generic: data-hd-programlang="generic"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:download: .download}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # About {{site.data.keyword.dns_short}} architecture and workload isolation
 {: #architecture-workload-isolation}

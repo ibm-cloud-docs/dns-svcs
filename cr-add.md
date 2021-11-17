@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,33 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring a custom resolver
 {: #ui-create-cr}
-
-
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
-{: beta}
 
 You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
@@ -45,7 +22,10 @@ You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI,
 {: #create-cr}
 {: ui}
 
-To add a custom resolver in {{site.data.keyword.dns_short}}, take the following steps:
+To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
+
+   Each VPC can have only one custom resolver.
+   {: note}
 
 1. Navigate to **Custom resolvers** in the {{site.data.keyword.dns_short}} navigation menu.
 1. Click **Create custom resolver**.
@@ -53,16 +33,23 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, take the following 
 1. Select a region from the list menu.
 1. Select a VPC from the list menu.
 1. Select a subnet from the list menu.
+
+   To achieve high availability, you must provide a minimum of two subnets. You can configure a maximum of three locations within the same subnet, or in different subnets. 
+   {: important}
+   
 1. Click **Add+** if you want to add another subnet.
-
-    Each VPC can have only one custom resolver.
-    {: note}
-
 1. Click **Create**.
 
-The custom resolver details view appears, where you can manage the custom resolver. 
+   The custom resolver details view appears, where you can manage custom resolver settings.
 
-## Create a custom resolver using the CLI
+### Creating a custom resolver without high availability
+{: #cr-add-no-ha}
+
+If you want to create a custom resolver without high availibility, you must manually delete the second subnet field by clicking the trashcan icon next to the second subnet. 
+
+![Delete second subnet](images/cr-no-ha.png "Delete the second subnet by clicking trashcan icon"){: caption="Figure 1. Delete the second subnet to remove high availability function" caption-side="bottom"}
+
+## Creating a custom resolver using the CLI
 {: #cli-create-cr}
 {: cli}
 
@@ -78,6 +65,15 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
+To create a custom resolver without high availability, run the command with `[-f, --force]`:
+
+`ibmcloud dns custom-resolver-create --name NAME [--location LOCATION1] [--location LOCATION2] [-description DESCRIPTION] [-f, --force] [-i, --instance INSTANCE] [--output FORMAT]`
+
+Where: 
+
+- **-f, --force** allows for creating custom resolver with fewer than 2 locations.
+
+
 ## Create a custom resolver using the API
 {: #api-create-cr}
 {: api}
@@ -90,7 +86,7 @@ To add a custom resolver using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, add your custom resolver:
 
-```
+```sh
 {
   "name": "my-resolver",
   "description": "custom resolver",

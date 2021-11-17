@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,31 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Viewing details of custom resolver forwarding rules
 {: #cr-fwd-rules-detail}
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
-{: beta}
 
 You view details of a single custom resolver forwarding rule and view a list of all custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
@@ -43,7 +22,7 @@ You view details of a single custom resolver forwarding rule and view a list of 
 {: #ui-cr-fwd-rules-view}
 {: ui}
 
-View the details of a custom resolver forwarding rule by navigating to the **Forwarding rules** section of the custom resolver details page.
+View the details of a custom resolver forwarding rule by navigating to the **Forwarding rules** tab in the custom resolver details page.
 
 The Forwarding rules section lists all custom resolver rules associate with the custom resolver.
 
@@ -90,7 +69,7 @@ To view the details of a custom resolver forwarding rule using the API, follow t
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, view the details of your custom resolver forwarding rule:
 
-    ```
+    ```sh
     {
       "id": "5365b73c-ce6f-4d6f-ad9f-d9c131b26370",
       "description": "forwarding rule",
@@ -118,7 +97,7 @@ To view the details of a custom resolver forwarding rule using the API, follow t
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, view the list of your custom resolver forwarding rule:
 
-    ```
+    ```sh
     {
       "forwarding_rules": [
         {

@@ -1,30 +1,16 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-03-16"
+  years: 2020, 2021
+lastupdated: "2021-10-22"
 
-keywords: DNS Services, responsibilities, ha, high availability, disaster recovery
+keywords: responsibilities, ha, high availability, disaster recovery
 
 subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:term: .term}  
-{:generic: data-hd-programlang="generic"}
-{:download: .download}  
+{{site.data.keyword.attribute-definition-list}}
 
 # Understanding your responsibilities when using {{site.data.keyword.dns_full_notm}}
 {: #responsibilities-dns-svcs}
@@ -43,6 +29,7 @@ Review the following sections for the specific responsibilities for you and for 
 - Provide high availability of DNS zone and resource records configuration data.
 - Ensure redundancy of data, enabling Disaster Recovery.
 - Provide DNS resolvers for DNS resolution.
+- Provide updates of appliance for global load balancer and custom resolvers.
 
 ## Customer responsibilities
 {: #customer-responsibilities}

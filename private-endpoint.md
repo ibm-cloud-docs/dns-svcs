@@ -10,21 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
-{:help: data-hd-content-type='help'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Integrating with Virtual Private Endpoint for VPC
 {: #vpe-for-dns-svcs}
@@ -71,7 +57,7 @@ curl https://api.private.dns-svcs.cloud.ibm.com/instance/<instance-id>/dnszones 
 
 After creating an endpoint gateway for the {{site.data.keyword.dns_short}} service, you must use the private endpoint's FQDN when setting the service's FQDN during construction of the {{site.data.keyword.dns_short}} service object. For example:
 
-```
+```sh
 api.private.dns-svcs.cloud.ibm.com
 ``` 
 {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,31 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Updating custom resolver locations
 {: #cr-res-loc-update}
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
-{: beta}
 
 You can update custom resolver locations in {{site.data.keyword.dns_full}} by using the UI, CLI, or API. 
 {: shortdesc}
@@ -43,7 +22,7 @@ You can update custom resolver locations in {{site.data.keyword.dns_full}} by us
 {: #ui-update-res-loc}
 {: ui}
 
-From the custom resolver details page, you can enable or disable your custom resolver by setting the toggle switch. 
+From the custom resolver details page, select the **Resolver locations** tab. Here you can enable or disable your custom resolver by setting the toggle switch. 
 
 ## Updating a resolver location using the CLI
 {: #cli-update-res-loc}
@@ -59,7 +38,7 @@ Where:
 - **LOCATION_ID** is the ID of the custom resolver location.
 - **--subnet** is the CRN of the subnet.
 - **--enabled** determines whether to enable the custom resolver location.
-- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
+- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
 ## Adding a resolver location using the API
@@ -76,7 +55,7 @@ To update a custom resolver location using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, get the details of your custom resolver:
 
-    ```
+    ```sh
     {
       "enabled": false,
       "subnet_crn": "crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04"

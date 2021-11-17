@@ -51,7 +51,7 @@ toc:
             - glb.md
             - health-check-events.md
         - topicgroup:
-            label: Custom resolvers (Beta)
+            label: Custom resolvers
             topics:
             - custom-resolver.md
             - topicgroup:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,31 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding custom resolver locations
 {: #cr-res-loc-add}
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
-{: beta}
 
 The task of the resolver location instance is to provide DNS resolver functions based on the forwarding rules that you configure. Add resolver locations to manage where your custom resolver deploys. 
 {: shortdesc}
@@ -44,11 +23,11 @@ The task of the resolver location instance is to provide DNS resolver functions 
 {: ui}
 
 To add a custom resolver location, from the custom resolver details page:
-1. Click **Add location**.
+1. Fronm the Resolver locations tab, click **Add location**.
 1. Select the subnet from the list menu in the row that appears.
 
-    Each custom resolver can have a maximum of 2 locations, either within the same subnet or in different subnets.
-    {: note}
+   Each custom resolver can have a maximum of three locations within the same subnet, or in different subnets. Also, to achieve high availability, you must configure custom resolvers with a minimum of two resolver locations.
+    {: important}
 
 The location is added when the subnet selection is made.
 
@@ -81,7 +60,7 @@ To add a custom resolver location using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, get the details of your custom resolver:
 
-    ```
+    ```sh
     {
       "subnet_crn": "crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04",
       "enabled": false

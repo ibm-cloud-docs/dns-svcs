@@ -10,14 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:generic: data-hd-programlang="generic"}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Known limitations
 {: #known-limitations}

@@ -12,16 +12,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:generic: data-hd-programlang="generic"}
-
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Understanding DNS concepts
 {: #dns-concepts}
@@ -63,6 +54,7 @@ Provides a mapping of a host to an IPv6 address.
 
 ### CNAME (Canonical Name)
 {: #record-type-cname}
+
 Provides a way to alias a hostname to another hostname or Canonical Name (CNAME).
 
 ### PTR (Pointer)

@@ -10,19 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic"}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Setting up your {{site.data.keyword.dns_short}} instance
 {: #setting-up-your-dns-instance}
@@ -84,14 +72,14 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
 
 To verify that your instance, zone, and record are performing correctly, run the following **dig** command:
 
-```
+```sh
 dig @161.26.0.7 <Record type> <record name>
 ```
 {: pre}
 
 Example:
 
-```
+```sh
 dig @161.26.0.7 A xyz.example.com
 ```
 {: codeblock}
@@ -106,7 +94,7 @@ See the [create a new resource instance](https://{DomainName}/apidocs/resource-c
 
 Set the variables as follows to create an instance of the standard plan:
 
-```
+```sh
 "resource_plan_id": "2c8fa097-d7c2-4df2-b53e-2efb7874cdf7",
 ```
 {: codeblock}
@@ -132,7 +120,8 @@ To verify that this variable is saved, run `echo $DNSSVCS_ENDPOINT` and ensure t
 
 After you gather details about your instance, run the following `curl` command to create a DNS zone:
 
-**Request**
+#### Request
+{: #api-create-dns-zone-request}
 
 * INSTANCE_ID: GUID of the instance
 * TOKEN: IAM OAUTH token
@@ -150,7 +139,8 @@ curl -X POST \
 {: pre}
 
 
-**Response**
+#### Response
+{: #api-create-dns-zone-response}
 
 ```json
 {
@@ -175,7 +165,8 @@ When a DNS zone gets created, its Status is `PENDING_NETWORK_ADD`. To move the z
 
 By adding your VPC to your zone's permitted network, compute instances on your VPC can access these resource records.
 
-**Request**
+#### Request
+{: #api-create-pm-request}
 
 ```bash
 curl -X POST \
@@ -190,7 +181,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #api-create-pm-response}
 
 ```json
 {
@@ -210,7 +202,8 @@ curl -X POST \
 
 An A Record (Address Record) is a DNS resource record that associates a domain or subdomain to an IPv4 address.
 
-**Request**
+#### Request
+{: #create-resource-records-request}
 
 * `name`: FQDN, such as `www.example.com` or the host, such as `www`.
 * `type`: Type of Record - A, AAAA, SRV, and so on.
@@ -232,7 +225,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #create-resource-records-response}
 
 ```json
 {
@@ -254,14 +248,14 @@ curl -X POST \
 
 To verify that your instance, zone, and record are performing correctly, run the following **dig** command:
 
-```
+```sh
 dig @161.26.0.7 <Record type> <record name>
 ```
 {: pre}
 
 Example:
 
-```
+```sh
 dig @161.26.0.7 A xyz.example.com
 ```
 {: codeblock}

@@ -10,29 +10,17 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic"}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
+{{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.dns_short}} pricing
 {: #pricing}
 
-Pricing for {{site.data.keyword.dns_full}} follows.
+Pricing for {{site.data.keyword.dns_full}} follows. All prices are in USD.
 {: shortdesc}
 
 ## Standard
 {: #standard-plan}
+
 * One DNS zone and one million DNS queries are included in an account.
 * Each instance can have up to 10 DNS zones.
 * Each DNS zone can have up to 10 VPC networks.
@@ -42,7 +30,7 @@ Pricing for {{site.data.keyword.dns_full}} follows.
 ### DNS Zones
 {: #zones-pricing}
 
-The standard price is $0.50 USD/month per DNS zone. If an instance does not have the zone for the whole month, the price of the instance's zone is prorated for the portion of the month a zone exists. Zone costs follow the prorated metering model based on usage for the month.
+The standard price is $0.50 per month, per DNS zone. If an instance does not have the zone for the whole month, the price of the instance's zone is prorated for the portion of the month a zone exists. Zone costs follow the prorated metering model based on usage for the month.
 
 ### Tiers
 {: #tiers-pricing}
@@ -57,3 +45,14 @@ Global load balancers are billed monthly. If an instance does not have the globa
 * $25 per global load balancer
 * $25 per origin pool
 * $1 per health check
+
+### Custom resolvers
+{: #cr-pricing}
+
+Custom resolvers are billed hourly at a rate of $0.125 per resolver location. The price is based on the number of hours the custom resolver exists within the billing cycle. If a custom resolver is removed before a full hour has elapsed, there is no charge for that hour.
+
+#### Custom resolver tiers
+{: #cr-tiers}
+
+* For 1-10 external queries, the price is $0.40 per million DNS queries.
+* For over 10 external queries, the price is $0.20 per million DNS queries.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,31 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Updating custom resolver forwarding rules
 {: #cr-fwd-rules-update}
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
-{: beta}
 
 You can update custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
@@ -49,6 +28,7 @@ Changing the Default rule might cause issues with DNS query resolution in VPCs t
 You can edit custom resolver forwarding rules from the custom resolver details page.
 
 To edit a forwarding rule:
+1. Click the **Forwarding rules** tab.
 1. Click the overflow menu next to the rule you want to edit.
 1. In the panel that appears, change the match conditions, forwarding IP addresses, or description.
 1. Click **Save** to commit your changes, or click **Cancel** to discard them.
@@ -88,7 +68,7 @@ To update a custom resolver forwarding rule using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, update your custom resolver forwarding rule:
 
-    ```
+    ```sh
     {
       "description": "forwarding rule",
       "match": "example.com",

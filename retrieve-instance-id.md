@@ -10,22 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:table: .aria-labeledby="caption"}
-{:generic: data-hd-programlang="generic"}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Retrieving your instance ID
 {: #retrieve-instance-ID}
@@ -42,18 +27,14 @@ You can view the instance ID that is associated with your {{site.data.keyword.dn
 2. Go to **Menu** &gt; **Resource List**, and then click **Services** to browse a list of your cloud services.
 3. Click the table row that describes your {{site.data.keyword.dns_short}} service instance.
 4. From the service details view, copy the **GUID** value.
-
-    This **GUID** value represents the instance ID that uniquely identifies your
-    {{site.data.keyword.dns_short}} service instance.
+    This **GUID** value represents the instance ID that uniquely identifies your {{site.data.keyword.dns_short}} service instance.
 
 ## Using the CLI
 {: #retrieve-cli}
 
-You can also retrieve the instance ID for your service instance by using the
-[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
+You can also retrieve the instance ID for your service instance by using the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
-1. Log in to {{site.data.keyword.cloud_notm}} with the
-[{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
+1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
     ```sh
     ibmcloud login
@@ -74,7 +55,7 @@ You can also retrieve the instance ID for your service instance by using the
 
     Replace `<instance_name>` with the unique alias that you assigned to your {{site.data.keyword.dns_short}} service instance. The following truncated example shows the CLI output.
 
-    ```
+    ```sh
     crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:42454b3b-5b06-407b-a4b3-34d9ef323901:: 42454b3b-5b06-407b-a4b3-34d9ef323901
     ```
     {: screen}
@@ -88,10 +69,9 @@ You might want to retrieve the instance ID programmatically to help you build an
 
 1. [Retrieve an {{site.data.keyword.cloud_notm}} IAM access token](/docs/account?topic=account-iamapikeysforservices).
 
-2. Call the [Resource Controller API](/apidocs/resource-controller){: external}
-to retrieve your instance ID.
+2. Call the [Resource Controller API](/apidocs/resource-controller){: external} to retrieve your instance ID.
 
-    ```cURL
+    ```sh
     curl -X GET \
       'https://resource-controller.cloud.ibm.com/v2/resource_instances' \
       -H 'authorization: Bearer <IAM_token>' | jq -r '.resources[] | select(.name | contains("<instance_name>")) | .guid'
@@ -100,7 +80,7 @@ to retrieve your instance ID.
 
     Replace `<instance_name>` with the unique alias that you assigned to your {{site.data.keyword.dns_short}} service instance. The following output shows an example instance ID:
 
-    ```
+    ```sh
     42454b3b-5b06-407b-a4b3-34d9ef323901
     ```
     {: screen}

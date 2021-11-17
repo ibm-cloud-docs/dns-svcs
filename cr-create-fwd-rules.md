@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,39 +10,27 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding custom resolver forwarding rules
 {: #cr-fwd-rules-add}
 
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
-{: beta}
-
-Use forwarding rules to configure where the DNS queries should be forwarded to for resolution.
+Use forwarding rules to configure where to forward DNS queries for resolution.
 {: shortdesc}
 
-Custom resolvers support three types of forwarding rules:
+Forwarding rules are configurations that you can set up to direct DNS queries to specific DNS resolvers. There are 3 parameters that need to be provided in order to setup a forwarding rule:
+
+* **Rule Type**: Currently only DNS Zone is supported.
+* **Match**: The DNS Zone for which you want the DNS query forwarded.
+* **Forwarding IP addresses**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the Custom Resolver goes through the list until a resolver responds.
+
+After a rule is configured and the Custom Resolver is enabled, DNS query requests go to the Custom Resolver first. 
+
+Then, the Custom Resolver checks if the query is for any rules that have been configured by comparing against the Match value. If there is a rule for the DNS query, the Custom Resolver forwards the DNS query to the specified DNS resolver in the configured rule. If there is _not_ a rule that matches the DNS query, the Customer Resolver forwards the DNS query to the specified DNS resolver in the default forwarding rule.
+
+Custom resolvers support two types of forwarding rules:
 
 * **DNS Zone** rules apply for a zone name.
-* **Hostname** rules apply for a given hostname.
 * The **Default** rule is configured to forward queries to DNS Services DNS resolvers (`161.26.0.7`, `161.26.0.8`). Only one default rule is allowed per custom resolver; it can be edited, but cannot be deleted.
 
     Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
@@ -53,9 +41,10 @@ Custom resolvers support three types of forwarding rules:
 {: ui}
 
 To add a forwarding rule:
+1. Go to the custom resolver details page and select the **Forwarding rules** tab.
 1. Click **Add rule**.
 1. In the Create forwarding rule panel, select the rule type from the list menu.
-1. Enter the match criteria.
+1. Enter the matching zone.
 1. Enter the forwarding IP addresses (in CIDR format) separated by commas.
 1. Optionally, enter a description of the rule.
 1. Click **Create**.
@@ -73,9 +62,9 @@ Where:
 - **RESOLVER_ID** is the ID of custom resolver.
 - **-t, --type** is the type of the forwarding rule. Valid values: "zone".
 - **-d, --description** is the descriptive text of the custom resolver forwarding rule.
-- **-match** is the matching zone or hostname.
+- **-match** is the matching zone.
 - **--dns-svcs** is the upstream DNS servers to be forwarded to.
-- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
+- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
 ## Adding custom resolver forwarding rules using the API
@@ -91,7 +80,7 @@ To create a custom resolver forwarding rule using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, create your custom resolver forwarding rule:
 
-    ```
+    ```sh
     {
       "description": "forwarding rule",
       "type": "zone",

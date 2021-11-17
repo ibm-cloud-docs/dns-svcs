@@ -10,20 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:generic: data-hd-programlang="generic"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:download: .download}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing DNS zones
 {: #managing-dns-zones}
@@ -50,7 +37,7 @@ Let's say we have two zones, `domain.example.com` and `example.com`.
 
 Records for `example.com`
 
-```
+```bash
  {
       myhost.domain.example.com A 1.1.1.1
       me.domain.example.com A 8.8.8.8
@@ -60,7 +47,7 @@ Records for `example.com`
 
 Records for `domain.example.com`
 
-```
+```bash
   {
       myhost.domain.example.com A 2.2.2.2
   }
@@ -81,9 +68,9 @@ DNS zones can be managed through the {{site.data.keyword.cloud}} console, or the
 {: #create-dns-zone-ui}
 
 1. From the Resource page, select the desired {{site.data.keyword.dns_short}} instance.
-2. Click the **Create Zone** button on the **DNS Zones** page.
-3. In the panel that appears, enter your zone name in the **Name** field. Optionally, enter **Label** and **Description** fields. See [Restricted DNS zone names(#restricted-dns-zone-names) for information about what names are not permitted.
-5. Click **Create Zone**.
+1. Click the **Create Zone** button on the **DNS Zones** page.
+1. In the panel that appears, enter your zone name in the **Name** field. Optionally, enter **Label** and **Description** fields. See [Restricted DNS zone names(#restricted-dns-zone-names) for information about what names are not permitted.
+1. Click **Create Zone**.
 
 If the zone creation is successful, you are directed to the Zone Details page.
 
@@ -111,14 +98,14 @@ The following DNS zone names are not permitted.
 ### Editing a DNS zone
 {: #edit-dns-zone-ui}
 
-1. From the **DNS Zones** page, select your zone. **Label** and **Description** options appear.
+1. From the DNS Zones page, select your zone. **Label** and **Description** options appear.
 2. Click the edit icon for **Label**, then enter the label and click **Save**.
 3. Click the edit icon for **Description**, then enter the description and click **Save**.
 
 ### Deleting a DNS zone
 {: #delete-dns-zone-ui}
 
-1. From the **DNS Zones** page, click the delete icon from the row for the zone you wish to delete. A confirmation dialog appears.
+1. From the DNS Zones page, click the delete icon from the row for the zone you wish to delete. A confirmation dialog appears.
 2. Click **Delete** button.
 
 ## Using the API
@@ -145,20 +132,22 @@ You must obtain an IAM token and export it into the `$TOKEN` for {{site.data.key
 
 Create a new zone by using the following `curl` command:
 
-**Request**
+#### Request creating a DNS zone
+{: #create-dns-zone-request}
 
 ```bash
 curl -X POST \
   $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones \
   -H "Authorization: $TOKEN" \
   -d '{
-	"name": "example.com",
-	"description": "Example zone"
+  "name": "example.com",
+  "description": "Example zone"
 }'
 ```
 {: pre}
 
-**Response**
+#### Response to creating a DNS zone
+{: #create-dns-zone-response}
 
 ```json
 {
@@ -187,7 +176,8 @@ For future reference, the "id" in response is used as `DNSZONE_ID`. 
 
 Use the following command to get an existing zone. 
 
-**Request**
+#### Request getting a DNS zone
+{: #get-zone-request}
 
 ```bash
 curl -X GET \
@@ -196,7 +186,8 @@ curl -X GET \
 ```
 {: pre}
 
-**Response**
+#### Response to getting a DNS zone
+{: #get-zone-response}
 
 ```json
 {
@@ -221,7 +212,8 @@ curl -X GET \
 
 Use the following command to update an existing zone. You can update the description and label fields. All other fields are read-only.
 
-**Request**
+#### Request update a DNS zone
+{: #update-zone-request}
 
 ```bash
 curl -X PATCH \
@@ -229,14 +221,15 @@ curl -X PATCH \
   -H 'Content-Type: application/json' \
   -H "Authorization: $TOKEN" \
   -d '{
-	  "description": "The DNS zone is used for VPCs in us-east region",
-	  "label": "us-east"
+    "description": "The DNS zone is used for VPCs in us-east region",
+    "label": "us-east"
 }'
 
 ```
 {: pre}
 
-**Response**
+#### Response to update a DNS zone
+{: #update-zone-response}
 
 ```json
 {
@@ -258,7 +251,8 @@ curl -X PATCH \
 
 List one or more zones in your domain by using the following `curl` command: 
 
-**Request**
+#### Request
+{: #list-zone-request}
 
 ```bash
 curl -X GET \
@@ -267,7 +261,8 @@ curl -X GET \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #list-zone-response}
 
 ```json
 {
@@ -292,7 +287,8 @@ curl -X GET \
 ### Deleting a DNS zone
 {: #delete-dns-zone-api}
 
-**Request**
+#### Request
+{: #delete-zone-request}
 
 ```bash
 curl -X DELETE \
@@ -301,9 +297,10 @@ curl -X DELETE \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #list-zone-response}
 
-```
+```bash
 HTTP/2 204 No Content
 ```
 {: codeblock}

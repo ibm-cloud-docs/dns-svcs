@@ -10,23 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:generic: data-hd-programlang="generic"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:download: .download}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing DNS records
 {: #managing-dns-records}
@@ -158,7 +142,8 @@ To verify that this variable was saved, run `echo $DNSSVCS_ENDPOINT` and ensure 
 ### Creating type `A` resource record
 {: #create-resource-record-api}
 
-**Request**
+#### Request
+{: #create-a-request}
 
 ```bash
 curl -X POST \
@@ -175,7 +160,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #create-a-response}
 
 ```json
 {    
@@ -196,7 +182,8 @@ curl -X POST \
 ### Creating type 'SRV' resource record
 {: #create-srv-resource-record-api}
 
-**Request**
+#### Request
+{: #create-srv-request}
 
 ```bash
 curl -X POST \
@@ -217,7 +204,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #create-srv-response}
 
 ```json
 {    
@@ -242,7 +230,8 @@ curl -X POST \
 ### Creating type 'TXT' resource record
 {: #create-txt-resource-record-api}
 
-**Request**
+#### Request
+{: #create-txt-request}
 
 ```bash
 curl -X POST \
@@ -258,7 +247,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #create-txt-response}
 
 ```json
 {
@@ -278,7 +268,8 @@ curl -X POST \
 ### Creating type 'MX' resource record
 {: #create-amx-resource-record-api}
 
-**Request**
+#### Request
+{: #create-mx-request}
 
 ```bash
 curl -X POST \
@@ -295,7 +286,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #create-mx-response}
 
 ```json
 {
@@ -316,7 +308,8 @@ curl -X POST \
 ### Creating type 'PTR' resource record
 {: #create-ptr-resource-record-api}
 
-**Request**
+#### Request
+{: #create-ptr-request}
 
 ```bash
 curl -X POST \
@@ -332,7 +325,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #create-ptr-response}
 
 ```json
 {
@@ -352,7 +346,8 @@ curl -X POST \
 ### Creating type 'CNAME' resource record
 {: #create-cname-resource-record-api}
 
-**Request**
+#### Request
+{: #create-cname-request}
 
 ```bash
 curl -X POST \
@@ -368,7 +363,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #create-cname-response}
 
 ```json
 {
@@ -389,7 +385,8 @@ curl -X POST \
 ### Creating type 'AAAA' resource record
 {: #create-aaaa-resource-record-api}
 
-**Request**
+#### Request
+{: #create-aaaa-request}
 
 ```bash
 curl -X POST \
@@ -405,7 +402,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #create-aaaa-response}
 
 ```json
 {
@@ -425,7 +423,8 @@ curl -X POST \
 ### Getting a resource record
 {: #get-resource-record-api}
 
-**Request**
+#### Request
+{: #get-rec-request}
 
 ```bash
 curl -X GET \
@@ -434,7 +433,8 @@ curl -X GET \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #get-rec-response}
 
 ```json
 {
@@ -454,7 +454,8 @@ curl -X GET \
 ### Listing resource records
 {: #list-resource-records-api}
 
-**Request**
+#### Request
+{: #list-rec-request}
 
 ```bash
 curl -X GET \
@@ -463,7 +464,8 @@ curl -X GET \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #list-rec-response}
 
 ```json
 {
@@ -493,7 +495,8 @@ curl -X GET \
 ### Updating a resource record
 {: #update-resource-record-api}
 
-**Request**
+#### Request
+{: #update-rec-request}
 
 ```bash
 curl -X PUT \
@@ -509,7 +512,8 @@ curl -X PUT \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #update-rec-response}
 
 ```json
 {
@@ -529,7 +533,8 @@ curl -X PUT \
 ### Deleting a resource record
 {: #delete-resource-record-api}
 
-**Request**
+#### Request
+{: #delete-rec-request}
 
 ```bash
 curl -X DELETE \
@@ -538,7 +543,8 @@ curl -X DELETE \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #delete-rec-response}
 
 ```json
 HTTP 204 is returned, no content in response.
@@ -548,7 +554,8 @@ HTTP 204 is returned, no content in response.
 ### Importing bulk resource records from a DNS zone file
 {: #import-resource-records-api}
 
-**Request**
+#### Request
+{: #import-bulk-request}
 
 ```bash
 curl -X POST \
@@ -557,7 +564,8 @@ curl -X POST \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #import-bulk-response}
 
 ```json
 {
@@ -591,7 +599,8 @@ curl -X POST \
 ### Exporting bulk resource records to a DNS zone file
 {: #export-resource-records-api}
 
-**Request**
+#### Request
+{: #export-bulk-request}
 
 ```bash
 curl -X GET \
@@ -600,7 +609,8 @@ curl -X GET \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #export-bulk-response}
 
 ```json
 HTTP 200 is returned with zone file content in byte format

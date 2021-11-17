@@ -10,20 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic"}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Exporting your {{site.data.keyword.dns_short}} configuration
 {: #writing-dns-svcs-config-to-file}
@@ -55,8 +42,8 @@ Where `<instance ID, NAME, or CRN>` is replaced by the relevant {{site.data.keyw
 Example usage:
 
 ```console
-$ ./copy_dns_config.sh my-instance1
-$ ./copy_dns_config.sh my-instance2 ~/dns-output.txt
+./copy_dns_config.sh my-instance1
+./copy_dns_config.sh my-instance2 ~/dns-output.txt
 ```
 {: pre}
 

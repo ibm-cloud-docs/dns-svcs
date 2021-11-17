@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,31 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"} 
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Updating a custom resolver
 {: #update-cr}
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
-{: beta}
 
 You can update custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API. 
 {: shortdesc}
@@ -43,7 +22,7 @@ You can update custom resolvers in {{site.data.keyword.dns_full}} by using the U
 {: #ui-update-cr}
 {: ui}
 
-The custom resolver details view shows the name and status of a custom resolver. It also lists the custom resolver ID, the date the resolver was modified, and the description that was entered when it was created. 
+The custom resolver details view shows the name and status of a custom resolver. It also lists the custom resolver ID, the linked VPC name, the date the resolver was modified, the description, and the enabled toggle that was entered when it was created. 
 
 To edit the name and description of the custom resolver, click **Edit** next to the pencil icon to open the edit view. Click **Save** to commit the changes, or cancel.
 
@@ -79,7 +58,7 @@ To update a custom resolver using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, update your custom resolver:
 
-    ```
+    ```sh
     {
       "name": "my-resolver",
       "description": "custom resolver",

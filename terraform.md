@@ -8,14 +8,7 @@ subcollection: dns-svcs
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Setting up Terraform for {{site.data.keyword.dns_short}}
 {: #terraform-setup-dns-svcs}
@@ -48,21 +41,21 @@ Before you begin, make sure that you have the [required access](/docs/dns-svcs?t
 
 3. Initialize the Terraform CLI.
 
-   ```
+   ```terraform
    terraform init
    ```
    {: pre}
 
 4. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.dns_short}} instance in your account.
 
-   ```
+   ```terraform
    terraform plan
    ```
    {: pre}
 
 5. Create the {{site.data.keyword.dns_short}} instance and IAM access policy in {{site.data.keyword.cloud_notm}}.
 
-   ```
+   ```terraform
    terraform apply
    ```
    {: pre}

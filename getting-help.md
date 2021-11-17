@@ -10,11 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:external: target="_blank" .external}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting help and support
 {: #gettinghelp}

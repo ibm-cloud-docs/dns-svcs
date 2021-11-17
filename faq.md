@@ -10,22 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
-{:generic: data-hd-programlang="generic"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQs
 {: #frequently-asked-questions}
@@ -98,7 +83,7 @@ A given instance can have multiple DNS zones with the same name. The label helps
 {: faq}
 
 To delete a {{site.data.keyword.dns_short}} instance,
-- Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: new_window}.
+- Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/).
 - Click the "overflow" menu ![overflow menu icon](../icons/actions-icon-vertical.svg "Overflow menu icon") in the final column and select "Delete".
 
 ## Why can't I delete a {{site.data.keyword.dns_short}} instance?
@@ -218,7 +203,7 @@ You can disable health check monitoring by disabling the origin.
 {: #upgrage-plan-free-standard}
 {: faq}
 
-1. Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: new_window}.
+1. Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/).
 1. Select the instance of {{site.data.keyword.dns_short}} you want to upgrade.
 1. Select **Plan** from the navigation menu.
 1. Select **Standard DNS** from the plan table.

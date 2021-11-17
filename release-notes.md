@@ -2,30 +2,14 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 subcollection: dns-svcs
 
 ---
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Release notes for {{site.data.keyword.dns_short}}
@@ -33,6 +17,14 @@ subcollection: dns-svcs
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
+
+## 17 November 2021
+{: #17-november-2021}
+
+* General availability release of custom resolver feature for UI, CLI, and API.
+* Improve workflow and add tooltips for enhanced user experience.
+* Update custom resolver High Availability recommendations from beta release.
+* Custom resolver beta program ending on 1 December 2021.
 
 ## 14 July 2021
 {: #14-july-2021}

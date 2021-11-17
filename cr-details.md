@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,31 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Viewing custom resolver details
 {: #details-cr}
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan.
-{: beta}
 
 You view details of a single custom resolver and view a list of all custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
@@ -43,9 +22,7 @@ You view details of a single custom resolver and view a list of all custom resol
 {: #ui-details-cr}
 {: ui}
 
-To view the details of a custom resolver using the UI, navigate to the custom resolver details page. There, you can view information about a specific custom resolver by clicking on the custom resolver ID.
-
-From the custom resolver tab, you can view a list of all custom resolvers.
+To view the details of a custom resolver using the UI, navigate to the custom resolver tab in the DNS Services instance. From the custom resolver view, you can view a list of all custom resolvers. There, you can view information about a specific custom resolver by clicking the custom resolver name.
 
 ## Get details of a custom resolver using the CLI
 {: #cli-get-cr}
@@ -89,7 +66,7 @@ To get the details of a custom resolver using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, get the details of your custom resolver:
 
-    ```
+    ```sh
     {
       "id": "5365b73c-ce6f-4d6f-ad9f-d9c131b26370",
       "name": "my-resolver",
@@ -122,7 +99,7 @@ To list all custom resolvers using the API, follow these steps:
     * `X-Correlation-ID`, which is a string that uniquely identifies a request.
 1. When all variables are initiated, list your custom resolvers:
 
-    ```
+    ```sh
     {
       "custom_resolvers": [
         {

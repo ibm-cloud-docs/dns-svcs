@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-11-17"
 
 keywords:
 
@@ -10,31 +10,10 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"} 
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic”}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with custom resolvers
 {: #custom-resolver}
-
-This custom resolver feature is available to {{site.data.keyword.dns_short}} users with a Standard plan. 
-{: beta}
 
 A private DNS custom resolver extends {{site.data.keyword.dns_full}}'s capability to meet the needs of a hybrid cloud environment by enabling resolution of the {{site.data.keyword.cloud_notm}} VPC hostnames from on-premises DNS resolvers, and also enables the  resolution of on-premises hostnames from the {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
@@ -47,7 +26,10 @@ Key features of the custom resolver:
 ## Custom resolver overview
 {: #custom-resolver-overview}
 
-To get started using a custom resolver, you must create a custom resolver and then add forwarding rules to it.
+To get started using a custom resolver, you must create a custom resolver and then add forwarding rules to it. 
+
+It is expected that the custom resolver will be configured for High Availibility by default. Follow the steps in [Creating a custom resolver without high availability](/docs/dns-svcs?topic=dns-svcs-ui-create-cr&interface=ui#cr-add-no-ha) if you do not want a highly available configuration.
+{: important}
 
 After you create the custom resolver and configure its forwarding rules, the resolver can be enabled for the VPC. This results in the DHCP option for the resolver changing to the custom resolver IP addresses.
 
@@ -72,7 +54,7 @@ The following status definitions apply to the custom resolver:
 The following limitations exist for the custom resolvers feature:
 
 * Each VPC can have a maximum of one custom resolver.
-* Each custom resolver can have a maximum of 2 locations, either within the same subnet or in different subnets.
+* Each custom resolver can have a maximum of three locations, either within the same subnet or in different subnets.
 * Each custom resolver can have a maximum of 15 forwarding rules.
 * You cannot delete the subnet used for the custom resolver.
-* For the beta period, you must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location virtual server instance.
+* You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location virtual server instance.

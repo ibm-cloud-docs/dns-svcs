@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-08"
+  years: 2020, 2021
+lastupdated: "2021-10-05"
 
 keywords:
 
@@ -10,21 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:term: .term}
-{:tip: .tip}
-{:beta: .beta}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:generic: data-hd-programlang="generic"}
-{:download: .download}
-{:DomainName: data-hd-keyref="DomainName"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with global load balancers
 {: #global-load-balancers}
@@ -96,14 +82,13 @@ Follow these steps to create a health check:
     If **HTTPS** is selected, the **Don't validate certificate** checkbox appears after the **Advanced options** section. Select this box when the HTTPS certificate on the origin is not signed by a certificate authority (for instance, a self-signed certificate).
 1. Enter the endpoint **Path** against which to perform the health check. The default value is `/`.
 1. Optionally, enter the **Port** number that you want to use.
-
     For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.
     {: note}
+
 1. In the **Advanced settings** section, select a **Test interval** (in seconds) between each health check. Shorter intervals can improve failover time, but increase load on the origins, as checks come from multiple locations. The default value is `60`.
 1. Choose a **Method** to use for the health check from the list (HTTP and HTTPS only). The default value is `GET`.
 1. Select a **Timeout** interval (in seconds) for how long to wait before the health check is marked as failed. The default value is `5`.
 1. Select the **Number of retries** to attempt in case there is a timeout before the origin is marked as unhealthy. Retries are attempted immediately. The default value is `1`.
-
     TCP monitor type options end with this step. Click **Create** to save your changes and create the health check. HTTP and HTTPS monitor types have additional options, which follow.
     {: note}
 
@@ -135,13 +120,14 @@ To create an origin pool, follow these steps:
 
     Disabling a pool causes any load balancer that uses it to fail over to the next pool, if any. Disabled pools do not receive traffic.
     {: note}
+    
 1. Enter a **Name** for the pool. Only alphanumeric characters, hyphens, and underscores are allowed.
 1. Optionally, enter a **Description** for the origin pool.
 1. Enable **Origins** to add to the list of origins within this pool.
 1. Give the origin a **Name** and **Address**. Click **Add** to add more pools, and move the toggle to switch the pool off or on. Traffic that is directed at this pool is balanced across all currently healthy origins, provided that the pool itself is healthy. Health checks exclude disabled origins.
 1. Select the **Healthy origin threshold**, which is the minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool is marked unhealthy and fails over to the next available pool. The default value is `1`.
 1. In the **Health monitoring** section, select a **Health check** to determine what method the health check uses, as well as the health check to use for checking origins within this pool. The default value is no health check.
-1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **WDC**, **London**, **Frankfurt**, **Osaka**, **Tokyo**, and **Sydney**.
+1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **Washington, DC**, **London**, **Frankfurt**, **Osaka**, **Tokyo**, **Sydney** and **Paris** (Paris is only available for restricted users). 
 1. Select the **VPC** that contains the subnet from where the health check originates.
 1. Choose a **Subnet (Location)**. Select a subnet and location from the list menu. This defines from which subnet the health check is running. You can specify up to two subnets.
 1. Click **Create** to save your changes and create your origin pool.

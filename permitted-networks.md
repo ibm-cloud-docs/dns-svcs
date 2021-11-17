@@ -10,22 +10,7 @@ subcollection: dns-svcs
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:external: target="_blank" .external}
-{:DomainName: data-hd-keyref="DomainName"}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:generic: data-hd-programlang="generic"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:download: .download}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing permitted networks
 {: #managing-permitted-networks}
@@ -60,8 +45,7 @@ Adding the same VPC to two DNS zones of the same name is not allowed.
 
 You can navigate to the VPC overview page from the **Permitted networks** section by clicking on the VPC name. For example, in the following image, clicking on `spark-friendly` takes you to the overview page of the VPC named `spark-friendly`.
 
-![Permitted network link to VPC overview page](images/permit-net-nav.png "Image of VPC name link in permitted network section")
-{: caption="Figure 1. Navigating to an IBM VPC from permitted networks section" caption-side="top"}
+![Permitted network link to VPC overview page](images/permit-net-nav.png "Image of VPC name link in permitted network section"){: caption="Figure 1. Navigating to an IBM VPC from permitted networks section" caption-side="top"}
 
 ### Removing a permitted network
 {: #removing-permitted-networks-ui}
@@ -89,11 +73,13 @@ To verify that this variable was saved, run **`echo $DNSSVCS_ENDPOINT`** and mak
 
 A DNS zone's initial state is `PENDING_NETWORK_ADD`, because its permitted network list is empty when the DNS zone is created. When a permitted network is added to the DNS zone's permitted networks, the state changes to `ACTIVE`.
 
-**Parameters**
+#### Parameters
+{: #add-pm-parameters}
 
 * DNSZONE_ID: When you create a zone, the DNSZONE_ID is returned in the response as **`id`**.
 
-**Request**
+#### Request
+{: #add-pm-request}
 
 ```bash
 curl -X POST \
@@ -109,7 +95,8 @@ curl -X POST \
 {: pre}
 
 
-**Response**
+#### Response
+{: #add-pm-response}
 
 ```json
 {
@@ -133,7 +120,8 @@ For future requests, the ID in the response is referenced as **`PERMITTED_NETWOR
 
 Retrieve a specific permitted network from your instance using the permitted network ID.
 
-**Request**
+#### Request
+{: #ret-pm-request}
 
 ```bash
 curl -X GET \
@@ -142,7 +130,8 @@ curl -X GET \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #ret-pm-response}
 
 ```json
 {
@@ -163,7 +152,8 @@ curl -X GET \
 
 List all permitted networks for your DNS zone.
 
-**Request**
+#### Request list permitted networks
+{: #list-pm-request}
 
 ```bash
 curl -X GET \
@@ -172,7 +162,8 @@ curl -X GET \
 ```
 {: pre}
 
-**Response**
+#### Response list permitted networks
+{: #list-pm-response}
 
 ```json
 {
@@ -197,7 +188,8 @@ curl -X GET \
 
 Delete a specific permitted network from your instance, and unlink VPC from a zone.
 
-**Request**
+#### Request remove permitted network
+{: #remove-pm-request}
 
 ```bash
 curl -X DELETE \
@@ -206,7 +198,9 @@ curl -X DELETE \
 ```
 {: pre}
 
-**Response**
+#### Response
+{: #remove-pm-response}
+
 ```json
 {
     "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
