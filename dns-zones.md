@@ -298,7 +298,7 @@ curl -X DELETE \
 {: pre}
 
 #### Response
-{: #list-zone-response}
+{: #delete-zone-response}
 
 ```bash
 HTTP/2 204 No Content

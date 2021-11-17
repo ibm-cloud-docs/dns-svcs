@@ -19,7 +19,7 @@ You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI,
 {: shortdesc}
 
 ## Creating a custom resolver using the UI
-{: #create-cr}
+{: #create-cr-ui}
 {: ui}
 
 To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
