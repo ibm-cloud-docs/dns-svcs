@@ -80,7 +80,7 @@ If the name resolution request for `www.example.com` originated from a client in
 |Permitted networks| 10 per DNS zone|
 |Global load balancers| 25 per DNS zone|
 |Custom resolvers| Only supported in these regions: Dallas, Washington, London, Frankfurt, Osaka, Tokyo, and Sydney| 
-{: caption="Table 1. DNS Services limitations" caption-side="top"}
+{: caption="Table 1. DNS Services limitations" caption-side="bottom"}
 
 ## DNS Services Supported Regions
 {: #supported-regions}
@@ -96,4 +96,4 @@ If the name resolution request for `www.example.com` originated from a client in
 | TOR | | | ![check icon](../icons/checkmark-icon.svg) |
 | SYD | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | SAO | | | ![check icon](../icons/checkmark-icon.svg) | 
-{: caption="Table 2. Regions supported by DNS Services" caption-side="top"}
+{: caption="Table 2. Regions supported by DNS Services" caption-side="bottom"}

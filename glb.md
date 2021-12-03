@@ -145,7 +145,7 @@ The following table describes the possible statuses that you might see in your o
 |Origin| `up` `down`|**Up**: The origin is functioning normally.  \n **Down**: The origin is down.  \n At least 50% of the origin's health checks must be up for origin health to remain `healthy`. |
 |Origin pool|`healthy` `degraded` `critical` | **Healthy**: All of the origins in the pool are up.  \n **Degraded**: At least one origin status is down.  \n **Critical**: The number of healthy origins in the pool is less than the healthy origin pool threshold. For example, if your threshold is `2`, and only one origin is up, the pool status is **Critical**. |
 |Global load balancer|`healthy` `degraded` `critical` |**Healthy**: All the origin pools that are associated with the global load balancer are healthy.  \n **Degraded**: At least one of the origin pools is in degraded status.  \n **Critical**: The global load balancer status is critical when all of the origin pools associated with the global load balancer are critical.|
-{: caption="Table 1. Status definitions for origins, origin pools, and global load balancers" caption-side="top"}
+{: caption="Table 1. Status definitions for origins, origin pools, and global load balancers" caption-side="bottom"}
 
 The fallback pool status is not taken into account for assessing the health of the global load balancer.
 {: note}

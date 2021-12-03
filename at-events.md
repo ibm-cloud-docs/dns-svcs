@@ -31,7 +31,7 @@ The following table lists the actions that are related to DNS zones and generate
 |`dns-svcs.zones.create`|Create a DNS zone.     |
 |`dns-svcs.zones.update`|Update a DNS zone.     |
 |`dns-svcs.zones.delete`|Delete a DNS zone.     |
-{: caption="Table 1. DNS zones" caption-side="top"}
+{: caption="Table 1. DNS zones" caption-side="bottom"}
 
 ## Resource records events
 {: #events_resource_record}
@@ -44,7 +44,7 @@ The following table lists the actions that are related to resource records and g
 |`dns-svcs.resource-records.create`|Create a resource record.     |
 |`dns-svcs.resource-records.update`|Update a resource record.     |
 |`dns-svcs.resource-records.delete`|Delete a resource record.     |
-{: caption="Table 2. Resource records" caption-side="top"}
+{: caption="Table 2. Resource records" caption-side="bottom"}
 
 
 ## Permitted networks events
@@ -57,7 +57,7 @@ The following table lists the actions that are related to permitted networks and
 |`dns-svcs.permitted-networks.read`  |Get or list permitted networks from DNS zone. |
 |`dns-svcs.permitted-networks.create`|Add a permitted network to DNS zone.          |
 |`dns-svcs.permitted-networks.delete`|Remove a permitted network from DNS zone.     |
-{: caption="Table 3. Permitted networks" caption-side="top"}
+{: caption="Table 3. Permitted networks" caption-side="bottom"}
 
 
 ## Global balancer events
@@ -79,7 +79,7 @@ The following table lists the actions that are related to global load balancers 
 |`dns-svcs.load-balancers.create`|Create a load balancer.     |
 |`dns-svcs.load-balancers.update`|Update a load balancer.     |
 |`dns-svcs.load-balancers.delete`|Delete a load balancer.     |
-{: caption="Table 4. Global load balancers" caption-side="top"}
+{: caption="Table 4. Global load balancers" caption-side="bottom"}
 
 
 ## Viewing events
