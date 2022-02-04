@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-07-14"
+  years: 2020, 2022
+lastupdated: "2022-02-03"
 
 keywords: wildcard records
 
@@ -45,6 +45,7 @@ For example, a type `A` query for the name `www.example.com` is made with wildca
 * Wildcard records are only allowed for the following record types.
     * `A`
     * `AAAA`
+    * `CNAME`
     * `MX`
 * PTR records are not supported for `A` and `AAAA` type wildcard records.
 * [Importing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#import-resource-records-api) does not support wildcard records.
