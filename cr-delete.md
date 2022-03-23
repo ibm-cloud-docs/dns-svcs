@@ -45,7 +45,7 @@ To delete a custom resolver using the CLI, run the following command:
 Where:
 
 - **RESOLVER_ID** is the ID of custom resolver.
-- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used insteaad.
+- **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 - **-f, --force** deletes the custom resolver without prompting for confirmation.
 

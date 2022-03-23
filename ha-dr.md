@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-10-25"
+  years: 2020, 2022
+lastupdated: "2022-03-21"
 
 keywords: HA for DNS Services, DR for DNS Services, high availability for DNS Services, disaster recovery for DNS Services, failover for DNS Services
 
@@ -28,6 +28,8 @@ The DNS resolvers are distributed around the world in multiple MZRs for optimizi
 * Osaka
 * Tokyo
 * Sydney
+* Toronto
+* Sao Paulo
 
 Custom resolvers are deployed to two locations by default, to ensure high availability.
 

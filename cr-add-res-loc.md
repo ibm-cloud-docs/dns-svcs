@@ -23,7 +23,7 @@ The task of the resolver location instance is to provide DNS resolver functions 
 {: ui}
 
 To add a custom resolver location, from the custom resolver details page:
-1. Fronm the Resolver locations tab, click **Add location**.
+1. From the Resolver locations tab, click **Add location**.
 1. Select the subnet from the list menu in the row that appears.
 
    Each custom resolver can have a maximum of three locations within the same subnet, or in different subnets. Also, to achieve high availability, you must configure custom resolvers with a minimum of two resolver locations.

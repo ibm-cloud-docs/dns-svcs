@@ -60,6 +60,7 @@ If they queried for `me.domain.example.com` instead, the resolver searches only 
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: #managing-dns-zones-ui}
+{: ui}
 
 DNS zones can be managed through the {{site.data.keyword.cloud}} console, or the API. The following sections cover the console usage.
 {: shortdesc}
@@ -110,6 +111,7 @@ The following DNS zone names are not permitted.
 
 ## Using the API
 {: #managing-dns-zones-api}
+{: api}
 
 First store the API endpoint in a variable so you can use it in API requests without having to type the full URL. For example, to store the production endpoint in a variable, run this command:
 
@@ -307,6 +309,7 @@ HTTP/2 204 No Content
 
 ## Using the CLI
 {: #managing-dns-zones-cli}
+{: cli}
 
 Follow these [instructions](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#cli-ref-prereqs) to install DNS Services CLI plugin.
 
@@ -416,6 +419,6 @@ example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae        example.com        PENDI
 Use the `ibmcloud dns zone-delete` followed by the zone ID to delete a zone.
 
 ```bash
-
+ibmcloud dns zone-delete  $DNS_ZONE_ID
 ```
 {: pre}

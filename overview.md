@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-07-14"
+  years: 2019, 2022
+lastupdated: "2022-03-21"
 
 keywords:
 
@@ -79,7 +79,7 @@ If the name resolution request for `www.example.com` originated from a client in
 |DNS records| 3500 per DNS zone|
 |Permitted networks| 10 per DNS zone|
 |Global load balancers| 25 per DNS zone|
-|Custom resolvers| Only supported in these regions: Dallas, Washington, London, Frankfurt, Osaka, Tokyo, and Sydney| 
+|Custom resolvers| Only supported in these regions: Dallas, Washington DC, London, Frankfurt, Osaka, Tokyo, Toronto, Sydney, and Sao Paulo|
 {: caption="Table 1. DNS Services limitations" caption-side="bottom"}
 
 ## DNS Services Supported Regions
@@ -93,7 +93,7 @@ If the name resolution request for `www.example.com` originated from a client in
 | FRA | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | OSA | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | TOK | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| TOR | | | ![check icon](../icons/checkmark-icon.svg) |
+| TOR | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | SYD | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| SAO | | | ![check icon](../icons/checkmark-icon.svg) | 
+| SAO | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | 
 {: caption="Table 2. Regions supported by DNS Services" caption-side="bottom"}

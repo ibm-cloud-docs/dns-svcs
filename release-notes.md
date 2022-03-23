@@ -1,10 +1,11 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2022
+lastupdated: "2021-03-23"
 
 keywords:
+
 subcollection: dns-svcs
 
 ---
@@ -17,6 +18,11 @@ subcollection: dns-svcs
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
+
+## 23 March 2022
+{: #23-march-2022}
+
+Added support for Toronto and Sao Paulo regions.
 
 ## 17 November 2021
 {: #17-november-2021}

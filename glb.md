@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-10-05"
+  years: 2020, 2022
+lastupdated: "2022-02-07"
 
 keywords:
 
@@ -127,7 +127,7 @@ To create an origin pool, follow these steps:
 1. Give the origin a **Name** and **Address**. Click **Add** to add more pools, and move the toggle to switch the pool off or on. Traffic that is directed at this pool is balanced across all currently healthy origins, provided that the pool itself is healthy. Health checks exclude disabled origins.
 1. Select the **Healthy origin threshold**, which is the minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool is marked unhealthy and fails over to the next available pool. The default value is `1`.
 1. In the **Health monitoring** section, select a **Health check** to determine what method the health check uses, as well as the health check to use for checking origins within this pool. The default value is no health check.
-1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **Washington, DC**, **London**, **Frankfurt**, **Osaka**, **Tokyo**, **Sydney** and **Paris** (Paris is only available for restricted users). 
+1. Select a **Health check region** from which the health check performs monitoring. Options are **Dallas**, **Washington, DC**, **London**, **Frankfurt**, **Osaka**, **Tokyo**, **Sydney**, **Toronto**, **Sao Paulo**, and **Paris** (Paris is only available for restricted users). 
 1. Select the **VPC** that contains the subnet from where the health check originates.
 1. Choose a **Subnet (Location)**. Select a subnet and location from the list menu. This defines from which subnet the health check is running. You can specify up to two subnets.
 1. Click **Create** to save your changes and create your origin pool.

@@ -21,7 +21,7 @@ subcollection: dns-svcs
 ## Setting up a VPE gateway for the {{site.data.keyword.dns_short}} service
 {: #vpe-setup}
 
-Follow instructions in [Getting started](/docs/vpc?topic=vpc-about-vpe#vpe-getting-started) for VPE for VPC to create and confirgue a VPE gateway for the {{site.data.keyword.dns_short}} service offering.
+Follow instructions in [Getting started](/docs/vpc?topic=vpc-about-vpe#vpe-getting-started) for VPE for VPC to create and configure a VPE gateway for the {{site.data.keyword.dns_short}} service offering.
 
 ### Using the CLI
 {: #cli-dns-svcs}
@@ -65,7 +65,7 @@ api.private.dns-svcs.cloud.ibm.com
 For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/dns-svcs?code=go).
 
 ### Using Terraform
-{: #terrform-dns-svcs}
+{: #terraform-dns-svcs}
 
 If you plan to access the {{site.data.keyword.dns_short}} service using Terraform, make sure to set the `IBMCLOUD_PRIVATE_DNS_API_ENDPOINT` environment variable to `https://api.private.dns-svcs.cloud.ibm.com/v1`. For example:
 

@@ -45,7 +45,7 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
 ### Creating a custom resolver without high availability
 {: #cr-add-no-ha}
 
-If you want to create a custom resolver without high availibility, you must manually delete the second subnet field by clicking the trashcan icon next to the second subnet. 
+If you want to create a custom resolver without high availability, you must manually delete the second subnet field by clicking the trashcan icon next to the second subnet. 
 
 ![Delete second subnet](images/cr-no-ha.png "Delete the second subnet by clicking trashcan icon"){: caption="Figure 1. Delete the second subnet to remove high availability function" caption-side="bottom"}
 

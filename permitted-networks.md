@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-07-27"
+  years: 2019, 2022
+lastupdated: "2022-03-21"
 
 keywords:
 
@@ -257,7 +257,9 @@ Select Network Region
 4. Japan
 5. Germany
 6. US East
-7. Sao Paulo
+7. Osaka
+8. Sao Paulo
+9. Toronto
 Enter a number> 1
 Network Region: US South
 Select VPC Network

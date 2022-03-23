@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-16"
+  years: 2020, 2022
+lastupdated: "2022-03-21"
 
 keywords:
 
@@ -135,16 +135,16 @@ In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-sp
 
 Creating two DNS Zones with the same name is allowed. Use label and description as described in the following steps to differentiate between the two.
 1. Create an instance of {{site.data.keyword.dns_short}}.
-2. Create a DNS zone for each environment (for example, production, staging, development, testing). When creating the zone, be sure to include a description indicating whatenvironment the zone is for. The zone name is the same for each zone (for example, `testing.com`).
+2. Create a DNS zone for each environment (for example, production, staging, development, testing). When creating the zone, be sure to include a description indicating what environment the zone is for. The zone name is the same for each zone (for example, `testing.com`).
     A single {{site.data.keyword.dns_short}} instance can only contain 10 zones.
     {: note}
 
 3. Add a zone to the instance of {{site.data.keyword.dns_short}}.
-4. In each respective zone, add specific VPCs as permitted networks. For example, for a development VPC, create a permitted network with the development VPC ID in the DNS zonefor the development environment.
+4. In each respective zone, add specific VPCs as permitted networks. For example, for a development VPC, create a permitted network with the development VPC ID in the DNS zone for the development environment.
     While duplicate zone names are allowed in an account, duplicate zones cannot be associated with a single permitted network.
     {: note}
 
-5. The result is that traffic from the development VPC only sees records from the development DNS zone and similarly for all the other environments. This way, you can use thesame zone name in all environments, with the results tailored to each respective environment.
+5. The result is that traffic from the development VPC only sees records from the development DNS zone and similarly for all the other environments. This way, you can use the same zone name in all environments, with the results tailored to each respective environment.
 
 
 ## Can I add the same permitted network (for example, a VPC) to two DNS zones of the same name?
@@ -155,7 +155,7 @@ No, adding the same permitted network (for example, a VPC) to two DNS zones of t
 
 
 ## What are the authoritative servers for the {{site.data.keyword.dns_short}} zones? Can I resolve the private DNS zones iteratively?
-{: #authoratative-servers-for-dns-zones}
+{: #authoritative-servers-for-dns-zones}
 {: faq}
 
 Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authoritative servers for private DNS zones. Clients must send their recursive DNS queries to the DNS resolvers provided by the service. {{site.data.keyword.dns_short}} does not allow iterative resolution of private DNS zones.
@@ -192,6 +192,8 @@ Health checks are currently supported in the following regions:
 * Osaka
 * Tokyo
 * Sydney
+* Toronto
+* Sao Paulo
 
 ## How can I disable health check monitoring to the origins?
 {: #disable-health-check-monitoring-to-origin}
@@ -200,7 +202,7 @@ Health checks are currently supported in the following regions:
 You can disable health check monitoring by disabling the origin.
 
 ## How do I upgrade my plan from free to standard?
-{: #upgrage-plan-free-standard}
+{: #upgrade-plan-free-standard}
 {: faq}
 
 1. Navigate to the Resource List in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/).

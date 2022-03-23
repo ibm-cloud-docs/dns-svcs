@@ -48,7 +48,7 @@ To view health check events in a {{site.data.keyword.loganalysisshort}} instance
 1. Click **Save**.
 
 ### Viewing health check events in the {{site.data.keyword.loganalysisshort}} instance
-{: #viewing-healtch-check-events-loganalysis}
+{: #viewing-health-check-events-loganalysis}
 
 To view health check events, use the UI of the {{site.data.keyword.loganalysisshort}} instance that you configured to receive the platform logs in the previous steps.
 
