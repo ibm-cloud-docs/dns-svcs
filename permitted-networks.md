@@ -251,15 +251,15 @@ Use `ibmcloud dns permitted-network-add` command followed by the zone ID to add 
 ```bash
 $ ibmcloud dns permitted-network-add $DNS_ZONE_ID
 Select Network Region
-1. US South
-2. Great Britain
-3. Australia
-4. Japan
-5. Germany
-6. US East
-7. Osaka
-8. Sao Paulo
-9. Toronto
+1. au-syd
+2. br-sao
+3. ca-tor
+4. eu-de
+5. eu-gb
+6. jp-osa
+7. jp-tok
+8. us-east
+9. us-south
 Enter a number> 1
 Network Region: US South
 Select VPC Network

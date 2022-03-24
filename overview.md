@@ -79,7 +79,6 @@ If the name resolution request for `www.example.com` originated from a client in
 |DNS records| 3500 per DNS zone|
 |Permitted networks| 10 per DNS zone|
 |Global load balancers| 25 per DNS zone|
-|Custom resolvers| Only supported in these regions: Dallas, Washington DC, London, Frankfurt, Osaka, Tokyo, Toronto, Sydney, and Sao Paulo|
 {: caption="Table 1. DNS Services limitations" caption-side="bottom"}
 
 ## DNS Services Supported Regions
@@ -87,13 +86,13 @@ If the name resolution request for `www.example.com` originated from a client in
 
 | Region | Data replication region | [Health check region](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#add-a-pool) | Permitted networks |
 | ------ | ------------- | --- |-------------------|
-| DAL | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| WDC | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| LON | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| FRA | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| OSA | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| TOK | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| TOR | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| SYD | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| SAO | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | 
+| Dallas (us-south) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Washington, D.C. (us-east) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| London (eu-gb) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Frankfurt (eu-de) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Osaka (jp-osa) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Tokyo (jp-tok) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Toronto (ca-tor) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Sydney (au-syd) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Sao Paulo (br-sao) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | 
 {: caption="Table 2. Regions supported by DNS Services" caption-side="bottom"}

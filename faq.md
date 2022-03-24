@@ -185,15 +185,15 @@ HTTP and HTTPS health checks are currently supported.
 {: faq}
 
 Health checks are currently supported in the following regions:
-* Dallas
-* Washington, D.C.
-* London
-* Frankfurt
-* Osaka
-* Tokyo
-* Sydney
-* Toronto
-* Sao Paulo
+* Dallas (us-south)
+* Washington, D.C. (us-east)
+* London (eu-gb)
+* Frankfurt (eu-de)
+* Osaka (jp-osa)
+* Tokyo (jp-tok)
+* Toronto (ca-tor)
+* Sydney (au-syd)
+* Sao Paulo (br-sao)
 
 ## How can I disable health check monitoring to the origins?
 {: #disable-health-check-monitoring-to-origin}

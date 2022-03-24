@@ -21,15 +21,15 @@ All {{site.data.keyword.cloud}} general availability (GA) offerings have a Servi
 
 The DNS resolvers are distributed around the world in multiple MZRs for optimizing latencies and providing high availability. If one region experiences an outage, the DNS resolvers route DNS requests to another region. The data is replicated to the following regions for latency optimization and high availability:
 
-* Dallas
-* Washington, DC
-* London
-* Frankfurt
-* Osaka
-* Tokyo
-* Sydney
-* Toronto
-* Sao Paulo
+* Dallas (us-south)
+* Washington, D.C. (us-east)
+* London (eu-gb)
+* Frankfurt (eu-de)
+* Osaka (jp-osa)
+* Tokyo (jp-tok)
+* Toronto (ca-tor)
+* Sydney (au-syd)
+* Sao Paulo (br-sao)
 
 Custom resolvers are deployed to two locations by default, to ensure high availability.
 
