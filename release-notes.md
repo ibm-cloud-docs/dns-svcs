@@ -8,6 +8,8 @@ keywords:
 
 subcollection: dns-svcs
 
+content-type: release-note
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
