@@ -107,7 +107,7 @@ Before you begin, keep the following considerations in mind when working with or
 * At least one origin pool is required for each load balancer.
 * Origin health monitoring continues even when an origin pool is disabled. To disable health monitoring on an origin, you can disable the origin.
 * When creating an origin pool, it can take 1 - 10 minutes for the health check to get initiated, during which time the pool appears in a `Critical` state.
-* You can't delete a subnet that you are using for health monitoring unless you also delete the origin pool that you are monitoring.
+* You can't delete a subnet that you are using for health monitoring unless you remove the health check from the origin pool that you are monitoring.
 * If a hostname is provided as an origin in a pool, it can be an A, AAAA, or CNAME resource record, as well as another load balancer. However, you might see slower performance when resolving long CNAME chains or load balancers.
 
 You must update your VPC security group to allow traffic from the health monitoring subnet. See [Security groups](#security-groups-glb) for more information.
