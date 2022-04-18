@@ -1,6 +1,6 @@
 {
     "title": "DNS Services docs",
-    "lastupdated": "2021-11-17",
+    "lastupdated": "2022-04-18",
     "introduction": "IBM Cloud DNS Services provides private DNS to Virtual Private Cloud (VPC) users.",
     "section_devtools": {
       "api": "/apidocs/dns-svcs", 
