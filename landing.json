@@ -34,19 +34,19 @@
       "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes",
       "tiles": [
         {
+          "date": "18 April 2022",
+          "title": "Import and export DNS records",
+          "description": "Added UI support for importing and exporting DNS records."
+        },
+        {
           "date": "23 March 2022",
           "title": "Add support for Toronto and Sao Paulo regions.",
           "description": "Adding support for the Toronto and Sau Paulo regions."
-        },  
+        },
         {
           "date": "17 November 2021",
           "title": "General availability release of custom resolvers.",
           "description": "Updated custom resolvers from Beta release to General Availability and improved High Availability (HA) support."
-        },  
-        {
-          "date": "14 July 2021",
-          "title": "Beta release of custom resolvers, add import and export for DNS records, add Sao Paulo region support.",
-          "description": "Adding support for the Sau Paulo region, including import and export commands for DNS records, and the beta release of custom resolvers."
         }
       ]
     }

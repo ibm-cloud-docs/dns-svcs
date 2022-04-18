@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-03-23"
+lastupdated: "2021-04-18"
 
 keywords:
 
@@ -21,12 +21,18 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
 
+## 18 April 2022
+{: #dns-svcs-apr1822}
+
+Import and export DNS records
+:   Added UI support for importing and exporting DNS records.
+
 ## 23 March 2022
 {: #dns-svcs-mar2322}
 {: release-note}
 
 Toronto and Sau Paulo supported across DNS Services
-: Added support for Toronto and Sao Paulo regions.
+:   Added support for Toronto and Sao Paulo regions.
 
 ## 17 November 2021
 {: #dns-svcs-nov1721}
