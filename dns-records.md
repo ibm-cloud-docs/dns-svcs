@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-07-13"
+  years: 2019, 2022
+lastupdated: "2022-04-18"
 
 keywords: 
 
@@ -125,6 +125,33 @@ In each record row, click the **Edit** icon to open a panel where you can update
 {: #deleting-dns-records}
 
 In each record row, click the **Delete** icon to open a panel where you can confirm the delete process.
+
+### Importing resource records
+{: #ui-import-records}
+
+To import resource records, take the following steps:
+
+1. From your DNS Services instance, select the zone to which you want to import records
+1. Click **Select record action** in the zone details section and choose **Import records**
+1. You can drag and drop the import file into the panel that appears, or click the link to upload from your computer
+    Import files must be plain text format, and cannot exceed 8 MB
+    {: note}
+
+1. Click **Import records**
+
+After the records are imported, you can review the details of the import status, including the number of files that successfully uploaded and which records could not be uploaded. If you need to upload additional files, click **Upload more files** and repeat the import steps. Click the **X** icon in the top right of the panel to close the import panel.
+
+### Exporting resource records
+{: #ui-export-records}
+
+To export resource records, take the following steps:
+
+1. From your DNS Services instance, select the zone from which you want to export records
+1. Click **Select record action** in the zone details section and choose **Export records**
+1. Enter a name for your exported file, or accept the default name of `records.txt`
+1. Click **Download**
+
+The exported file is downloaded to the default download location specified by your browser.
 
 ## Using the API
 {: #managing-dns-records-api}
