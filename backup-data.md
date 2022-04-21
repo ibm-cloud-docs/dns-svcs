@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-23"
+  years: 2020, 2022
+lastupdated: "2022-04-20"
 
-keywords: backup, restore
+keywords:
 
 subcollection: dns-svcs
 ---
@@ -20,7 +20,7 @@ DNS Services takes daily backups. You can take your own backups, if needed. For 
 ## Backing up {{site.data.keyword.dns_short}} data
 {: #backup-data}
 
-{{site.data.keyword.dns_short}} takes point-in-time backups of all data and saves it in the **Dallas** and **Frankfurt** regions. 
+{{site.data.keyword.dns_short}} takes point-in-time backups of all data and saves it in the **Dallas** and **Washington, D.C.** regions. 
 
 ## Restoring a deleted service instance
 {: #restoring-a-deleted-service-instance}
