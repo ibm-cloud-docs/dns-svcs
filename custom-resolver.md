@@ -21,7 +21,7 @@ A private DNS custom resolver extends {{site.data.keyword.dns_full}}'s capabilit
 Key features of the custom resolver:
 
 * Extends DNS resolutions to resolvers residing on-premises
-* Allows for resolution fallback to a secondary resolver (if one is configured) when the primary resolver is not available
+* Allows for resolution fallback to a secondary resolver location (if one is configured) when the primary resolver location is not available
 
 ## Custom resolver overview
 {: #custom-resolver-overview}
