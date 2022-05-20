@@ -212,3 +212,10 @@ You can disable health check monitoring by disabling the origin.
 1. Click **Save** and then click **OK** when prompted to verify 'Are you sure that you want to change plans?'.
 
 See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.
+
+## Why am I getting timeout errors for my DNS queries from my VPC when my query rate is more or less than the noted rate limit?
+
+{: #dns-query-rate-limit}
+{: faq}
+
+The noted DNS queries per second per availability zone rate [limit](/docs/dns-svcs?topic=dns-svcs-about-dns-services#limits) is currently the typical amount when using {{site.data.keyword.dns_short}} resolvers from a VPC. Depending on how traffic is actually routed, what protocols the queries use, and other factors, the actual rate limit might vary around this number. After a DNS query rate exceeds this rate limit, {{site.data.keyword.dns_short}} resolvers no longer respond to the excess DNS queries.

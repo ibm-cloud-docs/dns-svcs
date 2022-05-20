@@ -111,7 +111,11 @@ toc:
             - link:
                 label: Python SDK
                 href: https://github.com/IBM/networking-python-sdk
-        - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
+        - topicgroup:
+            label: CLI reference
+            topics:
+            - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
+            - cli-change-log.md
         - link:
             label: Terraform reference
             href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_custom_resolver

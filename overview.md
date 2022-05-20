@@ -79,6 +79,7 @@ If the name resolution request for `www.example.com` originated from a client in
 |DNS records| 3500 per DNS zone|
 |Permitted networks| 10 per DNS zone|
 |Global load balancers| 25 per DNS zone|
+|DNS queries per second| 1000 per availability zone|
 {: caption="Table 1. DNS Services limitations" caption-side="bottom"}
 
 ## DNS Services Supported Regions

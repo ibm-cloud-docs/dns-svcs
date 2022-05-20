@@ -23,6 +23,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 ## 18 April 2022
 {: #dns-svcs-apr1822}
+{: release-note}
 
 Import and export DNS records
 :   Added UI support for importing and exporting DNS records.
