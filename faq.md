@@ -214,7 +214,6 @@ You can disable health check monitoring by disabling the origin.
 See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.
 
 ## Why am I getting timeout errors for my DNS queries from my VPC when my query rate is more or less than the noted rate limit?
-
 {: #dns-query-rate-limit}
 {: faq}
 

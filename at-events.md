@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-09-30"
+  years: 2020, 2022
+lastupdated: "2022-06-09"
 
 keywords: 
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with the {{site.data.keyword.dns_full}} service in {{site.data.keyword.cloud}}.
 {: shortdesc}
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started#getting-started).
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
 ## DNS zone events
 {: #events_dns_zones}
@@ -80,6 +80,46 @@ The following table lists the actions that are related to global load balancers 
 |`dns-svcs.load-balancers.update`|Update a load balancer.     |
 |`dns-svcs.load-balancers.delete`|Delete a load balancer.     |
 {: caption="Table 4. Global load balancers" caption-side="bottom"}
+
+## Custom resolvers
+{: #events_custom_resolver}
+
+The following table lists the actions that are related to custom resolvers and generate an event.
+
+|Action |Description|
+|---|---|
+|`dns-svcs.custom-resolvers.read`  |Get or list custom resolvers.     |
+|`dns-svcs.custom-resolvers.create`|Create a custom resolver.         |
+|`dns-svcs.custom-resolvers.update`|Update a custom resolver.         |
+|`dns-svcs.custom-resolvers.delete`|Delete a custom resolver.         |
+|`dns-svcs.locations.create`       |Add a custom resolver location.   |
+|`dns-svcs.locations.update`       |Update a custom resolver location.|
+|`dns-svcs.locations.delete`       |Delete a custom resolver location.|
+|`dns-svcs.forwarding-rules.read`  |Get or list forwarding rules.     |
+|`dns-svcs.forwarding-rules.create`|Create a forwarding rule.         |
+|`dns-svcs.forwarding-rules.update`|Update a forwarding rule.         |
+|`dns-svcs.forwarding-rules.delete`|Delete a forwarding rule.         |
+{: caption="Table 5. Custom resolvers" caption-side="bottom"}
+
+## Cross-account zone access events
+{: #events_cross_account_zone_access}
+
+The following table lists the actions that are related to cross-account zone access and generate an event.
+
+|Action |Description|
+|---|---|
+|`dns-svcs.linked-dnszone.create`                   |Requestor creates a linked zone.                          |
+|`dns-svcs.linked-dnszone.update`                   |Requestor updates a linked zone.                          |
+|`dns-svcs.linked-dnszone.delete`                   |Requestor deletes a linked zone.                          |
+|`dns-svcs.linked-dnszone.read`                     |Requestor get or list linked zones.                       |
+|`dns-svcs.linked-dnszone-access-request.approve`   |Owner approves a access request.                          |
+|`dns-svcs.linked-dnszone-access-request.reject`    |Owner rejects a access request.                           |
+|`dns-svcs.linked-dnszone-access-request.revoke`    |Owner revokes a access request.                           |
+|`dns-svcs.linked-dnszone-access-request.read`      |Owner get or list access requests.                        |
+|`dns-svcs.linked-dnszone-permitted-networks.create`|Requestor adds a permitted network in a linked zone.      |
+|`dns-svcs.linked-dnszone-permitted-networks.delete`|Requestor removes a permitted network from a linked zone. |
+|`dns-svcs.linked-dnszone-permitted-networks.read`  |Requestor get or list permitted networks in a linked zone.|
+{: caption="Table 6. Cross-account zone access" caption-side="bottom"}
 
 
 ## Viewing events

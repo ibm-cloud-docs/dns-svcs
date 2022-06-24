@@ -80,6 +80,28 @@ toc:
         - output-dns-config.md
         - wildcard-support.md
         - topicgroup:
+            label: Cross-account access
+            topics:
+            - cross-account-about.md
+            - topicgroup:
+                label: Creating and managing linked zones
+                topics:
+                - create-linked-zone.md
+                - update-linked-zone.md
+                - list-details-linked-zones.md
+                - delete-linked-zone.md
+            - topicgroup:
+                label: Managing permitted networks in linked zones
+                topics:
+                - cross-acc-add-perm-net.md
+                - cross-acc-remove-perm-net.md
+                - list-details-perm-nets.md
+            - topicgroup:
+                label: Managing access requests
+                topics:
+                - update-access-req.md
+                - list-details-access-req.md
+        - topicgroup:
             label: High availability and disaster recovery
             topics:
             - ha-dr.md

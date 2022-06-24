@@ -21,6 +21,13 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
 
+## 24 June 2022
+{: #dns-svcs-jun2422}
+{: release-note}
+
+Cross account access and linked zones
+:   Added cross-account access and linked zones features for UI, CLI, and API.
+
 ## 18 April 2022
 {: #dns-svcs-apr1822}
 {: release-note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-06-17"
 
 keywords:
 
@@ -183,6 +183,17 @@ The DNS resolver uses the following order to return origins from the origin pool
 Location policy > Default policy > Fallback policy
 
 The location policy (if one is defined in the AZ), has the highest priority and is used first. If every origin pool in the location policy is down, then the DNS resolver uses origin pools from default policy. If all of the origin pools in the default policy are also down, then the DNS resolver goes to the origin pool designated in the fallback policy.
+
+### How DNS resolvers handle resource record TTLs for DNS responses
+{: #resolver-resource-record-ttl}
+
+As noted earlier, if an origin's address is a hostname, then this hostname can represent the name to an A, AAAA, or CNAME resource record. In these scenarios, a DNS query resolved using a global load balancer might require the resolver to consider multiple resource records at the same time.
+
+When the DNS resolver responses to a query, it chooses the lowest TTL observed among the set of resource records considered and the TTL configured on the global load balancer itself as the TTL for the resource records in the response.
+
+The resulting DNS response that is based on a global load balancer might only contain the necessary A or AAAA records, referring to the load-balanced IP addresses. However, the configuration of other items that a global load balancer depends on can also affect the TTL in the DNS response. This is especially true when there are origins with an address which refers to a CNAME resource record that is part of a CNAME chain to the desired A or AAAA resource record.
+
+There might be other scenarios where an origin's address refers to a resource record, or leads to a chain of other resource records, configured on a different DNS zone on the public internet. As a result, some resource records considered by DNS resolvers can come from other, upstream DNS resolvers. If an upstream DNS resolver's cached resource records contains a lower TTL in its cache as a result of its particular caching method, then the minimum TTL observed among all considered resource records might be pushed lower. This results in a DNS response that contains resource records with TTLs lower than the maximum expected duration.
 
 ## Viewing, editing, or deleting components of a global load balancer
 {: #edit-delete-load-balancer}

@@ -34,6 +34,11 @@
       "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes",
       "tiles": [
         {
+          "date": "24 June 2022",
+          "title": "Cross-account access",
+          "description": "Added support for cross-account access feature."
+        },
+        {
           "date": "18 April 2022",
           "title": "Import and export DNS records",
           "description": "Added UI support for importing and exporting DNS records."
@@ -42,11 +47,6 @@
           "date": "23 March 2022",
           "title": "Add support for Toronto and Sao Paulo regions.",
           "description": "Adding support for the Toronto and Sau Paulo regions."
-        },
-        {
-          "date": "17 November 2021",
-          "title": "General availability release of custom resolvers.",
-          "description": "Updated custom resolvers from Beta release to General Availability and improved High Availability (HA) support."
         }
       ]
     }
