@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-07-08"
 
 keywords:
 
@@ -55,7 +55,7 @@ The following limits exist for the custom resolvers feature:
 
 * Each VPC can have a maximum of one custom resolver.
 * Each custom resolver can have a maximum of three locations, either within the same subnet or in different subnets.
-* Each custom resolver can have a maximum of 15 forwarding rules.
+* Each custom resolver can have a maximum of 10 forwarding rules.
 * You cannot delete the subnet used for the custom resolver.
 * You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location virtual server instance.
 
