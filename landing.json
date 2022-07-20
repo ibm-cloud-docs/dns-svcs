@@ -3,8 +3,8 @@
     "lastupdated": "2022-04-18",
     "introduction": "IBM Cloud DNS Services provides private DNS to Virtual Private Cloud (VPC) users.",
     "section_devtools": {
-      "api": "/apidocs/dns-svcs", 
-      "cli": "/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands", 
+      "api": "/apidocs/dns-svcs",
+      "cli": "/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands",
       "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_glb"
     },
     "section_recommended": [
@@ -34,6 +34,11 @@
       "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes",
       "tiles": [
         {
+          "date": "20 July 2022",
+          "title": "Secondary zones",
+          "description": "Added support for secondary zones feature."
+        },
+        {
           "date": "24 June 2022",
           "title": "Cross-account access",
           "description": "Added support for cross-account access feature."
@@ -42,11 +47,6 @@
           "date": "18 April 2022",
           "title": "Import and export DNS records",
           "description": "Added UI support for importing and exporting DNS records."
-        },
-        {
-          "date": "23 March 2022",
-          "title": "Add support for Toronto and Sao Paulo regions.",
-          "description": "Adding support for the Toronto and Sau Paulo regions."
         }
       ]
     }

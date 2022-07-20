@@ -91,7 +91,7 @@ To list all access requests using the API, follow these steps:
 
 
 ## Getting the details of an access request using the API
-{: #api-get-details-perm-nets}
+{: #api-get-details-access-req}
 
 To get the details of an access request using the API, follow these steps:
 

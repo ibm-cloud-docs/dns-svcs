@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022
-lastupdated: "2022-05-10"
+lastupdated: "2022-07-20"
 
 keywords: change log for dns services cli, updates to dns-svcs-cli-plugin
 
@@ -19,6 +19,10 @@ subcollection: dns-svcs
 In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.dns_short}} CLI.
 {: shortdesc}
 
+## 20 July 2022
+{: #cli-jul2022}
+
+[Secondary zones](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#secondary-zones) support added.
 
 ## 14 April 2022
 {: #cli-apr1422}

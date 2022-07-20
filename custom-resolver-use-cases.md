@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2022
+lastupdated: "2022-07-20"
 
 keywords:
 
@@ -12,13 +12,13 @@ subcollection: dns-svcs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Custom resolvers use cases 
+# Custom resolvers use cases
 {: #custom-resolvers-use-case}
 
 {{site.data.keyword.dns_full}} provides custom resolvers as a service that offers the ability to customize the zone resolving rules for different hostnames. The custom resolver feature offers fine-grained control of name resolution and forwarding of DNS Queries to and from on-premises DNS resolvers.
 {: shortdesc}
 
-In this example scenario, financial data is in the on-premises instance and you manage this data access under the DNS zone `fin.example.com`, which is managed by your on-premises DNS servers. Your applications that are running in the IBM Cloud VPC must access financial data with hostnames under this DNS zone. 
+In this example scenario, financial data is in the on-premises instance and you manage this data access under the DNS zone `fin.example.com`, which is managed by your on-premises DNS servers. Your applications that are running in the IBM Cloud VPC must access financial data with hostnames under this DNS zone.
 
 In this case, you can create custom resolvers to forward the DNS queries on this DNS zone to your on-premises DNS servers. You can also use the custom resolvers to customize rules to forward DNS queries to {{site.data.keyword.dns_short}} servers, public resolvers, or even custom resolvers launched in other IBM Cloud VPCs.
 
@@ -32,7 +32,7 @@ A custom resolver can have multiple forwarding rules to customize where (and on 
 ## Use cases and workflows
 {: #cr-use-cases}
 
-The most common use cases of custom resolvers are: 
+The most common use cases of custom resolvers are:
 
 - Forwarding DNS queries from an IBM Cloud VPC to your on-premises DNS servers, or the reverse.
 - Forwarding DNS queries from an IBM Cloud VPC to public resolvers.
@@ -93,10 +93,10 @@ In this example, Direct Link is used to connect to on-premises DNS service/clien
 
 To forward DNS queries on a specific DNS zone to {{site.data.keyword.dns_short}} servers, enter the forwarding IP addresses `161.26.0.7` and `161.26.0.8`. 
 
-### Forwarding DNS queries to public resolver
+### Forwarding DNS queries to a public resolver
 {: #fwd-public-resolver}
 
-To forward DNS queries on a specific DNS zone to public resolvers on the internet, create a public gateway and attach it to the subnet used for the custom resolver location. Do this before entering the public resolver IP addresses as the forwarding IP. 
+To forward DNS queries on a specific DNS zone to public resolvers on the internet, create a public gateway and attach it to the subnet used for the custom resolver location. Do this before entering the public resolver IP addresses as the forwarding IP.
 
 For more information about connecting to external networks, see [External connectivity](/docs/vpc?topic=vpc-about-networking-for-vpc#external-connectivity).
 {: note}
@@ -109,3 +109,20 @@ You might want to create custom resolvers on multiple VPCs and use these custom 
 For more information about interconnecting VPCs using a transit gateway, see [Managing transit gateways](/docs/transit-gateway?topic=transit-gateway-adding-connections).
 
 To form the spoke-and-hub topology for custom resolvers across different VPCs, choose one custom resolver as the hub and manage its forwarding rules in the hub custom resolver. You must also edit the default forwarding rule in each spoke custom resolver to forward DNS queries to the hub custom resolver.
+
+### Adding a secondary zone to a custom resolver
+{: #add-sz-cr}
+
+The following sections show some use cases for adding a secondary zone to your custom resolvers.
+
+#### Duplicate zone records from on-premises DNS servers to custom resolver locations
+{: #dupe-zone-records}
+
+This duplication provides increased availability for zone records. If the on-premises servers become unavailable for any reason, you can make DNS queries to custom resolver locations which then return the same responses as the on-premises servers.
+
+After the zone has been configured, records are automatically updated in the custom resolver locations so that any changes made to on-premises records are reflected in the custom resolver locations.
+
+#### DNS queries for secondary zone records can be made within the VPC to custom resolver locations directly
+{: #dns-queries-in-vpc}
+
+To increase DNS query response times, you can choose a DNS server that is closer to the source. For instance, if the query is being made in the on-premises network, it can be directed at the on-premises DNS servers. Alternatively, if the query is being made in your VPC network, it can be directed at a configured custom resolver location.

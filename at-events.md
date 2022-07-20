@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-09"
+lastupdated: "2022-07-13"
 
 keywords: 
 
@@ -99,6 +99,10 @@ The following table lists the actions that are related to custom resolvers and g
 |`dns-svcs.forwarding-rules.create`|Create a forwarding rule.         |
 |`dns-svcs.forwarding-rules.update`|Update a forwarding rule.         |
 |`dns-svcs.forwarding-rules.delete`|Delete a forwarding rule.         |
+|`dns-svcs.secondary-zones.read`   |Get or list secondary zones.      |
+|`dns-svcs.secondary-zones.create` |Create a secondary zone.          |
+|`dns-svcs.secondary-zones.update` |Update a secondary zone.          |
+|`dns-svcs.secondary-zones.delete` |Delete a secondary zone.          |
 {: caption="Table 5. Custom resolvers" caption-side="bottom"}
 
 ## Cross-account zone access events

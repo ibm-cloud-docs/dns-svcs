@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-17"
+lastupdated: "2022-07-20"
 
 keywords:
 
@@ -72,6 +72,9 @@ After you create a DNS zone and add a permitted network to it, follow this workf
 
 Create a health check to specify how the origin health is monitored. {{site.data.keyword.dns_short}} supports HTTP, HTTPS and TCP monitoring types. After you create a health check, you can add it to a new or existing origin pool. Health checks exist at the instance level, and can be used by any pool in the instance.
 
+If an origin is marked as unhealthy because of failed health checks, a single passing health check is sufficient to bring the origin back to a healthy state.
+{: note}
+
 Follow these steps to create a health check:
 
 1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Health checks** tab.
@@ -85,10 +88,10 @@ Follow these steps to create a health check:
     For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.
     {: note}
 
-1. In the **Advanced settings** section, select a **Test interval** (in seconds) between each health check. Shorter intervals can improve failover time, but increase load on the origins, as checks come from multiple locations. The default value is `60`.
+1. In the **Advanced settings** section, select a **Test interval** (in seconds) between each health check. Shorter intervals can improve failover time, but increase load on the origins, because checks come from multiple locations. The default value is `60`.
 1. Choose a **Method** to use for the health check from the list (HTTP and HTTPS only). The default value is `GET`.
-1. Select a **Timeout** interval (in seconds) for how long to wait before the health check is marked as failed. The default value is `5`.
-1. Select the **Number of retries** to attempt in case there is a timeout before the origin is marked as unhealthy. Retries are attempted immediately. The default value is `1`.
+1. Select a **Timeout** interval (in seconds). The timeout interval is how long the health check waits before failing with a timeout error. The default value is `5`.
+1. Select the **Number of retries** to attempt. Decide how many times the health check is tried before declaring that the origin health check has failed. Retries are attempted immediately. The default value is `1`.
     TCP monitor type options end with this step. Click **Create** to save your changes and create the health check. HTTP and HTTPS monitor types have additional options, which follow.
     {: note}
 

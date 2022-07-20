@@ -76,6 +76,13 @@ toc:
                 - cr-update-fwd-rules.md
                 - cr-details-fwd-rules.md
                 - cr-delete-fwd-rules.md
+            - topicgroup:
+                label: Creating and managing secondary zones
+                topics:
+                - secondary-zones.md
+                - sec-zone-create.md
+                - sec-zone-edit.md
+                - sec-zone-delete.md
             - custom-resolver-use-cases.md
         - output-dns-config.md
         - wildcard-support.md

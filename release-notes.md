@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-04-18"
+lastupdated: "2021-07-20"
 
 keywords:
 
@@ -20,6 +20,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
+
+## 20 July 2022
+{: #dns-svcs-jul2022}
+{: release-note}
+
+Secondary zones
+:   Added secondary zone features for UI, CLI, and API.
 
 ## 24 June 2022
 {: #dns-svcs-jun2422}
