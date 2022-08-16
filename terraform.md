@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-08-25"
+  years: 2021, 2022
+lastupdated: "2022-08-16"
 
 subcollection: dns-svcs
 
@@ -30,11 +30,23 @@ Before you begin, make sure that you have the [required access](/docs/dns-svcs?t
    The {{site.data.keyword.dns_short}} DNS zone in the following example is named `my-dns-zone` and is created with the instance ID of `p-dns-instance-id`. 
 
    ```terraform
+   data "ibm_resource_group" "rg" {
+     is_default = true
+   }
+
+   resource "ibm_resource_instance" "test-pdns-instance" {
+     name              = "private-dns-instance-example"
+     resource_group_id = data.ibm_resource_group.rg.id
+     location          = "global"
+     service           = "dns-svcs"
+     plan              = "standard-dns"
+   }
+
    resource "ibm_dns_zone" "pdns-1-zone" {
-    name = "my-dns-zone"
-    instance_id = p-dns-instance-id
-    description = "testdescription"
-    label = "testlabel"
+     name = "my-dns-zone"
+     instance_id = ibm_resource_instance.test-pdns-cr-instance.guid
+     description = "testdescription"
+     label = "testlabel"
    }
    ```
    {: codeblock}
