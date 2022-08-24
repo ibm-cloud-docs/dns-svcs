@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-07-20"
+lastupdated: "2022-08-24"
 
 keywords:
 
@@ -20,6 +20,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
+
+## 24 August 2022
+{: #dns-svcs-aug2422}
+{: release-note}
+
+Resolver locations
+:   Added UI feature to the custom resolver location settings. You can now change resolver location priority by clicking up or down arrows to reorder the list.
 
 ## 20 July 2022
 {: #dns-svcs-jul2022}
