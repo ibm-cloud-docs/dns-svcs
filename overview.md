@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-09-22"
 
 keywords:
 
@@ -49,7 +49,7 @@ ISO 27001 requires that clocks of all relevant information processing systems wi
 
 IBM {{site.data.keyword.dns_short}} uses the following internal NTP servers:
 * `time.adn.networklayer.com`
-* `servertime.service.com`
+* `systemd-timesyncd.service`
 
 ## Resolving DNS names with {{site.data.keyword.dns_short}}
 {: #resolving-dns-names-with-dns-services}
