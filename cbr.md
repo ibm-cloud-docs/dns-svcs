@@ -207,7 +207,7 @@ You must work with an account administrator to ensure appropriate VPC operator p
 {: tip}
 
 ## Monitoring context-based restrictions in {{site.data.keyword.dns_short}}
-{: cbr-monitoring}
+{: #cbr-monitoring}
 
 The context-based restriction service generates audit logs every time a context-based rule is enforced. For more information, see
 [Monitoring context-based restrictions](/docs/account?topic=account-cbr-monitor).
