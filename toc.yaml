@@ -120,6 +120,7 @@ toc:
             - architecture-workload-isolation.md
             - service-connection.md
             - data-security.md
+            - cbr.md
             - at-events.md
             - vpe.md
         - terraform.md

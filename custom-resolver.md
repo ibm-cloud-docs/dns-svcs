@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-09-02"
 
 keywords:
 
@@ -32,6 +32,18 @@ It is expected that the custom resolver will be configured for High Availability
 {: important}
 
 After you create the custom resolver and configure its forwarding rules, the resolver can be enabled for the VPC. This results in the DHCP option for the resolver changing to the custom resolver IP addresses.
+
+## Reserved IP for custom resolvers
+{: #about-reserved-ip}
+
+Virtual appliances are created for custom resolvers to serve DNS queries, or for [global load balancer health checks](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#add-a-health-check) to send probes to your origin servers that monitor their health status. The virtual appliance is fully managed by {{site.data.keyword.dns_short}}, however, you can go to the **Subnets for VPC** dashboard and view the details of a subnet to see the reserved IPs of that subnet. You can see which IP address is bound to the network interface on the virtual appliance managed by {{site.data.keyword.dns_short}}.
+
+![Reserved IP](images/virtual_appliance_reserved_ip.png "Reserved IP for virtual appliance managed by DNS Services"){: caption="Figure 1. Reserved IP for virtual appliance managed by {{site.data.keyword.dns_short}}" caption-side="bottom"}
+
+From the **Targeted resource** column, you can view which reserved IP is bound to a DNS service instance that has a virtual appliance connected to your subnet. It is recommended that you keep **Auto-release** enabled (the default setting). With Auto-release, this IP address automatically releases to the IP address pool after the virtual appliance is deleted, as part of the deletion process for custom resolvers and global load balancer pools. 
+
+Disabling Auto-release can disrupt DNS Services recovery operations.
+{: important}
 
 ## Custom resolver status
 {: #cr-statuses}
