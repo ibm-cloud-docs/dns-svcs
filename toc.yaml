@@ -86,6 +86,7 @@ toc:
             - custom-resolver-use-cases.md
         - output-dns-config.md
         - wildcard-support.md
+        - cname-support.md
         - topicgroup:
             label: Cross-account access
             topics:
