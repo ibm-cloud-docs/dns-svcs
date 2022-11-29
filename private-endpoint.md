@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-03-09"
+  years: 2021, 2022
+lastupdated: "2022-11-28"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Integrating with Virtual Private Endpoint for VPC
 {: #vpe-for-dns-svcs}
 
-{{site.data.keyword.cloud}} Virtual Private Endpoint (VPE) for VPC enables you to connect to supported {{site.data.keyword.cloud_notm}} services from your VPC network by using IP addresses of your choosing, allocated from a subnet within your VPC.
+{{site.data.keyword.cloud}} Virtual Private Endpoint (VPE) for VPC enables you to connect to supported {{site.data.keyword.cloud_notm}} services from your VPC network by using IP addresses of your choosing, allocated from a subnet within your VPC. A {{site.data.keyword.dns_short}} VPE allows you to communicate with the control plane of {{site.data.keyword.dns_short}}.
 
 
 ## Setting up a VPE gateway for the {{site.data.keyword.dns_short}} service
@@ -25,6 +25,7 @@ Follow instructions in [Getting started](/docs/vpc?topic=vpc-about-vpe#vpe-getti
 
 ### Using the CLI
 {: #cli-dns-svcs}
+{: cli}
 
 After creating an endpoint gateway for {{site.data.keyword.dns_short}}, follow these steps:
 
@@ -42,8 +43,11 @@ After creating an endpoint gateway for {{site.data.keyword.dns_short}}, follow t
     ```
     {: pre}
 
+1. Log in to the CLI [using a private endpoint](/docs/cli?topic=cli-service-connection#cli-private-login).
+
 ### Using the API 
 {: #vpe-setup-api}
+{: api}
 
 After creating an endpoint gateway for the {{site.data.keyword.dns_short}} instance, use the service endpoint's FQDN `api.private.dns-svcs.cloud.ibm.com` in the URL to access the service. For example:
 
@@ -54,6 +58,7 @@ curl https://api.private.dns-svcs.cloud.ibm.com/instance/<instance-id>/dnszones 
 
 ### Using the SDK
 {: #sdk-dns-svcs}
+{: api}
 
 After creating an endpoint gateway for the {{site.data.keyword.dns_short}} service, you must use the private endpoint's FQDN when setting the service's FQDN during construction of the {{site.data.keyword.dns_short}} service object. For example:
 
@@ -66,6 +71,7 @@ For more examples of setting the service's FQDN for the specific SDK language, s
 
 ### Using Terraform
 {: #terraform-dns-svcs}
+{: terraform}
 
 If you plan to access the {{site.data.keyword.dns_short}} service using Terraform, make sure to set the `IBMCLOUD_PRIVATE_DNS_API_ENDPOINT` environment variable to `https://api.private.dns-svcs.cloud.ibm.com/v1`. For example:
 
