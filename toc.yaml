@@ -146,7 +146,7 @@ toc:
         - topicgroup:
             label: CLI reference
             topics:
-            - /dns-svcs-cli-plugin/dns-svcs-cli-plugin-dns-services-cli-commands
+            - include: ../dns-svcs-cli-plugin/dns-svcs-cli-plugin.md
             - cli-change-log.md
         - link:
             label: Terraform reference
