@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-01-13"
+lastupdated: "2023-01-27"
 
 keywords: context-based restrictions for dns services
 
@@ -12,13 +12,11 @@ subcollection: dns-svcs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Protecting {{site.data.keyword.dns_short}} resources with context-based restrictions (limited availability)
+# Protecting {{site.data.keyword.dns_short}} resources with context-based restrictions
 {: #cbr}
 
 Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.dns_full_notm}} resources can be controlled with context-based restrictions and identity and access management (IAM) policies.
 {: shortdesc}
-
-The preview of this functionality is available only to authorized accounts. {: preview}
 
 These restrictions work with traditional IAM policies, which are based on identity, to provide an extra layer of protection. Unlike IAM policies, context-based restrictions don't assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Since both IAM access and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials. For more information, see [What are context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 
@@ -143,7 +141,6 @@ Context-based restrictions protect only the actions associated with the [DNS Ser
 
 - The CBR rules created on {{site.data.keyword.dns_short}} don't apply to platform actions such as Global Search and Tagging, resource instance creation and deletion on {{site.data.keyword.dns_short}} instances. You can still view {{site.data.keyword.dns_short}} instances on IBM Cloud Resource Explorer.
 - When you create a rule, it might take up to 10 minutes to become enforced.
-- At this time {{site.data.keyword.cloud_notm}} console cannot be used to create context-based restriction rules for {{site.data.keyword.dns_short}}.
 
 ## Creating rules
 {: #cbr-rules}
