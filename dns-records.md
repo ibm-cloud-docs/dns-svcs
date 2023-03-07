@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-04-18"
+  years: 2019, 2023
+lastupdated: "2023-03-06"
 
 keywords: 
 
@@ -139,6 +139,18 @@ To import resource records, take the following steps:
     {: note}
 
 1. Click **Import records**
+
+Your import file should follow this sample format:
+
+```sh
+www.test2.com.  900 IN  A   127.0.0.1
+www.test2.com.  900 IN  AAAA    ::1
+w3.test2.com.   900 IN  CNAME   mydomain.com.
+www.test2.com.  900 IN  MX  1 mail.example.com.
+_service._tcp.www.sample.com.   900 IN  SRV 1 1 1 mydomain.com.
+www.test2.com.  900 IN  TXT "my content"
+```
+{: codeblock}
 
 After the records are imported, you can review the details of the import status, including the number of files that successfully uploaded and which records could not be uploaded. If you need to upload additional files, click **Upload more files** and repeat the import steps. Click the **X** icon in the top right of the panel to close the import panel.
 
