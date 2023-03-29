@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-03-03"
+  years: 2019, 2023
+lastupdated: "2023-03-29"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -43,19 +43,8 @@ While the private DNS resolvers are required to resolve private DNS names, they 
 1. If the zone creation is successful, you are directed to the zone details page.
 
 
-## Step 3: Add a VPC as a permitted network to the DNS zone
-{: #step-3-add-vpc-as-permitted-network-to-dns-zone}
-
-1. Select the zone from the table on the DNS Zones page.
-1. Select the **Permitted networks** tab.
-1. Click **Add network**.
-1. Select the region from the **Region** drop-down menu to see the list of networks in that region.
-1. Select the network from the list and click **Add network**.
-
-Resources in the VPC can resolve records associated with the DNS zone (see [Step 4](#step-4-add-dns-resource-records) to add records to the DNS zone). The DHCP server returns the DNS servers (`161.26.0.7` and `161.26.0.8`) provided by {{site.data.keyword.dns_short}} in its responses. If you have DHCP disabled on a server in the VPC, it is your responsibility to configure the DNS server IP addresses statically on that server, according to your operating system's documentation.
-
-## Step 4: Add DNS resource records
-{: #step-4-add-dns-resource-records}
+## Step 3: Add DNS resource records
+{: #step-3-add-dns-resource-records}
 
 1. Select the zone from the table on the DNS Zones page.
 1. Select the **DNS records** tab.
@@ -63,6 +52,17 @@ Resources in the VPC can resolve records associated with the DNS zone (see [Step
 1. In the panel that appears, select the type of DNS record you are adding from the **Type** menu.
 1. Input the required data for the type of DNS record selected.
 1. Click **Add record**.
+
+## Step 4: Add a VPC as a permitted network to the DNS zone
+{: #step-4-add-vpc-as-permitted-network-to-dns-zone}
+
+1. Select the zone from the table on the DNS Zones page.
+1. Select the **Permitted networks** tab.
+1. Click **Add network**.
+1. Select the region from the **Region** drop-down menu to see the list of networks in that region.
+1. Select the network from the list and click **Add network**.
+
+Resources in the VPC can resolve records associated with the DNS zone (see [Step 3](#step-3-add-dns-resource-records) to add records to the DNS zone). The DHCP server returns the DNS servers (`161.26.0.7` and `161.26.0.8`) provided by {{site.data.keyword.dns_short}} in its responses. If you have DHCP disabled on a server in the VPC, it is your responsibility to configure the DNS server IP addresses statically on that server, according to your operating system's documentation.
 
 ## Step 5: Verify that DNS name resolution works from the VPC
 {: #step-5-test-if-the-dns-name-resolution-works}
