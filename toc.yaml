@@ -20,7 +20,6 @@ toc:
         topics:
         - getting-started.md
         - overview.md
-        - pricing.md
         - dns-concepts.md
         - topicgroup:
             label: Related links

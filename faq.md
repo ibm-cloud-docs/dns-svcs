@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-03-21"
+  years: 2020, 2023
+lastupdated: "2023-03-28"
 
 keywords:
 
@@ -212,6 +212,13 @@ You can disable health check monitoring by disabling the origin.
 1. Click **Save** and then click **OK** when prompted to verify 'Are you sure that you want to change plans?'.
 
 See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.
+
+## Where do I find cost estimates for {{site.data.keyword.dns_short}}?
+{: #where-do-i-find-cost-estimates-for-dns-svcs} 
+{: faq} 
+{: support}
+
+You can estimate the cost of a service using the cost estimator on the provisioning pages for {{site.data.keyword.dns_short}} offerings. For example, log in to the [{{site.data.keyword.dns_short}}](/catalog/services/dns-services) console and click **Estimate costs** in the Summary panel. As you complete the form, cost estimates appear in the Summary side panel.
 
 ## Why am I getting timeout errors for my DNS queries from my VPC when my query rate is more or less than the noted rate limit?
 {: #dns-query-rate-limit}
