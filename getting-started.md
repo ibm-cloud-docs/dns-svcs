@@ -20,7 +20,7 @@ subcollection: dns-svcs
 ## Before you begin
 {: #before-you-begin-getting-started}
 
-To use {{site.data.keyword.dns_short}}, you must have at least one virtual server instance (VSI) in a VPC in the {{site.data.keyword.cloud_notm}}. If you do not have one, learn how to [get started with Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started).
+To use {{site.data.keyword.dns_short}}, you must have at least one virtual server instance in a VPC in the {{site.data.keyword.cloud_notm}}. If you do not have one, learn how to [get started with Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started).
 
 While the private DNS resolvers are required to resolve private DNS names, they also resolve public DNS names if the request is for a name that is not defined to be in a private DNS zone.
 {: note}
@@ -38,7 +38,7 @@ While the private DNS resolvers are required to resolve private DNS names, they 
 
 1. From the resource page, select the {{site.data.keyword.dns_short}} instance.
 1. Click the **Create zone** button on the DNS Zones page.
-1. Enter a fully qualified domain name for the zone and optionally add a label and description. The maximum number of levels a domain name can have is 5. You can define subdomains within the zone later.
+1. Enter a fully qualified domain name for the zone and optionally add a label and description. The domain name can have a maximum of 5 levels. You can define subdomains within the zone later.
 1. Click **Create zone**.
 1. If the zone creation is successful, you are directed to the zone details page.
 
@@ -67,7 +67,7 @@ Resources in the VPC can resolve records associated with the DNS zone (see [Step
 ## Step 5: Verify that DNS name resolution works from the VPC
 {: #step-5-test-if-the-dns-name-resolution-works}
 
-Test whether the zone resolution works using a **`dig`** from the VSI on your VPC. The following command should yield a resolution as the result.
+Test whether the zone resolution works using a **`dig`** from the virtal server instance on your VPC. The following command should yield a resolution as the result.
 
 ```shell
 dig www.example.com

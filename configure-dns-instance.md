@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-13"
+  years: 2019, 2023
+lastupdated: "2023-04-06"
 
 keywords:
 
@@ -43,6 +43,18 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
 1. Click **Create zone** in the panel.
    If the zone is created successfully, you are redirected to the Zone Details page.
 
+### Creating an "A" resource record
+{: #creating-an-a-resource-record}
+
+1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
+1. On the DNS Details page, click the **DNS Records** tab.
+1. Click **Select record action**, and select **Add record** from the list menu.
+1. In the Add Record panel, select the type of DNS record that you want to add from the **Type** menu.
+   In this case, select the type **A**.
+1. Enter the required data for the type of DNS record you selected.
+   In this case, for type **A**, enter **Name** and **IPv4 Address**.
+1. Click **Add record** in the panel.
+
 ### Creating a permitted network
 {: #creating-a-dns-permitted-network}
 
@@ -54,18 +66,6 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
 1. Click **Add network**.
 
    This request adds the VPC network to your zone, thereby giving the network access to the zone.
-
-### Creating an "A" resource record
-{: #creating-an-a-resource-record}
-
-1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
-1. On the DNS Details page, click the **DNS Records** tab.
-1. Click **Add record**.
-1. In the Add Record panel, select the type of DNS record that you want to add from the **Type** menu.
-   In this case, select the type **A**.
-1. Enter the required data for the type of DNS record you selected.
-   In this case, for type **A**, enter **Name** and **IPv4 Address**.
-1. Click **Add record** in the panel.
 
 ### Verifying the setup
 {: #verifying-the-setup}
