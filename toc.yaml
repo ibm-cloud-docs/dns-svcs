@@ -163,6 +163,7 @@ toc:
             - ts-permitted-network.md
             - ts-origin-down.md
             - ts-delete-subnet.md
+            - ts-delete-instance.md
             - ts-pool-critical.md
             - ts-cse-enabled.md
         - known-limitations.md
