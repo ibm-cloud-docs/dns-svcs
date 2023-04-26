@@ -13,7 +13,7 @@ subcollection: dns-svcs
 {{site.data.keyword.attribute-definition-list}}
 
 # Deleting a linked zone
-{: #delete-linked-zone}
+{: #deleting-linked-zone}
 
 Delete a linked zone by using the UI, CLI, or API.
 {: shortdesc}

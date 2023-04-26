@@ -13,7 +13,7 @@ subcollection: dns-svcs
 {{site.data.keyword.attribute-definition-list}}
 
 # Creating a linked zone
-{: #create-linked-zone}
+{: #creating-linked-zone}
 
 Create a linked zone from your DNS Services instance to a DNS zone in another account.
 {: shortdesc}
