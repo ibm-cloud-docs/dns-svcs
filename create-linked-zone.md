@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-24"
+  years: 2022, 2023
+lastupdated: "2023-05-30"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: dns-svcs
 {{site.data.keyword.attribute-definition-list}}
 
 # Creating a linked zone
-{: #creating-linked-zone}
+{: #create-linked-zone}
 
 Create a linked zone from your DNS Services instance to a DNS zone in another account.
 {: shortdesc}
