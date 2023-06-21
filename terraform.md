@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-08-16"
+  years: 2021, 2023
+lastupdated: "2023-02-09"
 
 subcollection: dns-svcs
 
@@ -24,10 +24,12 @@ Looking for a managed Terraform on {{site.data.keyword.cloud}} solution? Try out
 
 Before you begin, make sure that you have the [required access](/docs/dns-svcs?topic=dns-svcs-iam) to create and work with {{site.data.keyword.dns_short}} resources. 
 
-1. Follow the [Terraform on {{site.data.keyword.cloud}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to install the Terraform CLI and configure the {{site.data.keyword.cloud}} Provider plug-in for Terraform. The plug-in abstracts the {{site.data.keyword.cloud}} APIs that are used to provision, update, or delete {{site.data.keyword.dns_short}} service instances and resources.
-2. Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.dns_short}} service instance and to assign a user an access policy in Identity and Access Management (IAM) for that instance by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+- Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to complete this task.
+- Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.dns_short}} service instance and to assign a user an access policy in Identity and Access Management (IAM) for that instance by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
 
-   The {{site.data.keyword.dns_short}} DNS zone in the following example is named `my-dns-zone` and is created with the instance ID of `p-dns-instance-id`. 
+1. Create a {{site.data.keyword.dns_short}} instance by using the `ibm_resource_instance` resource argument in your `main.tf` file.
+
+   The {{site.data.keyword.dns_short}} DNS zone in the following example is named `my-dns-zone` and is created with the instance ID of `p-dns-instance-id`.
 
    ```terraform
    data "ibm_resource_group" "rg" {
@@ -51,29 +53,32 @@ Before you begin, make sure that you have the [required access](/docs/dns-svcs?t
    ```
    {: codeblock}
 
-3. Initialize the Terraform CLI.
+1. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
 
    ```terraform
    terraform init
    ```
    {: pre}
 
-4. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.dns_short}} instance in your account.
+1. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/run){: external}.
 
-   ```terraform
-   terraform plan
-   ```
-   {: pre}
+   1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
 
-5. Create the {{site.data.keyword.dns_short}} instance and IAM access policy in {{site.data.keyword.cloud_notm}}.
+      ```terraform
+      terraform plan
+      ```
+      {: pre}
 
-   ```terraform
-   terraform apply
-   ```
-   {: pre}
+   1. Run `terraform apply` to create the resources that are defined in the plan.
 
-6. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, select the {{site.data.keyword.dns_short}} instance that you created and note the instance ID.
-7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+      ```terraform
+      terraform apply
+      ```
+      {: pre}
+
+1. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, select the {{site.data.keyword.dns_short}} instance that you created and note the instance ID.
+
+1. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 
 ## What's next?
 {: #terraform-setup-next}

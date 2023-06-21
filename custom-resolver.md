@@ -70,3 +70,4 @@ The following limits exist for the custom resolvers feature:
 * Each custom resolver can have a maximum of 10 forwarding rules.
 * You cannot delete the subnet used for the custom resolver.
 * You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location virtual server instance.
+

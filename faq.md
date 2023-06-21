@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-28"
+lastupdated: "2023-06-06"
 
 keywords:
 
@@ -214,8 +214,8 @@ You can disable health check monitoring by disabling the origin.
 See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.
 
 ## Where do I find cost estimates for {{site.data.keyword.dns_short}}?
-{: #where-do-i-find-cost-estimates-for-dns-svcs} 
-{: faq} 
+{: #where-do-i-find-cost-estimates-for-dns-svcs}
+{: faq}
 {: support}
 
 You can estimate the cost of a service using the cost estimator on the provisioning pages for {{site.data.keyword.dns_short}} offerings. For example, log in to the [{{site.data.keyword.dns_short}}](/catalog/services/dns-services) console and click **Estimate costs** in the Summary panel. As you complete the form, cost estimates appear in the Summary side panel.
@@ -225,3 +225,18 @@ You can estimate the cost of a service using the cost estimator on the provision
 {: faq}
 
 The noted DNS queries per second per availability zone rate [limit](/docs/dns-svcs?topic=dns-svcs-about-dns-services#limits) is currently the typical amount when using {{site.data.keyword.dns_short}} resolvers from a VPC. Depending on how traffic is actually routed, what protocols the queries use, and other factors, the actual rate limit might vary around this number. After a DNS query rate exceeds this rate limit, {{site.data.keyword.dns_short}} resolvers no longer respond to the excess DNS queries.
+
+## Why is my custom resolver request and response count so low?
+{: #why-custom-resolver-request-response-count-low}
+
+DNS Services platform metrics counts DNS queries to custom resolvers in two ways: DNS requests, and cache hits and misses. When a DNS query is first received by the custom resolver location it counts that query towards the DNS requests total. Subsequent queries made before the TTL is reached are counted towards the cache hits and misses total. For example if 100 queries are made in rapid succession for a given domain, the DNS requests count would be 1 and the cache hits count would be at 99.
+
+If you want view the total request count you can do one of the following:
+* Combine the DNS requests and cache hits
+* Combine the cache hits and misses
+* View the cache requests metric
+
+## Why is my custom resolver metrics showing a `.` instead of my requested zone name?
+{: #why-custom-resolver-metrics-show-period}
+
+The custom resolver metric only shows the zone name for queries that are made for zones that have forwarding rules established. Queries for any other zones result in a zone name of `.`

@@ -35,7 +35,7 @@ toc:
         - topicgroup:
             label: Team based privacy using IAM, VPC, Transit Gateway and DNS
             topics:
-            - include: ../cloud-docs-solutions/solution-tutorials/vpc-tg-dns-iam.md
+            - include: ../solution-tutorials/vpc-tg-dns-iam.md
 
     - navgroup:
         id: howto
@@ -93,7 +93,7 @@ toc:
             - topicgroup:
                 label: Creating and managing linked zones
                 topics:
-                - create-linked-zone.md
+                - create-linked-zone.md     
                 - update-linked-zone.md
                 - list-details-linked-zones.md
                 - delete-linked-zone.md
@@ -109,6 +109,11 @@ toc:
                 - update-access-req.md
                 - list-details-access-req.md
         - topicgroup:
+            label: Observability
+            topics:
+            - at-events.md
+            - platform-metrics.md
+        - topicgroup:
             label: High availability and disaster recovery
             topics:
             - ha-dr.md
@@ -121,7 +126,6 @@ toc:
             - service-connection.md
             - data-security.md
             - cbr.md
-            - at-events.md
             - vpe.md
         - terraform.md
 

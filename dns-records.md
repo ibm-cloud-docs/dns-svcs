@@ -143,12 +143,12 @@ To import resource records, take the following steps:
 Your import file should follow this sample format:
 
 ```sh
-www.test2.com.  900 IN  A   127.0.0.1
-www.test2.com.  900 IN  AAAA    ::1
-w3.test2.com.   900 IN  CNAME   mydomain.com.
-www.test2.com.  900 IN  MX  1 mail.example.com.
+www.test.com.  900 IN  A   127.0.0.1
+www.test.com.  900 IN  AAAA    ::1
+w3.test.com.   900 IN  CNAME   mydomain.com.
+www.test.com.  900 IN  MX  1 mail.example.com.
 _service._tcp.www.sample.com.   900 IN  SRV 1 1 1 mydomain.com.
-www.test2.com.  900 IN  TXT "my content"
+www.test.com.  900 IN  TXT "my content"
 ```
 {: codeblock}
 

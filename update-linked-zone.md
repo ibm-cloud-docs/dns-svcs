@@ -26,7 +26,7 @@ To update the properties of a linked zone using the UI, take the following steps
 1. Navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance, then select the **Linked zones** tab.
 1. Click the link in the **Zone name** column of the linked zone you want to update.
 1. Click **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit icon") of the linked zone you want to update.
-1. Enter your changes (**NEED TO SEE WORKING VERSION**) and click **Save**.
+1. Enter your changes and click **Save**.
 
 ## Updating a linked zone using the CLI
 {: #cli-update-linked-zone}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-08-30"
+  years: 2021, 2023
+lastupdated: "2023-06-21"
 
 keywords: vpe for dns services, virtual private endpoints for dns services, using vpe for vpc with dns services, isolation for dns services, private network for dns services, network isolation in dns services, non-public routes for dns services, private connection for dns services, private connectivity for dns services
 
@@ -35,19 +35,11 @@ Before you target a virtual private endpoint for {{site.data.keyword.dns_short}}
 ## Setting up a VPE for {{site.data.keyword.dns_short}}
 {: #endpoint-setup}
 
-When you create a VPE gateway by using the CLI or API, you must specify the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the region in which you want connect to {{site.data.keyword.dns_short}}. Review the following table for the available regions and CRNs to use to create your VPE gateway.
+When you create a VPE gateway by using the CLI or API, use the following CRN information.
 
 | Location | Region | Cloud Resource Name (CRN) |
 |---------|-------|----------------|
-| Dallas | `us-south` | `crn:v1:bluemix:public:container-registry:us-south:::endpoint:vpe.us-south.container-registry.cloud.ibm.com` |
-| Frankfurt | `eu-de` | `crn:v1:bluemix:public:container-registry:eu-de:::endpoint:vpe.eu-de.container-registry.cloud.ibm.com` |
-| London | `eu-gb` | `crn:v1:bluemix:public:container-registry:eu-gb:::endpoint:vpe.eu-gb.container-registry.cloud.ibm.com` |
-| Osaka | `jp-osa` | `crn:v1:bluemix:public:container-registry:jp-osa:::endpoint:vpe.jp-osa.container-registry.cloud.ibm.com` |
-| Sao Paulo | `br-sao` | `crn:v1:bluemix:public:container-registry:br-sao:::endpoint:vpe.br-sao.container-registry.cloud.ibm.com` |
-| Sydney | `au-syd` | `crn:v1:bluemix:public:container-registry:au-syd:::endpoint:vpe.au-syd.container-registry.cloud.ibm.com` |
-| Tokyo | `jp-tok` | `crn:v1:bluemix:public:container-registry:jp-tok:::endpoint:vpe.jp-tok.container-registry.cloud.ibm.com` |
-| Toronto  | `ca-tor` | `crn:v1:bluemix:public:container-registry:ca-tor:::endpoint:vpe.ca-tor.container-registry.cloud.ibm.com` |
-| Washington DC | `us-east` | `crn:v1:bluemix:public:container-registry:us-east:::endpoint:vpe.us-east.container-registry.cloud.ibm.com` |
+| Global | `global` | `crn:v1:bluemix:public:dns-svcs:global::::` |
 {: caption="Table 1. Region availability and Cloud Resource Names (CRNs) for connecting {{site.data.keyword.dns_short}} over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
 
 ### Configuring an endpoint gateway
@@ -56,9 +48,9 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
 To configure a virtual private endpoint gateway, follow these steps:
 
 1. List the available services, including {{site.data.keyword.cloud_notm}} infrastructure services available (by default) for all VPC users.
-1. [Create an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway) for {{site.data.keyword.dns_short}} that you want to be privately available to the VPC.  
-1. [Bind a reserved IP address](/docs/vpc?topic=vpc-bind-unbind-reserved-ip) to the endpoint gateway. 
-1. View the created VPE gateways associated with the {{site.data.keyword.dns_short}} instance. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway). 
+1. [Create an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway) for {{site.data.keyword.dns_short}} that you want to be privately available to the VPC.
+1. [Bind a reserved IP address](/docs/vpc?topic=vpc-bind-unbind-reserved-ip) to the endpoint gateway.
+1. View the created VPE gateways associated with the {{site.data.keyword.dns_short}} instance. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway).
 
 Now your virtual server instances in the VPC can access your {{site.data.keyword.dns_short}} instance privately through it.
 
@@ -79,17 +71,17 @@ Use the following steps to update to the latest version of the CLI and the {{sit
    ibmcloud update
    ```
    {: pre}
-   
+
 1. Update the {{site.data.keyword.dns_short}} CLI plug-in:
 
    ```sh
    ibmcloud plugin update cloud-dns-services
    ```
    {: pre}
-   
-1. Log into `private.cloud.ibm.com`. For more information about logging into the private cloud, see [Securing your connection when using the IBM Cloud CLI](docs/cli?topic=cli-service-connection).
 
-### Using the VPE with the VPC API 
+1. Log into `private.cloud.ibm.com`. For more information about logging into the private cloud, see [Securing your connection when using the IBM Cloud CLI](/docs/cli?topic=cli-service-connection).
+
+### Using the VPE with the VPC API
 {: #vpe-api}
 {: api}
 
@@ -123,4 +115,4 @@ export IBMCLOUD_PRIVATE_DNS_API_ENDPOINT=api.private.dns-svcs.cloud.ibm.com
 ```
 {: pre}
 
-For more information, see [DNS Services resouces and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list#ibm-dns-service_rd).
+For more information, see [DNS Services resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list#ibm-dns-service_rd).

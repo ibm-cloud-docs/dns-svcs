@@ -17,11 +17,6 @@
         "title": "About DNS Services",
         "description": "Learn about DNS in general, and see a DNS Services overview.",
         "href": "/docs/dns-svcs?topic=dns-svcs-about-dns-services"
-      },
-      {
-        "title": "DNS Services pricing",
-        "description": "See the pricing for DNS Services features.",
-        "href": "/docs/dns-svcs?topic=dns-svcs-pricing"
       }
     ],
     "section_learn": {
@@ -34,19 +29,19 @@
       "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes",
       "tiles": [
         {
+          "date": "21 June 2023",
+          "title": "Platform metrics, Madrid support",
+          "description": "Added support for platform metrics feature and Madrid multi-zone region."
+        },
+        {
+          "date": "24 August 2022",
+          "title": "Resolver locations",
+          "description": "Added UI feature to the custom resolver location settings. You can now change resolver location priority by clicking up or down arrows to reorder the list.",
+        },
+        {
           "date": "20 July 2022",
           "title": "Secondary zones",
           "description": "Added support for secondary zones feature."
-        },
-        {
-          "date": "24 June 2022",
-          "title": "Cross-account access",
-          "description": "Added support for cross-account access feature."
-        },
-        {
-          "date": "18 April 2022",
-          "title": "Import and export DNS records",
-          "description": "Added UI support for importing and exporting DNS records."
         }
       ]
     }

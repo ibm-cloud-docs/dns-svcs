@@ -43,9 +43,9 @@ Adding the same VPC to two DNS zones of the same name is not allowed.
 ### Navigating from permitted networks to VPC overview
 {: #navigating-to-vpc}
 
-You can navigate to the VPC overview page from the **Permitted networks** section by clicking on the VPC name. For example, in the following image, clicking on `spark-friendly` takes you to the overview page of the VPC named `spark-friendly`.
+You can navigate to the VPC overview page from the **Permitted networks** section by clicking on the VPC name. For example, in the following image, clicking on `demo-vpc` takes you to the overview page of the VPC named `demo-vpc`.
 
-![Permitted network link to VPC overview page](images/permit-net-nav.png "Image of VPC name link in permitted network section"){: caption="Figure 1. Navigating to an IBM VPC from permitted networks section" caption-side="bottom"}
+![Permitted network link to VPC overview page](images/permit-net-nav.svg "Image of VPC name link in permitted network section"){: caption="Figure 1. Navigating to an IBM VPC from permitted networks section" caption-side="bottom"}
 
 ### List permitted networks
 {: #list-permitted-networks}

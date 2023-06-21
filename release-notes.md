@@ -21,6 +21,16 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
 
+## 21 June 2023
+{: #dns-svcs-jun2123}
+{: release-note}
+
+Platform metrics feature enabled
+:   Added support for platform metrics to DNS Services.
+
+Madrid region support added
+:   Added Madrid multi-zone region support.
+
 ## 24 August 2022
 {: #dns-svcs-aug2422}
 {: release-note}
