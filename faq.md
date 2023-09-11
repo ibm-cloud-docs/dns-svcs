@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-06"
+lastupdated: "2023-07-07"
 
 keywords:
 
@@ -112,6 +112,11 @@ If the VPC is deleted, the corresponding permitted network will also be deleted 
 
 To maintain a level of performance while resolving DNS queries, DNS Services resolvers cache data related to permitted networks for a period of time. Changes made to a permitted network might not have propagated until the previously cached data expires. See [Known limitations](/docs/dns-svcs?topic=dns-svcs-known-limitations) for more details.
 
+## Why am I still being charged for a disabled custom resolver or location?
+{: #disabled-custom-resolver-charge}
+{: faq}
+
+When you disable a custom resolver or a custom resolver location, the underlying appliance is still provisioned and subject to billing. To prevent unwanted charges, delete the custom resolver and custom resolver locations.
 
 ## What do the different zone states mean?
 {: #zone-states-definitions}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-21"
+lastupdated: "2023-08-14"
 
 keywords: cloud monitoring, monitoring, platform metrics, observability page, enable platform metrics, view metrics, launch monitoring
 
@@ -130,7 +130,12 @@ The custom resolver summary provides custom resolver location health.
 |Metric name | Labels |
 |----------|-------------|
 |`ibm_dns_svcs_cr_location_health` | crid, accountid, instanceid, locationip|
+|`ibm_dns_svcs_cr_dp_health`|crid, accountid, instanceid, locationip|
 {: caption="Table 4. Custom resolver summary metrics" caption-side="bottom"}
+
+Where:
+* `ibm_dns_svcs_cr_location_health` is a metric that helps determine the health of critical applications in a custom resolver location. The values are 0 for unhealthy and 1 for healthy. 
+* `ibm_dns_svcs_cr_dp_health` is a metric that shows the connectivity to the configured default forwarding rule IPs in the custom resolver location. This metric is marked 1 (healthy) when any one of the IPs in the default forwarding rule has connectivity. A 0 (unhealthy) means that none of the IPs in the default forwarding rule have connectivity. 
 
 The labels correspond to the following definitions:
 
