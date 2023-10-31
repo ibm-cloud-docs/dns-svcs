@@ -25,7 +25,7 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 | `Dallas` | `Dallas` |
 | `Frankfurt` | `Frankfurt` |
 | `London` | `London` |
-| `Madrid` | `Frankfurt` Currently, Cloud Monitoring in Madrid is routed to Frankfurt until Madrid support is enabled.|
+| `Madrid` | `Madrid` |
 | `Osaka` | `Osaka` |
 | `Paris` | `Paris` |
 | `São Paulo` | `São Paulo` |
