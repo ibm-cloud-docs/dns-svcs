@@ -75,7 +75,7 @@ Complete the following steps to launch the {{site.data.keyword.mon_full_notm}} w
 
 DNS Services collects two levels of platform metrics from two locations within the data path; the data path and custom resolvers. By default, you'll receive only the summary of metrics which gives a minimum amount of information about DNS query requests, DNS query results, and custom resolver location health.
 
-Open a Support case to enable the total metrics set.
+Open a Network Support case to enable the total metrics set.
 
 Platform metrics are priced per usage.
 
