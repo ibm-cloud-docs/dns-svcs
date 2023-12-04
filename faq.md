@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-12-04"
 
 keywords:
 
@@ -245,3 +245,10 @@ If you want view the total request count you can do one of the following:
 {: #why-custom-resolver-metrics-show-period}
 
 The custom resolver metric only shows the zone name for queries that are made for zones that have forwarding rules established. Queries for any other zones result in a zone name of `.`
+
+## How does disabling a custom resolver location affect name resolution?
+{: #how-does-disabling-a-custom-resolver-location-affect}
+
+Enabling or disabling a custom resolver and its locations updates the list of DNS Servers in the VPC. Disabling the custom resolver doesn't delete or power off the appliance virtual server instance. If disabled, the custom resolver location is still accessible directly through its private network IP. 
+
+Any `dig` requests directed to the custom resolver location's IP (for example, `dig www.example.com @10.0.0.13`), will be resolved by the appliance virtual server instance, whether the custom resolver location is enabled or not. Disabling a custom resolver causes the DHCP Server in the VPC to set the DNS server to the default DNS Service DNS servers (`161.26.0.7` and `161.26.0.8`). After a custom resolver or one of its locations is enabled again, then the list of available DNS Servers in the VPC is updated by the VPC's DHCP server.
