@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-14"
+  years: 2019, 2024
+lastupdated: "2024-01-22"
 
 keywords: restricted zones
 
@@ -95,6 +95,7 @@ The following DNS zone names are not permitted.
 * `ibmcloud.com`
 * `pdnsibm.net`
 * `appdomain.cloud`
+* `compass.cobaltiron.com`
 
 ### Editing a DNS zone
 {: #edit-dns-zone-ui}
