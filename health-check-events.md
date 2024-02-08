@@ -18,7 +18,7 @@ subcollection: dns-svcs
 When using global load balancing, you can create a health check to specify how the origin's health is monitored. Health check events are status changes from monitored origin pools and their associated origin servers. If an origin's status changes, a new event is recorded with the event's description.
 {: shortdesc}
 
-{{site.data.keyword.loganalysisfull}} manages system and application logs in the IBM Cloud. You can use this service to access health check events for your origin pools and origin servers. For more information, see the [Getting started tutorial](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-getting-started) for {{site.data.keyword.loganalysislong_notm}}.
+{{site.data.keyword.loganalysisfull}} manages system and application logs in the IBM Cloud. You can use this service to access health check events for your origin pools and origin servers. For more information, see the [Getting started tutorial](/docs/log-analysis?topic=log-analysis-getting-started) for {{site.data.keyword.loganalysislong_notm}}.
 
 ## Before you begin
 {: #loganalysis-preparation}
@@ -52,7 +52,7 @@ To view health check events in a {{site.data.keyword.loganalysisshort}} instance
 
 To view health check events, use the UI of the {{site.data.keyword.loganalysisshort}} instance that you configured to receive the platform logs in the previous steps.
 
-For more information, see [Launching the {{site.data.keyword.loganalysisshort}} web UI through the IBM Cloud UI](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-launch#launch_cloud_ui).
+For more information, see [Launching the {{site.data.keyword.loganalysisshort}} web UI through the IBM Cloud UI](/docs/log-analysis?topic=log-analysis-launch#launch_cloud_ui).
 
 To search health check events from within the logging instance, enter the health check event type `health_check_event` in the **Search** field.
 

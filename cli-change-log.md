@@ -19,7 +19,7 @@ subcollection: dns-svcs
 In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.dns_short}} CLI.
 {: shortdesc}
 
-## 12 Octorber 2022
+## 12 October 2022
 {: #cli-oct2022}
 
 On 12 October 2022, the following features changed in the {{site.data.keyword.dns_short}} CLI:
@@ -29,7 +29,7 @@ On 12 October 2022, the following features changed in the {{site.data.keyword.dn
 ## 20 July 2022
 {: #cli-jul2022}
 
-[Secondary zones](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#secondary-zones) support added.
+[Secondary zones](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#secondary-zones) support added.
 
 ## 14 April 2022
 {: #cli-apr1422}

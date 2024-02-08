@@ -80,11 +80,6 @@ Where:
 
 To create a linked zone using the API, follow these steps:
 
-"owner_instance_id": "03c5b4ed-58f2-4911-926e-753c2c258de0",
-    "owner_zone_id": "18fb3540-2d8b-4b86-8469-74f721520116",
-    "description": "linked zone test",
-    "label": "dev"
-
 1. Set up your API environment with the correct variables.
 1. Store the following values in variables to be used in the API command:
     * `INSTANCE_ID`, which is the unique identifier of a service instance.

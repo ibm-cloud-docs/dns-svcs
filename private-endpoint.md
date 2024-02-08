@@ -45,7 +45,7 @@ After creating an endpoint gateway for {{site.data.keyword.dns_short}}, follow t
 
 1. Log in to the CLI [using a private endpoint](/docs/cli?topic=cli-service-connection#cli-private-login).
 
-For more information on VPEs using the CLI, see [Virtual private endpoint gateways](/docs/vpc?topic=vpc-infrastructure-cli-plugin-vpc-reference#vpe-clis).
+For more information on VPEs using the CLI, see [Virtual private endpoint gateways](/docs/vpc?topic=vpc-vpc-reference&interface=cli#vpe-clis).
 
 ### Using the API 
 {: #vpe-setup-api}
@@ -82,7 +82,7 @@ export IBMCLOUD_PRIVATE_DNS_API_ENDPOINT=https://api.private.dns-svcs.cloud.ibm.
 ```
 {: pre}
 
-For more information on using Terraform, see [{{site.data.keyword.dns_short}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-dns-resources) and [{{site.data.keyword.dns_short}} data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-dns-data-sources).
+For more information on using Terraform, see [{{site.data.keyword.dns_short}} resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list#ibm-dns-service_rd).
 
 For more information on using VPEs in Terraform, see [`ibm_is_virtual_endpoint_gateway_ip`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_virtual_endpoint_gateway_ip){: external}.
 

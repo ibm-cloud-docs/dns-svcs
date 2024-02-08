@@ -312,7 +312,7 @@ HTTP/2 204 No Content
 {: #managing-dns-zones-cli}
 {: cli}
 
-Follow these [instructions](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#cli-ref-prereqs) to install DNS Services CLI plugin.
+Follow these [instructions](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#cli-ref-prereqs) to install DNS Services CLI plugin.
 
 First use `ibmcloud dns instances` command to list the DNS Services instances and then use the `ibmcloud dns instance-target` command to set the target operating DNS Services instance.
 

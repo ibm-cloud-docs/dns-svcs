@@ -9,11 +9,10 @@ toc:
     audience: service
     href: /docs/dns-svcs
     console-page: /catalog/services/dns-services
-    product-page: https://www.ibm.com/cloud/dns
+    product-page: https://www.ibm.com/products/dns
     path: dns-svcs
     label: DNS Services
 
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
     - navgroup:
         id: learn
@@ -93,7 +92,7 @@ toc:
             - topicgroup:
                 label: Creating and managing linked zones
                 topics:
-                - create-linked-zone.md     
+                - create-linked-zone.md
                 - update-linked-zone.md
                 - list-details-linked-zones.md
                 - delete-linked-zone.md
@@ -129,14 +128,12 @@ toc:
             - vpe.md
         - terraform.md
 
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
-#  Links to your command line reference docs should be included in the Reference navigation group.
     - navgroup:
         id: reference
         topics:
         - link:
             label: DNS Services API
-            href: https://cloud.ibm.com/apidocs/dns-svcs
+            href: https://{DomainName}/apidocs/dns-svcs
         - topicgroup:
             label: SDKs
             links:

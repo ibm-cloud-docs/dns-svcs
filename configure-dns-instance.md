@@ -90,7 +90,7 @@ dig @161.26.0.7 A xyz.example.com
 ### Creating a {{site.data.keyword.dns_short}} instance
 {: #creating-dns-instance-api}
 
-See the [create a new resource instance](https://{DomainName}/apidocs/resource-controller/resource-controller#create-provision-a-new-resource-instance) documentation for the Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set. Each account can have multiple resource groups, and each resource group has a unique ID.
+See the [create a new resource instance](/apidocs/resource-controller/resource-controller#create-resource-instance) documentation for the Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set. Each account can have multiple resource groups, and each resource group has a unique ID.
 
 Set the variables as follows to create an instance of the standard plan:
 

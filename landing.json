@@ -4,7 +4,7 @@
     "introduction": "IBM Cloud DNS Services provides private DNS to Virtual Private Cloud (VPC) users.",
     "section_devtools": {
       "api": "/apidocs/dns-svcs",
-      "cli": "/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands",
+      "cli": "/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands",
       "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_glb"
     },
     "section_recommended": [
@@ -21,9 +21,9 @@
     ],
     "section_learn": {
       "developer": "https://developer.ibm.com/depmodels/cloud/",
-      "architecture": "https://www.ibm.com/cloud/architecture",
+      "architecture": "https://www.ibm.com/architectures/hybrid",
       "training": "https://www.ibm.com/training/cloud",
-      "community": "https://community.ibm.com/community/user/publiccloud/home"
+      "community": "https://community.ibm.com/community/user/cloud/home"
     },
     "section_updates": {
       "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes",

@@ -48,7 +48,7 @@ For example, a type `A` query for the name `www.example.com` is made with wildca
     * `CNAME`
     * `MX`
 * PTR records are not supported for `A` and `AAAA` type wildcard records.
-* [Importing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#import-resource-records-api) does not support wildcard records.
+* [Importing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records&interface=api#import-resource-records-api) does not support wildcard records.
 * To avoid causing conflicts when importing a DNS zone file, do not create or delete DNS records until the import is complete.
 * When importing a DNS zone file, ensure that no other import operations occur that might cause a conflict.
 

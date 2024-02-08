@@ -26,6 +26,7 @@ To list all linked zones using the UI, navigate to the **Zones** section of your
 
 ## Getting the details of a linked zone using the UI
 {: #ui-get-details}
+{: ui}
 
 To get the details of a linked zone using the UI, take the following steps:
 
@@ -52,6 +53,7 @@ Where:
 
 ## Getting the details of a linked zone using the CLI
 {: #cli-get-details}
+{: cli}
 
 To get the details of a linked zone using the API, run the following command:
 
@@ -90,6 +92,7 @@ To list all linked zones using the API, follow these steps:
 
 ## Getting the details of a linked zone using the API
 {: #api-get-details}
+{: api}
 
 To get the details of a linked zone using the API, follow these steps:
 

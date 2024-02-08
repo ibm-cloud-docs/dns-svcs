@@ -111,9 +111,9 @@ The `addresses` attribute specifies individual IP addresses, ranges, subnets, an
 {: #network-zone-cli} 
 {: cli}
 
-1. To create network zones from the CLI, [install the CBR CLI plug-in](/docs/account?topic=cli-cbr-plugin#install-cbr-plugin).
+1. To create network zones from the CLI, [install the CBR CLI plug-in](/docs/account?topic=account-cbr-plugin).
 2. Use the `cbr-zone-create` command to add network locations and VPCs to network zones. For more information, see the CBR
-   [CLI reference](/docs/account?topic=cli-cbr-plugin#cbr-zones-cli).
+   [CLI reference](/docs/account?topic=account-cbr-plugin#cbr-zones-cli).
 
    The following example command adds an individual IP, range, subnet, and a VPC to a network zone.
 
@@ -199,8 +199,8 @@ The following example payload creates a rule that protects the {{site.data.keywo
 {: #rules-cli} 
 {: cli}
 
-1. To create rules from the CLI, [install the CBR CLI plug-in](/docs/account?topic=cli-cbr-plugin#install-cbr-plugin).
-1. Use the [`ibmcloud cbr rule-create` command](/docs/account?topic=cli-cbr-plugin#cbr-cli-rule-create-command) to create CBR rules. For more information, see the CBR [CLI reference](/docs/account?topic=cli-cbr-plugin#cbr-zones-cli).
+1. To create rules from the CLI, [install the CBR CLI plug-in](/docs/account?topic=account-cbr-plugin#install-cbr-plugin).
+1. Use the [`ibmcloud cbr rule-create` command](/docs/account?topic=account-cbr-plugin#cbr-cli-rule-create-command) to create CBR rules. For more information, see the CBR [CLI reference](/docs/account?topic=account-cbr-plugin#cbr-zones-cli).
 
 The examples in this section are enforcement rules. You can make them report-only by adding `--enforcement-mode report`.
 

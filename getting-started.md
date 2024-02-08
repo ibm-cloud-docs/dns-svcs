@@ -79,6 +79,6 @@ dig www.example.com
 
 Follow the steps in these detailed guides to use the API for:
 - [Creating a DNS zone](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#create-dns-zone-api)
-- [Managing permitted networks](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks#managing-permitted-networks-api)
-- [Import a DNS zone file](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#import-resource-records-api)
+- [Managing permitted networks](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks&interface=api)
+- [Import a DNS zone file](/docs/dns-svcs?topic=dns-svcs-managing-dns-records&interface=api#import-resource-records-api)
 - [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records#managing-dns-records-api)
