@@ -216,7 +216,7 @@ You can disable health check monitoring by disabling the origin.
 1. Select **Standard DNS** from the plan table.
 1. Click **Save** and then click **OK** when prompted to verify 'Are you sure that you want to change plans?'.
 
-See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-cli-plugin-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.
+See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.
 
 ## Where do I find cost estimates for {{site.data.keyword.dns_short}}?
 {: #where-do-i-find-cost-estimates-for-dns-svcs}
