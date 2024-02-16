@@ -42,7 +42,7 @@ You can configure only one instance of the {{site.data.keyword.mon_full}} servic
 
 - Provision an instance of the {{site.data.keyword.mon_full_notm}} service. After you provision the Monitoring instance, the *Observability* page opens. To continue working with {{site.data.keyword.cloud_notm}}, go back to the {{site.data.keyword.cloud_notm}} UI.
 - To configure the Monitoring instance, you must turn on the *platform metrics* configuration setting.
-- If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [{{site.data.keyword.cloud}} services](https://www.ibm.com/cloud/services).
+- If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [{{site.data.keyword.cloud}} services](https://www.ibm.com/consulting/cloud).
 - Use the Metrics Router to allow customers to configure which Sysdig instance their platform metrics flows to. To learn more about Metrics Router, see [IBM Cloud Metrics Routing](/docs/metrics-router).
 
 To monitor platform metrics, check that the Monitoring instance is provisioned in the same region where the {{site.data.keyword.cloud_notm}} instance is provisioned.
