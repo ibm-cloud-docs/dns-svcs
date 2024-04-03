@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-10-22"
+  years: 2020, 2024
+lastupdated: "2024-03-21"
 
 keywords: responsibilities, ha, high availability, disaster recovery
 
@@ -36,6 +36,8 @@ Review the following sections for the specific responsibilities for you and for 
 
 - Ensure that DNS zones and resource records data is correct and accurate.
 - Take periodic [backups](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file) of your DNS zones and resource records.
+- To achieve high availability, configure custom resolvers with a minimum of two resolver locations. The best practice is to establish one location in each availability zone.
+- To ensure correct high availability of secondary zones with multiple custom resolver locations, configure your on-prem resolver to allow zone transfers to all custom resolver locations that have been created.
 
 ## Abuse of {{site.data.keyword.dns_full_notm}}
 {: #abuse-of-dns-svcs}
