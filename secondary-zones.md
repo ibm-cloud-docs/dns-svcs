@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-26"
+lastupdated: "2024-04-04"
 
 keywords:
 
@@ -14,9 +14,6 @@ subcollection: dns-svcs
 
 # Understanding secondary zones
 {: #sec-zones-about}
-
-## Secondary zone definition
-{: #secondary-zone-term}
 
 A secondary zone is a read-only copy of the primary DNS zone. Instead of getting information from local files, secondary zones receive pertinent information from a primary server in a communication process known as a zone transfer.
 {: shortdesc}
@@ -51,5 +48,5 @@ In this example, a customer has a zone `onprem.customer.com` which is managed by
 
 If there is an outage or issue with the primary custom resolver location, one of the remaining secondary custom resolver locations is selected to become the primary location. After the issue with the down custom resolver location is resolved, that custom resolver acts as a secondary custom resolver location. All custom resolver locations must be specified in your on-prem DNS server as valid destinations for zone transfers.
 
-![Custom resolver HA setup with 3 locations configured after primary location goes down](images/cr-ha-secondary-down.png "Custom resolver with 3 locations for high availability and primary location down"){: caption="Figure 2. Custom resolver HA setup with 3 locations configured" caption-side="bottom"}
+![Custom resolver HA setup with 3 locations configured after primary location goes down](images/cr-ha-secondary-down.png "Custom resolver with 3 locations for high availability and primary location down"){: caption="Figure 2. Custom resolver HA setup with the primary location down" caption-side="bottom"}
 
