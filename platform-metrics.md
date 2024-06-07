@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-01"
+lastupdated: "2023-08-14"
 
 keywords: cloud monitoring, monitoring, platform metrics, observability page, enable platform metrics, view metrics, launch monitoring
 
@@ -21,17 +21,17 @@ subcollection: dns-svcs
 Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{site.data.keyword.dns_short}} deployments according to the following table:
 
 | Deployment Region | {{site.data.keyword.mon_full_notm}} Region |
-|-----------------|-----------------|
-| `Dallas`        | `Dallas`        |
-| `Frankfurt`     | `Frankfurt`     |
-| `London`        | `London`        |
-| `Madrid`        | `Madrid`        |
-| `Osaka`         | `Osaka`         |
-| `Paris`         | `Paris`         |
-| `São Paulo`     | `São Paulo`     |
-| `Sydney`        | `Sydney`        |
-| `Tokyo`         | `Tokyo`         |
-| `Toronto`       | `Toronto`       |
+|----------|-----------|
+| `Dallas` | `Dallas` |
+| `Frankfurt` | `Frankfurt` |
+| `London` | `London` |
+| `Madrid` | `Frankfurt` Currently, Cloud Monitoring in Madrid is routed to Frankfurt until Madrid support is enabled.|
+| `Osaka` | `Osaka` |
+| `Paris` | `Paris` |
+| `São Paulo` | `São Paulo` |
+| `Sydney` | `Sydney` |
+| `Tokyo` | `Tokyo` |
+| `Toronto` | `Toronto` |
 | `Washington DC` | `Washington DC` |
 {: caption="Table 1. {{site.data.keyword.mon_full_notm}} regions" caption-side="bottom"}
 

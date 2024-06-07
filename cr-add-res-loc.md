@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-06-07"
 
 keywords:
 
@@ -17,6 +17,24 @@ subcollection: dns-svcs
 
 The task of the resolver location instance is to provide DNS resolver functions based on the forwarding rules that you configure. Add resolver locations to manage where your custom resolver deploys. 
 {: shortdesc}
+
+## Custom resolver address propagation
+{: #custom-resolver-address-propagation}
+
+Custom resolver addresses are propagated to the virtual server instance on the VPC.
+
+### Zone affinity settings
+{: #zone-affinity-settings}
+
+The order of IPs of a custom-resolver location is set with zone affinity. For example, say a custom resolver has the following locations.
+* `us-south-1`: IP1
+* `us-south-2`: IP2
+* `us-south-3`: IP3
+
+The DNS servers will appear similar to this example.
+* Virtual server instance in `us-south-1`: IP1 IP2 IP3
+* Virtual server instance in `us-south-2`: IP2 IP3 IP1
+* Virtual server instance in `us-south-3`: IP3 IP1 IP2
 
 ## Adding a resolver location using the UI
 {: #ui-add-res-loc}

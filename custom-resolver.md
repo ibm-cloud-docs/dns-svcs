@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-09-02"
+  years: 2021, 2024
+lastupdated: "2024-05-21"
 
 keywords:
 
@@ -45,6 +45,72 @@ From the **Targeted resource** column, you can view which reserved IP is bound t
 Disabling Auto-release can disrupt DNS Services recovery operations.
 {: important}
 
+## Custom resolver addresses propagation to compute instances
+{: #about-address-propagation}
+
+The reserved IP addresses for each custom resolver location are collectively referred to as the custom resolver addresses. When you have multiple locations enabled in a custom resolver, the propagation of these custom resolver addresses to compute instances on the VPC takes account of any proximity and load balancing optimization rules.
+
+The proximity rule is considered the preferred rule to determine primary DNS server for compute instances, and then load balancing optimization is considered when an availability zone doesn't have a location. The following example describes the rules for determining primary DNS server assignment to compute instances in each availability zone.
+
+### Example 1: Three locations in different availability zones
+{: #cr-ex1-prop-to-compute}
+
+In this example, each availability has exactly one custom resolver location.
+
+Custom resolver: `R`:
+* location-1 in us-south-1 has address: `A1`
+* location-2 in us-south-2 has address: `A2`
+* location-3 in us-south-3 has address: `A3`
+
+Proximity is the sole policy to determine the primary DNS servers for compute instances in each availability zone:
+* us-south-1: `A1` (primary), `A2`, `A3`.
+* us-south-2: `A2` (primary), `A1`, `A3`.
+* us-south-3: `A3` (primary), `A1`, `A2`.
+
+### Example 2: Two of three locations in the same availability zone
+{: #cr-ex2-prop-to-compute}
+
+In this example, two of three locations are in the same availability zone `us-south-1`, but there are no locations in `us-south-3`.
+
+Custom resolver: `R`:
+* location-1 in us-south-1 has address: `A1`
+* location-2 in us-south-1 has address: `A2`
+* location-3 in us-south-3 has address: `A3`
+
+The proximity rule is applied first to determine primary DNS servers for `us-south-1` and `us-south-3` because these two availability zones have locations. Next, the load balancing optimization rule is used to selected the `location-2` as the primary server for `us-south-2`. Consequently, the resultant DNS servers for compute instances in each availability zone will be:
+* us-south-1: `A1` (primary), `A2`, `A3`.
+* us-south-3: `A3` (primary), `A1`, `A2`.
+* us-south-2: `A2` (primary), `A1`, `A3`.
+
+### Example 3: All 3 locations are in the same availability zone
+{: #cr-ex3-prop-to-compute}
+
+In this example, all locations are in the same availability zone `us-south-1`, but there are no locations in `us-south-2` and `us-south-3`.
+
+Custom resolver: `R`:
+* location-1 in us-south-1 has address: `A1`
+* location-2 in us-south-1 has address: `A2`
+* location-3 in us-south-1 has address: `A3`
+
+The proximity rule selects location-1 as the primary DNS sever for `us-south-1`. Then, the load balancing optimization rule assigns a primary DNS server for `us-south-2` and `us-south-3` to location-2 and location-3, respectively. The resultant DNS servers for compute instances in each availability zone will be:
+* us-south-1: `A1` (primary), `A2`, `A3`.
+* us-south-2: `A2` (primary), `A1`, `A3`.
+* us-south-3: `A3` (primary), `A1`, `A2`.
+
+### Example 4: Number of custom resolver locations is less than 3
+{: #cr-ex3-prop-to-compute}
+
+In this example, the custom resolver has fewer than 3 locations.
+
+Custom resolver: `R`:
+* location-1 in us-south-1 has address: `A1`
+* location-2 in us-south-2 has address: `A2`
+
+In this case, at least one location is used as the primary DNS server for two availability zones. After following the aforementioned rules, the resultant DNS servers for compute instances in each availability zone will be:
+* us-south-1: `A1` (primary), `A2`.
+* us-south-2: `A2` (primary), `A1`.
+* us-south-3: `A1` (primary), `A2`.
+
 ## Custom resolver status
 {: #cr-statuses}
 
@@ -66,8 +132,8 @@ The following status definitions apply to the custom resolver:
 The following limits exist for the custom resolvers feature:
 
 * Each VPC can have a maximum of one custom resolver.
-* Each custom resolver can have a maximum of three locations, either within the same subnet or in different subnets.
-* Each custom resolver can have a maximum of 10 forwarding rules.
-* You cannot delete the subnet used for the custom resolver.
+* Each custom resolver can have a maximum of 3 locations, either within the same subnet or in different subnets.
+* Each custom resolver can have a maximum of 100 forwarding rules.
+* You cannot delete the subnet that is used for the custom resolver.
 * You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location virtual server instance.
 
