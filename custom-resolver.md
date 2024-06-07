@@ -98,7 +98,7 @@ The proximity rule selects location-1 as the primary DNS sever for `us-south-1`.
 * us-south-3: `A3` (primary), `A1`, `A2`.
 
 ### Example 4: Number of custom resolver locations is less than 3
-{: #cr-ex3-prop-to-compute}
+{: #cr-ex4-prop-to-compute}
 
 In this example, the custom resolver has fewer than 3 locations.
 
