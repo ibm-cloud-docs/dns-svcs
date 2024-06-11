@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-05-21"
+  years: 2021, [{CURRENT_YEAR}]
+lastupdated: "[{LAST_UPDATED_DATE}]"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Working with custom resolvers
 {: #custom-resolver}
 
-A private DNS custom resolver extends {{site.data.keyword.dns_full}}'s capability to meet the needs of a hybrid cloud environment by enabling resolution of the {{site.data.keyword.cloud_notm}} VPC hostnames from on-premises DNS resolvers, and also enables the  resolution of on-premises hostnames from the {{site.data.keyword.cloud_notm}}. 
+A private DNS custom resolver extends {{site.data.keyword.dns_full}}'s capability to meet the needs of a hybrid cloud environment by enabling resolution of the {{site.data.keyword.cloud_notm}} VPC hostnames from on-premises DNS resolvers, and also enables the  resolution of on-premises hostnames from the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 Key features of the custom resolver:
@@ -26,7 +26,7 @@ Key features of the custom resolver:
 ## Custom resolver overview
 {: #custom-resolver-overview}
 
-To get started using a custom resolver, you must create a custom resolver and then add forwarding rules to it. 
+To get started using a custom resolver, you must create a custom resolver and then add forwarding rules to it.
 
 It is expected that the custom resolver will be configured for High Availability by default. Follow the steps in [Creating a custom resolver without high availability](/docs/dns-svcs?topic=dns-svcs-ui-create-cr&interface=ui#cr-add-no-ha) if you do not want a highly available configuration.
 {: important}
@@ -40,7 +40,7 @@ Virtual appliances are created for custom resolvers to serve DNS queries, or for
 
 ![Reserved IP](images/virtual_appliance_reserved_ip.png "Reserved IP for virtual appliance managed by DNS Services"){: caption="Figure 1. Reserved IP for virtual appliance managed by {{site.data.keyword.dns_short}}" caption-side="bottom"}
 
-From the **Targeted resource** column, you can view which reserved IP is bound to a DNS service instance that has a virtual appliance connected to your subnet. It is recommended that you keep **Auto-release** enabled (the default setting). With Auto-release, this IP address automatically releases to the IP address pool after the virtual appliance is deleted, as part of the deletion process for custom resolvers and global load balancer pools. 
+From the **Targeted resource** column, you can view which reserved IP is bound to a DNS service instance that has a virtual appliance connected to your subnet. It is recommended that you keep **Auto-release** enabled (the default setting). With Auto-release, this IP address automatically releases to the IP address pool after the virtual appliance is deleted, as part of the deletion process for custom resolvers and global load balancer pools.
 
 Disabling Auto-release can disrupt DNS Services recovery operations.
 {: important}

@@ -21,7 +21,7 @@ subcollection: dns-svcs
 Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{site.data.keyword.dns_short}} deployments according to the following table:
 
 | Deployment Region | {{site.data.keyword.mon_full_notm}} Region |
-|-----------------|-----------|
+|----------|-----------|
 | `Dallas`        | `Dallas` |
 | `Frankfurt`     | `Frankfurt` |
 | `London`        | `London` |
