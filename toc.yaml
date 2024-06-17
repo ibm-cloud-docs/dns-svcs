@@ -12,7 +12,6 @@ toc:
     product-page: https://www.ibm.com/products/dns
     path: dns-svcs
     label: DNS Services
-
   entries:
     - navgroup:
         id: learn
@@ -27,7 +26,6 @@ toc:
                 label: Getting started with Virtual Private Cloud (VPC)
                 href: https://{DomainName}/docs/vpc?topic=vpc-getting-started
         - release-notes.md
-
     - navgroup:
         id: tutorial
         topics:
@@ -35,7 +33,6 @@ toc:
             label: Team based privacy using IAM, VPC, Transit Gateway and DNS
             topics:
             - include: ../solution-tutorials/vpc-tg-dns-iam.md
-
     - navgroup:
         id: howto
         topics:
@@ -127,7 +124,6 @@ toc:
             - cbr.md
             - vpe.md
         - terraform.md
-
     - navgroup:
         id: reference
         topics:
@@ -152,7 +148,6 @@ toc:
             label: Terraform reference
             href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_custom_resolver
         - responsibilities.md
-
     - navgroup:
         id: help
         topics:
