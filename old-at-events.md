@@ -13,7 +13,7 @@ subcollection: dns-svcs
 {{site.data.keyword.attribute-definition-list}}
 
 # Auditing events for {{site.data.keyword.dns_short}}
-{: #at_events}
+{: #old-at_events}
 
 As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with the {{site.data.keyword.dns_full}} service in {{site.data.keyword.cloud}}.
 {: shortdesc}
