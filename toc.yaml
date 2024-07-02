@@ -107,7 +107,7 @@ toc:
         - topicgroup:
             label: Observability
             topics:
-            - at-events.md
+            - at_events.md
             - platform-metrics.md
         - topicgroup:
             label: High availability and disaster recovery
