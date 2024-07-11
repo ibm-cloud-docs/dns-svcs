@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-06-21"
+  years: 2020, 2023, 2024
+lastupdated: "2024-07-11"
 
 keywords:
 
@@ -33,6 +33,7 @@ The following limitations exist for the global load balancing feature.
         * Each origin pool can use no more than 2 subnets for health monitoring
     * Up to 100 origins
 * Each DNS zone can have a maximum of 25 global load balancers
+* For cross account linked zone, the location policy is dictated by the owner account's VPC zone map.
 
 
 ## Use cases and workflows
