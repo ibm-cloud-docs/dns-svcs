@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-07-20"
+  years: 2021, 2024
+lastupdated: "2024-07-15"
 
 keywords:
 
@@ -91,7 +91,7 @@ In this example, Direct Link is used to connect to on-premises DNS service/clien
 ### Forwarding DNS queries to {{site.data.keyword.dns_short}} servers
 {: #fwd-dns-svcs}
 
-To forward DNS queries on a specific DNS zone to {{site.data.keyword.dns_short}} servers, enter the forwarding IP addresses `161.26.0.7` and `161.26.0.8`. 
+To forward DNS queries on a specific DNS zone to {{site.data.keyword.dns_short}} servers, enter the forwarding IP addresses `161.26.0.7` and `161.26.0.8`.
 
 ### Forwarding DNS queries to a public resolver
 {: #fwd-public-resolver}

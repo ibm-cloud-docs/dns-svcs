@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-07-15"
 
 keywords:
 
@@ -15,14 +15,14 @@ subcollection: dns-svcs
 # Updating a custom resolver
 {: #update-cr}
 
-You can update custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API. 
+You can update custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
 ## Updating a custom resolver using the UI
 {: #ui-update-cr}
 {: ui}
 
-The custom resolver details view shows the name and status of a custom resolver. It also lists the custom resolver ID, the linked VPC name, the date the resolver was modified, the description, and the enabled toggle that was entered when it was created. 
+The custom resolver details view shows the name and status of a custom resolver. It also lists the custom resolver ID, the linked VPC name, the date the resolver was modified, the description, and the enabled toggle that was entered when it was created.
 
 To edit the name and description of the custom resolver, click **Edit** next to the pencil icon to open the edit view. Click **Save** to commit the changes, or cancel.
 
