@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-03-06"
+  years: 2019, 2024
+lastupdated: "2024-07-16"
 
-keywords: 
+keywords:
 
 subcollection: dns-svcs
 
@@ -134,7 +134,7 @@ To import resource records, take the following steps:
 1. From your DNS Services instance, select the zone to which you want to import records
 1. Click **Select record action** in the zone details section and choose **Import records**
 1. You can drag and drop the import file into the panel that appears, or click the link to upload from your computer
-    
+
     Import files must be plain text format, and cannot exceed 8 MB
     {: note}
 
@@ -204,7 +204,7 @@ curl -X POST \
 {: #create-a-response}
 
 ```json
-{    
+{
     "id": "fa57d5d0-7729-4770-af27-6d7f8dce860c",
     "created_on": "2019-08-12 08:03:03.910471016 +0000 UTC",
     "modified_on": "2019-08-12 08:03:03.910471016 +0000 UTC",
@@ -248,7 +248,7 @@ curl -X POST \
 {: #create-srv-response}
 
 ```json
-{    
+{
     "created_on": "2019-08-16 08:07:41.113606 +0000 UTC",
     "modified_on": "2019-08-16 08:07:41.113606 +0000 UTC",
     "rtype": "SRV",
@@ -610,11 +610,11 @@ curl -X POST \
 ```json
 {
     "total_records_parsed": 17,
-    "records_added": 17, 
-    "records_failed": 0,  
+    "records_added": 17,
+    "records_failed": 0,
     "records_added_by_type": {
-        "A": 10,      
-        "AAAA": 2,     
+        "A": 10,
+        "AAAA": 2,
         "CNAME": 4,
         "SRV": 0,
         "TXT": 0,
@@ -622,8 +622,8 @@ curl -X POST \
         "PTR": 1
     },
     "records_failed_by_type": {
-        "A": 0,      
-        "AAAA": 0,    
+        "A": 0,
+        "AAAA": 0,
         "CNAME": 0,
         "SRV": 0,
         "TXT": 0,
