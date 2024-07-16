@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-03-02"
+  years: 2019, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -32,7 +32,7 @@ To ensure that the support team has all of the details for investigating your is
 
 Provide the following details:
 
-1. The specific IDs of affected VPCs.   
+1. The specific IDs of affected VPCs.
 1. The IDs of the {{site.data.keyword.dns_short}} private resource records (if any).
 1. The IDs of zones that have affected private resource records (if any).
 1. The DNS queries made. If possible, give the details on DNS queries related to the issue, including DNS message ID and timestamp for each.

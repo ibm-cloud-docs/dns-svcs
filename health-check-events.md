@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-18"
+  years: 2020, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -30,8 +30,8 @@ To view health check events in {{site.data.keyword.loganalysisshort}}, make sure
 
 From the UI, follow these steps to navigate to the {{site.data.keyword.loganalysisshort}} service:
 
-1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Health checks** tab. 
-1. For new logging, click **Add logging** to start creating a new {{site.data.keyword.loganalysisshort}} instance. 
+1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Health checks** tab.
+1. For new logging, click **Add logging** to start creating a new {{site.data.keyword.loganalysisshort}} instance.
 1. To view existing {{site.data.keyword.loganalysisshort}} instances, click **Launch logging**.
 
 {{site.data.keyword.loganalysislong_notm}} opens in a new tab.
@@ -80,7 +80,7 @@ Health check event records have the following properties:
 - `logSourceCRN`: CRN of the {{site.data.keyword.dns_short}} instance in which the origin pools and origin servers were created.
     For example: `crn:v1:bluemix:public:dns-svcs:global:a/bcf1865e99742d38d2d5fc3fb80a5496:85ed7b9d-cd48-4881-b354-52eb1d8e9011::`
 - `type`: The value of this property is `health_check_event` for health check events.
-- `origins`: An array of objects representing the origin servers associated with the origin pool. For example: 
+- `origins`: An array of objects representing the origin servers associated with the origin pool. For example:
 
     ```sh
     [
