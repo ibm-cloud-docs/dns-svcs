@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-04-06"
+  years: 2020, 2024
+lastupdated: "2024-07-16"
 
 keywords: dns-svcs, DNS Services, Private DNS, dns support script, dns backup script
 
@@ -20,7 +20,7 @@ This section describes how to run a script to copy your {{site.data.keyword.dns_
 * All resource record data for each DNS zone.
 * All permitted network data for each DNS zone.
 
-This data can be helpful in debugging issues and can be provided to the support team (if configuration data is not considered private) in the case of a support issue. The data can also serve as a backup.  
+This data can be helpful in debugging issues and can be provided to the support team (if configuration data is not considered private) in the case of a support issue. The data can also serve as a backup.
 
 This data is "export only" and does not work to import a configuration.
 {: note}

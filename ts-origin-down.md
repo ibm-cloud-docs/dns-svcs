@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-16"
+  years: 2020, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -26,7 +26,7 @@ Your origin status is `down`. It might be for one or more of the following reaso
 ## Initial health check might not be complete
 {: #init-healthcheck-complete}
 
-Your origin might be down because the initial health check has not finished yet. 
+Your origin might be down because the initial health check has not finished yet.
 
 Wait for the health check interval to pass before checking again.
 {: tsResolve}
@@ -50,7 +50,7 @@ Verify that the application is running on the correct port, and is operating pro
 ## Incorrect type selected for health check type
 {: #wrong-type}
 
-Your origin might be down because you specified HTTPS as your type of health check. 
+Your origin might be down because you specified HTTPS as your type of health check.
 
 Make sure that a valid certificate exists on the origin. For a self-signed certificate, you can use the **Don't validate certificate** option for the health check.
 {: tsResolve}
@@ -66,7 +66,7 @@ Set the host header. For more information, see [Creating a health check](/docs/d
 ## Network interface limit
 {: #network-interface-limit}
 
-Your origin might be down because your subnet might have reached the limit for the number of network interfaces allowed. 
+Your origin might be down because your subnet might have reached the limit for the number of network interfaces allowed.
 
 Try again with a subnet that has available space, or remove interfaces from the current subnet to give space for the health check virtual server instance.
 {: tsResolve}

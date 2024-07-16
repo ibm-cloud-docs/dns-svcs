@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-09-18"
+  years: 2020, 2024
+lastupdated: "2024-07-16"
 
-keywords: 
+keywords:
 
 subcollection: dns-svcs
 

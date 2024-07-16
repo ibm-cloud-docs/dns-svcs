@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-09-18"
+  years: 2020, 2024
+lastupdated: "2024-07-16"
 
-keywords: 
+keywords:
 
 subcollection: dns-svcs
 
@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Why can't I add a permitted network?
 {: #troubleshoot-add-permitted-network}
 {: troubleshoot}
-{: support} 
+{: support}
 
 You tried to add a permitted network, and couldn't.
 {: shortdesc}
