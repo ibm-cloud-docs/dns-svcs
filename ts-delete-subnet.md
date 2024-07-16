@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-04-08"
+  years: 2022, 2024
+lastupdated: "2024-07-16"
 
-keywords: 
+keywords:
 
 subcollection: dns-svcs
 
@@ -28,7 +28,7 @@ The following error message appeared when you attempted to delete a subnet:
 When you create a pool and associate a health check to that pool, {{site.data.keyword.dns_short}} automatically provisions an appliance that attaches to a network interface in your subnet.
 {: tsCauses}
 
-To remove the subnet, first remove the health check configuration associated with your pool and then try deleting your subnet again. 
+To remove the subnet, first remove the health check configuration associated with your pool and then try deleting your subnet again.
 {: tsResolve}
 
 To remove the health check, take the following steps:

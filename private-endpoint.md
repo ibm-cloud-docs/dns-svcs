@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-28"
+  years: 2021, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -47,7 +47,7 @@ After creating an endpoint gateway for {{site.data.keyword.dns_short}}, follow t
 
 For more information on VPEs using the CLI, see [Virtual private endpoint gateways](/docs/vpc?topic=vpc-vpc-reference&interface=cli#vpe-clis).
 
-### Using the API 
+### Using the API
 {: #vpe-setup-api}
 {: api}
 
@@ -66,7 +66,7 @@ After creating an endpoint gateway for the {{site.data.keyword.dns_short}} servi
 
 ```sh
 api.private.dns-svcs.cloud.ibm.com
-``` 
+```
 {: pre}
 
 For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/dns-svcs?code=go).

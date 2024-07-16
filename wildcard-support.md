@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-02-03"
+  years: 2020, 2024
+lastupdated: "2024-07-16"
 
 keywords: wildcard records
 
@@ -55,4 +55,4 @@ For example, a type `A` query for the name `www.example.com` is made with wildca
 ## Managing wildcard DNS records
 {: #managing-wildcard-records}
 
-You can manage a wildcard record the same way as any other record. Refer to [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records) to learn more about creating, reading, updating, and deleting wildcard records. 
+You can manage a wildcard record the same way as any other record. Refer to [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records) to learn more about creating, reading, updating, and deleting wildcard records.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-09-22"
+  years: 2019, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -91,10 +91,10 @@ If the name resolution request for `www.example.com` originated from a client in
 | Washington, D.C. (us-east) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | London (eu-gb) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Frankfurt (eu-de) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| Madrid (eu-es) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | 
+| Madrid (eu-es) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Osaka (jp-osa) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Tokyo (jp-tok) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Toronto (ca-tor) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Sydney (au-syd) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-| Sao Paulo (br-sao) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | 
+| Sao Paulo (br-sao) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 {: caption="Table 2. Regions supported by DNS Services" caption-side="bottom"}

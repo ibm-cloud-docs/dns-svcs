@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-08-24"
+  years: 2021, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -107,4 +107,4 @@ Service clock synchronization
 {: release-note}
 
 New region support
-:   Added the Osaka region to list of available {{site.data.keyword.dns_short}} resolver regions.  
+:   Added the Osaka region to list of available {{site.data.keyword.dns_short}} resolver regions.

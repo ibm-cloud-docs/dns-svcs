@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-12-05"
+  years: 2019, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -54,7 +54,7 @@ You can navigate to the VPC overview page from the **Permitted networks** sectio
 1. Select the **Permitted Networks** tab.
 
 ![Cross-account filter example](images/cross-account-list.png "Image of permitted networks tab using a filter to sort cross-account ACL account IDs"){: caption="Figure 2. Filter by cross-account ACL account ID" caption-side="bottom}
-By default,the list contains permitted networks that were added from your account as the owner. To see permitted networks added by cross-account ACL users, you can use a filter by selecting the account IDs. 
+By default,the list contains permitted networks that were added from your account as the owner. To see permitted networks added by cross-account ACL users, you can use a filter by selecting the account IDs.
 
 You can select a maximum of 5 cross-account IDs.
 {: note}

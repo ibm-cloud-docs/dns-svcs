@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-02-09"
+  years: 2021, 2024
+lastupdated: "2024-07-16"
 
 subcollection: dns-svcs
 
@@ -22,7 +22,7 @@ Looking for a managed Terraform on {{site.data.keyword.cloud}} solution? Try out
 ## Installing Terraform and configuring resources for {{site.data.keyword.dns_short}}
 {: #install-terraform}
 
-Before you begin, make sure that you have the [required access](/docs/dns-svcs?topic=dns-svcs-iam) to create and work with {{site.data.keyword.dns_short}} resources. 
+Before you begin, make sure that you have the [required access](/docs/dns-svcs?topic=dns-svcs-iam) to create and work with {{site.data.keyword.dns_short}} resources.
 
 - Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to complete this task.
 - Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.dns_short}} service instance and to assign a user an access policy in Identity and Access Management (IAM) for that instance by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
