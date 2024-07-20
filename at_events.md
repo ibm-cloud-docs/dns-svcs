@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-07-20"
 
 keywords:
 
@@ -140,7 +140,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
 ### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
-{: #log-launch-standalone}
+{: #at-log-launch-standalone}
 
 For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.logs_full_notm}} documentation.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
 
@@ -273,7 +273,7 @@ The following table lists the actions that are related to cross-account zone acc
 Refer to the following information when you are analyzing events:
 
 - Filter for the `dns-svcs` action to see all {{site.data.keyword.dns_short}} events in your account.
-- Activity Tracker actions are set to `read` for both the GET and LIST calls, for example, `dns-svcs.zones.read`. 
+- Activity Tracker actions are set to `read` for both the GET and LIST calls, for example, `dns-svcs.zones.read`.
     - LIST calls set the `target.name` field to empty.
     - GET calls set the `target.name` field to the name of the resource.
 - The event's `correlationId` field contains a unique ID to identify the request transaction.
