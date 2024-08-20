@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-08-20"
 
 keywords:
 
@@ -20,6 +20,8 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
+
+
 
 ## 21 June 2023
 {: #dns-svcs-jun2123}
