@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, [{CURRENT_YEAR}]
-lastupdated: "[{LAST_UPDATED_DATE}]"
+  years: 2021, 2024
+lastupdated: "2024-08-20"
 
 keywords:
 
@@ -126,14 +126,15 @@ The following status definitions apply to the custom resolver:
 * **Degraded** - when there is more than one resolver location, and one is `Up` but another is `Down`, then the status changes to `Degraded`.
 * **Critical** - when all resolver locations are `Down`, the status changes to `Critical`.
 
-## Custom resolvers limits
+
+
+## Custom resolver limits
 {: #cr-limits}
 
-The following limits exist for the custom resolvers feature:
+The following limits exist for the custom resolvers feature.
 
 * Each VPC can have a maximum of one custom resolver.
 * Each custom resolver can have a maximum of 3 locations, either within the same subnet or in different subnets.
-* Each custom resolver can have a maximum of 100 forwarding rules.
 * You cannot delete the subnet that is used for the custom resolver.
-* You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location virtual server instance.
+* You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location's virtual server instance.
 
