@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-08-29"
 
 keywords: cloud monitoring, monitoring, platform metrics, observability page, enable platform metrics, view metrics, launch monitoring
 
@@ -50,6 +50,7 @@ To monitor platform metrics, check that the Monitoring instance is provisioned i
 
 ## Viewing metrics
 {: #view_metrics}
+{: #view-platform-logs}
 
 To monitor {{site.data.keyword.dns_short}} metrics, you must launch the {{site.data.keyword.mon_full_notm}} web UI instance that is enabled for platform metrics in the region where your {{site.data.keyword.cloud_notm}} instance is available.
 {: note}
@@ -95,7 +96,7 @@ The data path summary metrics provide the request count and response count with 
 
 The labels correspond to the following definitions:
 
-* **rtype** - Response type: NOERROR, SERVFAIL, and so on
+* **rtype** - Response type: NOERROR, SERVFAIL, and so on.
 
 ### Data path total platform metrics
 {: #datapath-total-metrics}
@@ -189,4 +190,3 @@ The following table outlines the pre-defined dashboards that you can use to moni
 
 The *Default* dashboard cannot be changed.
 {: important}
-
