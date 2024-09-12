@@ -39,43 +39,6 @@ Custom resolvers support two types of forwarding rules:
     Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
     {: important}
 
-## DNS views
-{: #dns-views}
-
-A DNS view defines an expression that must evaluate to `true` for a DNS request to be routed to the server block.
-Using this feature, customers can change where a request is routed based on their configured expression.
-
-Currently, {{site.data.keyword.dns_short}} only supports source-IP-related expressions. The accepted syntax for view expressions must conform to the Common Expression Language (CEL).
-
-The following example shows a custom resolver forwarding rule with a view defined.
-
-```sh
-{
-  "description": "forwarding rule",
-  "type": "zone",
-  "match": "example.com",
-  "forward_to": [
-    "161.26.0.7"
-  ],
-  "views": [
-    {
-      "name": "view-example",
-      "description": "view example",
-      "expression": "ipInRange(source.ip, '10.240.0.0/24') || ipInRange(source.ip, '10.240.1.0/24')",
-      "forward_to": [
-        "10.240.2.6"
-      ]
-    }
-  ]
-}
-```
-{: codeblock}
-
-The view configured in this example will route the DNS query for `example.com` to `10.240.2.6` when the source IP of the query belongs to either `10.240.0.0/24` or `10.240.1.0/24`. In all other cases, the query is routed to `161.26.0.7`.
-
-Views are prioritized based on the order that they are configured in the `views` array.
-{: note}
-
 ## Adding custom resolver forwarding rules using the UI
 {: #ui-add-fwd-rules}
 {: ui}
