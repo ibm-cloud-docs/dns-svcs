@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-12"
 
 keywords: cloud monitoring, monitoring, platform metrics, observability page, enable platform metrics, view metrics, launch monitoring
 
@@ -160,6 +160,7 @@ The set of metrics associates with DNS resolution through custom resolvers:
 |`ibm_dns_svcs_cr_forward_requests_total` | to, crid, accountid, instanceid |
 |`ibm_dns_svcs_cr_forward_responses_total` | to, rcode, crid, accountid, instanceid |
 |`ibm_dns_svcs_cr_location_health` | crid, accountid, instanceid, locationip |
+|`ibm_dns_svcs_cr_usage` | crid, accountid, instanceid, locationip |
 {: caption="Table 5. Custom resolver platform metrics" caption-side="bottom"}
 
 The labels correspond to the following definitions:

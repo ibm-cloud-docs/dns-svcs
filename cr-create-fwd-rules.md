@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-10-20"
+  years: 2021, 2024
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -22,12 +22,12 @@ Forwarding rules are configurations that you can set up to direct DNS queries to
 
 * **Rule Type**: Currently only DNS Zone is supported.
 * **Match**: The DNS Zone for which you want the DNS query forwarded.
-* **Forwarding IP addresses**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the Custom Resolver goes through the list using a sequential policy that selects hosts based on sequential ordering, until a resolver responds. 
+* **Forwarding IP addresses**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the Custom Resolver goes through the list using a sequential policy that selects hosts based on sequential ordering, until a resolver responds.
 
     VPC network behavior and your VPC network configurations can also affect traffic to and from custom resolvers located on your VPC. For example, if you want to create a forwarding rule to a DNS resolver on the external internet for DNS queries matching a certain DNS zone, you must create a public gateway to allow external connectivity for your custom resolvers. See [About networking for VPC](/docs/vpc?topic=vpc-about-networking-for-vpc) for more information on VPC networking.
     {: tip}
 
-After a rule is configured and the Custom Resolver is enabled, DNS query requests go to the Custom Resolver first. 
+After a rule is configured and the Custom Resolver is enabled, DNS query requests go to the Custom Resolver first.
 
 Then, the Custom Resolver checks if the query is for any rules that have been configured by comparing against the Match value. If there is a rule for the DNS query, the Custom Resolver forwards the DNS query to the specified DNS resolver in the configured rule. If there is _not_ a rule that matches the DNS query, the Customer Resolver forwards the DNS query to the specified DNS resolver in the default forwarding rule.
 
@@ -38,6 +38,43 @@ Custom resolvers support two types of forwarding rules:
 
     Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
     {: important}
+
+## DNS views
+{: #dns-views}
+
+A DNS view defines an expression that must evaluate to `true` for a DNS request to be routed to the server block.
+Using this feature, customers can change where a request is routed based on their configured expression.
+
+Currently, {{site.data.keyword.dns_short}} only supports source-IP-related expressions. The accepted syntax for view expressions must conform to the Common Expression Language (CEL).
+
+The following example shows a custom resolver forwarding rule with a view defined.
+
+```sh
+{
+  "description": "forwarding rule",
+  "type": "zone",
+  "match": "example.com",
+  "forward_to": [
+    "161.26.0.7"
+  ],
+  "views": [
+    {
+      "name": "view-example",
+      "description": "view example",
+      "expression": "ipInRange(source.ip, '10.240.0.0/24') || ipInRange(source.ip, '10.240.1.0/24')",
+      "forward_to": [
+        "10.240.2.6"
+      ]
+    }
+  ]
+}
+```
+{: codeblock}
+
+The view configured in this example will route the DNS query for `example.com` to `10.240.2.6` when the source IP of the query belongs to either `10.240.0.0/24` or `10.240.1.0/24`. In all other cases, the query is routed to `161.26.0.7`.
+
+Views are prioritized based on the order that they are configured in the `views` array.
+{: note}
 
 ## Adding custom resolver forwarding rules using the UI
 {: #ui-add-fwd-rules}

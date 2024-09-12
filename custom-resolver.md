@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-20"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -32,6 +32,23 @@ It is expected that the custom resolver will be configured for High Availability
 {: important}
 
 After you create the custom resolver and configure its forwarding rules, the resolver can be enabled for the VPC. This results in the DHCP option for the resolver changing to the custom resolver IP addresses.
+
+## Custom resolver profiles
+{: #cr-profiles}
+
+You can use custom resolver profiles to increase the limits on how many forwarding rules, secondary zones, or DNS views can be configured. Additionally, if the customer would like to configure a large number of DNS records for their secondary zones, a larger profile prevents performance bottlenecks.
+
+|                              | Essential | Advanced | Premier   |
+|------------------------------|-----------|----------|-----------|
+| Forwarding rules             | 10        | 50       | 100       |
+| Secondary zones              | 10        | 50       | 100       |
+| Recommended # of DNS records | 100,000   | 500,000  | 6,000,000 |
+| DNS view per forwarding rule | 1         | 3        |  5        |
+{: caption="Table 1. Comparison of custom resolver profiles by plan" caption-side="bottom"}
+
+Be aware that larger custom resolver profiles result in an increased usage cost per location configured.
+{: note}
+
 
 ## Reserved IP for custom resolvers
 {: #about-reserved-ip}
@@ -137,4 +154,3 @@ The following limits exist for the custom resolvers feature.
 * Each custom resolver can have a maximum of 3 locations, either within the same subnet or in different subnets.
 * You cannot delete the subnet that is used for the custom resolver.
 * You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location's virtual server instance.
-
