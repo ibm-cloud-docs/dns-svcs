@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-20"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -137,4 +137,3 @@ The following limits exist for the custom resolvers feature.
 * Each custom resolver can have a maximum of 3 locations, either within the same subnet or in different subnets.
 * You cannot delete the subnet that is used for the custom resolver.
 * You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location's virtual server instance.
-

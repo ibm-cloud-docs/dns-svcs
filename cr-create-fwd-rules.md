@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-10-20"
+  years: 2021, 2024
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -22,12 +22,12 @@ Forwarding rules are configurations that you can set up to direct DNS queries to
 
 * **Rule Type**: Currently only DNS Zone is supported.
 * **Match**: The DNS Zone for which you want the DNS query forwarded.
-* **Forwarding IP addresses**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the Custom Resolver goes through the list using a sequential policy that selects hosts based on sequential ordering, until a resolver responds. 
+* **Forwarding IP addresses**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the Custom Resolver goes through the list using a sequential policy that selects hosts based on sequential ordering, until a resolver responds.
 
     VPC network behavior and your VPC network configurations can also affect traffic to and from custom resolvers located on your VPC. For example, if you want to create a forwarding rule to a DNS resolver on the external internet for DNS queries matching a certain DNS zone, you must create a public gateway to allow external connectivity for your custom resolvers. See [About networking for VPC](/docs/vpc?topic=vpc-about-networking-for-vpc) for more information on VPC networking.
     {: tip}
 
-After a rule is configured and the Custom Resolver is enabled, DNS query requests go to the Custom Resolver first. 
+After a rule is configured and the Custom Resolver is enabled, DNS query requests go to the Custom Resolver first.
 
 Then, the Custom Resolver checks if the query is for any rules that have been configured by comparing against the Match value. If there is a rule for the DNS query, the Custom Resolver forwards the DNS query to the specified DNS resolver in the configured rule. If there is _not_ a rule that matches the DNS query, the Customer Resolver forwards the DNS query to the specified DNS resolver in the default forwarding rule.
 
