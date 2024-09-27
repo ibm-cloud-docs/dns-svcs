@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-27"
 
 keywords:
 
@@ -124,9 +124,7 @@ The following status definitions apply to the resolver locations:
 The following status definitions apply to the custom resolver:
 * **Healthy** - when all resolver locations are `Up`, the status is `Healthy`.
 * **Degraded** - when there is more than one resolver location, and one is `Up` but another is `Down`, then the status changes to `Degraded`.
-* **Critical** - when all resolver locations are `Down`, the status changes to `Critical`.
-
-
+* **Critical** - when all resolver locations are `Down`, the status changes to `Critical`. 
 
 ## Custom resolver limits
 {: #cr-limits}
