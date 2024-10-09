@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-24"
+  years: 2022, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -26,7 +26,7 @@ The following table describes the actions you can take as the account owner.
 |Reject|Denies the access request. |
 |Revoke|Removes access requests that were granted previously. |
 |No action | The request times out if you take no action after 7 days elapse.|
-{: caption="Table 1. Owner states" caption-side="bottom"}
+{: caption="Owner states" caption-side="bottom"}
 
 ## Updating an access request using the UI
 {: #ui-update-access-req}
@@ -83,5 +83,3 @@ To update the properties of an access request using the API, follow these steps:
         -d '{"action": "APPROVE"}
     ```
     {: codeblock}
-
-

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-05-30"
+  years: 2022, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -28,7 +28,7 @@ The following table shows the possible states your linked zone might be in as th
 |Approval rejected|Account owner rejected the cross-account access request|
 |Approval timed out|Account owner did not respond to the request for over 7 days|
 |Approval revoked|Account owner has revoked the cross-account access|
-{: caption="Table 1. Requestor states" caption-side="bottom"}
+{: caption="Requestor states" caption-side="bottom"}
 
 ## Creating a linked zone using the UI
 {: #ui-create-linked-zone}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -23,7 +23,7 @@ You attempted to delete your subnet, and received an error.
 The following error message appeared when you attempted to delete a subnet:
 {: tsSymptoms}
 
-![Delete subnet error](/images/delete-subnet-error.png "Delete subnet error"){: caption="Figure 1. Delete subnet error" caption-side="bottom}
+![Delete subnet error](/images/delete-subnet-error.png "Delete subnet error"){: caption="Delete subnet error" caption-side="bottom}
 
 When you create a pool and associate a health check to that pool, {{site.data.keyword.dns_short}} automatically provisions an appliance that attaches to a network interface in your subnet.
 {: tsCauses}

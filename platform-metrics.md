@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-09"
 
 keywords: cloud monitoring, monitoring, platform metrics, observability page, enable platform metrics, view metrics, launch monitoring
 
@@ -33,7 +33,7 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 | `Tokyo`         | `Tokyo` |
 | `Toronto`       | `Toronto` |
 | `Washington DC` | `Washington DC` |
-{: caption="Table 1. {{site.data.keyword.mon_full_notm}} regions" caption-side="bottom"}
+{: caption="{{site.data.keyword.mon_full_notm}} regions" caption-side="bottom"}
 
 ## Platform metrics overview
 {: #platform_metrics-pm}
@@ -92,7 +92,7 @@ The data path summary metrics provide the request count and response count with 
 |----------|-------------|
 |`ibm_dns_svcs_dns_requests_summary` | not available |
 |`ibm_dns_svcs_dns_responses_summary` | rtype |
-{: caption="Table 2. Data path metrics summary" caption-side="bottom"}
+{: caption="Data path metrics summary" caption-side="bottom"}
 
 The labels correspond to the following definitions:
 
@@ -107,7 +107,7 @@ Data path total platform metrics collect the following set of metrics in a {{sit
 |----------|-------------|
 | `ibm_dns_svcs_dns_requests_total`|qtype, proto, family, accountid, zoneid, zonename, instanceid, vpcid, mtype |
 | `ibm_dns_svcs_dns_responses_total`|rtype, accountid, zoneid, zonename, instanceid, vpcid, mtype, cachehit|
-{: caption="Table 3. Total DNS requests" caption-side="bottom"}
+{: caption="Total DNS requests" caption-side="bottom"}
 
 The labels correspond to the following definitions:
 
@@ -132,7 +132,7 @@ The custom resolver summary provides custom resolver location health.
 |----------|-------------|
 |`ibm_dns_svcs_cr_location_health` | crid, accountid, instanceid, locationip|
 |`ibm_dns_svcs_cr_dp_health`|crid, accountid, instanceid, locationip|
-{: caption="Table 4. Custom resolver summary metrics" caption-side="bottom"}
+{: caption="Custom resolver summary metrics" caption-side="bottom"}
 
 Where:
 * `ibm_dns_svcs_cr_location_health` is a metric that helps determine the health of critical applications in a custom resolver location. The values are 0 for unhealthy and 1 for healthy.
@@ -160,7 +160,7 @@ The set of metrics associates with DNS resolution through custom resolvers:
 |`ibm_dns_svcs_cr_forward_requests_total` | to, crid, accountid, instanceid |
 |`ibm_dns_svcs_cr_forward_responses_total` | to, rcode, crid, accountid, instanceid |
 |`ibm_dns_svcs_cr_location_health` | crid, accountid, instanceid, locationip |
-{: caption="Table 5. Custom resolver platform metrics" caption-side="bottom"}
+{: caption="Custom resolver platform metrics" caption-side="bottom"}
 
 The labels correspond to the following definitions:
 
@@ -186,7 +186,7 @@ The following table outlines the pre-defined dashboards that you can use to moni
 | **`DNS Services - Metrics Summary`**|The default summary dashboard that opens when you launch {{site.data.keyword.mon_full_notm}} web UI from your service instance UI. |
 | **`DNS Services - DP Metrics`**| The default data path dashboard that opens when you launch {{site.data.keyword.mon_full_notm}} web UI from your service instance UI. |
 | **`DNS Services - Custom Resolver (CR) Metrics`** |The default custom resolver dashboard that opens when you launch {{site.data.keyword.mon_full_notm}} web UI from your service instance UI.|
-{: caption="Table 6. Pre-defined dashboard" caption-side="bottom"}
+{: caption="Pre-defined dashboard" caption-side="bottom"}
 
 The *Default* dashboard cannot be changed.
 {: important}

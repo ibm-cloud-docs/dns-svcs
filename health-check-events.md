@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -56,20 +56,20 @@ For more information, see [Launching the {{site.data.keyword.loganalysisshort}} 
 
 To search health check events from within the logging instance, enter the health check event type `health_check_event` in the **Search** field.
 
-![{{site.data.keyword.loganalysisshort}} source search](images/health-check-type-filter.png "Search within logging instance"){: caption="Figure 1. Search within logging instance" caption-side="bottom"
+![{{site.data.keyword.loganalysisshort}} source search](images/health-check-type-filter.png "Search within logging instance"){: caption="Search within logging instance" caption-side="bottom"
 
 You can also search for the events you want by combining other event fields. For example:
 
 - Search health check events for a specific {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN](images/health-check-type-filter-crn.png "Search events by CRN"){: caption="Figure 2. Search events by CRN" caption-side="bottom"
+    ![search events by CRN](images/health-check-type-filter-crn.png "Search events by CRN"){: caption="Search events by CRN" caption-side="bottom"
 - Search health check events for a pool by specifying its `name` and its {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN and pool name](images/health-check-type-filter-crn-pool.png "Search events by CRN and pool name"){: caption="Figure 3. Search events by CRN and pool name" caption-side="bottom"
+    ![search events by CRN and pool name](images/health-check-type-filter-crn-pool.png "Search events by CRN and pool name"){: caption="Search events by CRN and pool name" caption-side="bottom"
 - Search health check events for an origin by specifying its `name` and its {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN and origin name](images/health-check-type-filter-crn-origin.png "Search events by CRN and origin name"){: caption="Figure 4. Search events by CRN and origin name" caption-side="bottom"
+    ![search events by CRN and origin name](images/health-check-type-filter-crn-origin.png "Search events by CRN and origin name"){: caption="Search events by CRN and origin name" caption-side="bottom"
 - Search health check events for an origin when its status becomes healthy by specifying its `name` and `overall_health` fields and also its {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN, origin name and health](images/health-check-type-filter-crn-origin-health.png "Search events by CRN, origin name, and health"){: caption="Figure 5. Search events by CRN, origin name, and health" caption-side="bottom"
+    ![search events by CRN, origin name and health](images/health-check-type-filter-crn-origin-health.png "Search events by CRN, origin name, and health"){: caption="Search events by CRN, origin name, and health" caption-side="bottom"
 - Search health check events for a pool when its status becomes DEGRADED by specifying its `name` and `healthy` fields and also its {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN, pool name and health](images/health-check-type-filter-crn-pool-health.png "Search events by CRN, pool name, and health"){: caption="Figure 6. Search events by CRN, pool name, and health" caption-side="bottom"
+    ![search events by CRN, pool name and health](images/health-check-type-filter-crn-pool-health.png "Search events by CRN, pool name, and health"){: caption="Search events by CRN, pool name, and health" caption-side="bottom"
 
 ## Health check event properties
 {: #health-check-event-properties}

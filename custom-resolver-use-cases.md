@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -69,7 +69,7 @@ You also have a zone `onprem.example.com`, which is defined in the on-premises D
 
 The resolver server instance IP address is `10.20.30.5`.
 
-![dns-svcs-cr.png](images/dns-svcs-cr.png "Diagram of a custom resolver with forwarding rules"){: caption="Figure 1. Diagram of a custom resolver with forwarding rules" caption-side="bottom"}
+![dns-svcs-cr.png](images/dns-svcs-cr.png "Diagram of a custom resolver with forwarding rules"){: caption="Diagram of a custom resolver with forwarding rules" caption-side="bottom"}
 
 Based on the configuration in Figure 1, this is how DNS name resolution occurs:
 

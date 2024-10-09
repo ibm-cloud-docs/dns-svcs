@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -47,7 +47,7 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
 
 If you want to create a custom resolver without high availability, you must manually delete the second subnet field by clicking the trashcan icon next to the second subnet. 
 
-![Delete second subnet](images/cr-no-ha.png "Delete the second subnet by clicking trashcan icon"){: caption="Figure 1. Delete the second subnet to remove high availability function" caption-side="bottom"}
+![Delete second subnet](images/cr-no-ha.png "Delete the second subnet by clicking trashcan icon"){: caption="Delete the second subnet to remove high availability function" caption-side="bottom"}
 
 ## Creating a custom resolver using the CLI
 {: #cli-create-cr}
@@ -107,4 +107,3 @@ To add a custom resolver using the API, follow these steps:
 * [Adding custom resolver locations](/docs/dns-svcs?topic=dns-svcs-cr-res-loc-add)
 * [Setting up custom resolver forwarding rules](/docs/dns-svcs?topic=dns-svcs-cr-fwd-rules-add)
 * [Deleting a custom resolver](/docs/dns-svcs?topic=dns-svcs-cr-delete)
-

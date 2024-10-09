@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-06-21"
+  years: 2021, 2024
+lastupdated: "2024-10-09"
 
 keywords: vpe for dns services, virtual private endpoints for dns services, using vpe for vpc with dns services, isolation for dns services, private network for dns services, network isolation in dns services, non-public routes for dns services, private connection for dns services, private connectivity for dns services
 
@@ -40,7 +40,7 @@ When you create a VPE gateway by using the CLI or API, use the following CRN inf
 | Location | Region | Cloud Resource Name (CRN) |
 |---------|-------|----------------|
 | Global | `global` | `crn:v1:bluemix:public:dns-svcs:global::::` |
-{: caption="Table 1. Region availability and Cloud Resource Names (CRNs) for connecting {{site.data.keyword.dns_short}} over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
+{: caption="Region availability and Cloud Resource Names (CRNs) for connecting {{site.data.keyword.dns_short}} over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
 
 ### Configuring an endpoint gateway
 {: #endpoint-gateway-dns-svcs}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -54,7 +54,7 @@ IBM {{site.data.keyword.dns_short}} uses the following internal NTP servers:
 ## Resolving DNS names with {{site.data.keyword.dns_short}}
 {: #resolving-dns-names-with-dns-services}
 
-![Diagram of DNS services overview](images/dns-svcs-overview.png "Diagram of {{site.data.keyword.dns_short}} overview"){: caption="Figure 1. A diagram of {{site.data.keyword.dns_short}} workflow" caption-side="bottom"}
+![Diagram of DNS services overview](images/dns-svcs-overview.png "Diagram of {{site.data.keyword.dns_short}} overview"){: caption="A diagram of {{site.data.keyword.dns_short}} workflow" caption-side="bottom"}
 
 
 As an example, consider that a DNS zone `example.com` is created in your DNS instance, and a resource record for `www` has been defined as shown in Figure 1. Also consider that a VPC 1 has been added to the DNS zone as a permitted network.
@@ -80,7 +80,7 @@ If the name resolution request for `www.example.com` originated from a client in
 |Permitted networks| 10 per DNS zone|
 |Global load balancers| 25 per DNS zone|
 |DNS queries per second| 1000 per availability zone|
-{: caption="Table 1. DNS Services limitations" caption-side="bottom"}
+{: caption="DNS Services limitations" caption-side="bottom"}
 
 ## DNS Services Supported Regions
 {: #supported-regions}
@@ -97,4 +97,4 @@ If the name resolution request for `www.example.com` originated from a client in
 | Toronto (ca-tor) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Sydney (au-syd) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Sao Paulo (br-sao) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
-{: caption="Table 2. Regions supported by DNS Services" caption-side="bottom"}
+{: caption="Regions supported by DNS Services" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -45,7 +45,7 @@ Use platform access roles to grant permissions at the account level, such as the
 |View {{site.data.keyword.dns_full}} instances 	 | Administrator, Operator, Editor, Viewer  |
 |Create {{site.data.keyword.dns_full}} instances | Administrator, Editor                    |
 |Delete {{site.data.keyword.dns_full}} instances | Administrator, Editor                    |
-{: caption="Table 1. Platform access roles" caption-side="bottom"}
+{: caption="Platform access roles" caption-side="bottom"}
 
 ### Service access roles
 {: #service-access-roles}
@@ -59,7 +59,7 @@ The following table shows how service access roles map to {{site.data.keyword.dn
 | Reader  | A reader can browse a high-level view of DNS zones, resource records, and permitted networks. Readers cannot create, delete or modify any resources under {{site.data.keyword.dns_short}} instances. | View DNS zones, resource records, and permitted networks. |
 | Writer  | A writer can modify DNS zones and resource records, in addition to actions that a reader can perform. | All actions that a reader can perform, also can update DNS zones and resource records. |
 | Manager | A manager can perform all actions that a reader and writer can perform, including the ability to create and delete DNS zones, create and delete resource records, and also add and remove permitted networks. | All actions that a Reader or a Writer can perform, also can create and delete DNS zones. Additionally, can create and delete resource records, and add or remove permitted networks. |
-{: caption="Table 2. Service access roles" caption-side="bottom"}
+{: caption="Service access roles" caption-side="bottom"}
 
 ## Working with permitted network (VPC) related IAM access
 {: #permitted-network-vpc-access-roles}
