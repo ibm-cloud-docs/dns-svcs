@@ -1,29 +1,26 @@
 {
   "version": 2,
-  "title": "DNS Services docs",
+  "title": "DNS Services",
   "introduction": "IBM Cloud DNS Services provides private DNS to Virtual Private Cloud (VPC) users.",
   "product_page": "https://www.ibm.com/products/dns",
   "console_page": "/catalog/services/dns-services",
   "section_topics": {
     "links": [
       {
-        "title": "Getting started with DNS Services",
+        "title": "Getting started with IBM Cloud DNS Services",
         "href": "/docs/dns-svcs?topic=dns-svcs-getting-started"
       },
       {
         "title": "About DNS Services",
-        "description": "Learn about DNS in general, and see a DNS Services overview.",
         "href": "/docs/dns-svcs?topic=dns-svcs-about-dns-services"
+      },
+      {
+        "title": "Understanding DNS concepts",
+        "href": "/docs/dns-svcs?topic=dns-svcs-dns-concepts"
       }
     ]
   },
   "section_highlights": [
-    {
-      "title": "Resource title",
-      "description": "Short description of resource content.",
-      "href": "https://www.example.ibm.com/link/to/resource",
-      "type": "blog"
-    },
     {
       "title": "Db2 Optimization Techniques for SAP Database Migration to the Cloud",
       "description": "This IBM Redbook provides in-depth recommendations for the source system database export.",
