@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -45,7 +45,7 @@ Adding the same VPC to two DNS zones of the same name is not allowed.
 
 You can navigate to the VPC overview page from the **Permitted networks** section by clicking on the VPC name. For example, in the following image, clicking on `demo-vpc` takes you to the overview page of the VPC named `demo-vpc`.
 
-![Permitted network link to VPC overview page](images/permit-net-nav.svg "Image of VPC name link in permitted network section"){: caption="Figure 1. Navigating to an IBM VPC from permitted networks section" caption-side="bottom"}
+![Permitted network link to VPC overview page](images/permit-net-nav.svg "Image of VPC name link in permitted network section"){: caption="Navigating to an IBM VPC from permitted networks section" caption-side="bottom"}
 
 ### List permitted networks
 {: #list-permitted-networks}
@@ -53,7 +53,7 @@ You can navigate to the VPC overview page from the **Permitted networks** sectio
 1. Select the desired zone from the table on the DNS Zones page.
 1. Select the **Permitted Networks** tab.
 
-![Cross-account filter example](images/cross-account-list.png "Image of permitted networks tab using a filter to sort cross-account ACL account IDs"){: caption="Figure 2. Filter by cross-account ACL account ID" caption-side="bottom}
+![Cross-account filter example](images/cross-account-list.png "Image of permitted networks tab using a filter to sort cross-account ACL account IDs"){: caption="Filter by cross-account ACL account ID" caption-side="bottom}
 By default,the list contains permitted networks that were added from your account as the owner. To see permitted networks added by cross-account ACL users, you can use a filter by selecting the account IDs.
 
 You can select a maximum of 5 cross-account IDs.

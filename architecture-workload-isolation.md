@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-08-07"
+  years: 2020, 2024
+lastupdated: "2024-10-09"
 
 keywords: architecture, workload isolation
 
@@ -32,7 +32,7 @@ The public resolver that is used for forwarding is also in the {{site.data.keywo
 
 Access to the multitenant control plane and data plane infrastructure is strictly controlled and restricted on an as-needed basis to a small number of operations personnel for administrative and troubleshooting purposes.
 
-![Architecture diagram](images/data-isolation.png "Architecture diagram"){: caption="Figure 1. Architectural diagram of control plane and data plane." caption-side="bottom"}
+![Architecture diagram](images/data-isolation.png "Architecture diagram"){: caption="Architectural diagram of control plane and data plane." caption-side="bottom"}
 
 1. Customer A and Customer B create DNS configuration records through the multitenant control plane infrastructure. Records get saved in the database as separate documents. Configuration information of different users gets saved in the database.
 1. A data plane DNS request from Customer A and Customer B's VPCs gets routed to the DNS resolvers `161.26.0.7` and `161.26.0.8` through the multitenant data plane infrastructure.

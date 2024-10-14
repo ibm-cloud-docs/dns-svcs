@@ -1,48 +1,40 @@
 {
-    "title": "DNS Services docs",
-    "lastupdated": "2022-04-18",
-    "introduction": "IBM Cloud DNS Services provides private DNS to Virtual Private Cloud (VPC) users.",
-    "section_devtools": {
-      "api": "/apidocs/dns-svcs",
-      "cli": "/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands",
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_glb"
-    },
-    "section_recommended": [
+  "version": 2,
+  "title": "DNS Services",
+  "introduction": "IBM Cloud DNS Services provides private DNS to Virtual Private Cloud (VPC) users.",
+  "product_page": "https://www.ibm.com/products/dns",
+  "console_page": "/catalog/services/dns-services",
+  "section_topics": {
+    "links": [
       {
-        "title": "Getting started with DNS Services",
-        "description": "Instructions for setting up a DNS Services instance.",
+        "title": "Getting started with IBM Cloud DNS Services",
         "href": "/docs/dns-svcs?topic=dns-svcs-getting-started"
       },
       {
         "title": "About DNS Services",
-        "description": "Learn about DNS in general, and see a DNS Services overview.",
         "href": "/docs/dns-svcs?topic=dns-svcs-about-dns-services"
+      },
+      {
+        "title": "Understanding DNS concepts",
+        "href": "/docs/dns-svcs?topic=dns-svcs-dns-concepts"
       }
-    ],
-    "section_learn": {
-      "developer": "https://developer.ibm.com/depmodels/cloud/",
-      "architecture": "https://www.ibm.com/architectures/hybrid",
-      "training": "https://www.ibm.com/training/cloud",
-      "community": "https://community.ibm.com/community/user/cloud/home"
-    },
-    "section_updates": {
-      "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes",
-      "tiles": [
-        {
-          "date": "21 June 2023",
-          "title": "Platform metrics, Madrid support",
-          "description": "Added support for platform metrics feature and Madrid multi-zone region."
-        },
-        {
-          "date": "24 August 2022",
-          "title": "Resolver locations",
-          "description": "Added UI feature to the custom resolver location settings. You can now change resolver location priority by clicking up or down arrows to reorder the list."
-        },
-        {
-          "date": "20 July 2022",
-          "title": "Secondary zones",
-          "description": "Added support for secondary zones feature."
-        }
-      ]
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Db2 Optimization Techniques for SAP Database Migration to the Cloud",
+      "description": "This IBM Redbook provides in-depth recommendations for the source system database export.",
+      "href": "https://www.redbooks.ibm.com/abstracts/sg248531.html",
+      "type": "redbook",
+      "recommended": true
     }
+  ],
+  "section_devtools": {
+      "api": "/apidocs/dns-svcs",
+      "cli": "/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands",
+      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_glb"
+  },
+  "section_updates": {
+    "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes"
   }
+}
