@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-15"
 
 keywords:
 
@@ -75,7 +75,7 @@ Based on the configuration in Figure 1, this is how DNS name resolution occurs:
 
 * Virtual server 2 DNS query for `w3.onprem.example.com`:
     * The resolver for virtual server 2 is a custom resolver, so the DNS query is sent to `10.20.30.5`.
-    * The customer resolver is based on the forwarding rule for `onprem.example.com`, which sends the query to `192.58.5.2`.
+    * The custom resolver is based on the forwarding rule for `onprem.example.com`, which sends the query to `192.58.5.2`.
     * The on-premises DNS server responds with `w3.onprem.example.com` A `192.168.4.10`.
     * The custom resolver responds to virtual server 2 with the answer and caches the response.
 * Virtual server 1 DNS query for `database.ibmcloud.example.com`:
