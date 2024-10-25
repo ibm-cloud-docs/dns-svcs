@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-24"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -16,8 +16,9 @@ subcollection: dns-svcs
 {: #update-linked-zone}
 
 Update the properties of a linked zone by using the UI, CLI, or API.
+{: shortdesc}
 
-## Updating a linked zone using the UI
+## Updating a linked zone in the UI
 {: #ui-update-linked-zone}
 {: ui}
 
@@ -28,7 +29,7 @@ To update the properties of a linked zone using the UI, take the following steps
 1. Click **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit icon") of the linked zone you want to update.
 1. Enter your changes and click **Save**.
 
-## Updating a linked zone using the CLI
+## Updating a linked zone from the CLI
 {: #cli-update-linked-zone}
 {: cli}
 
@@ -47,7 +48,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Updating a linked zone using the API
+## Updating a linked zone with the API
 {: #api-update-linked-zone}
 {: api}
 

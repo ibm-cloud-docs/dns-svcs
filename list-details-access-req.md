@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-24"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 List all access requests and get the details of an access request in your linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Listing all access requests using the UI
+## Listing all access requests in the UI
 {: #ui-list-access-req}
 {: ui}
 
@@ -27,7 +27,7 @@ To list all access requests using the UI, take the following steps:
 1. Navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance, then select the **DNS zones** tab, which shows a list of all zones.
 1. Check the **Status** column for pending requests.
 
-## Getting the details of an access request using the UI
+## Getting the details of an access request in the UI
 {: #ui-get-details-access-req}
 
 To get the details of an access request using the UI, take the following steps:
@@ -35,7 +35,7 @@ To get the details of an access request using the UI, take the following steps:
 1. Navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance, then select the **DNS zones** tab.
 1. Click the link in the **Zone name** column of the linked zone you want to view.
 
-## Listing all access requests using the CLI
+## Listing all access requests from the CLI
 {: #cli-list-access-req}
 {: cli}
 
@@ -52,7 +52,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Getting the details of an access request using the CLI
+## Getting the details of an access request from the CLI
 {: #cli-get-details-access-req}
 
 To get the details of an access request using the API, run the following command:
@@ -69,7 +69,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Listing access requests using the API
+## Listing access requests with the API
 {: #api-list-access-req}
 {: api}
 
@@ -90,7 +90,7 @@ To list all access requests using the API, follow these steps:
     {: codeblock}
 
 
-## Getting the details of an access request using the API
+## Getting the details of an access request with the API
 {: #api-get-details-access-req}
 
 To get the details of an access request using the API, follow these steps:

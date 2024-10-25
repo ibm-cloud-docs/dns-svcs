@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,13 +18,13 @@ subcollection: dns-svcs
 You view details of a single custom resolver and view a list of all custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Viewing custom resolver details using the UI
+## Viewing custom resolver details in the UI
 {: #ui-details-cr}
 {: ui}
 
 To view the details of a custom resolver using the UI, navigate to the custom resolver tab in the DNS Services instance. From the custom resolver view, you can view a list of all custom resolvers. There, you can view information about a specific custom resolver by clicking the custom resolver name.
 
-## Get details of a custom resolver using the CLI
+## Get details of a custom resolver from the CLI
 {: #cli-get-cr}
 {: cli}
 
@@ -50,7 +50,7 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
-## Get details of a custom resolver using the API
+## Get details of a custom resolver with the API
 {: #api-details-cr}
 {: api}
 

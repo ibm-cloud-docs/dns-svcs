@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-07-20"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,7 +15,10 @@ subcollection: dns-svcs
 # Editing a secondary zone
 {: #edit-secondary-zone}
 
-## Editing a secondary zone using the UI
+Edit a secondary zone by using the UI, CLI, or API.
+{: shortdesc}
+
+## Editing a secondary zone in the UI
 {: #ui-edit-secondary-zone}
 {: ui}
 
@@ -30,7 +33,7 @@ To edit a secondary zone using the UI, take the following steps:
 To change the zone name, delete the secondary zone rule and create the rule again with the new name.
 {: tip}
 
-## Editing a secondary zone using the CLI
+## Editing a secondary zone from the CLI
 {: #cli-edit-secondary-zone}
 {: cli}
 
@@ -52,7 +55,7 @@ Where:
 * **--output value** specifies output format. Currently, json is the only supported format.
 
 
-## Editing a secondary zone using the API
+## Editing a secondary zone with the API
 {: #api-edit-secondary-zone}
 {: api}
 

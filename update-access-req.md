@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -28,7 +28,7 @@ The following table describes the actions you can take as the account owner.
 |No action | The request times out if you take no action after 7 days elapse.|
 {: caption="Owner states" caption-side="bottom"}
 
-## Updating an access request using the UI
+## Updating an access request in the UI
 {: #ui-update-access-req}
 {: ui}
 
@@ -42,7 +42,7 @@ To update an access request using the UI, take the following steps:
 1. Select **Reject** or **Approve** to complete the request, or click the `X` at the top right of the side panel to close the request and take no action.
 
 
-## Updating an access request using the CLI
+## Updating an access request from the CLI
 {: #cli-update-access-req}
 {: cli}
 
@@ -61,7 +61,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Updating an access request using the API
+## Updating an access request with the API
 {: #api-update-access-req}
 {: api}
 

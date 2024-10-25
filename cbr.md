@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-01-27"
+  years: 2023, 2024
+lastupdated: "2024-10-25"
 
 keywords: context-based restrictions for dns services
 
@@ -15,6 +15,7 @@ subcollection: dns-svcs
 # Protecting {{site.data.keyword.dns_short}} resources with context-based restrictions
 {: #cbr}
 
+You can protect {{site.data.keyword.dns_short}} resources with context-based restrictions by using the UI, CLI, or API.
 Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.dns_full_notm}} resources can be controlled with context-based restrictions and identity and access management (IAM) policies.
 {: shortdesc}
 
@@ -27,15 +28,32 @@ Any {{site.data.keyword.cloudaccesstraillong_notm}} or audit log events generate
 
 To get started protecting your {{site.data.keyword.dns_short}} resources with context-based restrictions, see the tutorial for [Leveraging context-based restrictions to secure your resources](/docs/account?topic=account-context-restrictions-tutorial).
 
-## Creating network zones
+## Creating network zones 
 {: #network-zone}
+
+Create network zones by using the CLI or API.
 
 A network zone represents an allowlist of IP addresses where an access request is created. It defines a set of one or more network locations that are specified by the following attributes:
 
 - IP addresses, which include individual addresses, ranges, or subnets
 - VPCs
 
-### Creating network zones by using the API
+### Creating network zones from the CLI
+{: #network-zone-cli} 
+{: cli}
+
+1. To create network zones from the CLI, [install the CBR CLI plug-in](/docs/account?topic=account-cbr-plugin).
+2. Use the `cbr-zone-create` command to add network locations and VPCs to network zones. For more information, see the CBR
+   [CLI reference](/docs/account?topic=account-cbr-plugin#cbr-zones-cli).
+
+   The following example command adds an individual IP, range, subnet, and a VPC to a network zone.
+
+   ```sh
+   ibmcloud cbr zone-create --name example-zone --description "this is an example of zone" --addresses 169.23.56.234,169.23.22.0-169.23.22.255,192.0.2.0/24 --vpc crn:v1:bluemix:public:is:us-south:a/12ab34cd56ef78ab90cd12ef34ab56cd::vpc:r134-d98a1702-b39a-449a-86d4-ef8dbacf281e
+   ```
+   {: pre}
+
+### Creating network zones with the API
 {: #network-zone-api} 
 {: api}
 
@@ -106,21 +124,6 @@ The `addresses` attribute specifies individual IP addresses, ranges, subnets, an
 }
 ```
 {: codeblock}
-
-### Creating network zones by using the CLI
-{: #network-zone-cli} 
-{: cli}
-
-1. To create network zones from the CLI, [install the CBR CLI plug-in](/docs/account?topic=account-cbr-plugin).
-2. Use the `cbr-zone-create` command to add network locations and VPCs to network zones. For more information, see the CBR
-   [CLI reference](/docs/account?topic=account-cbr-plugin#cbr-zones-cli).
-
-   The following example command adds an individual IP, range, subnet, and a VPC to a network zone.
-
-   ```sh
-   ibmcloud cbr zone-create --name example-zone --description "this is an example of zone" --addresses 169.23.56.234,169.23.22.0-169.23.22.255,192.0.2.0/24 --vpc crn:v1:bluemix:public:is:us-south:a/12ab34cd56ef78ab90cd12ef34ab56cd::vpc:r134-d98a1702-b39a-449a-86d4-ef8dbacf281e
-   ```
-   {: pre}
    
 ## Limitations
 {: #cbr-limitations}
@@ -145,11 +148,27 @@ Context-based restrictions protect only the actions associated with the [DNS Ser
 ## Creating rules
 {: #cbr-rules}
 
-Context-based restrictions for {{site.data.keyword.dns_short}} can be scoped to a service instance or resource group by using resource attributes.
+Context-based restrictions for {{site.data.keyword.dns_short}} can be scoped to a service instance or resource group by using resource attributes. Create rules by using the CLI or API. 
 
 You can select a service instance by entering the ID. Alternatively, you can use the `*` wildcard to select all applicable service instances. You can also specify which resource group the rule is applied to in the command.
 
-### Creating rules by using the API
+### Creating rules from the CLI
+{: #rules-cli} 
+{: cli}
+
+1. To create rules from the CLI, [install the CBR CLI plug-in](/docs/account?topic=account-cbr-plugin#install-cbr-plugin).
+1. Use the [`ibmcloud cbr rule-create` command](/docs/account?topic=account-cbr-plugin#cbr-cli-rule-create-command) to create CBR rules. For more information, see the CBR [CLI reference](/docs/account?topic=account-cbr-plugin#cbr-zones-cli).
+
+The examples in this section are enforcement rules. You can make them report-only by adding `--enforcement-mode report`.
+
+The following example CLI command creates a context-based restriction rule for a {{site.data.keyword.dns_short}} instance in the current account:
+
+```sh
+ibmcloud cbr rule-create  --zone-id 65810ac762004f22ac19f8f8edf70a34 --description "example CBR rule" --service-name dns-svcs --service-instance 3bd0bc3c-232c-4886-a0c4-72aa26ec0d38
+```
+{: pre} 
+
+### Creating rules with the API
 {: #rules-api} 
 {: api}
 
@@ -194,22 +213,6 @@ The following example payload creates a rule that protects the {{site.data.keywo
 }
 ```
 {: codeblock}
-
-### Creating rules by using the CLI
-{: #rules-cli} 
-{: cli}
-
-1. To create rules from the CLI, [install the CBR CLI plug-in](/docs/account?topic=account-cbr-plugin#install-cbr-plugin).
-1. Use the [`ibmcloud cbr rule-create` command](/docs/account?topic=account-cbr-plugin#cbr-cli-rule-create-command) to create CBR rules. For more information, see the CBR [CLI reference](/docs/account?topic=account-cbr-plugin#cbr-zones-cli).
-
-The examples in this section are enforcement rules. You can make them report-only by adding `--enforcement-mode report`.
-
-The following example CLI command creates a context-based restriction rule for a {{site.data.keyword.dns_short}} instance in the current account:
-
-```sh
-ibmcloud cbr rule-create  --zone-id 65810ac762004f22ac19f8f8edf70a34 --description "example CBR rule" --service-name dns-svcs --service-instance 3bd0bc3c-232c-4886-a0c4-72aa26ec0d38
-```
-{: pre} 
 
 ## How {{site.data.keyword.dns_short}} authorizes VPC resource access
 {: #authorizing-resource-access}

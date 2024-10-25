@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You can delete custom resolver locations in {{site.data.keyword.dns_full}} by using the UI, CLI, or API. 
 {: shortdesc}
 
-## Deleting a resolver location using the UI
+## Deleting a resolver location in the UI
 {: #ui-delete-res-loc}
 {: ui}
 
@@ -28,7 +28,7 @@ To delete a resolver location by using the UI, follow these steps:
 1. Click the overflow menu icon for the location that you want to delete.
 1. Select **Delete**.
 
-## Deleting a resolver location
+## Deleting a resolver location from the CLI
 {: #cli-delete-res-loc}
 {: cli}
 
@@ -43,7 +43,7 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **-f, --force** deletes the resolver location without prompting for confirmation.
 
-## Deleting a resolver location using the API
+## Deleting a resolver location with the API
 {: #api-delete-res-loc}
 {: api}
 

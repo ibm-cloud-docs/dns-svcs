@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Adding custom resolver forwarding rules
 {: #cr-fwd-rules-add}
 
-Use forwarding rules to configure where to forward DNS queries for resolution.
+Use forwarding rules to configure where to forward DNS queries for resolution by using the UI, CLI, or API.
 {: shortdesc}
 
 Forwarding rules are configurations that you can set up to direct DNS queries to specific DNS resolvers. Two required parameters and one optional parameter need to be provided to setup a forwarding rule:
@@ -39,7 +39,7 @@ Custom resolvers support two types of forwarding rules:
     Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
     {: important}
 
-## Adding custom resolver forwarding rules by using the UI
+## Adding custom resolver forwarding rules in the UI
 {: #ui-add-fwd-rules}
 {: ui}
 
@@ -52,7 +52,7 @@ To add a forwarding rule:
 1. Optionally, enter a description of the rule.
 1. Click **Create**.
 
-## Adding custom resolver forwarding rules by using the CLI
+## Adding custom resolver forwarding rules from the CLI
 {: #cli-add-fwd-rules}
 {: cli}
 
@@ -70,7 +70,7 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
-## Adding custom resolver forwarding rules using the API
+## Adding custom resolver forwarding rules with the API
 {: #api-add-fwd-rules}
 {: api}
 

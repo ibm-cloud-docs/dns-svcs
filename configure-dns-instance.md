@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-04-06"
+  years: 2019, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,14 +15,12 @@ subcollection: dns-svcs
 # Setting up your {{site.data.keyword.dns_short}} instance
 {: #setting-up-your-dns-instance}
 
-This section describes how to set up a {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks, and resource records.
+Set up a {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks, and resource records by using the UI or API.
 {: shortdesc}
 
-## Using the {{site.data.keyword.cloud_notm}} console
-{: #setting-up-your-dns-instance-ui}
-
-### Creating a {{site.data.keyword.dns_short}} instance
+## Creating a {{site.data.keyword.dns_short}} instance in the UI
 {: #creating-a-dns-instance}
+{: ui}
 
 1. Open the [{{site.data.keyword.cloud_notm}} **Catalog**](https://{DomainName}/catalog/) page.
 1. Select the **Networking** category.
@@ -34,8 +32,9 @@ This section describes how to set up a {{site.data.keyword.dns_full}} instance, 
 
 You can also navigate directly to the {{site.data.keyword.dns_short}} instance creation by going to the [{{site.data.keyword.dns_short}} catalog entry](https://{DomainName}/catalog/services/dns-services).
 
-### Creating a DNS zone
+## Creating a DNS zone in the UI
 {: #creating-a-dns-zone}
+{: ui}
 
 1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance.
 1. On the DNS Zones page, click **Create zone**.
@@ -43,8 +42,9 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
 1. Click **Create zone** in the panel.
    If the zone is created successfully, you are redirected to the Zone Details page.
 
-### Creating an "A" resource record
+## Creating an "A" resource record in the UI
 {: #creating-an-a-resource-record}
+{: ui}
 
 1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
 1. On the DNS Details page, click the **DNS Records** tab.
@@ -55,8 +55,9 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
    In this case, for type **A**, enter **Name** and **IPv4 Address**.
 1. Click **Add record** in the panel.
 
-### Creating a permitted network
+## Creating a permitted network in the UI
 {: #creating-a-dns-permitted-network}
+{: ui}
 
 1. Navigate to the Resource page and select your {{site.data.keyword.dns_short}} instance. Then select your zone.
 1. Click the **Permitted Networks** tab.
@@ -67,7 +68,7 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
 
    This request adds the VPC network to your zone, thereby giving the network access to the zone.
 
-### Verifying the setup
+## Verifying the setup
 {: #verifying-the-setup}
 
 To verify that your instance, zone, and record are performing correctly, run the following **dig** command:
@@ -84,11 +85,9 @@ dig @161.26.0.7 A xyz.example.com
 ```
 {: codeblock}
 
-## Using the API
-{: #setting-up-your-dns-instance-api}
-
-### Creating a {{site.data.keyword.dns_short}} instance
+## Creating a {{site.data.keyword.dns_short}} instance with the API
 {: #creating-dns-instance-api}
+{: api}
 
 See the [create a new resource instance](/apidocs/resource-controller/resource-controller#create-resource-instance) documentation for the Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set. Each account can have multiple resource groups, and each resource group has a unique ID.
 
@@ -104,8 +103,9 @@ See the [Resource Controller API reference](/apidocs/resource-controller/resourc
 Command lines for instances are using resource controller API, not DNS APIs. These commands are equivalent to commands `ibmcloud resource service-instance`, which provide convenience for DNS users to manage {{site.data.keyword.dns_short}} instances.
 {: note}
 
-### Creating a DNS zone
+## Creating a DNS zone with the API
 {: #creating-dns-zone-api}
+{: api}
 
 You must create a VPC so that you can link your DNS zone to the VPC.
 
@@ -120,8 +120,9 @@ To verify that this variable is saved, run `echo $DNSSVCS_ENDPOINT` and ensure t
 
 After you gather details about your instance, run the following `curl` command to create a DNS zone:
 
-#### Request
+### Request
 {: #api-create-dns-zone-request}
+{: api}
 
 * INSTANCE_ID: GUID of the instance
 * TOKEN: IAM OAUTH token
@@ -139,8 +140,9 @@ curl -X POST \
 {: pre}
 
 
-#### Response
+### Response
 {: #api-create-dns-zone-response}
+{: api}
 
 ```json
 {
@@ -156,8 +158,9 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Creating a permitted network
+## Creating a permitted network with the API
 {: #creating-permitted-network-api}
+{: api}
 
 {{site.data.keyword.dns_short}} allows name resolution only from a VPC that was added to the DNS zone.
 
@@ -165,8 +168,9 @@ When a DNS zone gets created, its Status is `PENDING_NETWORK_ADD`. To move the z
 
 By adding your VPC to your zone's permitted network, compute instances on your VPC can access these resource records.
 
-#### Request
+### Request
 {: #api-create-pm-request}
+{: api}
 
 ```bash
 curl -X POST \
@@ -181,8 +185,9 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #api-create-pm-response}
+{: api}
 
 ```json
 {
@@ -197,13 +202,15 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Creating an "A" resource record
+## Creating an "A" resource record with the API
 {: #creating-resource-records}
+{: api}
 
 An A Record (Address Record) is a DNS resource record that associates a domain or subdomain to an IPv4 address.
 
-#### Request
+### Request
 {: #create-resource-records-request}
+{: api}
 
 * `name`: FQDN, such as `www.example.com` or the host, such as `www`.
 * `type`: Type of Record - A, AAAA, SRV, and so on.
@@ -225,8 +232,9 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #create-resource-records-response}
+{: api}
 
 ```json
 {
@@ -240,22 +248,5 @@ curl -X POST \
       "ip":"1.2.6.7"
    }
 }
-```
-{: codeblock}
-
-### Verifying the setup
-{: #verifying-the-setup-api}
-
-To verify that your instance, zone, and record are performing correctly, run the following **dig** command:
-
-```sh
-dig @161.26.0.7 <Record type> <record name>
-```
-{: pre}
-
-Example:
-
-```sh
-dig @161.26.0.7 A xyz.example.com
 ```
 {: codeblock}

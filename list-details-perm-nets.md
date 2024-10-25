@@ -18,7 +18,7 @@ subcollection: dns-svcs
 List all permitted networks and get the details of a permitted network in your linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Getting the details of a permitted network using the UI
+## Getting the details of a permitted network in the UI
 {: #ui-get-details-perm-nets}
 {: ui}
 
@@ -29,7 +29,7 @@ To get the details of a permitted network using the UI, take the following steps
 
 In the **Linked zone details** page, the **Permitted networks** tab lists the details of the permitted network.
 
-## Listing all permitted networks using the CLI
+## Listing all permitted networks from the CLI
 {: #cli-list-perm-nets}
 {: cli}
 
@@ -45,7 +45,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Getting the details of a permitted network using the CLI
+## Getting the details of a permitted network from the CLI
 {: #cli-get-details-perm-nets}
 
 To get the details of a permitted network using the API, run the following command:
@@ -61,7 +61,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Listing a permitted network using the API
+## Listing a permitted network with the API
 {: #api-list-perm-nets}
 {: api}
 
@@ -82,7 +82,7 @@ To list all linked zones using the API, follow these steps:
     {: codeblock}
 
 
-## Getting the details of a permitted network using the API
+## Getting the details of a permitted network with the API
 {: #api-get-details-perm-nets}
 
 To get the details of a permitted network using the API, follow these steps:

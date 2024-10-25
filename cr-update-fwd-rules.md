@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -21,7 +21,7 @@ You can update custom resolver forwarding rules in {{site.data.keyword.dns_full}
 Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
 {: important}
 
-## Updating custom resolver forwarding rules using the UI
+## Updating custom resolver forwarding rules in the UI
 {: #ui-cr-fwd-rules-update}
 {: ui}
 
@@ -36,7 +36,7 @@ To edit a forwarding rule:
     You cannot edit the rule type. If you require a different rule type, create a new rule.
     {: tip}
 
-## Updating custom resolver forwarding rules using the CLI
+## Updating custom resolver forwarding rules from the CLI
 {: #cli-cr-fwd-rules-update}
 {: cli}
 
@@ -54,7 +54,7 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
-## Updating custom resolver forwarding rules using the API
+## Updating custom resolver forwarding rules with the API
 {: #api-cr-fwd-rules-update}
 {: api}
 

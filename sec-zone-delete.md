@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-07-20"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,7 +15,10 @@ subcollection: dns-svcs
 # Deleting a secondary zone
 {: #delete-secondary-zone}
 
-## Deleting a secondary zone using the UI
+Delete a secondary zone by using the UI, CLI, or API.
+{: shortdesc}
+
+## Deleting a secondary zone in the UI
 {: #ui-delete-secondary-zone}
 {: ui}
 
@@ -26,7 +29,7 @@ To delete a secondary zone using the UI, take the following steps:
 1. Select the overflow menu icon ![overflow menu icon](images/overflow-icon.png) secondary zone you wish to delete and select **Delete**.
 1. Click **Delete** in the confirmation dialog box, or click **Cancel** to stop the deletion.
 
-## Deleting a secondary zone using the CLI
+## Deleting a secondary zone from the CLI
 {: #cli-delete-secondary-zone}
 {: cli}
 
@@ -45,7 +48,7 @@ Where:
 * **--output value** specifies output format. Currently, json is the only supported format.
 
 
-## Deleting a secondary zone using the API
+## Deleting a secondary zone with the API
 {: #api-delete-secondary-zone}
 {: api}
 
@@ -63,4 +66,3 @@ To delete a secondary zone using the API, follow these steps:
 curl -X DELETE   https://api.dns-svcs.cloud.ibm.com/v1/instances/2be5d4a7-78f0-4c62-a957-41dc15342777/custom_resolvers/ddbe7a53-7971-46dc-b021-420335c31562/secondary_zones/f97ef698-d5fa-4f91-bc5a-33f17d143b7d   -H 'Authorization: Bearer xxxxxx'
 ```
 {: codeblock}
-

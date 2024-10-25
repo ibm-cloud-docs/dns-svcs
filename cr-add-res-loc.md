@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-06-07"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Adding custom resolver locations
 {: #cr-res-loc-add}
 
-The task of the resolver location instance is to provide DNS resolver functions based on the forwarding rules that you configure. Add resolver locations to manage where your custom resolver deploys. 
+The task of the resolver location instance is to provide DNS resolver functions based on the forwarding rules that you configure. Add resolver locations to manage where your custom resolver deploys by using the UI, CLI, or API.
 {: shortdesc}
 
 ## Custom resolver address propagation
@@ -36,7 +36,7 @@ The DNS servers will appear similar to this example.
 * Virtual server instance in `us-south-2`: IP2 IP3 IP1
 * Virtual server instance in `us-south-3`: IP3 IP1 IP2
 
-## Adding a resolver location using the UI
+## Adding a resolver location in the UI
 {: #ui-add-res-loc}
 {: ui}
 
@@ -49,7 +49,7 @@ To add a custom resolver location, from the custom resolver details page:
 
 The location is added when the subnet selection is made.
 
-## Adding a resolver location using the CLI
+## Adding a resolver location from the CLI
 {: #cli-add-res-loc}
 {: cli}
 
@@ -65,7 +65,7 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
-## Adding a resolver location using the API
+## Adding a resolver location with the API
 {: #api-add-res-loc}
 {: api}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You can delete custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Deleting custom resolver forwarding rules using the UI
+## Deleting custom resolver forwarding rules in the UI
 {: #ui-cr-fwd-rules-delete}
 {: ui}
 
@@ -30,7 +30,7 @@ To delete a forwarding rule:
     You cannot delete the default rule.
     {: note}
 
-## Deleting custom resolver forwarding rules using the CLI
+## Deleting custom resolver forwarding rules from the CLI
 {: #cli-cr-fwd-rules-delete}
 {: cli}
 
@@ -45,7 +45,7 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **-f, --force** deletes the custom resolver forwarding rule without prompting for confirmation.
 
-## Deleting custom resolver forwarding rules using the API
+## Deleting custom resolver forwarding with using the API
 {: #api-cr-fwd-rules-delete}
 {: api}
 

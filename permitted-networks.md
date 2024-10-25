@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,15 +15,12 @@ subcollection: dns-svcs
 # Managing permitted networks
 {: #managing-permitted-networks}
 
-This section describes how to manage permitted networks for your {{site.data.keyword.dns_full}} instance.
+Manage permitted networks for your {{site.data.keyword.dns_full}} instance by using the UI, CLI, or API.
 {: shortdesc}
 
-## Using the IBM Cloud console
-{: #managing-permitted-networks-ui}
-{: ui}
-
-### Adding permitted networks
+## Adding permitted networks in the UI
 {: #adding-permitted-networks-ui}
+{: ui}
 
 DNS Services is a global service, therefore you may add permitted networks (for example, a VPC) from any {{site.data.keyword.cloud}} region. This request adds the network to the DNS zone, thereby giving the network access to the zone. You can add up to 10 permitted networks to a DNS zone.
 
@@ -40,15 +37,17 @@ Newly created virtual server instances are automatically configured to use priva
 Adding the same VPC to two DNS zones of the same name is not allowed.
 {: note}
 
-### Navigating from permitted networks to VPC overview
+## Navigating from permitted networks to VPC overview in the UI
 {: #navigating-to-vpc}
+{: ui}
 
 You can navigate to the VPC overview page from the **Permitted networks** section by clicking on the VPC name. For example, in the following image, clicking on `demo-vpc` takes you to the overview page of the VPC named `demo-vpc`.
 
 ![Permitted network link to VPC overview page](images/permit-net-nav.svg "Image of VPC name link in permitted network section"){: caption="Navigating to an IBM VPC from permitted networks section" caption-side="bottom"}
 
-### List permitted networks
+## Listing permitted networks in the UI
 {: #list-permitted-networks}
+{: ui}
 
 1. Select the desired zone from the table on the DNS Zones page.
 1. Select the **Permitted Networks** tab.
@@ -59,178 +58,16 @@ By default,the list contains permitted networks that were added from your accoun
 You can select a maximum of 5 cross-account IDs.
 {: note}
 
-### Removing a permitted network
+### Removing a permitted network in the UI
 {: #removing-permitted-networks-ui}
+{: ui}
 
 From the permitted networks table, click the **Delete** icon. Confirm the delete process in the dialog box that appears.
 
 If a network exists in a zone, you cannot delete the zone until the permitted network is deleted.
 {: note}
 
-## Using the API
-{: #managing-permitted-networks-api}
-{: api}
-
-First store the API endpoint in a variable so you can use it in API requests without having to type the full URL. For example, to store the production endpoint in a variable, run this command:
-
-```bash
-DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
-```
-{: pre}
-
-To verify that this variable was saved, run **`echo $DNSSVCS_ENDPOINT`** and make sure the response is not empty.
-
-### Adding permitted networks
-{: #adding-permitted-networks-api}
-
-A DNS zone's initial state is `PENDING_NETWORK_ADD`, because its permitted network list is empty when the DNS zone is created. When a permitted network is added to the DNS zone's permitted networks, the state changes to `ACTIVE`.
-
-#### Parameters
-{: #add-pm-parameters}
-
-* DNSZONE_ID: When you create a zone, the DNSZONE_ID is returned in the response as **`id`**.
-
-#### Request
-{: #add-pm-request}
-
-```bash
-curl -X POST \
-         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks \
-         -H "Authorization: $TOKEN" \
-         -d '{
-             "type": "vpc",
-             "permitted_network":{
-                 "vpc_crn":"crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
-             }
-         }'
-```
-{: pre}
-
-
-#### Response
-{: #add-pm-response}
-
-```json
-{
-    "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
-    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-    "permitted_network": {
-        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
-    },
-    "type": "vpc",
-    "state": "ACTIVE"
-}
-```
-{: codeblock}
-
-For future requests, the ID in the response is referenced as **`PERMITTED_NETWORK_ID`**.
-{: note}
-
-### Retrieve a permitted network
-{: #get-permitted-network-api}
-
-Retrieve a specific permitted network from your instance using the permitted network ID.
-
-#### Request
-{: #ret-pm-request}
-
-```bash
-curl -X GET \
-         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks/$PERMITTED_NETWORK_ID \
-         -H "Authorization: $TOKEN"
-```
-{: pre}
-
-#### Response
-{: #ret-pm-response}
-
-```json
-{
-    "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
-    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-    "permitted_network": {
-        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
-    },
-    "type": "vpc",
-    "state": "ACTIVE"
-}
-```
-{: codeblock}
-
-### Listing permitted networks
-{: #list-permitted-networks-api}
-
-List all permitted networks for your DNS zone.
-
-#### Request list permitted networks
-{: #list-pm-request}
-
-```bash
-curl -X GET \
-         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks \
-         -H "Authorization: $TOKEN"
-```
-{: pre}
-
-#### Response list permitted networks
-{: #list-pm-response}
-
-```json
-{
-    "permitted_networks": [
-        {
-            "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
-            "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-            "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-            "permitted_network": {
-                "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
-            },
-            "type": "vpc",
-            "state": "ACTIVE"
-        }
-    ]
-}
-```
-{: codeblock}
-
-### Removing a permitted network
-{: #removing-permitted-networks-api}
-
-Delete a specific permitted network from your instance, and unlink VPC from a zone.
-
-#### Request remove permitted network
-{: #remove-pm-request}
-
-```bash
-curl -X DELETE \
-         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks/$PERMITTED_NETWORK_ID \
-         -H "Authorization: $TOKEN"
-```
-{: pre}
-
-#### Response
-{: #remove-pm-response}
-
-```json
-{
-    "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
-    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
-    "permitted_network": {
-        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
-    },
-    "type": "vpc",
-    "state": "REMOVAL_IN_PROGRESS"
-}
-```
-{: codeblock}
-
-Removing a permitted network can take up to 5 minutes. You cannot add the VPC back to the DNS zone's permitted network until the removal operation is complete.
-{: note}
-
-## Using the CLI
+## Managing permitted networks from the CLI
 {: #managing-permitted-networks-cli}
 {: cli}
 
@@ -254,9 +91,9 @@ DNS_ZONE_ID="example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae"
 ```
 {: pre}
 
-
-### Adding permitted networks
+## Adding permitted networks from the CLI
 {: #adding-permitted-networks-cli}
+{: cli}
 
 Use `ibmcloud dns permitted-network-add` command followed by the zone ID to add a VPC to the zone's permitted networks. Follow the steps to select a VPC instance to add it to permitted networks.
 
@@ -296,8 +133,9 @@ Modified On   2020-04-10 10:06:24.99659547 +0000 UTC
 For future requests, the ID in the output is referenced as **`PERMITTED_NETWORK_ID`**.
 {: note}
 
-### Retrieve a permitted network
+## Retrieve a permitted network from the CLI
 {: #get-permitted-network-cli}
+{: cli}
 
 Use `ibmcloud dns permitted-network` followed by the zone ID and permitted network ID to retrieve the details of a permitted network.
 
@@ -317,8 +155,9 @@ Modified On   2020-04-10 10:06:24.99659547 +0000 UTC
 {: pre}
 
 
-### Listing permitted networks
+## Listing permitted networks from the CLI
 {: #list-permitted-networks-cli}
+{: cli}
 
 Use `ibmcloud dns permitted-networks` followed by the zone ID to list all permitted networks.
 
@@ -333,8 +172,9 @@ vpc-gen1-for-pdns-e2e-test01-do-not-delete   ffffffff-f7c9-49ff-a8ca-00000000000
 {: pre}
 
 
-### Removing a permitted network
+## Removing a permitted network from the CLI
 {: #removing-permitted-networks-cli}
+{: cli}
 
 Use `ibmcloud dns permitted-network-remove` followed by the zone ID and permitted network ID to unlink VPC from the zone.
 
@@ -345,6 +185,173 @@ Removing permitted network 'ffffffff-f7c9-49ff-a8ca-000000000000' from zone 'exa
 OK
 ```
 {: pre}
+
+Removing a permitted network can take up to 5 minutes. You cannot add the VPC back to the DNS zone's permitted network until the removal operation is complete.
+{: note}
+
+## Managing permitted networks with the API
+{: #managing-permitted-networks-api}
+{: api}
+
+First store the API endpoint in a variable so you can use it in API requests without having to type the full URL. For example, to store the production endpoint in a variable, run this command:
+
+```bash
+DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
+```
+{: pre}
+
+To verify that this variable was saved, run **`echo $DNSSVCS_ENDPOINT`** and make sure the response is not empty.
+
+## Adding permitted networks with the API
+{: #adding-permitted-networks-api}
+{: api}
+
+A DNS zone's initial state is `PENDING_NETWORK_ADD`, because its permitted network list is empty when the DNS zone is created. When a permitted network is added to the DNS zone's permitted networks, the state changes to `ACTIVE`.
+
+### Parameters
+{: #add-pm-parameters}
+
+* DNSZONE_ID: When you create a zone, the DNSZONE_ID is returned in the response as **`id`**.
+
+### Request
+{: #add-pm-request}
+
+```bash
+curl -X POST \
+         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks \
+         -H "Authorization: $TOKEN" \
+         -d '{
+             "type": "vpc",
+             "permitted_network":{
+                 "vpc_crn":"crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+             }
+         }'
+```
+{: pre}
+
+
+### Response
+{: #add-pm-response}
+
+```json
+{
+    "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
+    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "permitted_network": {
+        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+    },
+    "type": "vpc",
+    "state": "ACTIVE"
+}
+```
+{: codeblock}
+
+For future requests, the ID in the response is referenced as **`PERMITTED_NETWORK_ID`**.
+{: note}
+
+## Retrieve a permitted network with the API
+{: #get-permitted-network-api}
+{: api}
+
+Retrieve a specific permitted network from your instance using the permitted network ID.
+
+### Request
+{: #ret-pm-request}
+
+```bash
+curl -X GET \
+         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks/$PERMITTED_NETWORK_ID \
+         -H "Authorization: $TOKEN"
+```
+{: pre}
+
+### Response
+{: #ret-pm-response}
+
+```json
+{
+    "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
+    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "permitted_network": {
+        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+    },
+    "type": "vpc",
+    "state": "ACTIVE"
+}
+```
+{: codeblock}
+
+## Listing permitted networks with the API
+{: #list-permitted-networks-api}
+{: api}
+
+List all permitted networks for your DNS zone.
+
+### Request 
+{: #list-pm-request}
+
+```bash
+curl -X GET \
+         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks \
+         -H "Authorization: $TOKEN"
+```
+{: pre}
+
+### Response
+{: #list-pm-response}
+
+```json
+{
+    "permitted_networks": [
+        {
+            "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
+            "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+            "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+            "permitted_network": {
+                "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+            },
+            "type": "vpc",
+            "state": "ACTIVE"
+        }
+    ]
+}
+```
+{: codeblock}
+
+## Removing a permitted network with the API
+{: #removing-permitted-networks-api}
+{: api}
+
+Delete a specific permitted network from your instance, and unlink VPC from a zone.
+
+### Request 
+{: #remove-pm-request}
+
+```bash
+curl -X DELETE \
+         $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID/permitted_networks/$PERMITTED_NETWORK_ID \
+         -H "Authorization: $TOKEN"
+```
+{: pre}
+
+### Response
+{: #remove-pm-response}
+
+```json
+{
+    "id": "b7246cdf-892a-4a6c-8fa9-491a5f585bd0",
+    "created_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "modified_on": "2019-09-11 13:46:51.68793557 +0000 UTC",
+    "permitted_network": {
+        "vpc_crn": "crn:v1:staging:public:is:us-east:a/0821fa9f9ebcc7b7c9a0d6e9bf9442a4::vpc:b7246cdf-892a-4a6c-8fa9-491a5f585bd0"
+    },
+    "type": "vpc",
+    "state": "REMOVAL_IN_PROGRESS"
+}
+```
+{: codeblock}
 
 Removing a permitted network can take up to 5 minutes. You cannot add the VPC back to the DNS zone's permitted network until the removal operation is complete.
 {: note}
