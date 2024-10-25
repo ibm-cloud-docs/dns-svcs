@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-01-22"
+lastupdated: "2024-10-25"
 
 keywords: restricted zones
 
@@ -14,6 +14,9 @@ subcollection: dns-svcs
 
 # Managing DNS zones
 {: #managing-dns-zones}
+
+Manage DNS zones by using the UI, CLI, or API.
+{: shortdesc}
 
 You must have an {{site.data.keyword.dns_full}} instance before managing DNS zones. Refer to [Create a {{site.data.keyword.dns_short}} instance](/docs/dns-svcs?topic=dns-svcs-getting-started#step-1-create-dns-services-instance) for more information.
 
@@ -58,15 +61,9 @@ If a user queries for `myhost.domain.example.com`, the expected result (which is
 
 If they queried for `me.domain.example.com` instead, the resolver searches only the longest matching zone. Because `me.domain.example.com` does not exist in `domain.example.com`, the result is an `NXDOMAIN`. 
 
-## Using the {{site.data.keyword.cloud_notm}} console
-{: #managing-dns-zones-ui}
-{: ui}
-
-DNS zones can be managed through the {{site.data.keyword.cloud}} console, or the API. The following sections cover the console usage.
-{: shortdesc}
-
-### Creating a DNS zone
+## Creating a DNS zone in the UI
 {: #create-dns-zone-ui}
+{: ui}
 
 1. From the Resource page, select the desired {{site.data.keyword.dns_short}} instance.
 1. Click the **Create Zone** button on the **DNS Zones** page.
@@ -80,8 +77,9 @@ Newly added zones have a pending state until you add permitted networks to the z
 
 If the zone creation is unsuccessful, an error notification appears with information about what caused the error.
 
-#### Restricted DNS zone names
+### Restricted DNS zone names
 {: #restricted-dns-zone-names}
+{: ui}
 
 Subdomains to any of the restricted 2-level zones are not permitted. For example, `my.host.ibm.com` is a subdomain to `ibm.com`. Therefore, `my.host.ibm.com` is also a restricted zone.
 
@@ -97,218 +95,22 @@ The following DNS zone names are not permitted.
 * `appdomain.cloud`
 * `compass.cobaltiron.com`
 
-### Editing a DNS zone
+## Edit a DNS zone in the UI
 {: #edit-dns-zone-ui}
+{: ui}
 
 1. From the DNS Zones page, select your zone. **Label** and **Description** options appear.
 2. Click the edit icon for **Label**, then enter the label and click **Save**.
 3. Click the edit icon for **Description**, then enter the description and click **Save**.
 
-### Deleting a DNS zone
+## Delete a DNS zone in the UI
 {: #delete-dns-zone-ui}
+{: ui}
 
 1. From the DNS Zones page, click the delete icon from the row for the zone you wish to delete. A confirmation dialog appears.
 2. Click **Delete** button.
 
-## Using the API
-{: #managing-dns-zones-api}
-{: api}
-
-First store the API endpoint in a variable so you can use it in API requests without having to type the full URL. For example, to store the production endpoint in a variable, run this command:
-
-```bash
-DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
-```
-{: pre}
-
-To verify that this variable was saved, run `echo $DNSSVCS_ENDPOINT` and make sure the response is not empty.
-
-### Authentication
-{: #iam-authentication}
-
-The Authorization header is required for each API call. This header is the bearer token for the user, which can be retrieved from IAM (for example, using the `ibmcloud iam oauth-tokens` command).
-
-You must obtain an IAM token and export it into the `$TOKEN` for {{site.data.keyword.dns_short}}.
-
-### Creating a DNS zone
-{: #create-dns-zone-api}
-
-Create a new zone by using the following `curl` command:
-
-#### Request creating a DNS zone
-{: #create-dns-zone-request}
-
-```bash
-curl -X POST \
-  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones \
-  -H "Authorization: $TOKEN" \
-  -d '{
-  "name": "example.com",
-  "description": "Example zone"
-}'
-```
-{: pre}
-
-#### Response to creating a DNS zone
-{: #create-dns-zone-response}
-
-```json
-{
-    "success": true,
-    "result": {
-        "id": "ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
-        "created_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
-        "modified_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
-        "instance_id": "1a34bda8-9c94-4232-bea7-7df163b21d23",
-        "name": "example.com",
-        "description": "Example zone",
-        "state": "PENDING_NETWORK_ADD",
-        "tag": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079"
-    },
-    "errors": [],
-    "messages": []
-}
-```
-{: codeblock}
-
-For future reference, the "id" in response is used as `DNSZONE_ID`. 
-{: note}
-
-### Getting a DNS zone
-{: #get-dns-zone-api}
-
-Use the following command to get an existing zone. 
-
-#### Request getting a DNS zone
-{: #get-zone-request}
-
-```bash
-curl -X GET \
-  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID \
-  -H "Authorization: $TOKEN"
-```
-{: pre}
-
-#### Response to getting a DNS zone
-{: #get-zone-response}
-
-```json
-{
-    "success": true,
-    "result": {
-        "id": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
-        "created_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
-        "modified_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
-        "instance_id": "1a34bda8-9c94-4232-bea7-7df163b21d23",
-        "name": "example.com",
-        "description": "Example zone",
-        "state": "PENDING_NETWORK_ADD"
-    },
-    "errors": [],
-    "messages": []
-}
-```
-{: codeblock}
-
-### Updating a DNS zone
-{: #update-dns-zone-api}
-
-Use the following command to update an existing zone. You can update the description and label fields. All other fields are read-only.
-
-#### Request update a DNS zone
-{: #update-zone-request}
-
-```bash
-curl -X PATCH \
-  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID \
-  -H 'Content-Type: application/json' \
-  -H "Authorization: $TOKEN" \
-  -d '{
-    "description": "The DNS zone is used for VPCs in us-east region",
-    "label": "us-east"
-}'
-
-```
-{: pre}
-
-#### Response to update a DNS zone
-{: #update-zone-response}
-
-```json
-{
-  "created_on": "2019-01-01T05:20:00.12345Z",
-  "description": "The DNS zone is used for VPCs in us-east region",
-  "id": "example.com:2d0f862b-67cc-41f3-b6a2-59860d0aa90e",
-  "instance_id": "1407a753-a93f-4bb0-9784-bcfc269ee1b3",
-  "label": "us-east",
-  "modified_on": "2019-01-01T05:20:00.12345Z",
-  "name": "example.com",
-  "state": "PENDING_NETWORK_ADD"
-}
-```
-{: codeblock}
-
-
-### Listing DNS zones
-{: #list-dns-zones-api}
-
-List one or more zones in your domain by using the following `curl` command: 
-
-#### Request
-{: #list-zone-request}
-
-```bash
-curl -X GET \
-  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones \
-  -H "Authorization: $TOKEN"
-```
-{: pre}
-
-#### Response
-{: #list-zone-response}
-
-```json
-{
-    "success": true,
-    "result": [
-        {
-            "id": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
-            "created_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
-            "modified_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
-            "instance_id": "1a34bda8-9c94-4232-bea7-7df163b21d23",
-            "name": "example.com",
-            "description": "Example zone",
-            "state": "PENDING_NETWORK_ADD"
-        }
-    ],
-    "errors": [],
-    "messages": []
-}
-```
-{: codeblock}
-
-### Deleting a DNS zone
-{: #delete-dns-zone-api}
-
-#### Request
-{: #delete-zone-request}
-
-```bash
-curl -X DELETE \
-  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID \
-  -H "Authorization: $TOKEN"
-```
-{: pre}
-
-#### Response
-{: #delete-zone-response}
-
-```bash
-HTTP/2 204 No Content
-```
-{: codeblock}
-
-## Using the CLI
+# Manage DNS zones from the CLI
 {: #managing-dns-zones-cli}
 {: cli}
 
@@ -328,9 +130,9 @@ $ ibmcloud dns instance-target "DNS Services-km"
 ```
 {: pre}
 
-
-### Creating a DNS zone
+## Create a DNS zone from the CLI
 {: #create-dns-zone-cli}
+{: cli}
 
 Use the `ibmcloud dns zone-create` command followed by the zone name to create a zone.
 
@@ -357,8 +159,9 @@ DNS_ZONE_ID="example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae"
 {: codeblock}
 
 
-### Getting a DNS zone
+## Get a DNS zone from the CLI
 {: #get-dns-zone-cli}
+{: cli}
 
 Use the `ibmcloud dns zone` command followed by the zone ID to get details of an existing zone. 
 
@@ -377,9 +180,9 @@ Modified On   2020-04-10 07:21:51.774444868 +0000 UTC
 ```
 {: pre}
 
-
-### Updating a DNS zone
+## Update a DNS zone from the CLI
 {: #update-dns-zone-cli}
+{: cli}
 
 Use the `ibmcloud dns zone-update` command followed by the zone ID to update a zone. Specify `-d, --description` to update the description and/or `-l, --label` to update the label of a zone.
 
@@ -398,8 +201,9 @@ Modified On   2020-04-10 07:38:36.712131819 +0000 UTC
 ```
 {: pre}
 
-### Listing DNS zones
+## List DNS zones from the CLI
 {: #list-dns-zones-cli}
+{: cli}
 
 Use the `ibmcloud dns zones` command to list all zones.
 
@@ -414,8 +218,9 @@ example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae        example.com        PENDI
 {: pre}
 
 
-### Deleting a DNS zone
+## Delete a DNS zone from the CLI
 {: #delete-dns-zone-cli}
+{: cli}
 
 Use the `ibmcloud dns zone-delete` followed by the zone ID to delete a zone.
 
@@ -423,3 +228,217 @@ Use the `ibmcloud dns zone-delete` followed by the zone ID to delete a zone.
 ibmcloud dns zone-delete  $DNS_ZONE_ID
 ```
 {: pre}
+
+## Manage DNS zones with the API
+{: #managing-dns-zones-api}
+{: api}
+
+First store the API endpoint in a variable so you can use it in API requests without having to type the full URL. For example, to store the production endpoint in a variable, run this command:
+
+```bash
+DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
+```
+{: pre}
+
+To verify that this variable was saved, run `echo $DNSSVCS_ENDPOINT` and make sure the response is not empty.
+
+## Authentication
+{: #iam-authentication}
+{: api}
+
+The Authorization header is required for each API call. This header is the bearer token for the user, which can be retrieved from IAM (for example, using the `ibmcloud iam oauth-tokens` command).
+
+You must obtain an IAM token and export it into the `$TOKEN` for {{site.data.keyword.dns_short}}.
+
+## Create a DNS zone with the API
+{: #create-dns-zone-api}
+{: api}
+
+Create a new zone by using the following `curl` command:
+
+### Request
+{: #create-dns-zone-request}
+{: api}
+
+```bash
+curl -X POST \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones \
+  -H "Authorization: $TOKEN" \
+  -d '{
+  "name": "example.com",
+  "description": "Example zone"
+}'
+```
+{: pre}
+
+### Response 
+{: #create-dns-zone-response}
+{: api}
+
+```json
+{
+    "success": true,
+    "result": {
+        "id": "ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
+        "created_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
+        "modified_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
+        "instance_id": "1a34bda8-9c94-4232-bea7-7df163b21d23",
+        "name": "example.com",
+        "description": "Example zone",
+        "state": "PENDING_NETWORK_ADD",
+        "tag": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079"
+    },
+    "errors": [],
+    "messages": []
+}
+```
+{: codeblock}
+
+For future reference, the "id" in response is used as `DNSZONE_ID`. 
+{: note}
+
+## Get a DNS zone with the API
+{: #get-dns-zone-api}
+{: api}
+
+Use the following command to get an existing zone. 
+
+### Request 
+{: #get-zone-request}
+{: api}
+
+```bash
+curl -X GET \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID \
+  -H "Authorization: $TOKEN"
+```
+{: pre}
+
+### Response
+{: #get-zone-response}
+{: api}
+
+```json
+{
+    "success": true,
+    "result": {
+        "id": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
+        "created_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
+        "modified_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
+        "instance_id": "1a34bda8-9c94-4232-bea7-7df163b21d23",
+        "name": "example.com",
+        "description": "Example zone",
+        "state": "PENDING_NETWORK_ADD"
+    },
+    "errors": [],
+    "messages": []
+}
+```
+{: codeblock}
+
+## Updating a DNS zone with the API
+{: #update-dns-zone-api}
+{: api}
+
+Use the following command to update an existing zone. You can update the description and label fields. All other fields are read-only.
+
+### Request 
+{: #update-zone-request}
+{: api}
+
+```bash
+curl -X PATCH \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: $TOKEN" \
+  -d '{
+    "description": "The DNS zone is used for VPCs in us-east region",
+    "label": "us-east"
+}'
+
+```
+{: pre}
+
+### Response
+{: #update-zone-response}
+{: api}
+
+```json
+{
+  "created_on": "2019-01-01T05:20:00.12345Z",
+  "description": "The DNS zone is used for VPCs in us-east region",
+  "id": "example.com:2d0f862b-67cc-41f3-b6a2-59860d0aa90e",
+  "instance_id": "1407a753-a93f-4bb0-9784-bcfc269ee1b3",
+  "label": "us-east",
+  "modified_on": "2019-01-01T05:20:00.12345Z",
+  "name": "example.com",
+  "state": "PENDING_NETWORK_ADD"
+}
+```
+{: codeblock}
+
+
+## List DNS zones with the API
+{: #list-dns-zones-api}
+{: api}
+
+List one or more zones in your domain by using the following `curl` command: 
+
+### Request
+{: #list-zone-request}
+{: api}
+
+```bash
+curl -X GET \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones \
+  -H "Authorization: $TOKEN"
+```
+{: pre}
+
+### Response
+{: #list-zone-response}
+{: api}
+
+```json
+{
+    "success": true,
+    "result": [
+        {
+            "id": "example.com:ed10e4b2-8a64-4afa-a4e2-9e60a766d079",
+            "created_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
+            "modified_on": "2019-07-24 12:30:58.357201205 +0000 UTC",
+            "instance_id": "1a34bda8-9c94-4232-bea7-7df163b21d23",
+            "name": "example.com",
+            "description": "Example zone",
+            "state": "PENDING_NETWORK_ADD"
+        }
+    ],
+    "errors": [],
+    "messages": []
+}
+```
+{: codeblock}
+
+### Delete a DNS zone with the API
+{: #delete-dns-zone-api}
+{: api}
+
+#### Request
+{: #delete-zone-request}
+{: api}
+
+```bash
+curl -X DELETE \
+  $DNSSVCS_ENDPOINT/v1/instances/$INSTANCE_ID/dnszones/$DNSZONE_ID \
+  -H "Authorization: $TOKEN"
+```
+{: pre}
+
+#### Response
+{: #delete-zone-response}
+{: api}
+
+```bash
+HTTP/2 204 No Content
+```
+{: codeblock}

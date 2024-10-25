@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,18 +15,12 @@ subcollection: dns-svcs
 # Managing DNS records
 {: #managing-dns-records}
 
-DNS records make the connection between human-readable names and IP addresses. We cover how to manage DNS records in the following sections.
+DNS records make the connection between human-readable names and IP addresses. We cover how to manage DNS records in the following sections. Manage DNS records by using the UI, CLI, or API.
 {: shortdesc}
 
-## Using the {{site.data.keyword.cloud_notm}} console
-{: #managing-dns-records-ui}
-{: ui}
-
-Manage DNS records from the {{site.data.keyword.cloud}} console, or the API. The following sections cover the console usage.
-
-
-### Adding DNS records
+## Adding DNS records in the UI
 {: #adding-dns-records}
+{: ui}
 
 1. From the DNS zones table, click the zone name to which you want to add record(s). More details about the selected zone appear.
 2. Click **Add Record** to display a panel where you can create a record.
@@ -38,8 +32,9 @@ When you enter a name in the Name field, a domain name is automatically appended
 The minimum supported TTL value is `1 min` and the maximum is `12 hours`. The default value of TTL is `15 min`, but users can change it.
 {: note}
 
-#### A type record
+### Add an A type record in the UI
 {: #a-record}
+{: ui}
 
 To add this record type, valid values must exist in the **Name** and **IPv4 Address** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -48,8 +43,9 @@ Required fields
 * IPv4 Address
 * TTL (Default value is 15 min)
 
-#### AAAA type record
+### Add an AAAA type record in the UI
 {: #aaaa-record}
+{: ui}
 
 To add this record type, valid values must exist in the **Name** and **IPv6 Address** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -58,8 +54,9 @@ Required fields
 * IPv6 Address
 * TTL (Default value is 15 min)
 
-#### CNAME type record
+### Add an CNAME type record in the UI
 {: #cname-record}
+{: ui}
 
 To add this record type, a valid value must exist in the **Name** field and a fully qualified domain name must be in the **Target** (FQDN) field. A **TTL** can also be specified from the list menu, with the default value of `15 min`.
 
@@ -68,8 +65,9 @@ Required fields
 * Target (for CNAME)
 * TTL (Default value is 15 min)
 
-#### MX Type record
+### Add an MX Type record in the UI
 {: #mx-record}
+{: ui}
 
 To add this record type, a valid value must exist in the **Name** field, a fully qualified domain name must be in the **Mail Server** (FQDN) field, and a valid number must exist in the **Priority** field. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -79,8 +77,9 @@ Required fields
 * TTL (Default value is 15 min)
 * Priority (Default value is 1)
 
-#### PTR type record
+### Add an PTR type record in the UI
 {: #ptr-record}
+{: ui}
 
 To add this record type, you must have an existing A or AAAA record that is not already associated with another PTR record. Select an existing record from the list menu. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -88,8 +87,9 @@ Required fields
 * Select existing record
 * TTL (Default value is 15 min)
 
-#### SRV type record
+### Add an SRV type record in the UI
 {: #srv-record}
+{: ui}
 
 To add this record type, valid values must exist in the **Name**, **Service Name**, and **Target** fields. Use the list menu to select a **protocol**, which defaults to the UDP protocol. Additionally, you can specify **Priority**, **Weight**, and **Port**. These three fields default to a value of `1`. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -103,8 +103,9 @@ Required fields
 * Weight (Default value is 1)
 * Port (Default value is 1)
 
-#### TXT type record
+### Add an TXT type record in the UI
 {: #txt-record}
+{: ui}
 
 To add this record type, valid values must exist in the **Name** and **Content** fields. Specify a **TTL** value from the list menu, with a default value of `15 min`.
 
@@ -116,18 +117,20 @@ Required fields
 * Content
 * TTL (Default value is 15 min)
 
-### Updating DNS records
+## Update DNS records in the UI
 {: #updating-dns-records}
+{: ui}
 
 In each record row, click the **Edit** icon to open a panel where you can update the record.
 
-### Deleting DNS records
+## Delete DNS records in the UI
 {: #deleting-dns-records}
 
 In each record row, click the **Delete** icon to open a panel where you can confirm the delete process.
 
-### Importing resource records
+## Import resource records in  the UI
 {: #ui-import-records}
+{: ui}
 
 To import resource records, take the following steps:
 
@@ -154,8 +157,9 @@ www.test.com.  900 IN  TXT "my content"
 
 After the records are imported, you can review the details of the import status, including the number of files that successfully uploaded and which records could not be uploaded. If you need to upload additional files, click **Upload more files** and repeat the import steps. Click the **X** icon in the top right of the panel to close the import panel.
 
-### Exporting resource records
+## Export resource records in the UI
 {: #ui-export-records}
+{: ui}
 
 To export resource records, take the following steps:
 
@@ -166,7 +170,271 @@ To export resource records, take the following steps:
 
 The exported file is downloaded to the default download location specified by your browser.
 
-## Using the API
+## Managing DNS reconrds from the CLI
+{: #managing-dns-records-cli}
+{: cli}
+
+First use the `ibmcloud dns instance-target` command to set the target operating DNS Services instance.
+
+```bash
+$ ibmcloud dns instances
+Retrieving service instances for service 'dns-svcs' ...
+OK
+
+Name                 ID                                     Location   State    Service Name
+DNS Services-km      ffffffff-b042-41fd-885e-000000000000   global     active   dns-svcs
+
+$ ibmcloud dns instance-target "DNS Services-km"
+```
+
+Store the zone ID in a variable so you can use it in following commands without having to type it every time. For example, to store the zone ID in a variable, run this command:
+
+```bash
+DNS_ZONE_ID="example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae"
+```
+{: pre}
+
+## Create a type `A` resource record from the CLI
+{: #create-resource-record-cli}
+{: cli}
+
+Use the `ibmcloud dns resource-record-create` command with `--type A` option to create a type `A` resource record. `--name`, and `--ipv4` are the mandatory options.
+
+```bash
+$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type A --name www --ipv4 192.168.1.100
+Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID            A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
+Name          www.example.com
+Type          A
+Created On    2020-04-10 09:12:07.858707275 +0000 UTC
+Modified On   2020-04-10 09:12:07.858707275 +0000 UTC
+TTL           900
+Data
+    ip        192.168.1.100
+```
+{: pre}
+
+## Create a type 'SRV' resource record from the CLI
+{: #create-srv-resource-record-cli}
+{: cli}
+
+Use the `ibmcloud dns resource-record-create` command with `--type SRV` option to create a type `SRV` resource record. `--name`, `--service`, `--protocol`, and `--target` are the mandatory options.
+
+```bash
+$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type SRV --name video --service _sip --protocol tcp --priority 10 --weight 10 --port 953 --target media.example.com
+Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID             SRV:c7c8938b-87c7-4aee-95fa-63f28452c8d4
+Name           _sip._tcp.video.example.com
+Type           SRV
+Created On     2020-04-10 09:15:56.940189115 +0000 UTC
+Modified On    2020-04-10 09:15:56.940189115 +0000 UTC
+TTL            900
+Data
+    port       953
+    priority   10
+    target     media.example.com
+    weight     10
+```
+{: pre}
+
+## Create a type 'TXT' resource record from the CLI
+{: #create-txt-resource-record-cli}
+{: cli}
+
+Use the `ibmcloud dns resource-record-create` command with `--type TXT` option to create a type `TXT` resource record. `--name` and `--text` are mandatory options.
+
+```bash
+$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type TXT --name text --text "This is a text record."
+Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID            TXT:92648285-c7e5-49ef-bf8b-a5be91d5c5d3
+Name          text.example.com
+Type          TXT
+Created On    2020-04-10 09:16:50.169135062 +0000 UTC
+Modified On   2020-04-10 09:16:50.169135062 +0000 UTC
+TTL           900
+Data
+    text      This is a text record.
+```
+{: pre}
+
+## Create a type 'MX' resource record from the CLI
+{: #create-amx-resource-record-cli}
+{: cli}
+
+Use `ibmcloud dns resource-record-create` command with `--type MX` option to create a type `MX` resource record. `--name` and `--exchange` are the mandatory options.
+
+```bash
+$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type MX --name mail --preference 10 --exchange exchange.example.com
+Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID               MX:900750bf-881d-402f-a482-20447f2e64a2
+Name             mail.example.com
+Type             MX
+Created On       2020-04-10 09:18:08.299278244 +0000 UTC
+Modified On      2020-04-10 09:18:08.299278244 +0000 UTC
+TTL              900
+Data
+    preference   10
+    exchange     exchange.example.com
+```
+{: pre}
+
+## Create a type 'PTR' resource record from the CLI
+{: #create-ptr-resource-record-cli}
+{: cli}
+
+Use `ibmcloud dns resource-record-create` command with `--type PTR` option to create a type `PTR` resource record. `--name` and `--ptrdname` are the mandatory options.
+
+```bash
+$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type PTR --name 192.168.1.100 --ptrdname www.example.com
+Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID             PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
+Name           192.168.1.100
+Type           PTR
+Created On     2020-04-10 09:34:49.722454606 +0000 UTC
+Modified On    2020-04-10 09:34:49.722454606 +0000 UTC
+TTL            900
+Data
+    ptrdname   www.example.com
+```
+{: pre}
+
+
+## Create a type 'CNAME' resource record from the CLI
+{: #create-cname-resource-record-cli}
+{: cli}
+
+Use `ibmcloud dns resource-record-create` command with `--type CNAME` option to create a type `CNAME` resource record. `--name` and `--cname` are mandatory options.
+
+```bash
+$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type CNAME --name web --cname www.example.com
+Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID            CNAME:6e80f079-effd-409a-a520-b8c1b10f6e6e
+Name          web.example.com
+Type          CNAME
+Created On    2020-04-10 09:36:13.186040793 +0000 UTC
+Modified On   2020-04-10 09:36:13.186040793 +0000 UTC
+TTL           900
+Data
+    cname     www.example.com
+```
+{: pre}
+
+## Create a type 'AAAA' resource record from the CLI
+{: #create-aaaa-resource-record-cli}
+{: cli}
+
+Use `ibmcloud dns resource-record-create` command with `--type AAAA` option to create a type `AAAA` resource record. `--name` and `--ipv6` are mandatory options.
+
+```bash
+$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type AAAA --name www --ipv6 2019::2020
+Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID            AAAA:37e1e701-e549-4ca1-8c22-86574bf4aaed
+Name          www.example.com
+Type          AAAA
+Created On    2020-04-10 09:37:15.063814601 +0000 UTC
+Modified On   2020-04-10 09:37:15.063814601 +0000 UTC
+TTL           900
+Data
+    ip        2019::2020
+```
+{: pre}
+
+## Get a resource record from the CLI
+{: #get-resource-record-cli}
+{: cli}
+
+Use `ibmcloud dns resource-record` command followed by the zone ID and resource record ID to get details of a resource record.
+
+```bash
+$ ibmcloud dns resource-record $DNS_ZONE_ID A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
+Getting resource record 'A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID            A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
+Name          www.example.com
+Type          A
+Created On    2020-04-10 09:12:07.858707275 +0000 UTC
+Modified On   2020-04-10 09:34:49.986883927 +0000 UTC
+TTL           900
+Data
+    ip        192.168.1.100
+```
+{: pre}
+
+## List resource records from the CLI
+{: #list-resource-records-cli}
+{: cli}
+
+Use `ibmcloud dns resource-records` command followed by the zone ID to list all resource records.
+
+```bash
+$ ibmcloud dns resource-records $DNS_ZONE_ID
+Listing resource records in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+ID                                           Name                          Type    TTL
+AAAA:37e1e701-e549-4ca1-8c22-86574bf4aaed    www.example.com               AAAA    900
+CNAME:6e80f079-effd-409a-a520-b8c1b10f6e6e   web.example.com               CNAME   900
+MX:900750bf-881d-402f-a482-20447f2e64a2      mail.example.com              MX      900
+TXT:92648285-c7e5-49ef-bf8b-a5be91d5c5d3     text.example.com              TXT     900
+SRV:c7c8938b-87c7-4aee-95fa-63f28452c8d4     _sip._tcp.video.example.com   SRV     900
+A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6       www.example.com               A       900
+PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6     192.168.1.100                 PTR     900
+```
+{: pre}
+
+
+## Update a resource record from the CLI
+{: #update-resource-record-cli}
+{: cli}
+
+Use `ibmcloud dns resource-record-update` command followed by the zone ID and resource record ID to update a resource record.
+
+```bash
+$ ibmcloud dns resource-record-update $DNS_ZONE_ID A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6 --name www --ipv4 10.10.1.1
+Updating resource record 'A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+
+ID            A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
+Name          www.example.com
+Type          A
+Created On    2020-04-10 09:12:07.858707275 +0000 UTC
+Modified On   2020-04-10 09:40:55.204076727 +0000 UTC
+TTL           900
+Data
+    ip        10.10.1.1
+```
+{: pre}
+
+
+## Delete a resource record from the CLI
+{: #delete-resource-record-cli}
+{: cli}
+
+Use `ibmcloud dns resource-record-delete` command followed by the zone ID and resource record ID to delete a resource record.
+
+```bash
+$ ibmcloud dns resource-record-delete $DNS_ZONE_ID PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
+Really delete resource record 'PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km'? [y/N]> y
+Deleting resource record 'PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
+OK
+```
+{: pre}
+
+## Manage DNS Records with the API
 {: #managing-dns-records-api}
 {: api}
 
@@ -179,11 +447,13 @@ DNSSVCS_ENDPOINT=https://api.dns-svcs.cloud.ibm.com
 
 To verify that this variable was saved, run `echo $DNSSVCS_ENDPOINT` and ensure that the response is not empty.
 
-### Creating type `A` resource record
+## Create a type `A` resource record with the API
 {: #create-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #create-a-request}
+{: api}
 
 ```bash
 curl -X POST \
@@ -200,7 +470,7 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #create-a-response}
 
 ```json
@@ -219,11 +489,13 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Creating type 'SRV' resource record
+## Create a type 'SRV' resource record with the API
 {: #create-srv-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #create-srv-request}
+{: api}
 
 ```bash
 curl -X POST \
@@ -244,8 +516,9 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #create-srv-response}
+{: api}
 
 ```json
 {
@@ -267,10 +540,11 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Creating type 'TXT' resource record
+## Create a type 'TXT' resource record with the API
 {: #create-txt-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #create-txt-request}
 
 ```bash
@@ -287,8 +561,9 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #create-txt-response}
+{: api}
 
 ```json
 {
@@ -305,11 +580,13 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Creating type 'MX' resource record
+### Create a type 'MX' resource record with the API
 {: #create-amx-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #create-mx-request}
+{: api}
 
 ```bash
 curl -X POST \
@@ -326,8 +603,9 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #create-mx-response}
+{: api}
 
 ```json
 {
@@ -345,10 +623,11 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Creating type 'PTR' resource record
+## Create a type 'PTR' resource record with the API
 {: #create-ptr-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #create-ptr-request}
 
 ```bash
@@ -365,7 +644,7 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #create-ptr-response}
 
 ```json
@@ -383,10 +662,11 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Creating type 'CNAME' resource record
+## Create a type 'CNAME' resource record with the API
 {: #create-cname-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #create-cname-request}
 
 ```bash
@@ -403,8 +683,9 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #create-cname-response}
+{: api}
 
 ```json
 {
@@ -422,11 +703,13 @@ curl -X POST \
 {: codeblock}
 
 
-### Creating type 'AAAA' resource record
+## Creating a type 'AAAA' resource record with the API
 {: #create-aaaa-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #create-aaaa-request}
+{: api}
 
 ```bash
 curl -X POST \
@@ -442,8 +725,9 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #create-aaaa-response}
+{: api}
 
 ```json
 {
@@ -460,11 +744,13 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Getting a resource record
+## Get a resource record with the API
 {: #get-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #get-rec-request}
+{: api}
 
 ```bash
 curl -X GET \
@@ -473,8 +759,9 @@ curl -X GET \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #get-rec-response}
+{: api}
 
 ```json
 {
@@ -491,11 +778,13 @@ curl -X GET \
 ```
 {: codeblock}
 
-### Listing resource records
+## List resource records with the API
 {: #list-resource-records-api}
+{: api}
 
-#### Request
+### Request
 {: #list-rec-request}
+{: api}
 
 ```bash
 curl -X GET \
@@ -504,8 +793,9 @@ curl -X GET \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #list-rec-response}
+{: api}
 
 ```json
 {
@@ -532,11 +822,13 @@ curl -X GET \
 ```
 {: codeblock}
 
-### Updating a resource record
+## Update a resource record with the API
 {: #update-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #update-rec-request}
+{: api}
 
 ```bash
 curl -X PUT \
@@ -552,8 +844,9 @@ curl -X PUT \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #update-rec-response}
+{: api}
 
 ```json
 {
@@ -570,11 +863,13 @@ curl -X PUT \
 ```
 {: codeblock}
 
-### Deleting a resource record
+## Delete a resource record with the API
 {: #delete-resource-record-api}
+{: api}
 
-#### Request
+### Request
 {: #delete-rec-request}
+{: api}
 
 ```bash
 curl -X DELETE \
@@ -583,19 +878,22 @@ curl -X DELETE \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #delete-rec-response}
+{: api}
 
 ```json
 HTTP 204 is returned, no content in response.
 ```
 {: codeblock}
 
-### Importing bulk resource records from a DNS zone file
+## Import bulk resource records from a DNS zone file with the API
 {: #import-resource-records-api}
+{: api}
 
-#### Request
+### Request
 {: #import-bulk-request}
+{: api}
 
 ```bash
 curl -X POST \
@@ -604,8 +902,9 @@ curl -X POST \
 ```
 {: pre}
 
-#### Response
+### Response
 {: #import-bulk-response}
+{: api}
 
 ```json
 {
@@ -636,11 +935,13 @@ curl -X POST \
 ```
 {: codeblock}
 
-### Exporting bulk resource records to a DNS zone file
+## Export bulk resource records to a DNS zone file with the API
 {: #export-resource-records-api}
+{: api}
 
-#### Request
+### Request
 {: #export-bulk-request}
+{: api}
 
 ```bash
 curl -X GET \
@@ -651,264 +952,9 @@ curl -X GET \
 
 #### Response
 {: #export-bulk-response}
+{: api}
 
 ```json
 HTTP 200 is returned with zone file content in byte format
 ```
 {: codeblock}
-
-## Using the CLI
-{: #managing-dns-records-cli}
-{: cli}
-
-First use the `ibmcloud dns instance-target` command to set the target operating DNS Services instance.
-
-```bash
-$ ibmcloud dns instances
-Retrieving service instances for service 'dns-svcs' ...
-OK
-
-Name                 ID                                     Location   State    Service Name
-DNS Services-km      ffffffff-b042-41fd-885e-000000000000   global     active   dns-svcs
-
-$ ibmcloud dns instance-target "DNS Services-km"
-```
-
-Store the zone ID in a variable so you can use it in following commands without having to type it every time. For example, to store the zone ID in a variable, run this command:
-
-```bash
-DNS_ZONE_ID="example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae"
-```
-{: pre}
-
-### Creating type `A` resource record
-{: #create-resource-record-cli}
-
-Use the `ibmcloud dns resource-record-create` command with `--type A` option to create a type `A` resource record. `--name`, and `--ipv4` are the mandatory options.
-
-```bash
-$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type A --name www --ipv4 192.168.1.100
-Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID            A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
-Name          www.example.com
-Type          A
-Created On    2020-04-10 09:12:07.858707275 +0000 UTC
-Modified On   2020-04-10 09:12:07.858707275 +0000 UTC
-TTL           900
-Data
-    ip        192.168.1.100
-```
-{: pre}
-
-### Creating type 'SRV' resource record
-{: #create-srv-resource-record-cli}
-
-Use the `ibmcloud dns resource-record-create` command with `--type SRV` option to create a type `SRV` resource record. `--name`, `--service`, `--protocol`, and `--target` are the mandatory options.
-
-```bash
-$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type SRV --name video --service _sip --protocol tcp --priority 10 --weight 10 --port 953 --target media.example.com
-Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID             SRV:c7c8938b-87c7-4aee-95fa-63f28452c8d4
-Name           _sip._tcp.video.example.com
-Type           SRV
-Created On     2020-04-10 09:15:56.940189115 +0000 UTC
-Modified On    2020-04-10 09:15:56.940189115 +0000 UTC
-TTL            900
-Data
-    port       953
-    priority   10
-    target     media.example.com
-    weight     10
-```
-{: pre}
-
-### Creating type 'TXT' resource record
-{: #create-txt-resource-record-cli}
-
-Use the `ibmcloud dns resource-record-create` command with `--type TXT` option to create a type `TXT` resource record. `--name` and `--text` are mandatory options.
-
-```bash
-$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type TXT --name text --text "This is a text record."
-Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID            TXT:92648285-c7e5-49ef-bf8b-a5be91d5c5d3
-Name          text.example.com
-Type          TXT
-Created On    2020-04-10 09:16:50.169135062 +0000 UTC
-Modified On   2020-04-10 09:16:50.169135062 +0000 UTC
-TTL           900
-Data
-    text      This is a text record.
-```
-{: pre}
-
-### Creating type 'MX' resource record
-{: #create-amx-resource-record-cli}
-
-Use `ibmcloud dns resource-record-create` command with `--type MX` option to create a type `MX` resource record. `--name` and `--exchange` are the mandatory options.
-
-```bash
-$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type MX --name mail --preference 10 --exchange exchange.example.com
-Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID               MX:900750bf-881d-402f-a482-20447f2e64a2
-Name             mail.example.com
-Type             MX
-Created On       2020-04-10 09:18:08.299278244 +0000 UTC
-Modified On      2020-04-10 09:18:08.299278244 +0000 UTC
-TTL              900
-Data
-    preference   10
-    exchange     exchange.example.com
-```
-{: pre}
-
-
-### Creating type 'PTR' resource record
-{: #create-ptr-resource-record-cli}
-
-Use `ibmcloud dns resource-record-create` command with `--type PTR` option to create a type `PTR` resource record. `--name` and `--ptrdname` are the mandatory options.
-
-```bash
-$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type PTR --name 192.168.1.100 --ptrdname www.example.com
-Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID             PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
-Name           192.168.1.100
-Type           PTR
-Created On     2020-04-10 09:34:49.722454606 +0000 UTC
-Modified On    2020-04-10 09:34:49.722454606 +0000 UTC
-TTL            900
-Data
-    ptrdname   www.example.com
-```
-{: pre}
-
-
-### Creating type 'CNAME' resource record
-{: #create-cname-resource-record-cli}
-
-Use `ibmcloud dns resource-record-create` command with `--type CNAME` option to create a type `CNAME` resource record. `--name` and `--cname` are mandatory options.
-
-```bash
-$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type CNAME --name web --cname www.example.com
-Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID            CNAME:6e80f079-effd-409a-a520-b8c1b10f6e6e
-Name          web.example.com
-Type          CNAME
-Created On    2020-04-10 09:36:13.186040793 +0000 UTC
-Modified On   2020-04-10 09:36:13.186040793 +0000 UTC
-TTL           900
-Data
-    cname     www.example.com
-```
-{: pre}
-
-
-### Creating type 'AAAA' resource record
-{: #create-aaaa-resource-record-cli}
-
-Use `ibmcloud dns resource-record-create` command with `--type AAAA` option to create a type `AAAA` resource record. `--name` and `--ipv6` are mandatory options.
-
-```bash
-$ ibmcloud dns resource-record-create $DNS_ZONE_ID --type AAAA --name www --ipv6 2019::2020
-Creating resource record in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID            AAAA:37e1e701-e549-4ca1-8c22-86574bf4aaed
-Name          www.example.com
-Type          AAAA
-Created On    2020-04-10 09:37:15.063814601 +0000 UTC
-Modified On   2020-04-10 09:37:15.063814601 +0000 UTC
-TTL           900
-Data
-    ip        2019::2020
-```
-{: pre}
-
-### Getting a resource record
-{: #get-resource-record-cli}
-
-Use `ibmcloud dns resource-record` command followed by the zone ID and resource record ID to get details of a resource record.
-
-```bash
-$ ibmcloud dns resource-record $DNS_ZONE_ID A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
-Getting resource record 'A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID            A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
-Name          www.example.com
-Type          A
-Created On    2020-04-10 09:12:07.858707275 +0000 UTC
-Modified On   2020-04-10 09:34:49.986883927 +0000 UTC
-TTL           900
-Data
-    ip        192.168.1.100
-```
-{: pre}
-
-
-### Listing resource records
-{: #list-resource-records-cli}
-
-Use `ibmcloud dns resource-records` command followed by the zone ID to list all resource records.
-
-```bash
-$ ibmcloud dns resource-records $DNS_ZONE_ID
-Listing resource records in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-ID                                           Name                          Type    TTL
-AAAA:37e1e701-e549-4ca1-8c22-86574bf4aaed    www.example.com               AAAA    900
-CNAME:6e80f079-effd-409a-a520-b8c1b10f6e6e   web.example.com               CNAME   900
-MX:900750bf-881d-402f-a482-20447f2e64a2      mail.example.com              MX      900
-TXT:92648285-c7e5-49ef-bf8b-a5be91d5c5d3     text.example.com              TXT     900
-SRV:c7c8938b-87c7-4aee-95fa-63f28452c8d4     _sip._tcp.video.example.com   SRV     900
-A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6       www.example.com               A       900
-PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6     192.168.1.100                 PTR     900
-```
-{: pre}
-
-
-### Updating a resource record
-{: #update-resource-record-cli}
-
-Use `ibmcloud dns resource-record-update` command followed by the zone ID and resource record ID to update a resource record.
-
-```bash
-$ ibmcloud dns resource-record-update $DNS_ZONE_ID A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6 --name www --ipv4 10.10.1.1
-Updating resource record 'A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-
-ID            A:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
-Name          www.example.com
-Type          A
-Created On    2020-04-10 09:12:07.858707275 +0000 UTC
-Modified On   2020-04-10 09:40:55.204076727 +0000 UTC
-TTL           900
-Data
-    ip        10.10.1.1
-```
-{: pre}
-
-
-### Deleting a resource record
-{: #delete-resource-record-cli}
-
-Use `ibmcloud dns resource-record-delete` command followed by the zone ID and resource record ID to delete a resource record.
-
-```bash
-$ ibmcloud dns resource-record-delete $DNS_ZONE_ID PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6
-Really delete resource record 'PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km'? [y/N]> y
-Deleting resource record 'PTR:f20cfe91-b936-4bad-a8d1-f7afa4ac32a6' in zone 'example.com:f7f40364-a5e6-48f7-9fc9-387434c579ae' for service instance 'DNS Services-km' ...
-OK
-```
-{: pre}
