@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,18 +18,18 @@ subcollection: dns-svcs
 Use forwarding rules to configure where to forward DNS queries for resolution.
 {: shortdesc}
 
-Forwarding rules are configurations that you can set up to direct DNS queries to specific DNS resolvers. There are 3 parameters that need to be provided in order to setup a forwarding rule:
+Forwarding rules are configurations that you can set up to direct DNS queries to specific DNS resolvers. Two required parameters and one optional parameter need to be provided to setup a forwarding rule:
 
 * **Rule Type**: Currently only DNS Zone is supported.
 * **Match**: The DNS Zone for which you want the DNS query forwarded.
-* **Forwarding IP addresses**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the custom resolver goes through the list using a sequential policy that selects hosts based on sequential ordering, until a resolver responds.
+* **Forwarding IP addresses (optional)**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the custom resolver goes through the list by using a sequential policy that selects hosts based on sequential ordering until a resolver responds.
 
-    VPC network behavior and your VPC network configurations can also affect traffic to and from custom resolvers located on your VPC. For example, if you want to create a forwarding rule to a DNS resolver on the external internet for DNS queries matching a certain DNS zone, you must create a public gateway to allow external connectivity for your custom resolvers. See [About networking for VPC](/docs/vpc?topic=vpc-about-networking-for-vpc) for more information on VPC networking.
+    VPC network behavior and your VPC network configurations can also affect traffic to and from custom resolvers that are located on your VPC. For example, if you want to create a forwarding rule to a DNS resolver on the external internet for DNS queries matching a certain DNS zone, you must create a public gateway to allow external connectivity for your custom resolvers. See [About networking for VPC](/docs/vpc?topic=vpc-about-networking-for-vpc) for more information on VPC networking.
     {: tip}
 
 After a rule is configured and the custom resolver is enabled, DNS query requests go to the custom resolver first.
 
-Then, the custom resolver checks if the query is for any rules that have been configured by comparing against the Match value. If there is a rule for the DNS query, the custom resolver forwards the DNS query to the specified DNS resolver in the configured rule. If there is _not_ a rule that matches the DNS query, the custom resolver forwards the DNS query to the specified DNS resolver in the default forwarding rule.
+Then, the custom resolver checks if the query is for any rules that have been configured by comparing against the Match value. If a rule exists for the DNS query, the custom resolver forwards the DNS query to the specified DNS resolver in the configured rule. If _no_ rules exist that matches the DNS query, the custom resolver forwards the DNS query to the specified DNS resolver in the default forwarding rule.
 
 Custom resolvers support two types of forwarding rules:
 
@@ -39,7 +39,7 @@ Custom resolvers support two types of forwarding rules:
     Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
     {: important}
 
-## Adding custom resolver forwarding rules using the UI
+## Adding custom resolver forwarding rules by using the UI
 {: #ui-add-fwd-rules}
 {: ui}
 
@@ -52,11 +52,11 @@ To add a forwarding rule:
 1. Optionally, enter a description of the rule.
 1. Click **Create**.
 
-## Adding custom resolver forwarding rules using the CLI
+## Adding custom resolver forwarding rules by using the CLI
 {: #cli-add-fwd-rules}
 {: cli}
 
-To create a custom resolver forwarding rule using the CLI, run the following command:
+To create a custom resolver forwarding rule by using the CLI, run the following command:
 
 `ibmcloud dns custom-resolver-forwarding-rule-create RESOLVER_ID --type TYPE --match HOSTNAME --dns-svcs IPs [--description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
 

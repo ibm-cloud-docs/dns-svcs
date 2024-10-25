@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Working with custom resolvers
 {: #custom-resolver}
 
-A private DNS custom resolver extends {{site.data.keyword.dns_full}}'s capability to meet the needs of a hybrid cloud environment by enabling resolution of the {{site.data.keyword.cloud_notm}} VPC hostnames from on-premises DNS resolvers, and also enables the  resolution of on-premises hostnames from the {{site.data.keyword.cloud_notm}}.
+A private DNS custom resolver extends {{site.data.keyword.dns_full}}'s capability to meet the needs of a hybrid cloud environment by enabling resolution of the {{site.data.keyword.cloud_notm}} VPC hostnames from on-premises DNS resolvers and enables the resolution of on-premises hostnames from the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 Key features of the custom resolver:
@@ -28,7 +28,7 @@ Key features of the custom resolver:
 
 To get started using a custom resolver, you must create a custom resolver and then add forwarding rules to it.
 
-It is expected that the custom resolver will be configured for High Availability by default. Follow the steps in [Creating a custom resolver without high availability](/docs/dns-svcs?topic=dns-svcs-ui-create-cr&interface=ui#cr-add-no-ha) if you do not want a highly available configuration.
+It is expected that the custom resolver is configured for High Availability by default. Follow the steps in [Creating a custom resolver without high availability](/docs/dns-svcs?topic=dns-svcs-ui-create-cr&interface=ui#cr-add-no-ha) if you do not want a highly available configuration.
 {: important}
 
 After you create the custom resolver and configure its forwarding rules, the resolver can be enabled for the VPC. This results in the DHCP option for the resolver changing to the custom resolver IP addresses.
@@ -77,7 +77,7 @@ Custom resolver: `R`:
 * location-2 in us-south-1 has address: `A2`
 * location-3 in us-south-3 has address: `A3`
 
-The proximity rule is applied first to determine primary DNS servers for `us-south-1` and `us-south-3` because these two availability zones have locations. Next, the load balancing optimization rule is used to selected the `location-2` as the primary server for `us-south-2`. Consequently, the resultant DNS servers for compute instances in each availability zone will be:
+The proximity rule is applied first to determine primary DNS servers for `us-south-1` and `us-south-3` because these two availability zones have locations. Next, the load balancing optimization rule is used to select the `location-2` as the primary server for `us-south-2`. Consequently, the resultant DNS servers for compute instances in each availability zone will be:
 * us-south-1: `A1` (primary), `A2`, `A3`.
 * us-south-3: `A3` (primary), `A1`, `A2`.
 * us-south-2: `A2` (primary), `A1`, `A3`.
@@ -92,7 +92,7 @@ Custom resolver: `R`:
 * location-2 in us-south-1 has address: `A2`
 * location-3 in us-south-1 has address: `A3`
 
-The proximity rule selects location-1 as the primary DNS sever for `us-south-1`. Then, the load balancing optimization rule assigns a primary DNS server for `us-south-2` and `us-south-3` to location-2 and location-3, respectively. The resultant DNS servers for compute instances in each availability zone will be:
+The proximity rule selects location-1 as the primary DNS server for `us-south-1`. Then, the load balancing optimization rule assigns a primary DNS server for `us-south-2` and `us-south-3` to location-2 and location-3, respectively. The resultant DNS servers for compute instances in each availability zone are:
 * us-south-1: `A1` (primary), `A2`, `A3`.
 * us-south-2: `A2` (primary), `A1`, `A3`.
 * us-south-3: `A3` (primary), `A1`, `A2`.
@@ -114,7 +114,7 @@ In this case, at least one location is used as the primary DNS server for two av
 ## Custom resolver status
 {: #cr-statuses}
 
-The status of a newly-created custom resolver is initially `Critical` because the resolver location is not yet enabled. The status changes to `Healthy` after the resolver location changes to `Up`.
+The status of a newly-created custom resolver is initially `Critical` because the resolver location is not fully provisioned. The status changes to `Healthy` after the resolver location changes to `Up`.
 {: note}
 
 The following status definitions apply to the resolver locations:
