@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You view details of a single custom resolver forwarding rule and view a list of all custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Viewing custom resolver forwarding rules using the UI
+## Viewing custom resolver forwarding rules in the UI
 {: #ui-cr-fwd-rules-view}
 {: ui}
 
@@ -26,7 +26,7 @@ View the details of a custom resolver forwarding rule by navigating to the **For
 
 The Forwarding rules section lists all custom resolver rules associate with the custom resolver.
 
-## Viewing custom resolver forwarding rules using the CLI
+## Viewing custom resolver forwarding rules from the CLI
 {: #cli-cr-fwd-rules-view}
 {: cli}
 
@@ -55,7 +55,7 @@ Where:
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
 
-## Viewing custom resolver forwarding rules using the API
+## Viewing custom resolver forwarding rules with the API
 {: #api-cr-fwd-rules-view}
 {: api}
 

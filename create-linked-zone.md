@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Creating a linked zone
 {: #create-linked-zone}
 
-Create a linked zone from your DNS Services instance to a DNS zone in another account.
+Create a linked zone from your DNS Services instance to a DNS zone in another account by using the UI, CLI, or API.
 {: shortdesc}
 
 The following table shows the possible states your linked zone might be in as the access request progresses.
@@ -30,7 +30,7 @@ The following table shows the possible states your linked zone might be in as th
 |Approval revoked|Account owner has revoked the cross-account access|
 {: caption="Requestor states" caption-side="bottom"}
 
-## Creating a linked zone using the UI
+## Creating a linked zone in the UI
 {: #ui-create-linked-zone}
 {: ui}
 
@@ -54,7 +54,7 @@ If the request times out, you must create a new request to establish a linked zo
 
 After the request is approved, the status changes to "Pending network add". For more information, see [Adding a permitted network to a linked zone](/docs/dns-svcs?topic=dns-svcs-add-permit-network-linked).
 
-## Creating a linked zone using the CLI
+## Creating a linked zone from the CLI
 {: #cli-create-linked-zone}
 {: cli}
 
@@ -74,7 +74,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Creating a linked zone using the API
+## Creating a linked zone with the API
 {: #api-create-linked-zone}
 {: api}
 

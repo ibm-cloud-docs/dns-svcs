@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You can update custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Updating a custom resolver using the UI
+## Updating a custom resolver in the UI
 {: #ui-update-cr}
 {: ui}
 
@@ -28,7 +28,7 @@ To edit the name and description of the custom resolver, click **Edit** next to 
 
 Toggle the **Enablement** switch to enable or disable the custom resolver.
 
-## Update a custom resolver using the CLI
+## Update a custom resolver from the CLI
 {: #cli-update-cr}
 {: cli}
 
@@ -45,7 +45,7 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
-## Update a custom resolver using the API
+## Update a custom resolver with the API
 {: #api-update-cr}
 {: api}
 

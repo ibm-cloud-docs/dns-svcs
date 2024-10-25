@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-24"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Remove a permitted network from your linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Removing a permitted network using the UI
+## Removing a permitted network in the UI
 {: #ui-remove-permit-network}
 {: ui}
 
@@ -28,7 +28,7 @@ To remove a permitted network using the UI, take the following steps:
 1. Click the link in the **Zone name** column of the linked zone you want to view the **Linked zone details** page.
 1. In the **Permitted networks** tab, click the overflow menu ![Overflow menu icon](images/overflow-icon.png "Overflow menu icon") of the permitted network you want to delete, and select **Delete**.
 
-## Removing a permitted network using the CLI
+## Removing a permitted network from the CLI
 {: #cli-remove-permit-network}
 {: cli}
 
@@ -46,7 +46,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Removing a permitted network using the API
+## Removing a permitted network with the API
 {: #api-remove-permit-network}
 {: api}
 
@@ -66,5 +66,3 @@ To remove a permitted network from your linked zone using the API, follow these 
         -H "Authorization: $IAM_TOKEN"
     ```
     {: codeblock}
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-25"
 
 keywords: vpe for dns services, virtual private endpoints for dns services, using vpe for vpc with dns services, isolation for dns services, private network for dns services, network isolation in dns services, non-public routes for dns services, private connection for dns services, private connectivity for dns services
 
@@ -59,7 +59,7 @@ Now your virtual server instances in the VPC can access your {{site.data.keyword
 
 After you create an endpoint gateway for {{site.data.keyword.dns_short}}, follow these steps:
 
-### Using the VPE with the CLI
+### Using the VPE from the CLI
 {: #vpe-cli}
 {: cli}
 
@@ -94,6 +94,7 @@ curl https://api.private.dns-svcs.cloud.ibm.com/v1/dns-svcs?version='2020-03-31'
 
 ### Using the VPE with the SDK
 {: #vpe-sdk}
+{: api}
 
 After creating an endpoint gateway for {{site.data.keyword.dns_short}}, you must use the private endpoint's FQDN when setting the service's FQDN during construction of the {{site.data.keyword.dns_short}} gateway service object.
 

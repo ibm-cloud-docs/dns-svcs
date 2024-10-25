@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-27"
+  years: 2020, 2024
+lastupdated: "2024-10-25"
 
 keywords: instance ID, instance GUID, get instance ID, get instance GUID, instance ID API, instance ID CLI
 
@@ -15,11 +15,14 @@ subcollection: dns-svcs
 # Retrieving your instance ID
 {: #retrieve-instance-ID}
 
-You can target an individual {{site.data.keyword.dns_full}} service instance for operations by including its unique identifier, or instance ID, in API requests to the service.
+Retrieve your instance ID by using the UI, CLI, or API.
 {: shortdesc}
 
-## Using the {{site.data.keyword.cloud_notm}} console
+You can target an individual {{site.data.keyword.dns_full}} service instance for operations by including its unique identifier, or instance ID, in API requests to the service.
+
+## Retrieving your instance ID in the UI
 {: #view-instance-ID}
+{: ui}
 
 You can view the instance ID that is associated with your {{site.data.keyword.dns_short}} service instance by navigating to your {{site.data.keyword.cloud_notm}} resource list.
 
@@ -29,8 +32,9 @@ You can view the instance ID that is associated with your {{site.data.keyword.dn
 4. From the service details view, copy the **GUID** value.
     This **GUID** value represents the instance ID that uniquely identifies your {{site.data.keyword.dns_short}} service instance.
 
-## Using the CLI
+## Retrieving your instance ID from the CLI
 {: #retrieve-cli}
+{: cli}
 
 You can also retrieve the instance ID for your service instance by using the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
@@ -62,8 +66,9 @@ You can also retrieve the instance ID for your service instance by using the [{{
 
     The _42454b3b-5b06-407b-a4b3-34d9ef323901_ value is an example instance ID.
 
-## Using the API
+## Retrieving your instance ID with the API
 {: #retrieve-api}
+{: api}
 
 You might want to retrieve the instance ID programmatically to help you build and connect your application. You can call the [{{site.data.keyword.cloud_notm}} Resource Controller API](/apidocs/resource-controller){: external}, and then pipe the JSON output to `jq` to extract this value.
 

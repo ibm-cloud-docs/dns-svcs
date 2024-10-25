@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-07-20"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,7 +15,10 @@ subcollection: dns-svcs
 # Creating a secondary zone
 {: #create-secondary-zone}
 
-## Creating a secondary zone using the UI
+Create a secondary zone by using the UI, CLI, or API.
+{: shortdesc}
+
+## Creating a secondary zone in the UI
 {: #ui-create-secondary-zone}
 {: ui}
 
@@ -31,7 +34,7 @@ To create a secondary zone using the UI, take the following steps:
 
 The new secondary zone now appears in the list of secondary zones in the **Custom resolver details** page, and is enabled by default.
 
-## Creating a secondary zone using the CLI
+## Creating a secondary zone from the CLI
 {: #cli-create-secondary-zone}
 {: cli}
 
@@ -52,7 +55,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, JSON is the only supported format.
 
-## Creating a secondary zone using the API
+## Creating a secondary zone with the API
 {: #api-create-secondary-zone}
 {: api}
 

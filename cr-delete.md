@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-17"
+  years: 2021, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You can delete a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Deleting a custom resolver using the UI
+## Deleting a custom resolver in the UI
 {: #ui-cr-delete}
 {: ui}
 
@@ -34,7 +34,7 @@ To delete a custom resolver from the custom resolver details view:
 1. Click **Delete resolver**.
 1. Click **Delete** in the confirmation dialog that appears.
 
-## Deleting a custom resolver using the CLI
+## Deleting a custom resolver from the CLI
 {: #cli-delete-cr}
 {: cli}
 
@@ -49,7 +49,7 @@ Where:
 - **--output** specifies output format. Currently, JSON is the only supported format.
 - **-f, --force** deletes the custom resolver without prompting for confirmation.
 
-## Deleting a custom resolver using the API
+## Deleting a custom resolver with the API
 {: #api-delete-cr}
 {: api}
 

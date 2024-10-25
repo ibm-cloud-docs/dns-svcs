@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-24"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,13 +18,13 @@ subcollection: dns-svcs
 List all linked zones and get the details of a linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Listing a linked zone using the UI
+## Listing a linked zone in the UI
 {: #ui-list-linked-zone}
 {: ui}
 
 To list all linked zones using the UI, navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance, then select the **Linked zones** tab.
 
-## Getting the details of a linked zone using the UI
+## Getting the details of a linked zone in the UI
 {: #ui-get-details}
 {: ui}
 
@@ -35,7 +35,7 @@ To get the details of a linked zone using the UI, take the following steps:
 
 The **Linked zone details** page appears, where you can edit the linked zone details, [delete the linked zone](/docs/dns-svcs?topic=dns-svcs-update-linked-zone), and manage permitted networks. For more information, see [Add a permitted network](/docs/dns-svcs?topic=dns-svcs-add-permit-network-linked).
 
-## Listing a linked zone using the CLI
+## Listing a linked zone from the CLI
 {: #cli-list-linked-zone}
 {: cli}
 
@@ -51,7 +51,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Getting the details of a linked zone using the CLI
+## Getting the details of a linked zone from the CLI
 {: #cli-get-details}
 {: cli}
 
@@ -68,7 +68,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Listing all linked zones using the API
+## Listing all linked zones with the API
 {: #api-list-linked-zone}
 {: api}
 
@@ -90,7 +90,7 @@ To list all linked zones using the API, follow these steps:
     {: codeblock}
 
 
-## Getting the details of a linked zone using the API
+## Getting the details of a linked zone with the API
 {: #api-get-details}
 {: api}
 

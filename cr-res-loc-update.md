@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You can update custom resolver locations in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Updating a resolver location using the UI
+## Updating a resolver location in the UI
 {: #ui-update-res-loc}
 {: ui}
 
@@ -26,7 +26,7 @@ From the custom resolver details page, select the **Resolver locations** tab. He
 
 When the resolver location is disabled, the **Subnet** column changes to a list menu from which you can select a different subnet for your resolver location. When the resolver location is enabled, the **Subnets** column becomes static.
 
-## Updating a resolver location using the CLI
+## Updating a resolver location from the CLI
 {: #cli-update-res-loc}
 {: cli}
 
@@ -43,7 +43,7 @@ Where:
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
-## Adding a resolver location using the API
+## Adding a resolver location with the API
 {: #api-update-res-loc}
 {: api}
 

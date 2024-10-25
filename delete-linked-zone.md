@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-24"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Delete a linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Deleting a linked zone using the UI
+## Deleting a linked zone in the UI
 {: #ui-delete-linked-zone}
 {: ui}
 
@@ -29,7 +29,7 @@ To delete a linked zone using the UI, take the following steps:
 1. Select **Delete linked zone**.
 
 
-## Deleting a linked zone using the CLI
+## Deleting a linked zone from the CLI
 {: #cli-delete-linked-zone}
 {: cli}
 
@@ -46,7 +46,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Deleting a linked zone using the API
+## Deleting a linked zone with the API
 {: #api-delete-linked-zone}
 {: api}
 
@@ -65,5 +65,3 @@ To delete a linked zone using the API, follow these steps:
         -H "Authorization: $IAM_TOKEN"
     ```
     {: pre}
-
-

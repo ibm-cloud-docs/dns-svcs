@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-24"
+  years: 2022, 2024
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Add a permitted network to your linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Adding a permitted network using the UI
+## Adding a permitted network in the UI
 {: #ui-add-permit-network}
 {: ui}
 
@@ -33,7 +33,7 @@ To add a permitted network using the UI, take the following steps:
 The **Status** column shows that the linked zone is "Active" after a permitted network is successfully added.
 
 
-## Adding a permitted network using the CLI
+## Adding a permitted network from the CLI
 {: #cli-add-permit-network}
 {: cli}
 
@@ -52,7 +52,7 @@ Where:
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
 * **--output value** specifies the output format. Currently, `json` is the only supported format.
 
-## Adding a permitted network using the API
+## Adding a permitted network with the API
 {: #api-add-permit-network}
 {: api}
 

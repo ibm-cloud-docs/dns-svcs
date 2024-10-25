@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-10-25"
 
 keywords:
 
@@ -15,15 +15,17 @@ subcollection: dns-svcs
 # Integrating with Virtual Private Endpoint for VPC
 {: #vpe-for-dns-svcs}
 
-{{site.data.keyword.cloud}} Virtual Private Endpoint (VPE) for VPC enables you to connect to supported {{site.data.keyword.cloud_notm}} services from your VPC network by using IP addresses of your choosing, allocated from a subnet within your VPC. A {{site.data.keyword.dns_short}} VPE allows you to communicate with the control plane of {{site.data.keyword.dns_short}}.
+You can integrate with Virtual Private Endpoint for VPC by using the CLI, API, SDK, or Terraform.
+{: shortdesc}
 
+{{site.data.keyword.cloud}} Virtual Private Endpoint (VPE) for VPC enables you to connect to supported {{site.data.keyword.cloud_notm}} services from your VPC network by using IP addresses of your choosing, allocated from a subnet within your VPC. A {{site.data.keyword.dns_short}} VPE allows you to communicate with the control plane of {{site.data.keyword.dns_short}}.
 
 ## Setting up a VPE gateway for the {{site.data.keyword.dns_short}} service
 {: #vpe-setup}
 
 Follow instructions in [Getting started](/docs/vpc?topic=vpc-about-vpe#vpe-getting-started) for VPE for VPC to create and configure a VPE gateway for the {{site.data.keyword.dns_short}} service offering.
 
-### Using the CLI
+### Integrating with Virtual Private Endpoint for VPC from the CLI
 {: #cli-dns-svcs}
 {: cli}
 
@@ -47,7 +49,7 @@ After creating an endpoint gateway for {{site.data.keyword.dns_short}}, follow t
 
 For more information on VPEs using the CLI, see [Virtual private endpoint gateways](/docs/vpc?topic=vpc-vpc-reference&interface=cli#vpe-clis).
 
-### Using the API
+### Integrating with Virtual Private Endpoint for VPC with the API
 {: #vpe-setup-api}
 {: api}
 
@@ -58,7 +60,7 @@ curl https://api.private.dns-svcs.cloud.ibm.com/instance/<instance-id>/dnszones 
 ```
 {: pre}
 
-### Using the SDK
+### Integrating with Virtual Private Endpoint for VPC with the SDK
 {: #sdk-dns-svcs}
 {: api}
 
@@ -71,7 +73,7 @@ api.private.dns-svcs.cloud.ibm.com
 
 For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/dns-svcs?code=go).
 
-### Using Terraform
+### Integrating with Virtual Private Endpoint for VPC with Terraform
 {: #terraform-dns-svcs}
 {: terraform}
 
@@ -85,4 +87,3 @@ export IBMCLOUD_PRIVATE_DNS_API_ENDPOINT=https://api.private.dns-svcs.cloud.ibm.
 For more information on using Terraform, see [{{site.data.keyword.dns_short}} resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list#ibm-dns-service_rd).
 
 For more information on using VPEs in Terraform, see [`ibm_is_virtual_endpoint_gateway_ip`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_virtual_endpoint_gateway_ip){: external}.
-
