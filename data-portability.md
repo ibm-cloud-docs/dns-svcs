@@ -43,18 +43,18 @@ To find out more about responsibility ownership for using {{site.data.keyword.cl
 
 *If there is a specific responsibility topic available for the product, include the next line or remove the line and include details in this section of the topic.*
 
-For more information about your responsibilities for CIS, see [Understanding your responsibilities when using CIS](/docs/cis?topic=cis-responsibilities-cis).
+For more information about your responsibilities for CIS, see [Understanding your responsibilities when using DNS Services](/docs/cis?topic=cis-responsibilities-cis).
 
 ## Data export procedures
 {: #data-portability-procedures}
 
-CIS provides the mechanisms to export your content that's uploaded, stored, and processed when you use the service.
+DNS Services provides the mechanisms to export your content that's uploaded, stored, and processed when you use the service.
 
 *Include steps to export the customer owned data. For example, a database backup.*
 
 *If the service enables the upload application source and generate binary artifacts implemented by the customer and hosted by the service, include steps to export the application source and binary artifacts.*
 
-In addition, CIS provides mechanisms to export settings and configurations that are used to process the customer's content.
+In addition, DNS Services provides mechanisms to export settings and configurations that are used to process the customer's content.
 
 *Include steps to export the service configuration. For example, the database schema.*
 
@@ -65,17 +65,13 @@ In addition, CIS provides mechanisms to export settings and configurations that 
 
 *List data and configurations that cannot be exported and an alternative way for how customer can recover them. For example, store the data and configurations securely prior to uploading to IBM Cloud.* 
 
-CIS supports the following data format and schema of the exported data, configuration, and application:
-* Example data format and schema
+DNS Services supports the following data format and schema of the exported data, configuration, and application:
+* Export in JSON format.
 
+DNS Services doesn't support the export of the following data format and schema of the exported data, configuration, and application:
+* We don't support exporting zone files.
 
-CIS doesn't support the export of the following data format and schema of the exported data, configuration, and application:
-* Example of unsupported data format and schema
-
-[Exportable data:]{: tag-red}
-[DNS]{: tag-red}
-[Metrics (GraphQL?]{: tag-red}
-[Security Events]{: tag-red}
+For more information, see [Understanding your responsibilities when using IBM Cloud DNS Services](/docs/dns-svcs?topic=dns-svcs-responsibilities-dns-svcs) and [Exporting your DNS Services configuration](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file).
 
 ## Data ownership
 {: #data-portability-ownership}
