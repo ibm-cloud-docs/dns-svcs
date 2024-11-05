@@ -114,6 +114,7 @@ toc:
             topics:
             - ha-dr.md
             - backup-data.md
+            - data-portability.md
         - topicgroup:
             label: Enhancing security
             topics:
