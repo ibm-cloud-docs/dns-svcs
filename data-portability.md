@@ -43,7 +43,7 @@ To find out more about responsibility ownership for using {{site.data.keyword.cl
 
 *If there is a specific responsibility topic available for the product, include the next line or remove the line and include details in this section of the topic.*
 
-For more information about your responsibilities for CIS, see [Understanding your responsibilities when using DNS Services](/docs/cis?topic=cis-responsibilities-cis).
+For more information about your responsibilities for DNS Services, see [Understanding your responsibilities when using DNS Services](/docs/dns-svcs?topic=dns-svcs-responsibilities-dns-svcs).
 
 ## Data export procedures
 {: #data-portability-procedures}
