@@ -54,4 +54,4 @@ DNS Services doesn't support the export of the following data format and schema 
 All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/terms/?id=Z126-6304_WS){: external}.
 
 Document any copyright, licensing, IP, commercial, etc. limitation to the use that the customer can do on competitor providers
-NOTE: according to the [EU Data Act Chapter VI](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202302854&qid=1721987901212#d1e3171-1-1){: external} articles the cloud provider MUST remove legal, contractual, technical obstacles that would block the customer's rights to move a different provider
+NOTE: according to the [EU Data Act Chapter VI](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202302854&qid=1721987901212#d1e3171-1-1){: external} articles the cloud provider MUST remove legal, contractual, technical obstacles that would block the customer's rights to move a different provider.
