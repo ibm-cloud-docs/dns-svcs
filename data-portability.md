@@ -29,22 +29,12 @@ The customer is responsible for the use of the exported data and configuration f
 - The planning and execution for the porting of the required application code on the alternative infrastructure, including the adaptation of customer's application code, deployment automation, and so on.
 - The conversion of the exported data and configuration to the format that's required by the alternative infrastructure and adapted applications.
 
-*If there is specific responsibility documentation for the product, do not include the next paragraph*
-
-To find out more about responsibility ownership for using {{site.data.keyword.cloud}} products between {{site.data.keyword.IBM_notm}} and customer see [Shared responsibilities for {{site.data.keyword.cloud_notm}} products](/docs/overview?topic=overview-shared-responsibilities).
-
-*If there is a specific responsibility topic available for the product, include the next line or remove the line and include details in this section of the topic.*
-
 For more information about your responsibilities for DNS Services, see [Understanding your responsibilities when using DNS Services](/docs/dns-svcs?topic=dns-svcs-responsibilities-dns-svcs).
 
 ## Data export procedures
 {: #data-portability-procedures}
 
 DNS Services provides the mechanisms to export your content that's uploaded, stored, and processed when you use the service. 
-
-*Include steps to export the customer owned data. For example, a database backup.*
-
-*If the service enables the upload application source and generate binary artifacts implemented by the customer and hosted by the service, include steps to export the application source and binary artifacts.*
 
 In addition, DNS Services provides mechanisms to export settings and configurations that are used to process the customer's content. For more information, see [Exporting your DNS Services configuration](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file).
 
