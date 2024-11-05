@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Understanding data portability for DNS Services 
 {: #data-portability}
 
-Data portability involves a set of tools and procedures that enable customers to export the digital artifacts that are needed to implement similar workload and data processing on different service providers or on-premises software. It includes procedures for copying and storing the service customer content, including the related configuration that is used by the service to store and process the data, on the customer's own location.
+[Data Portability](#x2113280){: term} involves a set of tools and procedures that enable customers to export the digital artifacts that are needed to implement similar workload and data processing on different service providers or on-premises software. It includes procedures for copying and storing the service customer content, including the related configuration that is used by the service to store and process the data, on the customer's own location.
 {: shortdesc}
 
 ## Responsibilities
@@ -29,29 +29,29 @@ The customer is responsible for the use of the exported data and configuration f
 - The planning and execution for the porting of the required application code on the alternative infrastructure, including the adaptation of customer's application code, deployment automation, and so on.
 - The conversion of the exported data and configuration to the format that's required by the alternative infrastructure and adapted applications.
 
-For more information about your responsibilities for DNS Services, see [Understanding your responsibilities when using DNS Services](/docs/dns-svcs?topic=dns-svcs-responsibilities-dns-svcs).
+For more information about your responsibilities for DNS Services, see [Understanding your responsibilities when using DNS Services](/docs/dns-svcs?topic=dns-svcs-responsibilities-dns-svcs){: external}.
 
 ## Data export procedures
 {: #data-portability-procedures}
 
 DNS Services provides the mechanisms to export your content that's uploaded, stored, and processed when you use the service. 
 
-In addition, DNS Services provides mechanisms to export settings and configurations that are used to process the customer's content. For more information, see [Exporting your DNS Services configuration](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file).
+In addition, DNS Services provides mechanisms to export settings and configurations that are used to process the customer's content. For more information, see [Exporting your DNS Services configuration](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file){: external}.
 
 
 ## Exported data formats
 {: #data-portability-data-formats}
 
 DNS Services supports the following data format and schema of the exported data, configuration, and application:
-* Export in JSON format.
+* Export in JSON format only.
 
 DNS Services doesn't support the export of the following data format and schema of the exported data, configuration, and application:
-* We don't support exporting zone files.
+* Exporting [zone files](https://en.wikipedia.org/wiki/Zone_file){: external} is not supported.
 
 ## Data ownership
 {: #data-portability-ownership}
 
 All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/terms/?id=Z126-6304_WS){: external}.
 
-*Document any copyright, licensing, IP, commercial, etc. limitation to the use that the customer can do on competitor providers
-NOTE: according to the [EU Data Act Chapter VI](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202302854&qid=1721987901212#d1e3171-1-1) articles the cloud provider MUST remove legal, contractual, technical obstacles that would block the customer's rights to move a different provider*
+Document any copyright, licensing, IP, commercial, etc. limitation to the use that the customer can do on competitor providers
+NOTE: according to the [EU Data Act Chapter VI](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202302854&qid=1721987901212#d1e3171-1-1){: external} articles the cloud provider MUST remove legal, contractual, technical obstacles that would block the customer's rights to move a different provider
