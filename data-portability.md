@@ -15,14 +15,6 @@ subcollection: dns-svcs
 # Understanding data portability for DNS Services 
 {: #data-portability}
 
-[Comments in italics]{: tag-red}
-
-[Guidance](https://test.cloud.ibm.com/docs/writing?topic=writing-data-portability-content-guidance)
-
-**This topic should be placed in a topic group with the high availability, business continuity, and disaster recovery topic. I don't see any of these topics.**
- 
-*The short description should be a single, concise paragraph that contains one or two sentences and no more than 50 words. Summarize your offering's strategy for data portability. The following is a suggested short description.*
-
 Data portability involves a set of tools and procedures that enable customers to export the digital artifacts that are needed to implement similar workload and data processing on different service providers or on-premises software. It includes procedures for copying and storing the service customer content, including the related configuration that is used by the service to store and process the data, on the customer's own location.
 {: shortdesc}
 
@@ -48,30 +40,23 @@ For more information about your responsibilities for DNS Services, see [Understa
 ## Data export procedures
 {: #data-portability-procedures}
 
-DNS Services provides the mechanisms to export your content that's uploaded, stored, and processed when you use the service.
+DNS Services provides the mechanisms to export your content that's uploaded, stored, and processed when you use the service. 
 
 *Include steps to export the customer owned data. For example, a database backup.*
 
 *If the service enables the upload application source and generate binary artifacts implemented by the customer and hosted by the service, include steps to export the application source and binary artifacts.*
 
-In addition, DNS Services provides mechanisms to export settings and configurations that are used to process the customer's content.
+In addition, DNS Services provides mechanisms to export settings and configurations that are used to process the customer's content. For more information, see [Exporting your DNS Services configuration](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file).
 
-*Include steps to export the service configuration. For example, the database schema.*
 
 ## Exported data formats
 {: #data-portability-data-formats}
-
-*Document the data format and schema of the exported data, configuration, and application. When applicable, include the industry and national standards that define the specification of the artifact format used by the service.*
-
-*List data and configurations that cannot be exported and an alternative way for how customer can recover them. For example, store the data and configurations securely prior to uploading to IBM Cloud.* 
 
 DNS Services supports the following data format and schema of the exported data, configuration, and application:
 * Export in JSON format.
 
 DNS Services doesn't support the export of the following data format and schema of the exported data, configuration, and application:
 * We don't support exporting zone files.
-
-For more information, see [Understanding your responsibilities when using IBM Cloud DNS Services](/docs/dns-svcs?topic=dns-svcs-responsibilities-dns-svcs) and [Exporting your DNS Services configuration](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file).
 
 ## Data ownership
 {: #data-portability-ownership}
