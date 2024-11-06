@@ -110,11 +110,6 @@ toc:
             - at_events.md
             - platform-metrics.md
         - topicgroup:
-            label: High availability and disaster recovery
-            topics:
-            - ha-dr.md
-            - backup-data.md
-        - topicgroup:
             label: Enhancing security
             topics:
             - iam.md
@@ -147,6 +142,11 @@ toc:
         - link:
             label: Terraform reference
             href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_custom_resolver
+        - topicgroup:
+            label: High availability and disaster recovery
+            topics:
+            - ha-dr.md
+            - backup-data.md
         - responsibilities.md
     - navgroup:
         id: help
