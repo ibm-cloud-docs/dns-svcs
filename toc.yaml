@@ -143,6 +143,12 @@ toc:
             label: Terraform reference
             href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_custom_resolver
         - backup-data.md
+        - topicgroup:
+            label: High availability and disaster recovery
+            topics:
+            - ha.md
+            - bc-dr.md
+        - data-portability.md
         - responsibilities.md
     - navgroup:
         id: help
