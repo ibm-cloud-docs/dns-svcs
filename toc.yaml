@@ -145,7 +145,6 @@ toc:
         - topicgroup:
             label: High availability and disaster recovery
             topics:
-            - ha-dr.md
             - backup-data.md
         - responsibilities.md
     - navgroup:
