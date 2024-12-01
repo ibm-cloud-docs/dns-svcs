@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -17,6 +17,8 @@ subcollection: dns-svcs
 
 When using global load balancing, you can create a health check to specify how the origin's health is monitored. Health check events are status changes from monitored origin pools and their associated origin servers. If an origin's status changes, a new event is recorded with the event's description.
 {: shortdesc}
+
+As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.la_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Logging is the same for both services. For information about migrating from {{site.data.keyword.la_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see migration planning. {: important}
 
 {{site.data.keyword.loganalysisfull}} manages system and application logs in the IBM Cloud. You can use this service to access health check events for your origin pools and origin servers. For more information, see the [Getting started tutorial](/docs/log-analysis?topic=log-analysis-getting-started) for {{site.data.keyword.loganalysislong_notm}}.
 
