@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -55,7 +55,7 @@ If you want to create a custom resolver without high availability, you must manu
 
 To create a custom resolver using the CLI, run the following command:
 
-`ibmcloud dns custom-resolver-create --name NAME --location LOCATION1 --location LOCATION2 [-description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-create --name NAME --location LOCATION1 --location LOCATION2 [-d, --description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
 
