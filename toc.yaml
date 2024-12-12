@@ -108,6 +108,7 @@ toc:
             label: Observability
             topics:
             - at_events.md
+            - logging.md
             - platform-metrics.md
         - topicgroup:
             label: Enhancing security
