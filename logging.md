@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-17"
 
 keywords:
 
@@ -144,13 +144,13 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 The following three types of platform logs are generated for DNS services:
 
 `link_zone_action` 
-:   Logs are created during key steps of the process of linking a zone between DNS Services instances. This includes when a request to link is created, and when the link is granted access.
+:   Logs are created during key steps of the process of linking a zone between DNS Services instances. This includes when a request to link is created, and when the link is granted access. Learn more about [cross-account access](/docs/dns-svcs?topic=dns-svcs-cross-account-about&interface=ui).
 
 `health_check_event`
-:   Logs are created when there is critical activity regarding a healthcheck appliance. These logs can be related to the status of the appliance VSI itself, or to any of the origins that the healthcheck is monitoring.
+:   Logs are created when there is critical activity regarding a healthcheck appliance. These logs can be related to the status of the appliance VSI itself, or to any of the origins that the healthcheck is monitoring. Learn more about [creating a health check](/docs/dns-svcs?topic=dns-svcs-global-load-balancers&interface=ui#add-a-health-check).
 
 `custom_resolver_event` 
-:   Logs are created when there is critical activity regarding custom resolvers. Activities such as create and delete events for custom resolver locations and status updates of the locations all fall under this category.
+:   Logs are created when there is critical activity regarding custom resolvers. Activities such as create and delete events for custom resolver locations and status updates of the locations all fall under this category.Learn more about [working with custom resolvers](/docs/dns-svcs?topic=dns-svcs-custom-resolver).
 
 ## Viewing logs
 {: #log-viewing}
