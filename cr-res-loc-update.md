@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -22,7 +22,7 @@ You can update custom resolver locations in {{site.data.keyword.dns_full}} by us
 {: #ui-update-res-loc}
 {: ui}
 
-From the custom resolver details page, select the **Resolver locations** tab. Here you can enable or disable your custom resolver by setting the toggle switch. Change the priority of your resolver location by clicking the up or down arrows to alter the priority order of the list.
+From the custom resolver details page, select the **Resolver locations** tab. Here you can enable or disable your custom resolver by setting the toggle switch.
 
 When the resolver location is disabled, the **Subnet** column changes to a list menu from which you can select a different subnet for your resolver location. When the resolver location is enabled, the **Subnets** column becomes static.
 

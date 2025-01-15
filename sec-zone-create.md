@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-01-07"
 
 keywords:
 
@@ -29,7 +29,6 @@ To create a secondary zone using the UI, take the following steps:
 1. Click **Create secondary zone**.
 1. Enter a name for the secondary zone.
 1. Optionally, enter a description for the secondary zone.
-1. Enter up to two IP addresses of your AXFR-capable DNS servers, separated by a comma.
 1. Click **Create**.
 
 The new secondary zone now appears in the list of secondary zones in the **Custom resolver details** page, and is enabled by default.
