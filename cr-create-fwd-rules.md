@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-01-16"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Use forwarding rules to configure where to forward DNS queries for resolution by using the UI, CLI, or API.
 {: shortdesc}
 
-Forwarding rules are configurations that you can set up to direct DNS queries to specific DNS resolvers. Two required parameters and one optional parameter need to be provided to setup a forwarding rule:
+Forwarding rules are configurations that you can set up to direct DNS queries to specific DNS resolvers. Two required parameters and two optional parameters need to be provided to setup a forwarding rule. At least one of the optional parameters needs to be configured:
 
 * **Rule Type**: Currently only DNS Zone is supported.
 * **Match**: The DNS Zone for which you want the DNS query forwarded.
@@ -26,6 +26,7 @@ Forwarding rules are configurations that you can set up to direct DNS queries to
 
     VPC network behavior and your VPC network configurations can also affect traffic to and from custom resolvers that are located on your VPC. For example, if you want to create a forwarding rule to a DNS resolver on the external internet for DNS queries matching a certain DNS zone, you must create a public gateway to allow external connectivity for your custom resolvers. See [About networking for VPC](/docs/vpc?topic=vpc-about-networking-for-vpc) for more information on VPC networking.
     {: tip}
+* **Views (optional)**: Composed of an expression that when evaluated to true forwards the DNS query to the specified DNS resolvers.
 
 After a rule is configured and the custom resolver is enabled, DNS query requests go to the custom resolver first.
 
