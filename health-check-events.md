@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-11-27"
+  years: 2020, 2025
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -24,6 +24,8 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 ## Before you begin
 {: #loganalysis-preparation}
+
+[Deprecated]{: tag-red}
 
 To view health check events in {{site.data.keyword.loganalysisshort}}, make sure that you create an {{site.data.keyword.loganalysislong_notm}} instance in the Frankfurt region in the account.
 
@@ -52,6 +54,8 @@ To view health check events in a {{site.data.keyword.loganalysisshort}} instance
 ### Viewing health check events in the {{site.data.keyword.loganalysisshort}} instance
 {: #viewing-health-check-events-loganalysis}
 
+[Deprecated]{: tag-red}
+
 To view health check events, use the UI of the {{site.data.keyword.loganalysisshort}} instance that you configured to receive the platform logs in the previous steps.
 
 For more information, see [Launching the {{site.data.keyword.loganalysisshort}} web UI through the IBM Cloud UI](/docs/log-analysis?topic=log-analysis-launch#launch_cloud_ui).
@@ -75,6 +79,8 @@ You can also search for the events you want by combining other event fields. For
 
 ## Health check event properties
 {: #health-check-event-properties}
+
+[Deprecated]{: tag-red}
 
 Health check event records have the following properties:
 
