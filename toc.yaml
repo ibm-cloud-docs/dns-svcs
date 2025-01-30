@@ -166,5 +166,7 @@ toc:
             - ts-delete-instance.md
             - ts-pool-critical.md
             - ts-cse-enabled.md
+            - ts-cr-dns-view.md
+            - ts-cr-sz-not-available.md
         - known-limitations.md
         - getting-help.md
