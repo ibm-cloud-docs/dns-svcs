@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-07-20"
+  years: 2020, 2025
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -36,16 +36,6 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #at-table-1a}
 {: tab-title="Americas"}
-{: tab-group="ata"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
-{: #at-table-2a}
-{: tab-title="Asia Pacific"}
 {: tab-group="ata"}
 {: class="simple-tab-table"}
 {: row-headers}
@@ -280,4 +270,3 @@ Refer to the following information when you are analyzing events:
 - The event's `initiator` field contains information about the person who initiated each request.
 - All events that are issued for failed actions display `failure` in the `outcome` field, and provide more details as part of the `reason` field. Note that the `reason.reasonForFailure` field might be especially helpful, because it contains the details of the failure.
 - You can find the detailed information and fields included in the `requestData` and `responseData` for the {{site.data.keyword.dns_short}} AT events in the [API documentation](/apidocs/dns-svcs).
-
