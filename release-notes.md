@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-08-20"
+  years: 2021, 2025
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -21,7 +21,21 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
 
+## 30 January 2025
+{: #dns-svcs-jan3025}
+{: release-note}
 
+Profiles for custom resolvers
+:   You can now provision [custom resolvers with different profiles](/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-profile-capabilities). 
+
+Custom resolver capacity
+:   [Increased limits](/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-limits) on forwarding rules, secondary zones, and the number of supported DNS records per secondary zone.
+
+View feature for forwarding rules
+:   The [view feature](/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-forwarding-rule-view) enables advanced server block routing functions, such as split DNS.
+
+IXFR for secondary zone transfers
+:   Now supports both [IXFR and AXFR transfers](/docs/dns-svcs?topic=dns-svcs-sec-zones-about&interface=ui#sec-zone-config). IXFR incremental zone transfers increase efficiency by only sending the changed zone data instead of the entire set of zone data.
 
 ## 21 June 2023
 {: #dns-svcs-jun2123}

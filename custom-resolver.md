@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -32,6 +32,22 @@ It is expected that the custom resolver is configured for High Availability by d
 {: important}
 
 After you create the custom resolver and configure its forwarding rules, the resolver can be enabled for the VPC. This results in the DHCP option for the resolver changing to the custom resolver IP addresses.
+
+## Custom resolver profiles overview
+{: #cr-profiles}
+
+You can use custom resolver profiles to increase the limits on how many forwarding rules, secondary zones, or DNS views can be configured. Additionally, if you want to configure many DNS records for their secondary zones, a larger profile prevents performance bottlenecks.
+
+|                              | Essential | Advanced | Premier   |
+|------------------------------|-----------|----------|-----------|
+| Forwarding rules             | 10        | 50       | 100       |
+| Secondary zones              | 10        | 50       | 100       |
+| Total recommended number of DNS records | 100,000   | 500,000  | 6,000,000 |
+| DNS view per forwarding rule | 1         | 3        |  5        |
+{: caption="Comparison of custom resolver profiles by plan" caption-side="bottom"}
+
+Larger custom resolver profiles result in an increased usage cost per location configured.
+{: note}
 
 ## Reserved IP for custom resolvers
 {: #about-reserved-ip}
@@ -125,6 +141,59 @@ The following status definitions apply to the custom resolver:
 * **Healthy** - when all resolver locations are `Up`, the status is `Healthy`.
 * **Degraded** - when there is more than one resolver location, and one is `Up` but another is `Down`, then the status changes to `Degraded`.
 * **Critical** - when all resolver locations are `Down`, the status changes to `Critical`. 
+
+## Custom resolver profile capabilities
+{: #cr-profile-capabilities}
+
+You can provision custom resolvers with the following profiles to provide different capabilities, including the profile size of the location server instance, and the maximum limits of resources such as secondary zones, forwarding rules, and views.
+
+When you upgrade or downgrade a custom resolver profile, the subnets that the custom resolver locations are provisioned on _must_ have at least one IP address available. 
+{: important}
+
+If no IP addresses are available, the change process will not complete, even though the custom resolver locations will still function as normal. Also, forwarding rules and secondary zones cannot be created updated, or deleted during a profile change.
+
+The following table shows the capabilities of each profile.
+
+| Profile | Secondary zone limit | Forwarding rule limit | View limit per forwarding rule |
+| :----:    | :----: | :----: | :----: |
+| Essential |   10    | 10    | 1      |
+| Advanced  |   50    | 50    | 3      |
+| Premier   |  100    | 100   | 5      |
+{: caption="Capabilities of each profile" caption-side="bottom"}
+
+You cannot enable or disable the custom resolver and locations, delete the custom resolver, or add and remove locations while the custom resolver profile is updating.
+{: note}
+
+## Forwarding rule views
+{: #cr-forwarding-rule-view}
+
+A view defines an expression that enables DNS queries to be routed to different DNS resolvers based on the evaluation result. This evaluation enables advanced server block routing functions such as split DNS.
+
+The view expression follows [Common Expression Language](https://github.com/google/cel-spec/blob/master/doc/langdef.md), but does not support all CEL build-in functions and macros. Currently, the expression supports only the following custom functions, variables, and operators.
+
+* Functions
+   * `ipInRange(ip, cidr)`: Return a boolean value indicating whether the `ip` address is in the `cidr` range.
+
+* Variables
+   * `source`: Client information for the DNS query.
+     * `ip`: The client's IP address.
+
+* Operators
+   * `||`: Logical OR
+   * `&&`: Logical AND
+   * `!`: Logical NOT
+   * `==`: Logical Equals
+   * `!=`: Logical NotEquals
+   * `?:`: Conditional
+
+### View expression examples
+{: #expression-examples-view}
+
+* ipInRange(source.ip, '10.240.0.0/24')
+* !ipInRange(source.ip, '10.240.0.0/24')
+* ipInRange(source.ip, '10.240.0.0/24') || ipInRange(source.ip, '10.240.1.0/24')
+* source.ip == '10.240.0.5'
+* source.ip != '10.240.0.5'
 
 ## Custom resolver limits
 {: #cr-limits}

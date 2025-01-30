@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -30,6 +30,8 @@ When configuring secondary zones, take the following into consideration:
 
 * Server must have the zone configured
 * Server must enable DNS transfer to all custom resolver locations
+* Server must support 1 million DNS records
+* Custom resolver performs AXFR and IXFR transfers
 * Custom resolver uses port 53 to communicate with DNS server
 * Each custom resolver can have a maximum of 5 secondary zones
 
