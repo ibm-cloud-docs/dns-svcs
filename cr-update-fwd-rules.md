@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -29,8 +29,8 @@ You can edit custom resolver forwarding rules from the custom resolver details p
 
 To edit a forwarding rule:
 1. Click the **Forwarding rules** tab.
-1. Click the overflow menu next to the rule you want to edit.
-1. In the panel that appears, change the match conditions, forwarding IP addresses, or description.
+1. Click the overflow menu next to the rule you want to edit or click on the forwarding rules row to open the view panel and click **Edit** button.
+1. In the panel that appears, change the match conditions, forwarding IP addresses, DNS views or description.
 1. Click **Save** to commit your changes, or click **Cancel** to discard them.
 
     You cannot edit the rule type. If you require a different rule type, create a new rule.
@@ -42,7 +42,7 @@ To edit a forwarding rule:
 
 To update a custom resolver forwarding rule using the CLI, run the following command:
 
-`ibmcloud dns custom-resolver-forwarding-rule-update RESOLVER_ID RULE_ID [--match HOSTNAME] [--dns-svcs IPs] [--description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-forwarding-rule-update RESOLVER_ID RULE_ID [--match HOSTNAME] [--dns-svcs IPs] [--description DESCRIPTION] [--add-view VIEW_PARAMETER --add-view VIEW_PARAMETER ...] [--update-view VIEW_PARAMETER --update-view VIEW_PARAMETER] [--reorder-view REORDER_VIEW_PARAMETER] [--remove-view VIEW_NAME --remove-view VIEW_NAME] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
 
@@ -51,6 +51,10 @@ Where:
 - **-d, --description** is the descriptive text of the custom resolver forwarding rule.
 - **-match** is the matching zone or hostname.
 - **--dns-svcs** is the upstream DNS servers to be forwarded to.
+- **--add-view** is the value of the view parameters to be added in the forwarding rule.
+- **--update-view** is the value of the view parameters to be updated.
+- **--reorder-view** is the name of the views to be reordered.
+- **--remove-view** is the name of the view to be removed.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
@@ -74,6 +78,16 @@ To update a custom resolver forwarding rule using the API, follow these steps:
       "match": "example.com",
       "forward_to": [
         "161.26.0.7"
+      ],
+      "views": [
+        {
+          "name": "view name",
+          "description": "view description",
+          "forward_to": [
+            "161.26.0.7"
+          ],
+          "expression": "ipInRange(source.ip,'10.11.12.0/24')"
+        }
       ]
     }
     ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -20,7 +20,7 @@ Use forwarding rules to configure where to forward DNS queries for resolution by
 
 Forwarding rules are configurations that you can set up to direct DNS queries to specific DNS resolvers. Two required parameters and two optional parameters need to be provided to setup a forwarding rule. At least one of the optional parameters needs to be configured:
 
-* **Rule Type**: Currently only DNS Zone is supported.
+* **Rule Type**: At the moment, only the DNS Zone is available for selection.
 * **Match**: The DNS Zone for which you want the DNS query forwarded.
 * **Forwarding IP addresses (optional)**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the custom resolver goes through the list by using a sequential policy that selects hosts based on sequential ordering until a resolver responds.
 
@@ -84,10 +84,11 @@ Views are prioritized based on the order that they are configured in the `views`
 To add a forwarding rule:
 1. Go to the custom resolver details page and select the **Forwarding rules** tab.
 1. Click **Add rule**.
-1. In the Create forwarding rule panel, select the rule type from the list menu.
+1. In the Create forwarding rule panel, the only available option rule type is already selected from the list menu.
 1. Enter the matching zone.
-1. Enter the forwarding IP addresses (in CIDR format) separated by commas.
 1. Optionally, enter a description of the rule.
+1. Enter the forwarding IP addresses (in CIDR format) separated by commas. This is optional when DNS views is configured with forwarding IP addresses.
+1. Optionally, Click **Add DNS view** to configure DNS view with priority, name, optional description, forwarding ip addresses and expression. You will be able to add number of DNS views based on custom resolver profile.
 1. Click **Create**.
 
 ## Adding custom resolver forwarding rules from the CLI
@@ -96,7 +97,7 @@ To add a forwarding rule:
 
 To create a custom resolver forwarding rule by using the CLI, run the following command:
 
-`ibmcloud dns custom-resolver-forwarding-rule-create RESOLVER_ID --type TYPE --match HOSTNAME --dns-svcs IPs [--description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-forwarding-rule-create RESOLVER_ID --type TYPE --match HOSTNAME [--dns-svcs IPs] [--description DESCRIPTION] [--view VIEW1 --view VIEW2 ...] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
 
@@ -105,6 +106,7 @@ Where:
 - **-d, --description** is the descriptive text of the custom resolver forwarding rule.
 - **-match** is the matching zone.
 - **--dns-svcs** is the upstream DNS servers to be forwarded to.
+- **--view** is an expression that for a DNS request to be routed to the server block. `name`, `expression` and `dns-svcs` are required, `description` is optional.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
@@ -128,6 +130,16 @@ To create a custom resolver forwarding rule using the API, follow these steps:
       "match": "example.com",
       "forward_to": [
         "161.26.0.7"
+      ],
+      "views": [
+        {
+          "name": "view name",
+          "description": "view description",
+          "forward_to": [
+            "161.26.0.7"
+          ],
+          "expression": "ipInRange(source.ip,'10.11.12.0/24')"
+        }
       ]
     }
     ```

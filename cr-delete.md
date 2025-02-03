@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -33,6 +33,8 @@ To delete a custom resolver from the custom resolver details view:
 1. Select the custom resolver you want to delete to open the details page.
 1. Click **Delete resolver**.
 1. Click **Delete** in the confirmation dialog that appears.
+
+Deleting the enabled custom resolver is not permitted. {: note}
 
 ## Deleting a custom resolver from the CLI
 {: #cli-delete-cr}

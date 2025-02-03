@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -22,11 +22,13 @@ You can update custom resolvers in {{site.data.keyword.dns_full}} by using the U
 {: #ui-update-cr}
 {: ui}
 
-The custom resolver details view shows the name and status of a custom resolver. It also lists the custom resolver ID, the linked VPC name, the date the resolver was modified, the description, and the enabled toggle that was entered when it was created.
+The custom resolver details view shows the name, status, ID, the enabled toggle, and the allow disruptive updates toggle of a custom resolver. It also lists the linked VPC name, the date the resolver was modified, the description, the resolver profile, and the resolver profile status that was entered when it was created.
 
-To edit the name and description of the custom resolver, click **Edit** next to the pencil icon to open the edit view. Click **Save** to commit the changes, or cancel.
+To edit the name, description or profile of the custom resolver, click **Edit** next to the pencil icon to see the edit view. Click **Save** to commit the changes, or cancel.
 
 Toggle the **Enablement** switch to enable or disable the custom resolver.
+
+Toggle the **Enablement** switch to enable or disable the allow disruptive updates to custom resolver.
 
 ## Update a custom resolver from the CLI
 {: #cli-update-cr}
@@ -34,7 +36,7 @@ Toggle the **Enablement** switch to enable or disable the custom resolver.
 
 To update a custom resolver using the CLI, run the following command:
 
-`ibmcloud dns custom-resolver-update RESOLVER_ID [--name NAME] [--enabled true|false] [--description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-update RESOLVER_ID [--name NAME] [--enabled true|false] [--description DESCRIPTION] [--profile essential|advance|premier] [--allow_disruptive_updates true|false] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
 
@@ -42,6 +44,8 @@ Where:
 - **-n, --name** is the name of the custom resolver.
 - **-d, --description** is the descriptive text of the custom resolver.
 - **--enabled** determines whether to enable the custom resolver.
+- **--profile** is the  profile name of custom resolver. Valid values: "essential", "advanced", "premier".
+- **--allow_disruptive_updates** determines weather disruptive update is allowed for the custom resolver.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
@@ -62,7 +66,9 @@ To update a custom resolver using the API, follow these steps:
     {
       "name": "my-resolver",
       "description": "custom resolver",
-      "enabled": false
+      "enabled": false,
+      "profile": "essential",
+      "allow_disruptive_updates": false
     }
     ```
     {: codeblock}

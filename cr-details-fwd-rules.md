@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -24,7 +24,7 @@ You view details of a single custom resolver forwarding rule and view a list of 
 
 View the details of a custom resolver forwarding rule by navigating to the **Forwarding rules** tab in the custom resolver details page.
 
-The Forwarding rules section lists all custom resolver rules associate with the custom resolver.
+The Forwarding rules section lists all custom resolver rules associate with the custom resolver. To view the details of a specific forwarding rule, click on a row to see the configuration in more detail.
 
 ## Viewing custom resolver forwarding rules from the CLI
 {: #cli-cr-fwd-rules-view}
