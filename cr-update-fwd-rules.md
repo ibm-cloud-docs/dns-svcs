@@ -29,8 +29,8 @@ You can edit custom resolver forwarding rules from the custom resolver details p
 
 To edit a forwarding rule:
 1. Click the **Forwarding rules** tab.
-1. Click the overflow menu next to the rule you want to edit.
-1. In the panel that appears, change the match conditions, forwarding IP addresses, or description.
+1. Click the overflow menu next to the rule you want to edit or click on the forwarding rules row to open the view panel and click **Edit** button.
+1. In the panel that appears, change the match conditions, forwarding IP addresses, DNS views or description.
 1. Click **Save** to commit your changes, or click **Cancel** to discard them.
 
     You cannot edit the rule type. If you require a different rule type, create a new rule.
