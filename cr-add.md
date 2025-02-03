@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-12-10"
+  years: 2021, 2025
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -30,6 +30,7 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
 1. Navigate to **Custom resolvers** in the {{site.data.keyword.dns_short}} navigation menu.
 1. Click **Create custom resolver**.
 1. Enter a name and description for your custom resolver.
+1. Select a profile from the list menu.
 1. Select a region from the list menu.
 1. Select a VPC from the list menu.
 1. Select a subnet from the list menu.
