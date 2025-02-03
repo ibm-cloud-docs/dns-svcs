@@ -64,7 +64,9 @@ To update a custom resolver using the API, follow these steps:
     {
       "name": "my-resolver",
       "description": "custom resolver",
-      "enabled": false
+      "enabled": false,
+      "profile": "essential",
+      "allow_disruptive_updates": false
     }
     ```
     {: codeblock}

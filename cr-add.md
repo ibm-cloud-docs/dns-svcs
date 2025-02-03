@@ -96,7 +96,8 @@ To add a custom resolver using the API, follow these steps:
       "subnet_crn": "crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04",
       "enabled": false
     }
-  ]
+  ],
+  "profile": "essential"
 }
 ```
 {: codeblock}
@@ -106,5 +107,6 @@ To add a custom resolver using the API, follow these steps:
 {: #next-steps-create-cr}
 
 * [Adding custom resolver locations](/docs/dns-svcs?topic=dns-svcs-cr-res-loc-add)
+* [Custom resolver profiles](/docs/dns-svcs?topic=custom-resolver#cr-profiles)
 * [Setting up custom resolver forwarding rules](/docs/dns-svcs?topic=dns-svcs-cr-fwd-rules-add)
 * [Deleting a custom resolver](/docs/dns-svcs?topic=dns-svcs-cr-delete)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -128,6 +128,16 @@ To create a custom resolver forwarding rule using the API, follow these steps:
       "match": "example.com",
       "forward_to": [
         "161.26.0.7"
+      ],
+      "views": [
+        {
+          "name": "view name",
+          "description": "view description",
+          "forward_to": [
+            "161.26.0.7"
+          ],
+          "expression": "ipInRange(source.ip,'10.11.12.0/24')"
+        }
       ]
     }
     ```
