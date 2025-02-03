@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -22,11 +22,13 @@ You can update custom resolvers in {{site.data.keyword.dns_full}} by using the U
 {: #ui-update-cr}
 {: ui}
 
-The custom resolver details view shows the name and status of a custom resolver. It also lists the custom resolver ID, the linked VPC name, the date the resolver was modified, the description, and the enabled toggle that was entered when it was created.
+The custom resolver details view shows the name, status, ID, the enabled toggle, and the allow disruptive updates toggle of a custom resolver. It also lists the linked VPC name, the date the resolver was modified, the description, the resolver profile, and the resolver profile status that was entered when it was created.
 
-To edit the name and description of the custom resolver, click **Edit** next to the pencil icon to open the edit view. Click **Save** to commit the changes, or cancel.
+To edit the name, description or profile of the custom resolver, click **Edit** next to the pencil icon to see the edit view. Click **Save** to commit the changes, or cancel.
 
 Toggle the **Enablement** switch to enable or disable the custom resolver.
+
+Toggle the **Enablement** switch to enable or disable the allow disruptive updates to custom resolver.
 
 ## Update a custom resolver from the CLI
 {: #cli-update-cr}
