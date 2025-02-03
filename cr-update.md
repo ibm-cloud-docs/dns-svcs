@@ -36,7 +36,7 @@ Toggle the **Enablement** switch to enable or disable the allow disruptive updat
 
 To update a custom resolver using the CLI, run the following command:
 
-`ibmcloud dns custom-resolver-update RESOLVER_ID [--name NAME] [--enabled true|false] [--description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-update RESOLVER_ID [--name NAME] [--enabled true|false] [--description DESCRIPTION] [--profile essential|advance|premier] [--allow_disruptive_updates true|false] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
 
@@ -44,6 +44,8 @@ Where:
 - **-n, --name** is the name of the custom resolver.
 - **-d, --description** is the descriptive text of the custom resolver.
 - **--enabled** determines whether to enable the custom resolver.
+- **--profile** is the  profile name of custom resolver. Valid values: "essential", "advanced", "premier".
+- **--allow_disruptive_updates** determines weather disruptive update is allowed for the custom resolver.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 

@@ -42,7 +42,7 @@ To edit a forwarding rule:
 
 To update a custom resolver forwarding rule using the CLI, run the following command:
 
-`ibmcloud dns custom-resolver-forwarding-rule-update RESOLVER_ID RULE_ID [--match HOSTNAME] [--dns-svcs IPs] [--description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-forwarding-rule-update RESOLVER_ID RULE_ID [--match HOSTNAME] [--dns-svcs IPs] [--description DESCRIPTION] [--add-view VIEW_PARAMETER --add-view VIEW_PARAMETER ...] [--update-view VIEW_PARAMETER --update-view VIEW_PARAMETER] [--reorder-view REORDER_VIEW_PARAMETER] [--remove-view VIEW_NAME --remove-view VIEW_NAME] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
 
@@ -51,6 +51,10 @@ Where:
 - **-d, --description** is the descriptive text of the custom resolver forwarding rule.
 - **-match** is the matching zone or hostname.
 - **--dns-svcs** is the upstream DNS servers to be forwarded to.
+- **--add-view** is the value of the view parameters to be added in the forwarding rule.
+- **--update-view** is the value of the view parameters to be updated.
+- **--reorder-view** is the name of the views to be reordered.
+- **--remove-view** is the name of the view to be removed.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 

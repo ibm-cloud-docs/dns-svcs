@@ -97,7 +97,7 @@ To add a forwarding rule:
 
 To create a custom resolver forwarding rule by using the CLI, run the following command:
 
-`ibmcloud dns custom-resolver-forwarding-rule-create RESOLVER_ID --type TYPE --match HOSTNAME --dns-svcs IPs [--description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-forwarding-rule-create RESOLVER_ID --type TYPE --match HOSTNAME [--dns-svcs IPs] [--description DESCRIPTION] [--view VIEW1 --view VIEW2 ...] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
 
@@ -106,6 +106,7 @@ Where:
 - **-d, --description** is the descriptive text of the custom resolver forwarding rule.
 - **-match** is the matching zone.
 - **--dns-svcs** is the upstream DNS servers to be forwarded to.
+- **--view** is an expression that for a DNS request to be routed to the server block. `name`, `expression` and `dns-svcs` are required, `description` is optional.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 

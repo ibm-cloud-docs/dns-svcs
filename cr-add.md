@@ -56,21 +56,22 @@ If you want to create a custom resolver without high availability, you must manu
 
 To create a custom resolver using the CLI, run the following command:
 
-`ibmcloud dns custom-resolver-create --name NAME --location LOCATION1 --location LOCATION2 [-d, --description DESCRIPTION] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-create --name NAME --location LOCATION1 --location LOCATION2 [-d, --description DESCRIPTION] [--profile Profile] [-i, --instance INSTANCE] [--output FORMAT]`
 
 Where:
 
 - **-n, --name** is the name of the custom resolver.
 - **-d, --description** is the descriptive text of the custom resolver.
 - **--location** is the location where the custom resolver is running. The location subnet CRN is required. For example: `--location subnet1,enable  --location subnet2,disable`
+- **--profile** is the profile name of custom resolver. Valid values: `essential`, `advanced`, `premier`.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
 - **--output** specifies output format. Currently, JSON is the only supported format.
 
 To create a custom resolver without high availability, run the command with `[-f, --force]`:
 
-`ibmcloud dns custom-resolver-create --name NAME [--location LOCATION1] [--location LOCATION2] [-description DESCRIPTION] [-f, --force] [-i, --instance INSTANCE] [--output FORMAT]`
+`ibmcloud dns custom-resolver-create --name NAME [--location LOCATION1] [--location LOCATION2] [-description DESCRIPTION] [--profile Profile] [-f, --force] [-i, --instance INSTANCE] [--output FORMAT]`
 
-Where: 
+Where:
 
 - **-f, --force** allows for creating custom resolver with fewer than 2 locations.
 
