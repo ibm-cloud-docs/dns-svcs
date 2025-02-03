@@ -32,6 +32,8 @@ To view health check events in {{site.data.keyword.loganalysisshort}}, make sure
 ## Adding {{site.data.keyword.loganalysisshort}}
 {: #loganalysis-nav}
 
+[Deprecated]{: tag-red}
+
 From the UI, follow these steps to navigate to the {{site.data.keyword.loganalysisshort}} service:
 
 1. From the {{site.data.keyword.dns_short}} navigation menu, click **Global load balancers**, then select the **Health checks** tab.
@@ -42,6 +44,8 @@ From the UI, follow these steps to navigate to the {{site.data.keyword.loganalys
 
 ## Receiving health check events with the {{site.data.keyword.loganalysisshort}} instance
 {: #receiving-health-check-events-loganalysis}
+
+[Deprecated]{: tag-red}
 
 To view health check events in a {{site.data.keyword.loganalysisshort}} instance, you must configure the {{site.data.keyword.loganalysisshort}} instance to receive platform logs with the following steps:
 
