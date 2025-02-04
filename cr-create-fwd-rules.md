@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -20,7 +20,7 @@ Use forwarding rules to configure where to forward DNS queries for resolution by
 
 Forwarding rules are configurations that you can set up to direct DNS queries to specific DNS resolvers. Two required parameters and two optional parameters need to be provided to setup a forwarding rule. At least one of the optional parameters needs to be configured:
 
-* **Rule Type**: At the moment, only the DNS Zone is available for selection.
+* **Rule Type**: Currently, only the DNS Zone is available for selection.
 * **Match**: The DNS Zone for which you want the DNS query forwarded.
 * **Forwarding IP addresses (optional)**: The IP addresses of the DNS resolvers to which the query is forwarded. If multiple addresses are provided, the custom resolver goes through the list by using a sequential policy that selects hosts based on sequential ordering until a resolver responds.
 
@@ -84,11 +84,10 @@ Views are prioritized based on the order that they are configured in the `views`
 To add a forwarding rule:
 1. Go to the custom resolver details page and select the **Forwarding rules** tab.
 1. Click **Add rule**.
-1. In the Create forwarding rule panel, the only available option rule type is already selected from the list menu.
 1. Enter the matching zone.
 1. Optionally, enter a description of the rule.
-1. Enter the forwarding IP addresses (in CIDR format) separated by commas. This is optional when DNS views is configured with forwarding IP addresses.
-1. Optionally, Click **Add DNS view** to configure DNS view with priority, name, optional description, forwarding ip addresses and expression. You will be able to add number of DNS views based on custom resolver profile.
+1. Enter the forwarding IP addresses (in CIDR format) separated by commas. This is optional when DNS views are configured with forwarding IP addresses.
+1. Optionally, Click **Add DNS view** to configure the DNS view with priority, name, optional description, forwarding ip addresses and expression. Add the number of DNS views based on the custom resolver profile.
 1. Click **Create**.
 
 ## Adding custom resolver forwarding rules from the CLI
