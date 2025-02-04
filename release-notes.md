@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -29,7 +29,7 @@ Profiles for custom resolvers
 :   You can now provision [custom resolvers with different profiles](/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-profile-capabilities). 
 
 Custom resolver capacity
-:   [Increased limits](/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-limits) on forwarding rules, secondary zones, and the number of supported DNS records per secondary zone.
+:   [Increased limits](/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-profiles) on forwarding rules, secondary zones, and the number of supported DNS records per secondary zone.
 
 View feature for forwarding rules
 :   The [view feature](/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-forwarding-rule-view) enables advanced server block routing functions, such as split DNS.
