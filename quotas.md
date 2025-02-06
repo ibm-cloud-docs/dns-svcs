@@ -21,7 +21,7 @@ This section details some of the quotas and service limits of DNS services.
 ## Quotas for DNS services
 {: #dns-quotas}
 
-### Quotas for Custom Resolvers
+### Quotas for custom resolver profiles
 {: #custom-resolver-quotas}
 
 | Resource | Quota |
