@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-06"
 
 keywords:
 
@@ -198,9 +198,4 @@ The view expression follows [Common Expression Language](https://github.com/goog
 ## Custom resolver limits
 {: #cr-limits}
 
-The following limits exist for the custom resolvers feature.
-
-* Each VPC can have a maximum of one custom resolver.
-* Each custom resolver can have a maximum of 3 locations, either within the same subnet or in different subnets.
-* You cannot delete the subnet that is used for the custom resolver.
-* You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location's virtual server instance.
+For more information, see [Service limits for DNS services] (tbd).
