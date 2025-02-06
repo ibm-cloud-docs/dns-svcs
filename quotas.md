@@ -21,7 +21,6 @@ This section details some of the quotas and service limits of DNS services.
 ## Quotas for DNS services
 {: #dns-quotas}
 
-
 ### Quotas for Custom Resolvers
 {: #custom-resolver-quotas}
 
@@ -44,4 +43,3 @@ For more information, see [Custom resolver profiles overview](https://cloud.ibm.
 * Each custom resolver can have a maximum of 3 locations, either within the same subnet or in different subnets.
 * You cannot delete the subnet that is used for the custom resolver.
 * You must manually add rules to your security groups to allow traffic from your virtual server instance to the resolver location's virtual server instance.
-
