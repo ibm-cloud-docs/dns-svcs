@@ -198,4 +198,4 @@ The view expression follows [Common Expression Language](https://github.com/goog
 ## Custom resolver limits
 {: #cr-limits}
 
-For more information, see [Service limits for DNS services](/docs/dns-svcs?topic=dns-svcs-dns-quotas-service-limits).
+For more information, see [Service limits for DNS services](/docs/dns-svcs?topic=dns-svcs-dns-quotas-service-limits&interface=ui#dns-service-limits).
