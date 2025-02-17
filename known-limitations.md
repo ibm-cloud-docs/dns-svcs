@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-02-10"
+lastupdated: "2025-02-17"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: dns-svcs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Limitations and known issues
+# Known issues and limitations
 {: #limitations-known-issues}
 
 This section details some of the limitations and known issues of {{site.data.keyword.dns_short}}.
