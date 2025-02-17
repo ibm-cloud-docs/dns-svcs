@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-17"
 
 keywords:
 
@@ -40,9 +40,9 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
+| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) | 
 |---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | 
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #at-table-3a}
 {: tab-title="Europe"}
@@ -77,9 +77,9 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
+| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) | 
 |---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | 
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #at-table-3}
 {: tab-title="Europe"}
@@ -114,9 +114,9 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
+| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) | 
 |---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | 
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #atracker-table-3}
 {: tab-title="Europe"}
