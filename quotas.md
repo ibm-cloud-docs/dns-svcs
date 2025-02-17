@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-02-10"
+lastupdated: "2025-02-17"
 
 keywords:
 
@@ -32,14 +32,7 @@ _These quotas list the maximum limit for DNS Services resources. If the default 
 ### Quotas for custom resolver profiles
 {: #custom-resolver-quotas}
 
-| Resource | Quota |
-|--------|-----|
-| Secondary zones | 100 |
-| Forwarding rules | 100 |
-| View Limits per forwarding rule | 5 |
-{: caption="Quotas for DNS services" caption-side="bottom"}
-
-For more information, see [Custom resolver profiles overview](https://cloud.ibm.com/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-profiles).
+Quotas vary based on the custom resolver profile you select. For more information, see [Custom resolver profiles overview](https://cloud.ibm.com/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-profiles).
 
 [Note]{: tag-red} _Are these service limits or limitations? Most repos require a separate topic in Help subsection titled "Known issues and limitations. Need to identify what are service limits vs limitations vs planning considerations._
 
