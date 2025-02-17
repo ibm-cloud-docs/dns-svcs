@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2024-11-14"
+lastupdated: "2025-02-17"
 
 keywords:
 
@@ -32,16 +32,18 @@ You can achieve high availability on different levels in your IT infrastructure 
 
 The DNS resolvers are distributed around the world in multiple MZRs with any cast IP addresses for optimizing latencies and providing high availability. If one region experiences an outage, the DNS queries are routed to another region. The data is replicated to the following regions for latency optimization and high availability:
 
-Dallas (us-south)
-Washington, D.C. (us-east)
-London (eu-gb)
-Madrid (eu-es)
-Frankfurt (eu-de)
-Osaka (jp-osa)
-Tokyo (jp-tok)
-Toronto (ca-tor)
-Sydney (au-syd)
-Sao Paulo (br-sao)
+- Dallas (us-south)
+- Washington, D.C. (us-east)
+- London (eu-gb)
+- Madrid (eu-es)
+- Frankfurt (eu-de)
+- Osaka (jp-osa)
+- Tokyo (jp-tok)
+- Toronto (ca-tor)
+- Sydney (au-syd)
+- Sao Paulo (br-sao)
+
+
 A best practice is to deploy custom resolvers to more than one subnet to ensure high availability. It is recommended that you deploy in all three availability zones.
 
 ## What level of availability does {{site.data.keyword.cloud_notm}} offer?
