@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-20"
 
 keywords:
 
@@ -42,7 +42,6 @@ The DNS resolvers are distributed around the world in multiple MZRs with any cas
 - Toronto (ca-tor)
 - Sydney (au-syd)
 - Sao Paulo (br-sao)
-
 
 A best practice is to deploy custom resolvers to more than one subnet to ensure high availability. It is recommended that you deploy in all three availability zones.
 
