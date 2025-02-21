@@ -169,4 +169,5 @@ toc:
             - ts-cr-dns-view.md
             - ts-cr-sz-not-available.md
         - known-limitations.md
+        - quotas.md
         - getting-help.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2024-11-14"
+lastupdated: "2025-02-21"
 
 keywords:
 
@@ -34,7 +34,7 @@ DNS Services provide mechanisms to protect your data and restore service functio
 |---|---|
 |  RPO | 1 hour   |
 |  RTO | 24 hours  |
-{: caption="Table 1. RPO and RTO for DNS Services" caption-side="bottom"}
+{: caption="RPO and RTO for DNS Services" caption-side="bottom"}
 
 ## Locations
 {: #ha-locations}

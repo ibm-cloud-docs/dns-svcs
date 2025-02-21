@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-10-25"
+  years: 2019, 2025
+lastupdated: "2025-02-20"
 
 keywords: restricted zones
 
@@ -60,6 +60,8 @@ Records for `domain.example.com`
 If a user queries for `myhost.domain.example.com`, the expected result (which is 2.2.2.2) should come from `domain.example.com`, because `domain.example.com` is the longest match with the user query.
 
 If they queried for `me.domain.example.com` instead, the resolver searches only the longest matching zone. Because `me.domain.example.com` does not exist in `domain.example.com`, the result is an `NXDOMAIN`. 
+
+For more information, see [Known issues and limitations](/docs/dns-svcs?topic=dns-svcs-limitations-known-issues).
 
 ## Creating a DNS zone in the UI
 {: #create-dns-zone-ui}
