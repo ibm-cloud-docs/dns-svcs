@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-02-20"
+lastupdated: "2025-02-25"
 
 keywords:
 
@@ -82,7 +82,7 @@ If the name resolution request for `www.example.com` originated from a client in
 |DNS queries per second| 1000 per availability zone|
 {: caption="DNS Services limitations" caption-side="bottom"}
 
-## DNS Services Supported Regions
+## DNS Services supported regions
 {: #supported-regions}
 
 | Region | Data replication region | [Health check region](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#add-a-pool) | Permitted networks |

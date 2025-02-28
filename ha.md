@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2025-02-21"
+lastupdated: "2025-02-24"
 
 keywords:
 
@@ -50,12 +50,12 @@ A best practice is to deploy custom resolvers to more than one subnet to ensure 
 
 The level of availability that you set up for your cluster impacts your coverage under the {{site.data.keyword.cloud_notm}} high availability service level agreement terms.
 
-Service level objectives (SLOs) describe the design points that the {{site.data.keyword.cloud_notm}} services are engineered to meet. _service-name_ is designed to achieve the following availability target.
+Service level objectives (SLOs) describe the design points that the {{site.data.keyword.cloud_notm}} services are engineered to meet. DNS Services is designed to achieve the following availability target.
 
 | Availability target | Target Value   |
 |---|---|
 |  Availability % | 99.999% |
-{: caption="SLO for _service-name_" caption-side="bottom"}
+{: caption="SLO for DNS Services" caption-side="bottom"}
 
 The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo).
 
