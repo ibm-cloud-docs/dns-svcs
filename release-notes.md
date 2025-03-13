@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-03-13"
 
 keywords:
 
@@ -20,6 +20,12 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
+
+## 13 March 2025
+{: #dns-svcs-mar1325}
+
+Montreal region now available
+:    Montreal is now a supported region for DNS Services. For more information, see [IBM Cloud region and data center locations for resource deployment](/docs/overview?topic=overview-locations).
 
 ## 30 January 2025
 {: #dns-svcs-jan3025}
