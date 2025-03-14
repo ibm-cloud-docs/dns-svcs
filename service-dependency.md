@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-01-15"
+lastupdated: "2025-03-14"
 
 keywords:
 
@@ -40,10 +40,6 @@ The following table provides the dependency listing of this service following a 
 |:---|:---|:---|:---|:---|
 | IBM Cloud Internet Services | Availability, Disaster recovery, Operations, Security compliance | No | Control plane |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
 | IBM Cloud Global Resource Catalog | Availability, Instance control | No | Control plane |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
-| IBM Cloud Image Service for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
-| IBM Cloud Service Endpoints | Availability, Disaster recovery, Instance control | No | Control plane |  Same data center  |
-| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
-| IBM Cloud Virtual Server for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
 | IBM Cloudant for IBM Cloud | Availability, Change management, Disaster recovery, Instance control | No | Control plane |  Same region  |
 | IBM Cloud Databases - databases-for-redis | Availability, Change management, Disaster recovery, Instance control | No | Data plane |  Same region  |
 | IBM Cloud Databases - databases-for-etcd | Availability, Change management, Disaster recovery, Instance control | No | Data plane |  Same region  |
@@ -54,6 +50,10 @@ The following table provides the dependency listing of this service following a 
 | IBM Key Protect for IBM Cloud | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | Control plane |  Same region  |
 | IBM Cloud Virtual Servers | Availability, Change management, Disaster recovery, Instance control | No | Control plane |  Same data center  |
 | IBM Cloud Business Support Services | Availability | No | Control plane |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
+| IBM Cloud Image Service for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
+| IBM Cloud Service Endpoints | Availability, Disaster recovery, Instance control | No | Control plane |  Same data center  |
+| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
+| IBM Cloud Virtual Server for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
 {: row-headers}
 {: caption="IBM Cloud DNS Services service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
@@ -64,12 +64,12 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
+| IBM Cloud Console | Availability, Instance control, Operations | No | Control plane |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
 | IBM Cloud Metrics Routing | Availability, Operations | No | Data plane |  Same region  |
+| IBM Cloud Logs - logs | Access management, Availability, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
+| IBM Cloud Secrets Manager | Availability, Change management, configuration-management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
 | IBM Cloud Virtual Private Endpoint for VPC | Availability, Disaster recovery, Instance control | No | Data plane |  Same zone  |
 | IBM Log Analysis Log Routing | Availability, Operations | No | Data plane |  Same region  |
-| IBM Log Analysis and IBM Cloud Activity Tracker | Access management, Availability, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
-| IBM Cloud Console | Availability, Instance control, Operations | No | Control plane |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
-| IBM Cloud Secrets Manager | Availability, Change management, configuration-management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud DNS Services service dependency information - Significant dependencies" caption-side="top"}
 {: tab-title="Significant dependencies"}
@@ -80,13 +80,13 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Transit Gateway| none, Security compliance | No | Data plane |  Same region  |
-| IBM Cloud Object Storage| Disaster recovery, Security compliance | No | Data plane |  Same data center  |
-| IBM Cloud Global Search and Tagging| Security compliance | No | Control plane |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
 | Synthetics| Operations | No | Control plane |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
-| IBM Cloud Global Protect VPN| Security compliance | No | Data plane |  Same data center  |
-| IBM Cloud Activity Tracker event routing| Operations, Security compliance | No | Control plane |  Same region  |
 | IBM Cloud Monitoring| Operations, Security compliance | No | Control plane |  Same region  |
+| IBM Cloud Activity Tracker event routing| Operations, Security compliance | No | Control plane |  Same region  |
+| IBM Cloud Object Storage| Disaster recovery, Security compliance | No | Data plane |  Same data center  |
+| IBM Cloud Transit Gateway| none, Security compliance | No | Data plane |  Same region  |
+| IBM Cloud Global Protect VPN| Security compliance | No | Data plane |  Same data center  |
+| IBM Cloud Global Search and Tagging| Security compliance | No | Control plane |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
 {: row-headers}
 {: caption="IBM Cloud DNS Services service dependency information - Minimal dependencies" caption-side="top"}
 {: tab-title="Minimal dependencies"}
