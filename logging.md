@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-02-24"
+lastupdated: "2025-03-14"
 
 keywords:
 
@@ -37,7 +37,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|-------------------------|-------------------|----------------------|
 | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where platform logs are generated in Americas locations" caption-side="top"}
-{: #pl-table-1}
 {: tab-title="Americas"}
 {: tab-group="pl"}
 {: class="simple-tab-table"}
@@ -47,7 +46,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|------------------|------------------|--------------------|
 | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where platform logs are generated in Asia Pacific locations" caption-side="top"}
-{: #pl-table-2}
 {: tab-title="Asia Pacific"}
 {: tab-group="pl"}
 {: class="simple-tab-table"}
@@ -57,7 +55,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------------------------------------------------|---------------------|------------------|
 | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where platform logs are generated in Europe locations" caption-side="top"}
-{: #pl-table-3}
 {: tab-title="Europe"}
 {: tab-group="pl"}
 {: class="simple-tab-table"}
@@ -75,7 +72,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|-------------------------|-------------------|----------------------|
 | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where logs are sent in Americas locations" caption-side="top"}
-{: #la-table-1}
 {: tab-title="Americas"}
 {: tab-group="la"}
 {: class="simple-tab-table"}
@@ -85,7 +81,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|------------------|------------------|--------------------|
 | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where logs are sent in Asia Pacific locations" caption-side="top"}
-{: #la-table-2}
 {: tab-title="Asia Pacific"}
 {: tab-group="la"}
 {: class="simple-tab-table"}
@@ -95,7 +90,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------------------------------------------------|---------------------|------------------|
 | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where logs are sent in Europe locations" caption-side="top"}
-{: #la-table-3}
 {: tab-title="Europe"}
 {: tab-group="la"}
 {: class="simple-tab-table"}
@@ -112,7 +106,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|-------------------------|-------------------|----------------------|
 | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where logs are sent in Americas locations" caption-side="top"}
-{: #lr-table-1}
 {: tab-title="Americas"}
 {: tab-group="lr"}
 {: class="simple-tab-table"}
@@ -122,7 +115,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|------------------|------------------|--------------------|
 | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where logs are sent in Asia Pacific locations" caption-side="top"}
-{: #lr-table-2}
 {: tab-title="Asia Pacific"}
 {: tab-group="lr"}
 {: class="simple-tab-table"}
@@ -132,7 +124,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------------------------------------------------|---------------------|------------------|
 | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where logs are sent in Europe locations" caption-side="top"}
-{: #lr-table-3}
 {: tab-title="Europe"}
 {: tab-group="lr"}
 {: class="simple-tab-table"}
