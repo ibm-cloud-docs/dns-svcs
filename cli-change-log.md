@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2022
-lastupdated: "2022-10-14"
+  years: 2022, 2025
+lastupdated: "2025-03-14"
 
-keywords: change log for dns services cli, updates to dns-svcs-cli-plugin
+keywords: change log for dns services cli, updates to cli
 
 subcollection: dns-svcs
 
