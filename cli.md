@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-04-14"
 
 keywords:
 
@@ -1689,7 +1689,7 @@ ibmcloud dns glb-monitor-create --name NAME --type (HTTP|HTTPS) --path PATH [--p
     - For `TCP`-type health checks. Extra required fields are `port`.
         - `port`: The TCP port to use for the health check.
     - For `HTTP/HTTPS`-type health checks. Extra required fields are `expected_codes`.
-        - `expected_codes`: The expected HTTP response code or code range of the health checks. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`.
+        - `expected_codes`: The expected HTTP response code or code range of the health checks. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`.
     - Extra option fields are `port`, `expected_body`, `method`, `path`, `header`, `allow_insecure`.
         - `port`: The port number that the health check connects to.
         - `expected_body`: A case-insensitive substring to look for in the response body.
@@ -1767,7 +1767,7 @@ ibmcloud dns glb-monitor-create --name NAME --type (HTTP|HTTPS) --path PATH [--p
 :   The port number that the health check connects to.
 
 --expected-codes
-:   The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`.
+:   The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`.
 
 --expected-body
 :   A case-insensitive substring to look for in the response body.
@@ -1831,7 +1831,7 @@ GLB_MON_ID
     - For `TCP`-type health check. Extra option fields are `port`.
         - `port`: The TCP port to use for the health check.
     - For `HTTP/HTTPS`-type health check. Extra option fields are `expected_codes`, `port`, `expected_body`, `method`, `path`, `header`, `allow_insecure`.
-        - `expected_codes`: The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`.
+        - `expected_codes`: The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`.
         - `port`: The port number that the health check connects to.
         - `expected_body`: A case-insensitive substring to look for in the response body.
         - `method`: The method to use for the health check that is applicable to HTTP/HTTPS-based checks. Valid values: `GET`, `HEAD`.
@@ -1908,7 +1908,7 @@ GLB_MON_ID
 :   The port number that the health check connects to.
 
 --expected-codes
-:   The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`.
+:   The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`.
 
 --expected-body
 :   A case-insensitive substring to look for in the response body.
@@ -3107,4 +3107,3 @@ ZONE_ID
 ibmcloud dns cross-account access-requests 05855abe-3908-4cdc-bf0d-063e0b1c296d --i "dns-demo"
 ```
 {: pre} 
-
