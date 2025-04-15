@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-20"
+lastupdated: "2025-04-15"
 
 keywords:
 
@@ -38,8 +38,7 @@ After you create the custom resolver and configure its forwarding rules, the res
 
 You can use custom resolver profiles to increase the limits on how many forwarding rules, secondary zones, or DNS views can be configured. Additionally, if you want to configure many DNS records for their secondary zones, a larger profile prevents performance bottlenecks.
 
-Quotas vary based on the custom resolver profile you select. For more information, see [Custom resolver profiles overview](/docs/dns-svcs?topic=dns-svcs-dns-quotas-service-limits#custom-resolver-quotas).
-
+Quotas vary based on the custom resolver profile you select. For more information, see [Quotas for custom resolver profiles](/docs/dns-svcs?topic=dns-svcs-dns-quotas-service-limits#custom-resolver-quotas).
 
 ## Reserved IP for custom resolvers
 {: #about-reserved-ip}

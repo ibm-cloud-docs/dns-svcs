@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-04-15"
 
 keywords:
 
@@ -108,6 +108,6 @@ To add a custom resolver using the API, follow these steps:
 {: #next-steps-create-cr}
 
 * [Adding custom resolver locations](/docs/dns-svcs?topic=dns-svcs-cr-res-loc-add)
-* [Custom resolver profiles](/docs/dns-svcs?topic=custom-resolver#cr-profiles)
+* [Custom resolver profiles](/docs/dns-svcs?topic=dns-svcs-custom-resolver#cr-profiles)
 * [Setting up custom resolver forwarding rules](/docs/dns-svcs?topic=dns-svcs-cr-fwd-rules-add)
 * [Deleting a custom resolver](/docs/dns-svcs?topic=dns-svcs-cr-delete)
