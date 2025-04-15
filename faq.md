@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-07-07"
+  years: 2020, 2025
+lastupdated: "2025-04-15"
 
 keywords:
 
@@ -110,7 +110,7 @@ If the VPC is deleted, the corresponding permitted network will also be deleted 
 {: #why-can-i-resolve-resource-records-after-delete}
 {: faq}
 
-To maintain a level of performance while resolving DNS queries, DNS Services resolvers cache data related to permitted networks for a period of time. Changes made to a permitted network might not have propagated until the previously cached data expires. See [Known limitations](/docs/dns-svcs?topic=dns-svcs-known-limitations) for more details.
+To maintain a level of performance while resolving DNS queries, DNS Services resolvers cache data related to permitted networks for a period of time. Changes made to a permitted network might not have propagated until the previously cached data expires. See [Known issues and limitations](/docs/dns-svcs?topic=dns-svcs-limitations-known-issues) for more details.
 
 ## Why am I still being charged for a disabled custom resolver or location?
 {: #disabled-custom-resolver-charge}
