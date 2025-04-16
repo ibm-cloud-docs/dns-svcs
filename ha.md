@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2025-02-24"
+lastupdated: "2025-04-16"
 
 keywords:
 
@@ -57,7 +57,7 @@ Service level objectives (SLOs) describe the design points that the {{site.data.
 |  Availability % | 99.999% |
 {: caption="SLO for DNS Services" caption-side="bottom"}
 
-The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo).
+The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](docs/resiliency?topic=resiliency-slo).
 
 
 ## Locations
@@ -65,4 +65,4 @@ The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue cred
 
 For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
 
-See [How IBM Cloud ensures high availability and disaster recovery](/docs/overview?topic=overview-zero-downtime#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}. You can also find information about [Service Level Agreements](/docs/overview?topic=overview-slas#slas).
+See [How IBM Cloud ensures high availability and disaster recovery](docs/resiliency?topic=resiliency-ha-redundancy#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}. You can also find information about [Service Level Agreements](/docs/overview?topic=overview-slas#slas).
