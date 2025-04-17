@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-02"
+  years: 2020, 2025
+lastupdated: "2025-04-17"
 
 keywords: dns-svcs, DNS Services, Private DNS, dns support script, dns backup script
 
@@ -260,5 +260,5 @@ fi
 ## Alternatives to a script
 {: #alternatives-to-a-script}
 
-* A more portable alternative is to use an Infrastructure as Code tool such as Terraform for {{site.data.keyword.dns_short}} [as documented](dns-svcs?topic=dns-svcs-terraform-setup-dns-svcs).
+* A more portable alternative is to use an Infrastructure as Code tool such as Terraform for {{site.data.keyword.dns_short}} [as documented](/docs/dns-svcs?topic=dns-svcs-terraform-setup-dns-svcs).
 * Compared to custom scripts that only export, tools like Terraform allow for easier export, import, and other operations needed to manage configurations in a more uniform manner.
