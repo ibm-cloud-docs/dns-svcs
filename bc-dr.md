@@ -2,11 +2,11 @@
 
 copyright:
   years: 2021
-lastupdated: "2025-02-21"
+lastupdated: "2025-04-17"
 
 keywords:
 
-subcollection: repo-name
+subcollection: dns-svcs
 
 ---
 

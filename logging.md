@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-04-22"
 
 keywords:
 
@@ -21,11 +21,6 @@ subcollection: dns-svcs
 You can use {{site.data.keyword.logs_routing_full_notm}}, a platform service, to route platform logs in your account to a destination of your choice by configuring a tenant that defines where platform logs are sent. For more information, see [About Logs Routing](/docs/logs-router?topic=logs-router-about).
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on platform logs that are generated in your account and routed by {{site.data.keyword.logs_routing_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
-
-
-
-As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.la_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Logging is the same for both services. For information about migrating from {{site.data.keyword.la_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-migration-intro).
-{: important}
 
 ## Locations where platform logs are generated
 {: #log-locations}
@@ -57,41 +52,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: caption="Regions where platform logs are generated in Europe locations" caption-side="top"}
 {: tab-title="Europe"}
 {: tab-group="pl"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-
-### Locations where logs are sent to {{site.data.keyword.la_full_notm}}
-{: #la-legacy-locations}
-
-
-
-{{site.data.keyword.dns_short}} sends platform logs to {{site.data.keyword.la_full_notm}} in the regions indicated in the following table.
-
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|-------------------------|-------------------|----------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where logs are sent in Americas locations" caption-side="top"}
-{: tab-title="Americas"}
-{: tab-group="la"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where logs are sent in Asia Pacific locations" caption-side="top"}
-{: tab-title="Asia Pacific"}
-{: tab-group="la"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where logs are sent in Europe locations" caption-side="top"}
-{: tab-title="Europe"}
-{: tab-group="la"}
 {: class="simple-tab-table"}
 {: row-headers}
 
