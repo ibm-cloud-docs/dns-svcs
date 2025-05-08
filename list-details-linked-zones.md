@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,13 +18,13 @@ subcollection: dns-svcs
 List all linked zones and get the details of a linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Listing a linked zone in the UI
+## Listing a linked zone in the console
 {: #ui-list-linked-zone}
 {: ui}
 
 To list all linked zones using the UI, navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance, then select the **Linked zones** tab.
 
-## Getting the details of a linked zone in the UI
+## Getting the details of a linked zone in the console
 {: #ui-get-details}
 {: ui}
 

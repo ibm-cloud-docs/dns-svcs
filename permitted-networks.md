@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-10-25"
+  years: 2019, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Manage permitted networks for your {{site.data.keyword.dns_full}} instance by using the UI, CLI, or API.
 {: shortdesc}
 
-## Adding permitted networks in the UI
+## Adding permitted networks in the console
 {: #adding-permitted-networks-ui}
 {: ui}
 
@@ -37,7 +37,7 @@ Newly created virtual server instances are automatically configured to use priva
 Adding the same VPC to two DNS zones of the same name is not allowed.
 {: note}
 
-## Navigating from permitted networks to VPC overview in the UI
+## Navigating from permitted networks to VPC overview in the console
 {: #navigating-to-vpc}
 {: ui}
 
@@ -45,7 +45,7 @@ You can navigate to the VPC overview page from the **Permitted networks** sectio
 
 ![Permitted network link to VPC overview page](images/permit-net-nav.svg "Image of VPC name link in permitted network section"){: caption="Navigating to an IBM VPC from permitted networks section" caption-side="bottom"}
 
-## Listing permitted networks in the UI
+## Listing permitted networks in the console
 {: #list-permitted-networks}
 {: ui}
 
@@ -58,7 +58,7 @@ By default,the list contains permitted networks that were added from your accoun
 You can select a maximum of 5 cross-account IDs.
 {: note}
 
-### Removing a permitted network in the UI
+### Removing a permitted network in the console
 {: #removing-permitted-networks-ui}
 {: ui}
 
@@ -289,7 +289,7 @@ curl -X GET \
 
 List all permitted networks for your DNS zone.
 
-### Request 
+### Request
 {: #list-pm-request}
 
 ```bash
@@ -326,7 +326,7 @@ curl -X GET \
 
 Delete a specific permitted network from your instance, and unlink VPC from a zone.
 
-### Request 
+### Request
 {: #remove-pm-request}
 
 ```bash

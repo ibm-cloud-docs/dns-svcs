@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Creating a custom resolver in the UI
+## Creating a custom resolver in the console
 {: #create-cr-ui}
 {: ui}
 
@@ -35,9 +35,9 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
 1. Select a VPC from the list menu.
 1. Select a subnet from the list menu.
 
-   To achieve high availability, you must provide a minimum of two subnets. You can configure a maximum of three locations within the same subnet, or in different subnets. 
+   To achieve high availability, you must provide a minimum of two subnets. You can configure a maximum of three locations within the same subnet, or in different subnets.
    {: important}
-   
+
 1. Click **Add+** if you want to add another subnet.
 1. Click **Create**.
 
@@ -46,7 +46,7 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
 ### Creating a custom resolver without high availability
 {: #cr-add-no-ha}
 
-If you want to create a custom resolver without high availability, you must manually delete the second subnet field by clicking the trashcan icon next to the second subnet. 
+If you want to create a custom resolver without high availability, you must manually delete the second subnet field by clicking the trashcan icon next to the second subnet.
 
 ![Delete second subnet](images/cr-no-ha.png "Delete the second subnet by clicking trashcan icon"){: caption="Delete the second subnet to remove high availability function" caption-side="bottom"}
 

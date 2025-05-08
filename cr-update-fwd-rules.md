@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -21,7 +21,7 @@ You can update custom resolver forwarding rules in {{site.data.keyword.dns_full}
 Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
 {: important}
 
-## Updating custom resolver forwarding rules in the UI
+## Updating custom resolver forwarding rules in the console
 {: #ui-cr-fwd-rules-update}
 {: ui}
 

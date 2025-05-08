@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-10-25"
+  years: 2019, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 DNS records make the connection between human-readable names and IP addresses. We cover how to manage DNS records in the following sections. Manage DNS records by using the UI, CLI, or API.
 {: shortdesc}
 
-## Adding DNS records in the UI
+## Adding DNS records in the console
 {: #adding-dns-records}
 {: ui}
 
@@ -32,7 +32,7 @@ When you enter a name in the Name field, a domain name is automatically appended
 The minimum supported TTL value is `1 min` and the maximum is `12 hours`. The default value of TTL is `15 min`, but users can change it.
 {: note}
 
-### Add an A type record in the UI
+### Add an A type record in the console
 {: #a-record}
 {: ui}
 
@@ -43,7 +43,7 @@ Required fields
 * IPv4 Address
 * TTL (Default value is 15 min)
 
-### Add an AAAA type record in the UI
+### Add an AAAA type record in the console
 {: #aaaa-record}
 {: ui}
 
@@ -54,7 +54,7 @@ Required fields
 * IPv6 Address
 * TTL (Default value is 15 min)
 
-### Add an CNAME type record in the UI
+### Add an CNAME type record in the console
 {: #cname-record}
 {: ui}
 
@@ -65,7 +65,7 @@ Required fields
 * Target (for CNAME)
 * TTL (Default value is 15 min)
 
-### Add an MX Type record in the UI
+### Add an MX Type record in the console
 {: #mx-record}
 {: ui}
 
@@ -77,7 +77,7 @@ Required fields
 * TTL (Default value is 15 min)
 * Priority (Default value is 1)
 
-### Add an PTR type record in the UI
+### Add an PTR type record in the console
 {: #ptr-record}
 {: ui}
 
@@ -87,7 +87,7 @@ Required fields
 * Select existing record
 * TTL (Default value is 15 min)
 
-### Add an SRV type record in the UI
+### Add an SRV type record in the console
 {: #srv-record}
 {: ui}
 
@@ -103,7 +103,7 @@ Required fields
 * Weight (Default value is 1)
 * Port (Default value is 1)
 
-### Add an TXT type record in the UI
+### Add an TXT type record in the console
 {: #txt-record}
 {: ui}
 
@@ -117,18 +117,18 @@ Required fields
 * Content
 * TTL (Default value is 15 min)
 
-## Update DNS records in the UI
+## Update DNS records in the console
 {: #updating-dns-records}
 {: ui}
 
 In each record row, click the **Edit** icon to open a panel where you can update the record.
 
-## Delete DNS records in the UI
+## Delete DNS records in the console
 {: #deleting-dns-records}
 
 In each record row, click the **Delete** icon to open a panel where you can confirm the delete process.
 
-## Import resource records in  the UI
+## Import resource records in the console
 {: #ui-import-records}
 {: ui}
 
@@ -157,7 +157,7 @@ www.test.com.  900 IN  TXT "my content"
 
 After the records are imported, you can review the details of the import status, including the number of files that successfully uploaded and which records could not be uploaded. If you need to upload additional files, click **Upload more files** and repeat the import steps. Click the **X** icon in the top right of the panel to close the import panel.
 
-## Export resource records in the UI
+## Export resource records in the console
 {: #ui-export-records}
 {: ui}
 

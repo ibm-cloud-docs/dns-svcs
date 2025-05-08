@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-25"
+  years: 2020, 2025
+lastupdated: "2025-05-08"
 
 keywords: instance ID, instance GUID, get instance ID, get instance GUID, instance ID API, instance ID CLI
 
@@ -20,7 +20,7 @@ Retrieve your instance ID by using the UI, CLI, or API.
 
 You can target an individual {{site.data.keyword.dns_full}} service instance for operations by including its unique identifier, or instance ID, in API requests to the service.
 
-## Retrieving your instance ID in the UI
+## Retrieving your instance ID in the console
 {: #view-instance-ID}
 {: ui}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Create a secondary zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Creating a secondary zone in the UI
+## Creating a secondary zone in the console
 {: #ui-create-secondary-zone}
 {: ui}
 

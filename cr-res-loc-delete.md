@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -15,10 +15,10 @@ subcollection: dns-svcs
 # Deleting custom resolver locations
 {: #cr-res-loc-delete}
 
-You can delete custom resolver locations in {{site.data.keyword.dns_full}} by using the UI, CLI, or API. 
+You can delete custom resolver locations in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Deleting a resolver location in the UI
+## Deleting a resolver location in the console
 {: #ui-delete-res-loc}
 {: ui}
 

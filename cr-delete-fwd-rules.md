@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You can delete custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Deleting custom resolver forwarding rules in the UI
+## Deleting custom resolver forwarding rules in the console
 {: #ui-cr-fwd-rules-delete}
 {: ui}
 

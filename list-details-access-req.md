@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 List all access requests and get the details of an access request in your linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Listing all access requests in the UI
+## Listing all access requests in the console
 {: #ui-list-access-req}
 {: ui}
 
@@ -27,7 +27,7 @@ To list all access requests using the UI, take the following steps:
 1. Navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance, then select the **DNS zones** tab, which shows a list of all zones.
 1. Check the **Status** column for pending requests.
 
-## Getting the details of an access request in the UI
+## Getting the details of an access request in the console
 {: #ui-get-details-access-req}
 
 To get the details of an access request using the UI, take the following steps:

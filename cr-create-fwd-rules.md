@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -77,7 +77,7 @@ The view that is configured in this example forwards the DNS query for `example.
 Views are prioritized based on the order that they are configured in the `views` array.
 {: note}
 
-## Adding custom resolver forwarding rules in the UI
+## Adding custom resolver forwarding rules in the console
 {: #ui-add-fwd-rules}
 {: ui}
 

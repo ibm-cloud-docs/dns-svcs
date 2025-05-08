@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -30,7 +30,7 @@ The following table shows the possible states your linked zone might be in as th
 |Approval revoked|Account owner has revoked the cross-account access|
 {: caption="Requestor states" caption-side="bottom"}
 
-## Creating a linked zone in the UI
+## Creating a linked zone in the console
 {: #ui-create-linked-zone}
 {: ui}
 

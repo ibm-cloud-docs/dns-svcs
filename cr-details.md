@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You view details of a single custom resolver and view a list of all custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Viewing custom resolver details in the UI
+## Viewing custom resolver details in the console
 {: #ui-details-cr}
 {: ui}
 

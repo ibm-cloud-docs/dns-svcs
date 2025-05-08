@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 You can delete a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Deleting a custom resolver in the UI
+## Deleting a custom resolver in the console
 {: #ui-cr-delete}
 {: ui}
 
