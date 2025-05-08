@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Add a permitted network to your linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Adding a permitted network in the UI
+## Adding a permitted network in the console
 {: #ui-add-permit-network}
 {: ui}
 

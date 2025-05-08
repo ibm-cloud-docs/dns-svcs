@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Remove a permitted network from your linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Removing a permitted network in the UI
+## Removing a permitted network in the console
 {: #ui-remove-permit-network}
 {: ui}
 

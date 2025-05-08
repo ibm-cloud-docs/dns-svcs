@@ -18,7 +18,7 @@ subcollection: dns-svcs
 List all permitted networks and get the details of a permitted network in your linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Getting the details of a permitted network in the UI
+## Getting the details of a permitted network in the console
 {: #ui-get-details-perm-nets}
 {: ui}
 

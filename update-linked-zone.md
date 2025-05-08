@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Update the properties of a linked zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Updating a linked zone in the UI
+## Updating a linked zone in the console
 {: #ui-update-linked-zone}
 {: ui}
 

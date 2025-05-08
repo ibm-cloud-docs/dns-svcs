@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -28,7 +28,7 @@ The following table describes the actions you can take as the account owner.
 |No action | The request times out if you take no action after 7 days elapse.|
 {: caption="Owner states" caption-side="bottom"}
 
-## Updating an access request in the UI
+## Updating an access request in the console
 {: #ui-update-access-req}
 {: ui}
 

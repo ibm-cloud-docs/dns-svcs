@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-10-25"
+  years: 2019, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,13 +18,13 @@ subcollection: dns-svcs
 Set up a {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks, and resource records by using the UI or API.
 {: shortdesc}
 
-## Creating a {{site.data.keyword.dns_short}} instance in the UI
+## Creating a {{site.data.keyword.dns_short}} instance in the console
 {: #creating-a-dns-instance}
 {: ui}
 
 1. Open the [{{site.data.keyword.cloud_notm}} **Catalog**](https://{DomainName}/catalog/) page.
 1. Select the **Networking** category.
-1. Click the **{{site.data.keyword.dns_short}}** tile. 
+1. Click the **{{site.data.keyword.dns_short}}** tile.
 1. Choose a plan.
 1. Enter **Service name** and click **Create**.
 
@@ -32,7 +32,7 @@ Set up a {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks,
 
 You can also navigate directly to the {{site.data.keyword.dns_short}} instance creation by going to the [{{site.data.keyword.dns_short}} catalog entry](https://{DomainName}/catalog/services/dns-services).
 
-## Creating a DNS zone in the UI
+## Creating a DNS zone in the console
 {: #creating-a-dns-zone}
 {: ui}
 
@@ -42,7 +42,7 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
 1. Click **Create zone** in the panel.
    If the zone is created successfully, you are redirected to the Zone Details page.
 
-## Creating an "A" resource record in the UI
+## Creating an "A" resource record in the console
 {: #creating-an-a-resource-record}
 {: ui}
 
@@ -55,7 +55,7 @@ You can also navigate directly to the {{site.data.keyword.dns_short}} instance c
    In this case, for type **A**, enter **Name** and **IPv4 Address**.
 1. Click **Add record** in the panel.
 
-## Creating a permitted network in the UI
+## Creating a permitted network in the console
 {: #creating-a-dns-permitted-network}
 {: ui}
 

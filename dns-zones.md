@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-02-20"
+lastupdated: "2025-05-08"
 
 keywords: restricted zones
 
@@ -63,7 +63,7 @@ If they queried for `me.domain.example.com` instead, the resolver searches only 
 
 For more information, see [Known issues and limitations](/docs/dns-svcs?topic=dns-svcs-limitations-known-issues).
 
-## Creating a DNS zone in the UI
+## Creating a DNS zone in the console
 {: #create-dns-zone-ui}
 {: ui}
 
@@ -97,7 +97,7 @@ The following DNS zone names are not permitted.
 * `appdomain.cloud`
 * `compass.cobaltiron.com`
 
-## Edit a DNS zone in the UI
+## Edit a DNS zone in the console
 {: #edit-dns-zone-ui}
 {: ui}
 
@@ -105,7 +105,7 @@ The following DNS zone names are not permitted.
 2. Click the edit icon for **Label**, then enter the label and click **Save**.
 3. Click the edit icon for **Description**, then enter the description and click **Save**.
 
-## Delete a DNS zone in the UI
+## Delete a DNS zone in the console
 {: #delete-dns-zone-ui}
 {: ui}
 
@@ -273,7 +273,7 @@ curl -X POST \
 ```
 {: pre}
 
-### Response 
+### Response
 {: #create-dns-zone-response}
 {: api}
 
@@ -305,7 +305,7 @@ For future reference, the "id" in response is used as `DNSZONE_ID`. 
 
 Use the following command to get an existing zone. 
 
-### Request 
+### Request
 {: #get-zone-request}
 {: api}
 
@@ -344,7 +344,7 @@ curl -X GET \
 
 Use the following command to update an existing zone. You can update the description and label fields. All other fields are read-only.
 
-### Request 
+### Request
 {: #update-zone-request}
 {: api}
 

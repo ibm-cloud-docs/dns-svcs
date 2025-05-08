@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 Delete a secondary zone by using the UI, CLI, or API.
 {: shortdesc}
 
-## Deleting a secondary zone in the UI
+## Deleting a secondary zone in the console
 {: #ui-delete-secondary-zone}
 {: ui}
 

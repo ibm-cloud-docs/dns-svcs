@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -18,11 +18,11 @@ subcollection: dns-svcs
 You can update custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Updating a custom resolver in the UI
+## Updating a custom resolver in the console
 {: #ui-update-cr}
 {: ui}
 
-You can update your custom resolver name, description, and profile, and toggle to change enablement status or allow disruptive updates in the details view in the UI. 
+You can update your custom resolver name, description, and profile, and toggle to change enablement status or allow disruptive updates in the details view in the console.
 
 To edit the name, description or profile of the custom resolver, click **Edit** to see the edit view. Click **Save** to commit the changes, or cancel.
 

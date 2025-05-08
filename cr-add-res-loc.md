@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2025
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -36,7 +36,7 @@ The DNS servers will appear similar to this example.
 * Virtual server instance in `us-south-2`: IP2 IP3 IP1
 * Virtual server instance in `us-south-3`: IP3 IP1 IP2
 
-## Adding a resolver location in the UI
+## Adding a resolver location in the console
 {: #ui-add-res-loc}
 {: ui}
 
@@ -85,4 +85,3 @@ To add a custom resolver location using the API, follow these steps:
     }
     ```
     {: codeblock}
-  
