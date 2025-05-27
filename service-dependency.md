@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-04-03"
+lastupdated: "2025-05-27"
 
 keywords:
 
@@ -40,20 +40,20 @@ The following table provides the dependency listing of this service following a 
 |:---|:---|:---|:---|:---|
 | IBM Cloud Internet Services | Availability, Disaster recovery, Operations, Security compliance | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Global Resource Catalog | Availability, Instance control | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Business Support Services | Availability | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Image Service for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
+| IBM Cloud Service Endpoints | Availability, Disaster recovery, Instance control | No | Control plane |  Same data center  |
+| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
+| IBM Cloud Virtual Private Cloud | Availability, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same zone  |
+| IBM Cloud Virtual Server for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
 | IBM Cloudant for IBM Cloud | Availability, Change management, Disaster recovery, Instance control | No | Control plane |  Same region  |
 | IBM Cloud Databases - databases-for-redis | Availability, Change management, Disaster recovery, Instance control | No | Data plane |  Same region  |
 | IBM Cloud Databases - databases-for-etcd | Availability, Change management, Disaster recovery, Instance control | No | Data plane |  Same region  |
 | Oculus Automation API | Availability, Disaster recovery, Operations | No | Data plane |  Same data center  |
 | IBM Cloud Identity and Access Management | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Virtual Private Cloud | Availability, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same zone  |
 | VPC Regional Infrastructure API Service | Availability, configuration-management, Disaster recovery, Instance control, Operations | No | Control plane |  Same data center  |
 | IBM Key Protect for IBM Cloud | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | Control plane |  Same region  |
 | IBM Cloud Virtual Servers | Availability, Change management, Disaster recovery, Instance control | No | Control plane |  Same data center  |
-| IBM Cloud Business Support Services | Availability | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Image Service for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
-| IBM Cloud Service Endpoints | Availability, Disaster recovery, Instance control | No | Control plane |  Same data center  |
-| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
-| IBM Cloud Virtual Server for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
 {: row-headers}
 {: caption="IBM Cloud DNS Services service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
@@ -64,13 +64,13 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
+| IBM Cloud Virtual Private Endpoint for VPC | Availability, Disaster recovery, Instance control | No | Data plane |  Same zone  |
+| IBM Log Analysis Log Routing | Availability, Operations | No | Data plane |  Same region  |
+| IBM Cloud Container Registry | Change management, Disaster recovery, Instance control | No | Control plane |  Same region  |
 | IBM Cloud Console | Availability, Instance control, Operations | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Metrics Routing | Availability, Operations | No | Data plane |  Same region  |
 | IBM Cloud Logs - logs | Access management, Availability, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
 | IBM Cloud Secrets Manager | Availability, Change management, configuration-management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
-| IBM Cloud Virtual Private Endpoint for VPC | Availability, Disaster recovery, Instance control | No | Data plane |  Same zone  |
-| IBM Log Analysis Log Routing | Availability, Operations | No | Data plane |  Same region  |
-| IBM Cloud Container Registry | Change management, Disaster recovery, Instance control | No | Control plane |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud DNS Services service dependency information - Significant dependencies" caption-side="top"}
 {: tab-title="Significant dependencies"}
