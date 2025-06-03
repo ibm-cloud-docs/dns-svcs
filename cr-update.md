@@ -26,7 +26,7 @@ To update your custom resolver name, description, and profile, and toggle to cha
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
-1. Navigate to **Custom resolver** tab.
+1. Navigate to the **Custom resolver** tab.
 1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
 1. To edit the name, description or profile of the custom resolver, click **Edit** to see the edit view. Click **Save** to commit the changes, or cancel.
 1. To enable or disable the custom resolver or to enable or disable allowing disruptive updates to the custom resolver, toggle the **Enablement** switches.

@@ -26,7 +26,7 @@ To update a resolver location by using the UI, follow these steps:
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
-1. Navigate to **Custom resolver** tab.
+1. Navigate to the **Custom resolver** tab.
 1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
 1. From the custom resolver details page, select the **Resolver locations** tab. Here you can enable or disable your custom resolver by setting the toggle switch.
 
