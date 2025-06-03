@@ -27,7 +27,7 @@ To delete a resolver location by using the UI, follow these steps:
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
 1. Navigate to **Custom resolver** tab.
-1. Click the overflow menu icon for the location that you want to delete.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") icon for the location that you want to delete.
 1. Select **Delete**.
 
 Deleting an enabled location is not permitted. {: note}

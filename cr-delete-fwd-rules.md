@@ -28,8 +28,8 @@ To delete a forwarding rule by using the UI, follow these steps:
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
 1. Navigate to **Custom resolver** tab.
 1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
-1. In the Custom resolver details page, and select the **Forwarding rules** tab.
-1. Click the overflow menu next to the rule that you want to delete.
+1. In the Custom resolver details page, select the **Forwarding rules** tab.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the rule that you want to delete.
 1. Select **Delete**.
 
   You cannot delete the default rule.

@@ -29,7 +29,7 @@ You can edit custom resolver forwarding rules from the custom resolver details p
 
 To edit a forwarding rule by using the UI, follow these steps:
 1. Click the **Forwarding rules** tab.
-1. Click the overflow menu next to the rule you want to edit or click the forwarding rules row to open the view panel and click **Edit**.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the rule you want to edit or click the forwarding rules row to open the view panel and click **Edit**.
 1. In the panel that appears, change the match conditions, forwarding IP addresses, DNS views or description.
 1. Click **Save** to commit your changes, or click **Cancel** to discard them.
 
