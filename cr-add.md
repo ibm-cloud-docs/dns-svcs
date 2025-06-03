@@ -18,11 +18,12 @@ subcollection: dns-svcs
 You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Creating a custom resolver by using the UI
+## Creating a custom resolver in the console
+
 {: #create-cr-ui}
 {: ui}
 
-To add a custom resolver by using the UI, follow these steps:
+To add a custom resolver in the console, follow these steps:
 
    You must create a DNS service before you create a custom resolver. Each VPC can have only one custom resolver.
    {: note}

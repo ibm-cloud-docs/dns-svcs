@@ -40,7 +40,7 @@ The DNS servers will appear similar to this example.
 {: #ui-add-res-loc}
 {: ui}
 
-To add a custom resolver location by using the UI, follow these steps:
+To add a custom resolver location in the console, follow these steps:
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.

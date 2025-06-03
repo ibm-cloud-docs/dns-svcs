@@ -18,11 +18,11 @@ subcollection: dns-svcs
 You can update custom resolver locations in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Updating a resolver location by using the UI
+## Updating a resolver location in the console
 {: #ui-update-res-loc}
 {: ui}
 
-To update a resolver location by using the UI, follow these steps: 
+To update a resolver location in the console, follow these steps: 
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.

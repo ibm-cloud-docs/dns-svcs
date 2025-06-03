@@ -77,11 +77,11 @@ The view that is configured in this example forwards the DNS query for `example.
 Views are prioritized based on the order that they are configured in the `views` array.
 {: note}
 
-## Adding custom resolver forwarding rules by using the UI
+## Adding custom resolver forwarding rules in the console
 {: #ui-add-fwd-rules}
 {: ui}
 
-To add a forwarding rule by using the UI, follow these steps:
+To add a forwarding rule in the console, follow these steps:
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.

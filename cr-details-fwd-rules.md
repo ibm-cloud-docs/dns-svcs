@@ -18,11 +18,11 @@ subcollection: dns-svcs
 You view details of a single custom resolver forwarding rule and view a list of all custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Viewing custom resolver forwarding rules by using the UI
+## Viewing custom resolver forwarding rules in the console
 {: #ui-cr-fwd-rules-view}
 {: ui}
 
-To view the details of a custom resolver forwarding rule by using the UI, follow these steps:
+To view the details of a custom resolver forwarding rule in the console, follow these steps:
  
 The Forwarding rules section lists all custom resolver rules associate with the custom resolver. To view the details of a specific forwarding rule, click a row to see the configuration in more detail. 
 

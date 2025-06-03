@@ -18,11 +18,11 @@ subcollection: dns-svcs
 You view details of a single custom resolver and view a list of all custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Viewing custom resolver details by using the UI
+## Viewing custom resolver details in the console
 {: #ui-details-cr}
 {: ui}
 
-To view the details of a custom resolver by using the UI, follow these steps:
+To view the details of a custom resolver in the console, follow these steps:
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.

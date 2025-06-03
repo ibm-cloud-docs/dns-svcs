@@ -18,11 +18,11 @@ subcollection: dns-svcs
 You can update custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Updating a custom resolver by using the UI
+## Updating a custom resolver in the console
 {: #ui-update-cr}
 {: ui}
 
-To update your custom resolver name, description, and profile, and toggle to change enablement status or allow disruptive updates in the details view by using the UI, follow these steps:
+To update your custom resolver name, description, and profile, and toggle to change enablement status or allow disruptive updates in the details view in the console, follow these steps:
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
