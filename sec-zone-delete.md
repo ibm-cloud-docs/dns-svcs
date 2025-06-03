@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -26,7 +26,7 @@ To delete a secondary zone using the UI, take the following steps:
 
 1. Navigate to the **Custom resolver** section of your DNS Services instance, and select the custom resolver from which you want to delete a secondary zone.
 1. In the **Custom resolver details** page, select the **Secondary zone** tab.
-1. Select the overflow menu icon ![overflow menu icon](images/overflow-icon.png) secondary zone you wish to delete and select **Delete**.
+1. Select the overflow menu icon ![overflow menu icon](images/overflow-icon.png) secondary zone that you want to delete, then select **Delete**.
 1. Click **Delete** in the confirmation dialog box, or click **Cancel** to stop the deletion.
 
 ## Deleting a secondary zone from the CLI

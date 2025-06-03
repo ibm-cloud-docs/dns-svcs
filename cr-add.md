@@ -26,12 +26,11 @@ To add a custom resolver by using the UI, follow these steps:
 
    You must create a DNS service before you create a custom resolver. Each VPC can have only one custom resolver.
    {: note}
-
+   
 1. If you haven't already, [create a DNS service](/docs/dns-svcs?topic=dns-svcs-getting-started&interface=ui).
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
-1. Navigate to **Custom resolver** tab in the navigation menu.
-1. Click **Create custom resolver**.
+1. Navigate to the **Custom resolver** tab, then click **Create custom resolver**. 
 1. Enter a name and description for your custom resolver.
 1. Select a profile from the list menu.
 1. Select a region from the list menu.
@@ -68,7 +67,7 @@ Where:
 - **--location** is the location where the custom resolver is running. The location subnet CRN is required. For example: `--location subnet1,enable  --location subnet2,disable`
 - **--profile** is the profile name of custom resolver. Valid values: `essential`, `advanced`, `premier`.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 To create a custom resolver without high availability, run the command with `[-f, --force]`:
 

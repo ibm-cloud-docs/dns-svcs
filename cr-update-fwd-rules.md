@@ -29,7 +29,7 @@ You can edit custom resolver forwarding rules from the custom resolver details p
 
 To edit a forwarding rule by using the UI, follow these steps:
 1. Click the **Forwarding rules** tab.
-1. Click the overflow menu next to the rule you want to edit or click on the forwarding rules row to open the view panel and click **Edit** button.
+1. Click the overflow menu next to the rule you want to edit or click the forwarding rules row to open the view panel and click **Edit**.
 1. In the panel that appears, change the match conditions, forwarding IP addresses, DNS views or description.
 1. Click **Save** to commit your changes, or click **Cancel** to discard them.
 
@@ -56,7 +56,7 @@ Where:
 - **--reorder-view** is the name of the views to be reordered.
 - **--remove-view** is the name of the view to be removed.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 ## Updating custom resolver forwarding rules with the API
 {: #api-cr-fwd-rules-update}

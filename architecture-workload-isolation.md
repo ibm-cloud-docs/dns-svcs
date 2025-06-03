@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2025
+lastupdated: "2025-06-03"
 
 keywords: architecture, workload isolation
 
@@ -22,7 +22,7 @@ Review the following sample architecture for {{site.data.keyword.dns_full}} to l
 
 {{site.data.keyword.dns_short}} is a multitenant service, sharing the infrastructure among all customers. {{site.data.keyword.dns_short}} uses a Cloudant database to store customer-provided Domain Name System (DNS) configuration information. The data is encrypted at rest in Cloudant. Data is also encrypted in transit through SSL from the API endpoints within the control plane to the database.
 
-{{site.data.keyword.dns_short}} handles user-initiated DNS configuration requests in the control plane. In the control plane, {{site.data.keyword.dns_short}} relies on IAM-based authorization and authentication so that only explicitly permitted users within the account can access the information. The IAM policies are enforced at the API level in a way that other user interfaces, such as UI and CLI, all inherit consistent access control policies. For information on which platform and service roles are allowed to take what action, see [Managing IAM and IBM Cloud DNS Services](https://cloud.ibm.com/docs/dns-svcs?topic=dns-svcs-iam). 
+{{site.data.keyword.dns_short}} handles user-initiated DNS configuration requests in the control plane. In the control plane, {{site.data.keyword.dns_short}} relies on IAM-based authorization and authentication so that only explicitly permitted users within the account can access the information. The IAM policies are enforced at the API level in a way that other user interfaces, such as UI and CLI, all inherit consistent access control policies. For information on which platform and service roles are allowed to take what action, see [Managing IAM and IBM Cloud DNS Services](/docs/dns-svcs?topic=dns-svcs-iam). 
 
 Name resolution requests from the Virtual Private Cloud (VPC) are handled in the data plane. The user controls which VPC can access this DNS configuration data in the data plane. This can be specified using the control plane mechanism of adding a permitted network for the DNS zone. A user who has at least `Operator` level access to a VPC can add or remove that VPC as a permitted network for the DNS zone. 
 

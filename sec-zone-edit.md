@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -26,7 +26,7 @@ To edit a secondary zone using the UI, take the following steps:
 
 1. Navigate to the **Custom resolver** section of your DNS Services instance, and select the custom resolver in which you want to edit a secondary zone.
 1. In the **Custom resolver details** page, select the **Secondary zone** tab.
-1. Select the secondary zone you wish to edit.
+1. Select the secondary zone that you want to edit.
 1. Enter the changes for the secondary zone. Only the description and IP address fields can be edited.
 1. Click **Save**.
 
@@ -52,7 +52,7 @@ Where:
 * **--description value** is the description of the secondary zone.
 * **--enabled value** is whether the secondary zone is enabled.
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by ibmcloud dns instance-target INSTANCE is used.
-* **--output value** specifies output format. Currently, json is the only supported format.
+* **--output value** specifies output format. Currently, `json` is the only supported format.
 
 
 ## Editing a secondary zone with the API

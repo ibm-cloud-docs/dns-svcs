@@ -23,12 +23,14 @@ You view details of a single custom resolver forwarding rule and view a list of 
 {: ui}
 
 To view the details of a custom resolver forwarding rule by using the UI, follow these steps:
+ 
+The Forwarding rules section lists all custom resolver rules associate with the custom resolver. To view the details of a specific forwarding rule, click a row to see the configuration in more detail. 
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
-1. Navigate to **Custom resolver** tab in the navigation menu.
-1. In the Custom resolver table, click on the name of the custom resolver to view its details.
-1. The Forwarding rules section lists all custom resolver rules associate with the custom resolver. To view the details of a specific forwarding rule, click on a row to see the configuration in more detail.
+1. Navigate to the **Custom resolver** tab.
+1. In the Custom resolver table, click the name of the custom resolver to view its details.
+1. The Forwarding rules section lists all custom resolver rules associate with the custom resolver. To view the details of a specific forwarding rule, click a row to see the configuration in more detail. 
 
 ## Viewing custom resolver forwarding rules from the CLI
 {: #cli-cr-fwd-rules-view}
@@ -43,7 +45,7 @@ Where:
 - **RESOLVER_ID** is the ID of custom resolver.
 - **RULE_ID** is the ID of custom resolver forwarding rule.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by dns instance-target INSTANCE is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 ### Listing all custom resolvers forwarding rule
 {: #cli-list-fwd-rules}
@@ -56,7 +58,7 @@ Where:
 
 - **RESOLVER_ID** is the ID of custom resolver.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 
 ## Viewing custom resolver forwarding rules with the API

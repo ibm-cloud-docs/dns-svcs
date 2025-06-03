@@ -2,16 +2,13 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-06-03"
 
 keywords:
 
 subcollection: dns-svcs
 
 ---
-
-
-
 
 {{site.data.keyword.attribute-definition-list}}
 
@@ -34,7 +31,6 @@ Minimal
 :   When the dependency is down, the main service features are not impacted.
 
 The following table provides the dependency listing of this service following a standard deployment.
-
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|

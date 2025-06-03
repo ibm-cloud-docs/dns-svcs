@@ -28,8 +28,8 @@ To delete a custom resolver from the custom resolver list view by using the UI, 
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
-1. Navigate to **Custom resolver** tab in the navigation menu.
-1. Click the overflow icon next to the custom resolver you want to delete.
+1. Navigate to **Custom resolver** tab.
+1. Click the overflow icon next to the custom resolver that you want to delete.
 1. Select **Delete**.
 1. Click **Delete** in the confirmation dialog that appears.
 
@@ -37,9 +37,9 @@ To delete a custom resolver from the custom resolver details view by using the U
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
-1. Navigate to **Custom resolver** tab in the navigation menu.
-1. In the Custom resolver table, click on the name of the custom resolver you want to edit.
-1. Select the custom resolver you want to delete to open the details page.
+1. Navigate to **Custom resolver** tab.
+1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
+1. Select the custom resolver that you want to delete to open the details page.
 1. Click **Delete resolver**.
 1. Click **Delete** in the confirmation dialog that appears.
 
@@ -57,7 +57,7 @@ Where:
 
 - **RESOLVER_ID** is the ID of custom resolver.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 - **-f, --force** deletes the custom resolver without prompting for confirmation.
 
 ## Deleting a custom resolver with the API

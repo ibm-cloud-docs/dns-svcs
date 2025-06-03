@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-03-29"
+  years: 2019, 2025
+lastupdated: "2025-06-03"
 
 keywords: dns-svcs, DNS Services, Private DNS
 
@@ -37,7 +37,7 @@ While the private DNS resolvers are required to resolve private DNS names, they 
 {: #step-2-add-dns-zone}
 
 1. From the resource page, select the {{site.data.keyword.dns_short}} instance.
-1. Click the **Create zone** button on the DNS Zones page.
+1. Click **Create zone** on the DNS Zones page.
 1. Enter a fully qualified domain name for the zone and optionally add a label and description. The domain name can have a maximum of 5 levels. You can define subdomains within the zone later.
 1. Click **Create zone**.
 1. If the zone creation is successful, you are directed to the zone details page.
@@ -59,7 +59,7 @@ While the private DNS resolvers are required to resolve private DNS names, they 
 1. Select the zone from the table on the DNS Zones page.
 1. Select the **Permitted networks** tab.
 1. Click **Add network**.
-1. Select the region from the **Region** drop-down menu to see the list of networks in that region.
+1. Select the region from the **Region** menu to see the list of networks in that region.
 1. Select the network from the list and click **Add network**.
 
 Resources in the VPC can resolve records associated with the DNS zone (see [Step 3](#step-3-add-dns-resource-records) to add records to the DNS zone). The DHCP server returns the DNS servers (`161.26.0.7` and `161.26.0.8`) provided by {{site.data.keyword.dns_short}} in its responses. If you have DHCP disabled on a server in the VPC, it is your responsibility to configure the DNS server IP addresses statically on that server, according to your operating system's documentation.
@@ -74,7 +74,7 @@ dig www.example.com
 ```
 {: pre}
 
-## Next Steps
+## Next steps
 {: #getting-started-api}
 
 Follow the steps in these detailed guides to use the API for:

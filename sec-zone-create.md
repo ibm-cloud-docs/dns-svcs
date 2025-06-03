@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -53,7 +53,7 @@ Where:
 * **--description value** is the description of the secondary zone.
 * **--enabled value** specifies whether the secondary zone is enabled.
 * **-i, --instance value** is the instance name or ID. If not set, the context instance specified by `ibmcloud dns instance-target INSTANCE` is used.
-* **--output value** specifies the output format. Currently, JSON is the only supported format.
+* **--output value** specifies the output format. Currently, `json` is the only supported format.
 
 ## Creating a secondary zone with the API
 {: #api-create-secondary-zone}

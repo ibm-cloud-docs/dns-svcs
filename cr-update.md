@@ -26,8 +26,8 @@ To update your custom resolver name, description, and profile, and toggle to cha
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
-1. Navigate to **Custom resolver** tab in the navigation menu.
-1. In the Custom resolver table, click on the name of the custom resolver you want to edit.
+1. Navigate to **Custom resolver** tab.
+1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
 1. To edit the name, description or profile of the custom resolver, click **Edit** to see the edit view. Click **Save** to commit the changes, or cancel.
 1. To enable or disable the custom resolver, toggle the **Enablement** switch.
 1. To enable or disable the allow disruptive updates to custom resolver, toggle the **Enablement** switch.
@@ -49,7 +49,7 @@ Where:
 - **--profile** is the  profile name of custom resolver. Valid values: "essential", "advanced", "premier".
 - **--allow_disruptive_updates** determines weather disruptive update is allowed for the custom resolver.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 ## Update a custom resolver with the API
 {: #api-update-cr}
