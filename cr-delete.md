@@ -18,28 +18,27 @@ subcollection: dns-svcs
 You can delete a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Deleting a custom resolver by in the console
+## Deleting a custom resolver in the console
 {: #ui-cr-delete}
 {: ui}
 
-You can delete your custom resolver with the UI in two ways.
+You can delete your custom resolver in the console in two ways.
 
 To delete a custom resolver from the custom resolver list view in the console, follow these steps:
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
 1. Navigate to the **Custom resolver** tab.
-1. Click the overflow icon next to the custom resolver that you want to delete.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the custom resolver that you want to delete.
 1. Select **Delete**.
 1. Click **Delete** in the confirmation dialog that appears.
 
-To delete a custom resolver from the custom resolver details view by using the UI, follow these steps:
+To delete a custom resolver from the custom resolver details view in the console, follow these steps:
 
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
 1. Navigate to the **Custom resolver** tab.
-1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
-1. Select the custom resolver that you want to delete to open the details page.
+1. In the Custom resolver table, click the name of the custom resolver that you want to delete to open the details page.
 1. Click **Delete resolver**.
 1. Click **Delete** in the confirmation dialog that appears.
 
