@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -18,13 +18,17 @@ subcollection: dns-svcs
 You view details of a single custom resolver forwarding rule and view a list of all custom resolver forwarding rules in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Viewing custom resolver forwarding rules in the console
+## Viewing custom resolver forwarding rules by using the UI
 {: #ui-cr-fwd-rules-view}
 {: ui}
 
-View the details of a custom resolver forwarding rule by navigating to the **Forwarding rules** tab in the custom resolver details page.
+To view the details of a custom resolver forwarding rule by using the UI, follow these steps:
 
-The Forwarding rules section lists all custom resolver rules associate with the custom resolver. To view the details of a specific forwarding rule, click on a row to see the configuration in more detail.
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to **Custom resolver** tab in the navigation menu.
+1. In the Custom resolver table, click on the name of the custom resolver to view its details.
+1. The Forwarding rules section lists all custom resolver rules associate with the custom resolver. To view the details of a specific forwarding rule, click on a row to see the configuration in more detail.
 
 ## Viewing custom resolver forwarding rules from the CLI
 {: #cli-cr-fwd-rules-view}

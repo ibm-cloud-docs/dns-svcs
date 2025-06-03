@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -18,17 +18,19 @@ subcollection: dns-svcs
 You can update custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Updating a custom resolver in the console
+## Updating a custom resolver by using the UI
 {: #ui-update-cr}
 {: ui}
 
-You can update your custom resolver name, description, and profile, and toggle to change enablement status or allow disruptive updates in the details view in the console.
+To update your custom resolver name, description, and profile, and toggle to change enablement status or allow disruptive updates in the details view by using the UI, follow these steps:
 
-To edit the name, description or profile of the custom resolver, click **Edit** to see the edit view. Click **Save** to commit the changes, or cancel.
-
-To enable or disable the custom resolver, toggle the **Enablement** switch.
-
-To enable or disable the allow disruptive updates to custom resolver, toggle the **Enablement** switch.
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to **Custom resolver** tab in the navigation menu.
+1. In the Custom resolver table, click on the name of the custom resolver you want to edit.
+1. To edit the name, description or profile of the custom resolver, click **Edit** to see the edit view. Click **Save** to commit the changes, or cancel.
+1. To enable or disable the custom resolver, toggle the **Enablement** switch.
+1. To enable or disable the allow disruptive updates to custom resolver, toggle the **Enablement** switch.
 
 ## Update a custom resolver from the CLI
 {: #cli-update-cr}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -18,16 +18,19 @@ subcollection: dns-svcs
 You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Creating a custom resolver in the console
+## Creating a custom resolver by using the UI
 {: #create-cr-ui}
 {: ui}
 
-To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
+To add a custom resolver by using the UI, follow these steps:
 
-   Each VPC can have only one custom resolver.
+   You must create a DNS service before you create a custom resolver. Each VPC can have only one custom resolver.
    {: note}
 
-1. Navigate to **Custom resolvers** in the {{site.data.keyword.dns_short}} navigation menu.
+1. If you haven't already, [create a DNS service](/docs/dns-svcs?topic=dns-svcs-getting-started&interface=ui).
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to **Custom resolver** tab in the navigation menu.
 1. Click **Create custom resolver**.
 1. Enter a name and description for your custom resolver.
 1. Select a profile from the list menu.
@@ -46,7 +49,7 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
 ### Creating a custom resolver without high availability
 {: #cr-add-no-ha}
 
-If you want to create a custom resolver without high availability, you must manually delete the second subnet field by clicking the trashcan icon next to the second subnet.
+If you want to create a custom resolver without high availability, you must manually delete the second subnet field by clicking the **Delete** icon next to the second subnet.
 
 ![Delete second subnet](images/cr-no-ha.png "Delete the second subnet by clicking trashcan icon"){: caption="Delete the second subnet to remove high availability function" caption-side="bottom"}
 

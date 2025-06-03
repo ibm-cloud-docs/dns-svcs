@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -18,11 +18,16 @@ subcollection: dns-svcs
 You view details of a single custom resolver and view a list of all custom resolvers in {{site.data.keyword.dns_full}} by using the UI, CLI, or API.
 {: shortdesc}
 
-## Viewing custom resolver details in the console
+## Viewing custom resolver details by using the UI
 {: #ui-details-cr}
 {: ui}
 
-To view the details of a custom resolver using the UI, navigate to the custom resolver tab in the DNS Services instance. From the custom resolver view, you can view a list of all custom resolvers. There, you can view information about a specific custom resolver by clicking the custom resolver name.
+To view the details of a custom resolver by using the UI, follow these steps:
+
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to **Custom resolver** tab in the navigation menu.
+1. In the Custom resolver table, click on the name of the custom resolver to view its details.
 
 ## Get details of a custom resolver from the CLI
 {: #cli-get-cr}

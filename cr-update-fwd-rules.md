@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -21,13 +21,13 @@ You can update custom resolver forwarding rules in {{site.data.keyword.dns_full}
 Changing the Default rule might cause issues with DNS query resolution in VPCs that have virtual private endpoints, IKS clusters, ROKS clusters, or defined private DNS zones.
 {: important}
 
-## Updating custom resolver forwarding rules in the console
+## Updating custom resolver forwarding rules by using the UI
 {: #ui-cr-fwd-rules-update}
 {: ui}
 
 You can edit custom resolver forwarding rules from the custom resolver details page.
 
-To edit a forwarding rule:
+To edit a forwarding rule by using the UI, follow these steps:
 1. Click the **Forwarding rules** tab.
 1. Click the overflow menu next to the rule you want to edit or click on the forwarding rules row to open the view panel and click **Edit** button.
 1. In the panel that appears, change the match conditions, forwarding IP addresses, DNS views or description.
