@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -81,8 +81,13 @@ Views are prioritized based on the order that they are configured in the `views`
 {: #ui-add-fwd-rules}
 {: ui}
 
-To add a forwarding rule:
-1. Go to the custom resolver details page and select the **Forwarding rules** tab.
+To add a forwarding rule in the console, follow these steps:
+
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to the **Custom resolver** tab.
+1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
+1. In the Custom resolver details page, select the **Forwarding rules** tab.
 1. Click **Add rule**.
 1. Enter the matching zone.
 1. Optionally, enter a description of the rule.
@@ -107,7 +112,7 @@ Where:
 - **--dns-svcs** is the upstream DNS servers to be forwarded to.
 - **--view** is an expression that for a DNS request to be routed to the server block. `name`, `expression` and `dns-svcs` are required, `description` is optional.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 ## Adding custom resolver forwarding rules with the API
 {: #api-add-fwd-rules}

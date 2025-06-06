@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -22,7 +22,12 @@ You view details of a single custom resolver and view a list of all custom resol
 {: #ui-details-cr}
 {: ui}
 
-To view the details of a custom resolver using the UI, navigate to the custom resolver tab in the DNS Services instance. From the custom resolver view, you can view a list of all custom resolvers. There, you can view information about a specific custom resolver by clicking the custom resolver name.
+To view the details of a custom resolver in the console, follow these steps:
+
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to the **Custom resolver** tab.
+1. In the Custom resolver table, click the name of the custom resolver to view its details.
 
 ## Get details of a custom resolver from the CLI
 {: #cli-get-cr}
@@ -36,7 +41,7 @@ Where:
 
 - **RESOLVER_ID** is the ID of custom resolver.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 ### List all custom resolvers
 {: #cli-list-cr}
@@ -48,7 +53,7 @@ To list all custom resolvers using the CLI, run the following command:
 Where:
 
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 ## Get details of a custom resolver with the API
 {: #api-details-cr}

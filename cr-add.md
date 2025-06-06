@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -19,24 +19,24 @@ You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI,
 {: shortdesc}
 
 ## Creating a custom resolver in the console
+
 {: #create-cr-ui}
 {: ui}
 
-To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
+To add a custom resolver in the console, follow these steps:
 
-   Each VPC can have only one custom resolver.
-   {: note}
-
-1. Navigate to **Custom resolvers** in the {{site.data.keyword.dns_short}} navigation menu.
-1. Click **Create custom resolver**.
+   You must create a DNS service before you create a custom resolver. Each VPC can only have one custom resolver.
+   {: important}
+   
+1. If you haven't already, [create a DNS service](/docs/dns-svcs?topic=dns-svcs-getting-started&interface=ui).
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to the **Custom resolver** tab, then click **Create custom resolver**. 
 1. Enter a name and description for your custom resolver.
-1. Select a profile from the list menu.
-1. Select a region from the list menu.
-1. Select a VPC from the list menu.
-1. Select a subnet from the list menu.
+1. Select a profile, region, VPC, and subnet from the list menu.
 
    To achieve high availability, you must provide a minimum of two subnets. You can configure a maximum of three locations within the same subnet, or in different subnets.
-   {: important}
+   {: note}
 
 1. Click **Add+** if you want to add another subnet.
 1. Click **Create**.
@@ -46,7 +46,7 @@ To add a custom resolver in {{site.data.keyword.dns_short}}, follow these steps:
 ### Creating a custom resolver without high availability
 {: #cr-add-no-ha}
 
-If you want to create a custom resolver without high availability, you must manually delete the second subnet field by clicking the trashcan icon next to the second subnet.
+If you want to create a custom resolver without high availability, you must manually delete the second subnet field by clicking the **Delete** icon next to the second subnet.
 
 ![Delete second subnet](images/cr-no-ha.png "Delete the second subnet by clicking trashcan icon"){: caption="Delete the second subnet to remove high availability function" caption-side="bottom"}
 
@@ -65,7 +65,7 @@ Where:
 - **--location** is the location where the custom resolver is running. The location subnet CRN is required. For example: `--location subnet1,enable  --location subnet2,disable`
 - **--profile** is the profile name of custom resolver. Valid values: `essential`, `advanced`, `premier`.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 To create a custom resolver without high availability, run the command with `[-f, --force]`:
 

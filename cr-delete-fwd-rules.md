@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -22,13 +22,18 @@ You can delete custom resolver forwarding rules in {{site.data.keyword.dns_full}
 {: #ui-cr-fwd-rules-delete}
 {: ui}
 
-To delete a forwarding rule:
- 1. Navigate to the custom resolver details page and select the **Forwarding rules** tab.
- 1. Click the overflow menu next to the rule that you want to delete.
- 1. Select **Delete**.
+To delete a forwarding rule in the console, follow these steps:
 
-    You cannot delete the default rule.
-    {: note}
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to the **Custom resolver** tab.
+1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
+1. In the Custom resolver details page, select the **Forwarding rules** tab.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the rule that you want to delete.
+1. Select **Delete**.
+
+  You cannot delete the default rule.
+  {: note}
 
 ## Deleting custom resolver forwarding rules from the CLI
 {: #cli-cr-fwd-rules-delete}

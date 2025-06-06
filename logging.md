@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-04-22"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -118,13 +118,7 @@ For more information about launching the {{site.data.keyword.logs_full_notm}} UI
 ## Fields by log type
 {: #log-fields}
 
-
-
 For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#platform_reqd).
-
-
-
-
 
 | Field             | Type       | Description             |
 |-------------------|------------|-------------------------|
@@ -136,11 +130,6 @@ For information about fields included in every platform log, see [Fields for pla
 | `resolution`      | Optional   | Guidance on how to proceed if you receive this log record. |
 | `documentsURL`    | Optional   | More information on how to proceed if you receive this log record. |
 {: caption="Log record fields" caption-side="bottom"}
-
-
-
-
-
 
 ## Analyzing {{site.data.keyword.dns_short}} logs
 {: #cloud-logs}

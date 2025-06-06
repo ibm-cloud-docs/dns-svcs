@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords: restricted zones
 
@@ -68,7 +68,7 @@ For more information, see [Known issues and limitations](/docs/dns-svcs?topic=dn
 {: ui}
 
 1. From the Resource page, select the desired {{site.data.keyword.dns_short}} instance.
-1. Click the **Create Zone** button on the **DNS Zones** page.
+1. Click **Create Zone** on the **DNS Zones** page.
 1. In the panel that appears, enter your zone name in the **Name** field. Optionally, enter **Label** and **Description** fields. See [Restricted DNS zone names(#restricted-dns-zone-names) for information about what names are not permitted.
 1. Click **Create Zone**.
 
@@ -109,8 +109,8 @@ The following DNS zone names are not permitted.
 {: #delete-dns-zone-ui}
 {: ui}
 
-1. From the DNS Zones page, click the delete icon from the row for the zone you wish to delete. A confirmation dialog appears.
-2. Click **Delete** button.
+1. From the DNS Zones page, click the Delete icon from the row for the zone that you want to delete. A confirmation dialog appears.
+2. Click **Delete**.
 
 # Manage DNS zones from the CLI
 {: #managing-dns-zones-cli}

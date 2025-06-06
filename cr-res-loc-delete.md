@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -22,13 +22,18 @@ You can delete custom resolver locations in {{site.data.keyword.dns_full}} by us
 {: #ui-delete-res-loc}
 {: ui}
 
-To delete a resolver location by using the UI, follow these steps:
-1. Select a custom resolver to open the details page.
-1. Select the **Resolver locations** tab, if not selected already.
-1. Click the overflow menu icon for the location that you want to delete.
-1. Select **Delete**.
+To delete a resolver location in the console, follow these steps:
 
-Deleting an enabled location is not permitted. {: note}
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to **Custom resolver** tab.
+1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
+1. From the custom resolver details page, select the **Resolver locations** tab. Here you can enable or disable your custom resolver location by setting the toggle switch.
+
+  Deleting an enabled location is not permitted. {: note}
+
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") icon for the location that you want to delete.
+1. Select **Delete**.
 
 ## Deleting a resolver location from the CLI
 {: #cli-delete-res-loc}

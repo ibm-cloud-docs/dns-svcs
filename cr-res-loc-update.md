@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -22,9 +22,16 @@ You can update custom resolver locations in {{site.data.keyword.dns_full}} by us
 {: #ui-update-res-loc}
 {: ui}
 
-From the custom resolver details page, select the **Resolver locations** tab. Here you can enable or disable your custom resolver by setting the toggle switch.
+To update a resolver location in the console, follow these steps: 
 
-When the resolver location is disabled, the **Subnet** column changes to a list menu from which you can select a different subnet for your resolver location. When the resolver location is enabled, the **Subnets** column becomes static.
+1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
+1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
+1. Navigate to the **Custom resolver** tab.
+1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
+1. From the custom resolver details page, select the **Resolver locations** tab. Here you can enable or disable your custom resolver by setting the toggle switch.
+
+  When the resolver location is disabled, the **Subnet** column changes to a list menu from which you can select a different subnet for your resolver location. When the resolver location is enabled, the **Subnets** column becomes static.
+  {: note}
 
 ## Updating a resolver location from the CLI
 {: #cli-update-res-loc}
@@ -41,7 +48,7 @@ Where:
 - **--subnet** is the CRN of the subnet.
 - **--enabled** determines whether to enable the custom resolver location.
 - **-i, --instance** is the instance name or ID. If this is not set, the context instance specified by `dns instance-target INSTANCE` is used instead.
-- **--output** specifies output format. Currently, JSON is the only supported format.
+- **--output** specifies output format. Currently, `json` is the only supported format.
 
 ## Adding a resolver location with the API
 {: #api-update-res-loc}

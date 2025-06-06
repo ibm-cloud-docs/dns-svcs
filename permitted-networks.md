@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-06-03"
 
 keywords:
 
@@ -29,7 +29,7 @@ Newly created virtual server instances are automatically configured to use priva
 
 1. Select the desired zone from the table on the DNS Zones page.
 1. Select the **Permitted Networks** tab.
-1. Click the **Add Network** button.
+1. Click **Add Network**.
 1. In the panel that appears, select the region of your network from the **Network Region** list menu.
 1. Select the desired network from the **Network** list menu that appears.
 1. Click **Add Network**.
