@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-07-14"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: dns-svcs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs
+# FAQ
 {: #frequently-asked-questions}
 
 Have a question about {{site.data.keyword.dns_full}}? Review frequently asked questions, which provide answers to provisioning concerns, application access, and other common inquiries.
