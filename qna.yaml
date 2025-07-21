@@ -1,0 +1,44 @@
+document_outline: |
+  Information about the DNS Services offering on IBM Cloud.
+domain: DNS Services on IBM Cloud
+seed_examples:
+  - context: |
+    questions_and_answers:
+      - question:
+        answer:
+      - question:
+        answer:
+      - question:
+        answer:
+  - context: |
+    questions_and_answers:
+      - question:
+        answer:
+      - question:
+        answer:
+      - question:
+        answer:
+  - context: |
+    questions_and_answers:
+      - question:
+        answer:
+      - question:
+        answer:
+      - question:
+        answer:
+  - context: |
+    questions_and_answers:
+      - question:
+        answer:
+      - question:
+        answer:
+      - question:
+        answer:
+  - context: |
+    questions_and_answers:
+      - question:
+        answer:
+      - question:
+        answer:
+      - question:
+        answer:
