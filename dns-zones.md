@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-06-03"
+lastupdated: "2025-08-06"
 
 keywords: restricted zones
 
@@ -96,6 +96,7 @@ The following DNS zone names are not permitted.
 * `pdnsibm.net`
 * `appdomain.cloud`
 * `compass.cobaltiron.com`
+* [uptycs.io](http://uptycs.io/)
 
 ## Edit a DNS zone in the console
 {: #edit-dns-zone-ui}
