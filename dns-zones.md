@@ -96,7 +96,7 @@ The following DNS zone names are not permitted.
 * `pdnsibm.net`
 * `appdomain.cloud`
 * `compass.cobaltiron.com`
-* [uptycs.io](http://uptycs.io/)
+* `uptycs.io`
 
 ## Edit a DNS zone in the console
 {: #edit-dns-zone-ui}
