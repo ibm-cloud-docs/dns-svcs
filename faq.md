@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-07-14"
+lastupdated: "2025-08-13"
 
 keywords:
 
@@ -189,16 +189,7 @@ HTTP and HTTPS health checks are currently supported.
 {: #what-regions-health-check-monitoring}
 {: faq}
 
-Health checks are currently supported in the following regions:
-* Dallas (us-south)
-* Washington, D.C. (us-east)
-* London (eu-gb)
-* Frankfurt (eu-de)
-* Osaka (jp-osa)
-* Tokyo (jp-tok)
-* Toronto (ca-tor)
-* Sydney (au-syd)
-* Sao Paulo (br-sao)
+See [DNS Services supported regions](/docs/dns-svcs?topic=dns-svcs-about-dns-services#supported-regions) for an updated list of regions where health checks are currently supported.
 
 ## How can I disable health check monitoring to the origins?
 {: #disable-health-check-monitoring-to-origin}
