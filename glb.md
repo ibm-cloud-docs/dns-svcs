@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2025
+lastupdated: "2025-09-15"
 
 keywords:
 
@@ -86,6 +86,7 @@ Follow these steps to create a health check:
     If **HTTPS** is selected, the **Don't validate certificate** checkbox appears after the **Advanced options** section. Select this box when the HTTPS certificate on the origin is not signed by a certificate authority (for instance, a self-signed certificate).
 1. Enter the endpoint **Path** against which to perform the health check. The default value is `/`.
 1. Optionally, enter the **Port** number that you want to use.
+
     For the health check to succeed, a relevant application must be running on the origin that responds to the health monitoring requests.
     {: note}
 
@@ -93,6 +94,7 @@ Follow these steps to create a health check:
 1. Choose a **Method** to use for the health check from the list (HTTP and HTTPS only). The default value is `GET`.
 1. Select a **Timeout** interval (in seconds). The timeout interval is how long the health check waits before failing with a timeout error. The default value is `5`.
 1. Select the **Number of retries** to attempt. Decide how many times the health check is tried before declaring that the origin health check has failed. Retries are attempted immediately. The default value is `1`.
+
     TCP monitor type options end with this step. Click **Create** to save your changes and create the health check. HTTP and HTTPS monitor types have additional options, which follow.
     {: note}
 
