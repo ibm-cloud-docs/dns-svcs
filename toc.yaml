@@ -164,6 +164,7 @@ toc:
             - ts-cse-enabled.md
             - ts-cr-dns-view.md
             - ts-cr-sz-not-available.md
+            - ts-create-har.md
         - known-limitations.md
         - quotas.md
         - getting-help.md
