@@ -30,8 +30,10 @@ A HAR file can include sensitive details such as passwords, payment information,
 Use the following sections to generate HAR files in Firefox, Chrome, or Safari browsers.
 {: tsResolve}
 
-## How to generate a HAR file in Firefox
+## Generating a HAR file in Firefox
 {: #har-firefox}
+
+To generate a HAR file:
 
 1. In Firefox, go to the page within DNS Services where you are experiencing trouble.
 1. Select the Firefox menu (three horizontal parallel lines) at the upper-right of your browser window, then select **Developer > Network**.
@@ -41,8 +43,10 @@ Use the following sections to generate HAR files in Firefox, Chrome, or Safari b
 1. After you have reproduced the issue, right-click anywhere under the **File** column in the docked panel and click **Save All As HAR**.
 1. Save the HAR file in a location you choose, and send the file to Support.
 
-## How to generate a HAR file in Chrome
+## Generating a HAR file in Chrome
 {: #har-chrome}
+
+To generate a HAR file:
 
 1. In Chrome, go to the page within DNS Services where you are experiencing trouble.
 1. Select the Chrome menu (three vertical dots) at the top-right of your browser window, then select **Tools > Developer Tools**.
@@ -53,8 +57,10 @@ Use the following sections to generate HAR files in Firefox, Chrome, or Safari b
 1. After you have successfully reproduced the issue while recording, right-click any of the items within the Network tab and select **Save all as HAR with Content** to save a copy of the activity that you recorded.
 1. Save the HAR file in a location you choose, and send the file to Support.
 
-## How to generate a HAR file in Safari
+## Generating a HAR file in Safari
 {: #har-safari}
+
+To generate a HAR file:
 
 1. In Safari, first check to see if you have a "Develop" menu at the top of the page. If not, go to **Safari > Preferences > Advanced** and check "Show Develop Menu in menu bar".
 1. In Safari, go to the page within DNS Services where you are experiencing trouble.
@@ -67,8 +73,10 @@ Use the following sections to generate HAR files in Firefox, Chrome, or Safari b
 1. After you have reproduced the issue, Control + click the resource that you want to capture the HAR file for, and click **"Export HAR"**.
 1. Save the HAR file in a location you choose, and send the file to Support.
 
-## How to generate a HAR file in Microsoft Edge
+## Generating a HAR file in Microsoft Edge
 {: #har-edge}
+
+To generate a HAR file:
 
 1. In Microsoft Edge, go to the page within DNS Services where you are experiencing trouble.
 1. Click the Edge menu (three vertical dots) at the top-right of your browser window, then select **More Tools > Developer Tools**.
