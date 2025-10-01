@@ -65,8 +65,10 @@ To generate a HAR file:
 1. In Safari, first check to see if you have a "Develop" menu at the top of the page. If not, go to **Safari > Preferences > Advanced** and check "Show Develop Menu in menu bar".
 1. In Safari, go to the page within DNS Services where you are experiencing trouble.
 1. Navigate to **Develop > Show Web Inspector**.
+
     This menu option is not available until you browse somewhere beyond Safari's starting page. The Web Inspector opens as a docked panel at the bottom of Safari.
     {: note}
+
 
 1. Click the **Network** tab.
 1. Refresh the DNS Services page that you are on or go through the steps to reproduce the problem you've been experiencing while Safari is recording activity.
@@ -83,6 +85,7 @@ To generate a HAR file:
 1. Select the Network tab, then click **Record** in the upper left corner of the tab and verify that it is recording. If it is not yet recording, click **Record** to start recording.
 1. Check the box next to **Preserve Log**.
 1. Select **Clear** to remove any existing logs from the **Network** tab.
+
     Do not close the Developer Tools panel. This ends the recording and the HAR file will be lost.
     {: note}
 
