@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-28"
+lastupdated: "2025-10-23"
 
 keywords: HA for dns services, DR for dns-svcs, dns-svcs recovery time objective, dns-svcs recovery point objective
 
@@ -13,7 +13,7 @@ subcollection: content-kit
 {{site.data.keyword.attribute-definition-list}}
 
 # Understanding high availability and disaster recovery for DNS Services
-{: #service-name-ha-dr}
+{: #dns-svcs-ha-dr}
 
 
 
@@ -91,7 +91,7 @@ See [How IBM Cloud ensures high availability and disaster recovery](/docs/overvi
 ## Disaster recovery architecture
 {: #disaster-recovery-intro}
 
-Maintaining an external record of your DNS configuration is important for recovering DNS Services in the event of a disaster. Both the backup and restore process can be automated using scripting and the export and import processes in the [Disaster recovery features](/docs/dns-svcs?topic=dns-svcs-service-name-ha-dr#dr-features) table. DNS Services supports Terraform and it can be used to define workloads with parameterized locations and performance. Customers can use IBM Cloud Schematics to build and manage Terraform scripts, which in turn can be used to recover resources in an available location during a disaster.
+Maintaining an external record of your DNS configuration is important for recovering DNS Services in the event of a disaster. Both the backup and restore process can be automated using scripting and the export and import processes in the [Disaster recovery features](/docs/dns-svcs?topic=dns-svcs-dns-svcs-ha-dr#dr-features) table. DNS Services supports Terraform and it can be used to define workloads with parameterized locations and performance. Customers can use IBM Cloud Schematics to build and manage Terraform scripts, which in turn can be used to recover resources in an available location during a disaster.
 
 ### Disaster recovery features
 {: #dr-features}

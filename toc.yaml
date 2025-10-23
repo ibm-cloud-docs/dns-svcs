@@ -1,5 +1,3 @@
-#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
----
 toc:
   properties:
     subcollection: dns-svcs
@@ -13,158 +11,158 @@ toc:
     path: dns-svcs
     label: DNS Services
   entries:
-    - navgroup:
-        id: learn
-        topics:
-        - getting-started.md
-        - overview.md
-        - dns-concepts.md
-        - topicgroup:
-            label: Related links
-            topics:
-            - link:
-                label: Getting started with Virtual Private Cloud (VPC)
-                href: https://{DomainName}/docs/vpc?topic=vpc-getting-started
-        - release-notes.md
-    - navgroup:
-        id: tutorial
-        topics:
-        - topicgroup:
-            label: Team based privacy using IAM, VPC, Transit Gateway and DNS
-            topics:
-            - include: ../solution-tutorials/vpc-tg-dns-iam.md
-    - navgroup:
-        id: howto
-        topics:
-        - configure-dns-instance.md
-        - retrieve-instance-id.md
-        - dns-zones.md
-        - permitted-networks.md
-        - dns-records.md
-        - private-endpoint.md
-        - topicgroup:
-            label: Global load balancers
-            topics:
-            - glb.md
-            - health-check-events.md
-        - topicgroup:
-            label: Custom resolvers
-            topics:
-            - custom-resolver.md
-            - topicgroup:
-                label: Creating and managing custom resolvers
-                topics:
-                - cr-add.md
-                - cr-update.md
-                - cr-details.md
-                - cr-delete.md
-            - topicgroup:
-                label: Creating and managing resolver locations
-                topics:
-                - cr-add-res-loc.md
-                - cr-res-loc-update.md
-                - cr-res-loc-delete.md
-            - topicgroup:
-                label: Creating and managing custom resolver forwarding rules
-                topics:
-                - cr-create-fwd-rules.md
-                - cr-update-fwd-rules.md
-                - cr-details-fwd-rules.md
-                - cr-delete-fwd-rules.md
-            - topicgroup:
-                label: Creating and managing secondary zones
-                topics:
-                - secondary-zones.md
-                - sec-zone-create.md
-                - sec-zone-edit.md
-                - sec-zone-delete.md
-            - custom-resolver-use-cases.md
-        - output-dns-config.md
-        - wildcard-support.md
-        - cname-support.md
-        - topicgroup:
-            label: Cross-account access
-            topics:
-            - cross-account-about.md
-            - topicgroup:
-                label: Creating and managing linked zones
-                topics:
-                - create-linked-zone.md
-                - update-linked-zone.md
-                - list-details-linked-zones.md
-                - delete-linked-zone.md
-            - topicgroup:
-                label: Managing permitted networks in linked zones
-                topics:
-                - cross-acc-add-perm-net.md
-                - cross-acc-remove-perm-net.md
-                - list-details-perm-nets.md
-            - topicgroup:
-                label: Managing access requests
-                topics:
-                - update-access-req.md
-                - list-details-access-req.md
-        - topicgroup:
-            label: Observability
-            topics:
-            - at_events.md
-            - logging.md
-            - platform-metrics.md
-        - topicgroup:
-            label: Enhancing security
-            topics:
-            - iam.md
-            - architecture-workload-isolation.md
-            - service-connection.md
-            - data-security.md
-            - cbr.md
-            - vpe.md
-        - terraform.md
-    - navgroup:
-        id: reference
-        topics:
-        - link:
-            label: DNS Services API
-            href: https://{DomainName}/apidocs/dns-svcs
-        - topicgroup:
-            label: SDKs
-            links:
-            - link:
-                label: GoLang SDK
-                href: https://github.com/IBM/networking-go-sdk
-            - link:
-                label: Python SDK
-                href: https://github.com/IBM/networking-python-sdk
-        - topicgroup:
-            label: CLI reference
-            topics:
-            - cli.md
-            - cli-change-log.md
-        - link:
-            label: Terraform reference
-            href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_custom_resolver
-        - backup-data.md
-        - service-dependency.md
-        - ha-dr.md
-        - data-portability.md
-        - responsibilities.md
-    - navgroup:
-        id: help
-        topics:
-        - faq.md
-        - topicgroup:
-            label: Troubleshooting
-            topics:
-            - ts-nxdomain.md
-            - ts-permitted-network.md
-            - ts-origin-down.md
-            - ts-delete-subnet.md
-            - ts-delete-instance.md
-            - ts-pool-critical.md
-            - ts-cse-enabled.md
-            - ts-cr-dns-view.md
-            - ts-cr-sz-not-available.md
-            - ts-create-har.md
-        - known-limitations.md
-        - quotas.md
-        - getting-help.md
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - overview.md
+      - dns-concepts.md
+      - topicgroup:
+          label: Related links
+          topics:
+          - link:
+              label: Getting started with Virtual Private Cloud (VPC)
+              href: https://{DomainName}/docs/vpc?topic=vpc-getting-started
+      - release-notes.md
+  - navgroup:
+      id: tutorial
+      topics:
+      - topicgroup:
+          label: Team based privacy using IAM, VPC, Transit Gateway and DNS
+          topics:
+          - include: ../solution-tutorials/vpc-tg-dns-iam.md
+  - navgroup:
+      id: howto
+      topics:
+      - configure-dns-instance.md
+      - retrieve-instance-id.md
+      - dns-zones.md
+      - permitted-networks.md
+      - dns-records.md
+      - private-endpoint.md
+      - topicgroup:
+          label: Global load balancers
+          topics:
+          - glb.md
+          - health-check-events.md
+      - topicgroup:
+          label: Custom resolvers
+          topics:
+          - custom-resolver.md
+          - topicgroup:
+              label: Creating and managing custom resolvers
+              topics:
+              - cr-add.md
+              - cr-update.md
+              - cr-details.md
+              - cr-delete.md
+          - topicgroup:
+              label: Creating and managing resolver locations
+              topics:
+              - cr-add-res-loc.md
+              - cr-res-loc-update.md
+              - cr-res-loc-delete.md
+          - topicgroup:
+              label: Creating and managing custom resolver forwarding rules
+              topics:
+              - cr-create-fwd-rules.md
+              - cr-update-fwd-rules.md
+              - cr-details-fwd-rules.md
+              - cr-delete-fwd-rules.md
+          - topicgroup:
+              label: Creating and managing secondary zones
+              topics:
+              - secondary-zones.md
+              - sec-zone-create.md
+              - sec-zone-edit.md
+              - sec-zone-delete.md
+          - custom-resolver-use-cases.md
+      - output-dns-config.md
+      - wildcard-support.md
+      - cname-support.md
+      - topicgroup:
+          label: Cross-account access
+          topics:
+          - cross-account-about.md
+          - topicgroup:
+              label: Creating and managing linked zones
+              topics:
+              - create-linked-zone.md
+              - update-linked-zone.md
+              - list-details-linked-zones.md
+              - delete-linked-zone.md
+          - topicgroup:
+              label: Managing permitted networks in linked zones
+              topics:
+              - cross-acc-add-perm-net.md
+              - cross-acc-remove-perm-net.md
+              - list-details-perm-nets.md
+          - topicgroup:
+              label: Managing access requests
+              topics:
+              - update-access-req.md
+              - list-details-access-req.md
+      - topicgroup:
+          label: Observability
+          topics:
+          - at_events.md
+          - logging.md
+          - platform-metrics.md
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - iam.md
+          - architecture-workload-isolation.md
+          - service-connection.md
+          - data-security.md
+          - cbr.md
+          - vpe.md
+      - terraform.md
+  - navgroup:
+      id: reference
+      topics:
+      - link:
+          label: DNS Services API
+          href: https://{DomainName}/apidocs/dns-svcs
+      - topicgroup:
+          label: SDKs
+          links:
+          - link:
+              label: GoLang SDK
+              href: https://github.com/IBM/networking-go-sdk
+          - link:
+              label: Python SDK
+              href: https://github.com/IBM/networking-python-sdk
+      - topicgroup:
+          label: CLI reference
+          topics:
+          - cli.md
+          - cli-change-log.md
+      - link:
+          label: Terraform reference
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_custom_resolver
+      - backup-data.md
+      - service-dependency.md
+      - ha-dr.md
+      - data-portability.md
+      - responsibilities.md
+  - navgroup:
+      id: help
+      topics:
+      - faq.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - ts-nxdomain.md
+          - ts-permitted-network.md
+          - ts-origin-down.md
+          - ts-delete-subnet.md
+          - ts-delete-instance.md
+          - ts-pool-critical.md
+          - ts-cse-enabled.md
+          - ts-cr-dns-view.md
+          - ts-cr-sz-not-available.md
+          - ts-create-har.md
+      - known-limitations.md
+      - quotas.md
+      - getting-help.md
