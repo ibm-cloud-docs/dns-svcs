@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-08-15"
+lastupdated: "2025-10-31"
 
 keywords:
 
@@ -30,105 +30,196 @@ Medium
 Minimal
 :   When the dependency is down, the main service features are not impacted.
 
-The following table provides the dependency listing of this service following a standard deployment.
+
+
+## Data plane deployment
+{: #data-plane-deployment}
+
+The following dependencies apply to the following deployment locations: Dallas (us-south), Frankfurt (eu-de), London (eu-gb), Madrid (eu-es), Osaka (jp-osa), Sao Paulo (br-sao), Sydney (au-syd), Tokyo (jp-tok), Toronto (ca-tor), Washington DC (us-east).
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Internet Services | Availability, Disaster recovery, Operations, Security compliance | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Global Resource Catalog | Availability, Instance control | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Business Support Services | Availability | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Image Service for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
-| IBM Cloud Service Endpoints | Availability, Disaster recovery, Instance control | No | Control plane |  Same data center  |
-| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
-| IBM Cloud Virtual Private Cloud | Availability, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same zone  |
-| IBM Cloud Virtual Server for VPC | Availability, Disaster recovery, Instance control, Operations | No | Data plane |  Same zone  |
-| IBM Cloudant for IBM Cloud | Availability, Change management, Disaster recovery, Instance control | No | Control plane |  Same region  |
-| IBM Cloud Databases - databases-for-redis | Availability, Change management, Disaster recovery, Instance control | No | Data plane |  Same region  |
-| IBM Cloud Databases - databases-for-etcd | Availability, Change management, Disaster recovery, Instance control | No | Data plane |  Same region  |
-| Oculus Automation API | Availability, Disaster recovery, Operations | No | Data plane |  Same data center  |
-| IBM Cloud Identity and Access Management | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| VPC Regional Infrastructure API Service | Availability, configuration-management, Disaster recovery, Instance control, Operations | No | Control plane |  Same data center  |
-| IBM Key Protect for IBM Cloud | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | Control plane |  Same region  |
-| IBM Cloud Virtual Servers | Availability, Change management, Disaster recovery, Instance control | No | Control plane |  Same data center  |
+| IBM Cloud Global Resource Catalog | Availability, Instance control | No | data-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Image Service for VPC | Availability, Disaster recovery, Instance control, Operations | No | data-plane |  Same zone  |
+| IBM Cloud Service Endpoints | Availability, Disaster recovery, Instance control | No | data-plane |  Same data center  |
+| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Operations, Security compliance | No | data-plane |  Same region  |
+| {{site.data.keyword.vpc_full}} | Availability, Disaster recovery, Instance control, Operations, Security compliance | No | data-plane |  Same zone  |
+| IBM Cloud Virtual Server for VPC | Availability, Disaster recovery, Instance control, Operations | No | data-plane |  Same zone  |
+| {{site.data.keyword.cloudantfull}} | Availability, Change management, Disaster recovery, Instance control | No | data-plane |  Same region  |
+| Oculus Automation API | Availability, Disaster recovery, Operations | No | data-plane |  Same data center  |
+| {{site.data.keyword.iamlong}} | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | data-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| VPC Regional Infrastructure API Service | Availability, configuration-management, Disaster recovery, Instance control, Operations | No | data-plane |  Same data center  |
+| {{site.data.keyword.keymanagementservicefull}} | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | data-plane |  Same region  |
+| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | data-plane |  Same data center  |
 {: row-headers}
-{: caption="IBM Cloud DNS Services service dependency information - Critical dependencies" caption-side="top"}
+{: caption="IBM Cloud DNS Services - Data plane deployment service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
-{: tab-group="service-dependency-data-for-dns-svcs"}
+{: tab-group="service-dependency-data-for-dns-svcs-Data-plane-deployment"}
 {: class="comparison-tab-table"}
 {: #critical-deps}
-{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers details about the dependency. The column headers identify the dependency. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
+{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers detail the specific dependent service. The column headers identify the details about the dependency and its impact. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Virtual Private Endpoint for VPC | Availability, Disaster recovery, Instance control | No | Data plane |  Same zone  |
-| IBM Log Analysis Log Routing | Availability, Operations | No | Data plane |  Same region  |
-| IBM Cloud Container Registry | Change management, Disaster recovery, Instance control | No | Control plane |  Same region  |
-| IBM Cloud Console | Availability, Instance control, Operations | No | Control plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Metrics Routing | Availability, Operations | No | Data plane |  Same region  |
-| IBM Cloud Logs - logs | Access management, Availability, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
-| IBM Cloud Secrets Manager | Availability, Change management, configuration-management, Disaster recovery, Instance control, Operations, Security compliance | No | Control plane |  Same region  |
+| IBM Cloud Virtual Private Endpoint for VPC | Availability, Disaster recovery, Instance control | No | data-plane |  Same zone  |
+| IBM Log Analysis Log Routing | Availability, Operations | No | data-plane |  Same region  |
+| {{site.data.keyword.metrics_router_full}} | Availability, Operations | No | data-plane |  Same region  |
+| {{site.data.keyword.secrets-manager_full}} | Availability, Change management, configuration-management, Disaster recovery, Instance control, Operations, Security compliance | No | data-plane |  Same region  |
 {: row-headers}
-{: caption="IBM Cloud DNS Services service dependency information - Significant dependencies" caption-side="top"}
+{: caption="IBM Cloud DNS Services - Data plane deployment service dependency information - Significant dependencies" caption-side="top"}
 {: tab-title="Significant dependencies"}
-{: tab-group="service-dependency-data-for-dns-svcs"}
+{: tab-group="service-dependency-data-for-dns-svcs-Data-plane-deployment"}
 {: class="comparison-tab-table"}
 {: #significant-deps}
-{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers details about the dependency. The column headers identify the dependency. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
+{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers detail the specific dependent service. The column headers identify the details about the dependency and its impact. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
-This table can be used to answer the following questions:
+|Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
+|:---|:---|:---|:---|:---|
+| {{site.data.keyword.tg_full}}| none, Security compliance | No | data-plane |  Same region  |
+| IBM Cloud Global Protect VPN| Security compliance | No | data-plane |  Same data center  |
+| IBM Cloud Global Search and Tagging| Security compliance | No | data-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| {{site.data.keyword.monitoringlong}}| Operations, Security compliance | No | data-plane |  Same region  |
+| {{site.data.keyword.atracker_full}}| Operations, Security compliance | No | data-plane |  Same region  |
+| {{site.data.keyword.cos_full}}| Disaster recovery, Security compliance | No | data-plane |  Same data center  |
+{: row-headers}
+{: caption="IBM Cloud DNS Services - Data plane deployment service dependency information - Minimal dependencies" caption-side="top"}
+{: tab-title="Minimal dependencies"}
+{: tab-group="service-dependency-data-for-dns-svcs-Data-plane-deployment"}
+{: class="comparison-tab-table"}
+{: #minimal-deps}
+{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers detail the specific dependent service. The column headers identify the details about the dependency and its impact. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
-- **What is the expected impact to the functions described?** Each severity tab in the table indicates the impact that your provisioned service might encounter if the dependency were to go offline. This means that the dependency high availability and disaster recovery influences the severity of the impact and therefore is used for general guidance to help you understand potential issues that might arise if the dependency was impacted by an incident.
+## Control plane deployment
+{: #control-plane-deployment}
 
-   Services that are regional are not impacted by a severe outage of a single availability zone because of the failover that is built in to default to another zone. For these occurrences, there might be a slight performance impact, if any, while the system fails over to the other location. This also applies to global services where the impact is lowered even more as it can fail over to other regions if necessary. This reduces the frequency at which these items might have the impact that is shown.
-   {: note}
+The following dependencies apply to the following deployment locations: Dallas (us-south), Washington DC (us-east).
 
-- **What services does my service depend on?** The Dependencies column lists the services. These are the major service to service dependencies including major internal dependencies that might not be visible externally.
 
-- **What function does the dependency impact?** Functions include access management, availability, change management, configuration management, customer responsibility, disaster recovery, instance control, none, operations or security compliance. If the dependency goes offline, these functions might be impacted. Definitions for each available values are as follows:
+|Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
+|:---|:---|:---|:---|:---|
+| {{site.data.keyword.cis_full}} | Availability, Disaster recovery, Operations, Security compliance | No | control-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Global Resource Catalog | Availability, Instance control | No | control-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Business Support Services | Availability | No | control-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Service Endpoints | Availability, Disaster recovery, Instance control | No | control-plane |  Same data center  |
+| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Operations, Security compliance | No | control-plane |  Same region  |
+| {{site.data.keyword.vpc_full}} | Availability, Disaster recovery, Instance control, Operations, Security compliance | No | control-plane |  Same zone  |
+| {{site.data.keyword.cloudantfull}} | Availability, Change management, Disaster recovery, Instance control | No | control-plane |  Same region  |
+| {{site.data.keyword.iamlong}} | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | control-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| VPC Regional Infrastructure API Service | Availability, configuration-management, Disaster recovery, Instance control, Operations | No | control-plane |  Same data center  |
+| {{site.data.keyword.keymanagementservicefull}} | Access management, Availability, Disaster recovery, Instance control, Security compliance | No | control-plane |  Same region  |
+| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | control-plane |  Same data center  |
+{: row-headers}
+{: caption="IBM Cloud DNS Services - Control plane deployment service dependency information - Critical dependencies" caption-side="top"}
+{: tab-title="Critical dependencies"}
+{: tab-group="service-dependency-data-for-dns-svcs-Control-plane-deployment"}
+{: class="comparison-tab-table"}
+{: #critical-deps}
+{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers detail the specific dependent service. The column headers identify the details about the dependency and its impact. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
-   access management
-   :   Authentication, authorization and governance of the customer users access to the service and service instances.
+|Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
+|:---|:---|:---|:---|:---|
+| IBM Cloud Console | Availability, Instance control, Operations | No | control-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| {{site.data.keyword.secrets-manager_full}} | Availability, Change management, configuration-management, Disaster recovery, Instance control, Operations, Security compliance | No | control-plane |  Same region  |
+{: row-headers}
+{: caption="IBM Cloud DNS Services - Control plane deployment service dependency information - Significant dependencies" caption-side="top"}
+{: tab-title="Significant dependencies"}
+{: tab-group="service-dependency-data-for-dns-svcs-Control-plane-deployment"}
+{: class="comparison-tab-table"}
+{: #significant-deps}
+{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers detail the specific dependent service. The column headers identify the details about the dependency and its impact. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
-   availability
-   :   Availability of the service and service instances.
+|Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
+|:---|:---|:---|:---|:---|
+| Synthetics| Operations | No | control-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Global Search and Tagging| Security compliance | No | control-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| {{site.data.keyword.monitoringlong}}| Operations, Security compliance | No | control-plane |  Same region  |
+| {{site.data.keyword.atracker_full}}| Operations, Security compliance | No | control-plane |  Same region  |
+{: row-headers}
+{: caption="IBM Cloud DNS Services - Control plane deployment service dependency information - Minimal dependencies" caption-side="top"}
+{: tab-title="Minimal dependencies"}
+{: tab-group="service-dependency-data-for-dns-svcs-Control-plane-deployment"}
+{: class="comparison-tab-table"}
+{: #minimal-deps}
+{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers detail the specific dependent service. The column headers identify the details about the dependency and its impact. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
-   change management
-   :   Deployment, upgrade, patch, and so on of the service and service instances.
 
-   configuration management
-   :   Deployment, upgrade, patch, and so on of the service and service instances.
+## Understanding service dependency data
+{: #understand-dependency-data}
 
-   customer responsibility
-   :   Functions provides by customers to support specific service and service instances function. For example: {{site.data.keyword.keymanagementservicefull_notm}} instances provided by customer to support service BYOK encryption.
+If you have any questions about the service dependency data as you review the service dependency information in the tables, you can refer to the following FAQ:
 
-   disaster recovery
-   :   Backup, recovery, restart of the service and service instances in case of disruption.
+### What is the expected impact to the functions described?
+{: #expected-impact}
 
-   instance control
-   :   Creation, deletion, start, stop actions on lifecycle of the service instances.
+Each severity tab in the table indicates the impact that your provisioned service might encounter if the dependency were to go offline. This means that the dependency high availability and disaster recovery influences the severity of the impact and therefore is used for general guidance to help you understand potential issues that might arise if the dependency was impacted by an incident.
 
-   none
-   :   No function impacted.
+Services that are regional are not impacted by a severe outage of a single zone because of the failover that is built in to default to another zone. For these occurrences, there might be a slight performance impact, if any, while the system fails over to the other location. This also applies to global services where the impact is lowered even more as it can fail over to other regions if necessary. This reduces the frequency at which these items might have the impact that is shown.
+{: note}
 
-   operations
-   :   Monitoring, troubleshooting, etc of the service and service instances.
+### What services does my service depend on?
+{: #dependent-services}
 
-   security compliance
-   :   Vulnerability management and other security and compliance management of the service and service instances.
+The **Dependencies** column lists the services. These are the major service to service dependencies including major internal dependencies that might not be visible externally.
 
-- The **Customer provided** column will show if there is any dependency that has been provided by the customer to enable specific functionality. (for example: To properly configure and set up using BYOK into a service, the customer would provision a service like {{site.data.keyword.keymanagementservicefull_notm}}. But there may be other examples like this.) For details on how to enable the features and which services you need to provision, please see the documentation on the service.
+### What function does the dependency impact?
+{: #function-impact}
 
-- **Where do dependency services need to be deployed regarding my service?** In the Location of dependency column you can view if the dependency is located in the same region or deployed to a specific data center. You can use this data with the data in the Control or data plane column for a quick reference to identify if your data leaves the region or not in a standard setup.
+Functions include access management, availability, change management, configuration management, customer responsibility, disaster recovery, instance control, operations, security compliance, or none. If the dependency goes offline, these functions might be impacted. Definitions for each available value are as follows:
 
-   To find where your service can be deployed, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
+Access management
+:   Authentication, authorization, and governance of the customer users access to the service and service instances.
 
-   The table shows a standard cloud deployment. If a special deployment is used like Fedramp or other region-bound deployment models, the data might differ from the details available in the table. Refer to the specific deployment that you are using for that information.
-   {: note}
+Availability
+:   Availability of the service and service instances.
 
-- **Where are the separate control plane and data plane located, if applicable?** Sometimes, the dependency might have a separate control plane and data plane. In these cases, there are separate lines that show the location in relation to the deployed customer instance of the service where these will be provisioned. The lines might have different impacts and different functions. See the Control or data plane column to understand what possible impact this type of outage might have.
+Change management
+:   Deployment, upgrade, patch, and so on, of the service and service instances.
 
-   Same region means that the dependent services are in the same region as the provisioned instance. Other values might show data center or region names if the service must be used from a specific region, a specific availability zone, or set of availability zones. If a service is tied to a specific region or site, and the region goes offline, the service might go offline as well. It is recommended that you go through the high availability and disaster recovery documentation of the dependency to determine if there are any steps that you should take to mitigate these types of risks.
+Configuration management
+:   Deployment, upgrade, patch, and so on, of the service and service instances.
 
+Customer responsibility
+:   Functions provided by customers to support specific service and service instances function. For example, {{site.data.keyword.keymanagementservicefull_notm}} instances provided by customer to support service BYOK encryption.
+
+Disaster recovery
+:   Backup, recovery, restart of the service and service instances in the case of a disruption.
+
+Instance control
+:   Creation, deletion, start, stop actions on the lifecycle of the service instances.
+
+Operations
+:   Monitoring, troubleshooting, and so on, of the service and service instances.
+
+Security compliance
+:   Vulnerability management and other security and compliance management of the service and service instances.
+
+None
+:   No function impacted.
+
+### What does customer provided mean for dependencies?
+{: #customer-provided-dep}
+
+The **Customer provided** column reports if there is any dependency that has been provided by the customer to enable specific functionality. One such example is to properly configure and set up using BYOK into a service, the customer would provision a service like {{site.data.keyword.keymanagementservicefull_notm}}. For more information about how to enable the features and which services you need to provision, see the documentation for the service.
+
+### Where do dependency services need to be deployed regarding my service?
+{: #deploy-dependencies}
+
+In the **Location of dependency** column, you can view if the dependency is located in the same region or deployed to a specific data center. You can use this data with the data in the **Control or data plane** column for a quick reference to identify if your data leaves the region or not in a standard setup.
+
+To find where your service can be deployed, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
+
+The table shows a standard cloud deployment. If a special deployment is used like FedRAMP or other region-bound deployment models, the data might differ from the details available in the table. Refer to the specific deployment that you are using for that information.
+{: note}
+
+### Where are the separate control plane and data plane located, if applicable?
+{: #separate-plans}
+
+Sometimes, the dependency might have a separate control plane and data plane. In these cases, there are separate lines that show the location in relation to the deployed customer instance of the service where these will be provisioned. The lines might have different impacts and different functions. See the **Control or data plane** column to understand what possible impact this type of outage might have.
+
+`Same region` means that the dependent services are in the same region as the provisioned instance. Other values might show `data center` or region names if the service must be used from a specific region, a specific zone, or set of zones. If a service is tied to a specific region or site, and the region goes offline, the service might go offline as well. It is recommended that you go through the high availability and disaster recovery documentation of the dependency to determine if there are any steps that you should take to mitigate these types of risks.
+
+## Additional resources
+{: #additional-resources}
 
 For more information about the policies that are related to the services, you can refer to the following resources:
 
