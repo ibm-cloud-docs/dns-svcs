@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-10-31"
 
 keywords:
 
@@ -87,6 +87,7 @@ If the name resolution request for `www.example.com` originated from a client in
 
 | Region | Data replication region | [Health check region](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#add-a-pool) | Permitted networks |
 | ------ | ------------- | --- |-------------------|
+| Chennai (in-che) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Dallas (us-south) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Washington, D.C. (us-east) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | London (eu-gb) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
