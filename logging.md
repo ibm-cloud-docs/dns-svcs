@@ -183,4 +183,3 @@ Notable fields:
 Common messages to look for:
 
 - `"The status of custom resolver location <id> is changed from <up/down> to <up/down>"` - This message indicates that a custom resolver appliance has changed health status. This can be due a planned maintenance/update or from a unexpected outage.
-    
