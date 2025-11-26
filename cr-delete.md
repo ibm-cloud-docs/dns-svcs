@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-06-03"
+lastupdated: "2025-11-26"
 
 keywords:
 
@@ -23,6 +23,9 @@ You can delete a custom resolver in {{site.data.keyword.dns_full}} by using the 
 {: ui}
 
 You can delete your custom resolver in the console in two ways.
+
+To disable or delete a Custom Resolver, you must first remove the DNS Resolution Bindings.
+{: important}
 
 To delete a custom resolver from the custom resolver list view in the console, follow these steps:
 
