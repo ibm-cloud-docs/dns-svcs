@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-12-11"
 
 keywords:
 
@@ -21,7 +21,7 @@ Follow these instructions to use the {{site.data.keyword.dns_full}} command line
 ## Before you begin
 {: #cli-ref-prereqs}
 
-Complete these steps to use the {{site.data.keyword.dns_short}} CLI, which is implemented as an {{site.data.keyword.cloud_notm}} CLI plug-in. This plug-in provides you with the means to manage your service instance and its associated resources through a command line user interface.
+Complete these steps to use the {{site.data.keyword.dns_short}} CLI, which is implemented as an {{site.data.keyword.cloud_notm}} CLI plug-in. This plug-in provides you with the means to manage your service instance and its associated resources through a command line user interface. 
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#install-ibmcloud-cli){: external}.
 1. Install or update the `cloud-dns-services` plug-in to the {{site.data.keyword.cloud_notm}} CLI.
@@ -962,18 +962,10 @@ ZONE_ID
 --output
 :   Specify the output format. Currently, `json` is the only supported format.
 
-#### Command example
-{: #list-resource-record-pagination}
-
-List resource records with pagination:
-
-```sh
-ibmcloud dns resource-records ZONE_ID --per-page 1000 --page 1
-```
-{: pre}
-
 #### Example command to list resource records with pagination
 {: #list-resource-rec-pagination-example}
+
+List all resource records with pagination.
 
  ```sh
  ibmcloud dns resource-records ZONE_ID --per-page 1000 --page 1
@@ -1339,7 +1331,13 @@ DNS_DOMAIN_ID
 --output
 :   Specify the output format. Currently, `json` is the only supported format.
 
-#### Examples
+--page
+:   Page number of paginated results (default 1).
+
+--per-page
+:   Number of resource records per page. Min: 50. Max: 1000 (default 200).
+
+#### Example command to list load balancers
 {: #list-glb-examples}
 
 List load balancers for zone `demo.com:31984fea73a15b45779fa0df4ef62f9b`.
@@ -1347,6 +1345,16 @@ List load balancers for zone `demo.com:31984fea73a15b45779fa0df4ef62f9b`.
 ```sh
 ibmcloud dns glbs demo.com:31984fea73a15b45779fa0df4ef62f9b -i "dns-demo"
 ```
+{: pre}
+
+#### Example command to list load balancers with pagination
+{: #list-glb-pagination-example}
+
+List load balancers for zone "dns-demo" with pagination.
+
+ ```sh
+ibmcloud dns glbs demo.com:31984fea73a15b45779fa0df4ef62f9b -i "dns-demo" --output json --per-page 1000 --page 1
+ ```
 {: pre}
 
 ### `ibmcloud dns glb-pool-create`
@@ -1649,14 +1657,30 @@ ibmcloud dns glb-pools [-i, --instance INSTANCE] [--output FORMAT]
 --output
 :   Specify the output format. Currently, `json` is the only supported format.
 
-#### Examples
+--page
+:   Page number of paginated results (default 1).
+
+--per-page
+:   Number of resource records per page. Min: 50. Max: 1000 (default 200).
+
+#### Example command to list load balancer pools
 {: #list-glb-pools-examples}
 
-List all GLB pools for instance `dns-demo`.
+List all load balancer pools for instance `dns-demo`.
 
 ```sh
 ibmcloud dns glb-pools -i "dns-demo"
 ```
+{: pre}
+
+#### Example command to list load balancer pools with pagination
+{: #list-glb-pools-pagination-example}
+
+List all load balancer pools with pagination for instance `dns-demo`.
+
+ ```sh
+ibmcloud dns glb-pools -i "dns-demo" --output json --per-page 1000 --page 1
+ ```
 {: pre}
 
 ### `ibmcloud dns glb-monitor-create`
@@ -2025,14 +2049,30 @@ ibmcloud dns glb-monitors [-i, --instance INSTANCE] [--output FORMAT]
 --output
 :   Specify the output format. Currently, `json` is the only supported format.
 
-#### Examples
+--page
+:   Page number of paginated results (default 1).
+
+--per-page
+:   Number of resource records per page. Min: 50. Max: 1000 (default 200).
+
+#### Example commands
 {: #list-glb-monitors-examples}
 
-List all GLB monitors for instance `dns-demo`.
+List all load balancer monitors for instance `dns-demo`.
 
 ```sh
 ibmcloud dns glb-monitors -i "dns-demo"
 ```
+{: pre}
+
+#### Example command to list load balancer pools with pagination
+{: #list-glb-monitors-pagination-example}
+
+List all load balancer monitors with pagination for instance `dns-demo`.
+
+ ```sh
+ibmcloud dns glb-monitors -i "dns-demo" --output json --per-page 1000 --page 1
+ ```
 {: pre}
 
 ## Custom resolver
@@ -2475,7 +2515,13 @@ RESOLVER_ID
 --output
 :   Specify the output format. Currently, `json` is the only supported format.
 
-#### Examples
+--page
+:   Page number of paginated results (default 1).
+
+--per-page
+:   Number of resource records per page. Min: 50. Max: 1000 (default 200).
+
+#### Example command to list forwarding rules
 {: #list-custom-resolver-forwarding-rules-examples}
 
 List forwarding rules in a custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc` for instance `dns-demo`.
@@ -2483,6 +2529,16 @@ List forwarding rules in a custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc` fo
 ```sh
 ibmcloud dns custom-resolver-forwarding-rules f1aba936b94213e5b8dca0c0dbf1f9cc -i "dns-demo"
 ```
+{: pre}
+
+#### Example command to list forwarding rules with pagination
+{: #list-forwarding-rules-pagination-example}
+
+List all forwarding rules in a custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc` with pagination for instance `dns-demo`.
+
+ ```sh
+ibmcloud dns custom-resolver-forwarding-rules f1aba936b94213e5b8dca0c0dbf1f9cc -i "dns-demo" --output json --per-page 1000 --page 1
+ ```
 {: pre}
 
 ### `ibmcloud dns custom-resolver-forwarding-rule-delete`
