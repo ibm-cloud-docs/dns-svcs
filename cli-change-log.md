@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-11"
+lastupdated: "2025-12-12"
 
 keywords: change log for dns services cli, updates to cli
 
@@ -26,23 +26,23 @@ On 09 December 2025, the following features changed in the {{site.data.keyword.d
 
 Pagination support has been added to the following DNS Services CLI commands:
 
-        [list-glbs](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb)
-        [list-glb-pools](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb-pools)
-        [list-glb-monitors](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb-monitors)
+- [list-glbs](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb)
+- [list-glb-pools](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb-pools)
+- [list-glb-monitors](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb-monitors)
         
-        As part of this update (available in version 0.8.4), the JSON response structure has changed. Users should update their jq filters accordingly:
+As part of this update (available in version 0.8.4), the JSON response structure has changed. Users should update their jq filters accordingly:
 
-        list-glb:
-            - From: jq '.[] | .name'
-            - To: jq '.load_balancers[] | .name'
+- list-glb:
+   - From: jq '.[] | .name'
+   - To: jq '.load_balancers[] | .name'
 
-        list-glb-pools:
-            - From: jq '.[] | .name'
-            - To: jq '.pools[] | .name'
+- list-glb-pools:
+   - From: jq '.[] | .name'
+   - To: jq '.pools[] | .name'
 
-        list-glb-monitors:
-            - From: jq '.[] | .name'
-            - To: jq '.monitors[] | .name'
+- list-glb-monitors:
+   - From: jq '.[] | .name'
+   - To: jq '.monitors[] | .name'
 
 ## 12 October 2022
 {: #cli-oct2022}
