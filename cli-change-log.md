@@ -33,16 +33,16 @@ Pagination support has been added to the following DNS Services CLI commands:
 As part of this update (available in version 0.8.4), the JSON response structure has changed. Users should update their jq filters accordingly:
 
 - list-glb:
-   - From: jq '.[] | .name'
-   - To: jq '.load_balancers[] | .name'
+   - From: `jq '.[] | .name'`
+   - To: `jq '.load_balancers[] | .name'`
 
 - list-glb-pools:
-   - From: jq '.[] | .name'
-   - To: jq '.pools[] | .name'
+   - From: `jq '.[] | .name'`
+   - To: `jq '.pools[] | .name'`
 
 - list-glb-monitors:
-   - From: jq '.[] | .name'
-   - To: jq '.monitors[] | .name'
+   - From: `jq '.[] | .name'`
+   - To: `jq '.monitors[] | .name'`
 
 ## 12 October 2022
 {: #cli-oct2022}
