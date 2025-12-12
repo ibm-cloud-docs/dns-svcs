@@ -19,10 +19,10 @@ subcollection: dns-svcs
 In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.dns_short}} CLI.
 {: shortdesc}
 
-## 09 Dec 2025
-{: #cli-dec2025}
+## 16 September 2025
+{: #cli-sept2025}
 
-On 09 December 2025, the following features changed in the {{site.data.keyword.dns_short}} CLI:
+On 16 September 2025, the following features changed in the {{site.data.keyword.dns_short}} CLI:
 
 Pagination support has been added to the following DNS Services CLI commands:
 
