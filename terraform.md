@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-07-16"
+  years: 2021, 2026
+lastupdated: "2026-01-14"
 
 subcollection: dns-svcs
 
@@ -13,7 +13,7 @@ subcollection: dns-svcs
 # Setting up Terraform for {{site.data.keyword.dns_short}}
 {: #terraform-setup-dns-svcs}
 
-Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multi-tier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.dns_full}} instances by using HashiCorp Configuration Language (HCL).
+Terraform on {{site.data.keyword.cloud}} enables predictable and consistent creation of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multi-tier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the creation, update, and deletion of your {{site.data.keyword.dns_full}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
 Looking for a managed Terraform on {{site.data.keyword.cloud}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud}} catalog.
@@ -22,14 +22,14 @@ Looking for a managed Terraform on {{site.data.keyword.cloud}} solution? Try out
 ## Installing Terraform and configuring resources for {{site.data.keyword.dns_short}}
 {: #install-terraform}
 
-Before you begin, make sure that you have the [required access](/docs/dns-svcs?topic=dns-svcs-iam) to create and work with {{site.data.keyword.dns_short}} resources.
+Before you can create an authorization by using Terraform, make sure that you have completed the following:
 
-- Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to complete this task.
-- Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.dns_short}} service instance and to assign a user an access policy in Identity and Access Management (IAM) for that instance by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
+* Make sure that you have the [required access](/docs/dns-svcs?topic=dns-svcs-iam) to create and work with {{site.data.keyword.dns_short}} resources.
+* Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to complete this task.
+* Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create an authorization between services by using HashiCorp Configuration Language. For more information, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
-1. Create a {{site.data.keyword.dns_short}} instance by using the `ibm_resource_instance` resource argument in your `main.tf` file.
-
-   The {{site.data.keyword.dns_short}} DNS zone in the following example is named `my-dns-zone` and is created with the instance ID of `p-dns-instance-id`.
+1. In your Terraform configuration file, find the Terraform code that you used to create the {{site.data.keyword.dns_short}}.
+1. Create a {{site.data.keyword.dns_short}} instance by using the `ibm_resource_instance` resource argument in your `main.tf` file. The {{site.data.keyword.dns_short}} DNS zone in the following example is named `my-dns-zone` and is created with the instance ID of `p-dns-instance-id`.
 
    ```terraform
    data "ibm_resource_group" "rg" {
