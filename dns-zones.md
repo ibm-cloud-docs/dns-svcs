@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2025
-lastupdated: "2025-08-06"
+  years: 2019, 2026
+lastupdated: "2026-02-19"
 
 keywords: restricted zones
 
@@ -97,6 +97,10 @@ The following DNS zone names are not permitted.
 * `appdomain.cloud`
 * `compass.cobaltiron.com`
 * `uptycs.io`
+* `registry.access.redhat.com`
+* `registry.redhat.io`
+* `registry.connect.redhat.com`
+* `quay.io`
 
 ## Edit a DNS zone in the console
 {: #edit-dns-zone-ui}
