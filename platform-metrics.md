@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2025
-lastupdated: "2025-09-01"
+  years: 2023, 2026
+lastupdated: "2026-02-19"
 
 keywords: cloud monitoring, monitoring, platform metrics, observability page, enable platform metrics, view metrics, launch monitoring
 
@@ -33,6 +33,7 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 | `Toronto`       | `Toronto` |
 | `Washington DC` | `Washington DC` |
 | `Montreal`         | `Montreal` |
+| `Chennai`         | `Chennai` |
 {: caption="{{site.data.keyword.mon_full_notm}} regions" caption-side="bottom"}
 
 ## Platform metrics overview
