@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2025
-lastupdated: "2025-10-31"
+  years: 2019, 2026
+lastupdated: "2026-02-24"
 
 keywords:
 
@@ -87,7 +87,6 @@ If the name resolution request for `www.example.com` originated from a client in
 
 | Region | Data replication region | [Health check region](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#add-a-pool) | Permitted networks |
 | ------ | ------------- | --- |-------------------|
-| Chennai (in-che) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Dallas (us-south) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Washington, D.C. (us-east) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | London (eu-gb) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
@@ -99,4 +98,6 @@ If the name resolution request for `www.example.com` originated from a client in
 | Toronto (ca-tor) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Sydney (au-syd) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 | Sao Paulo (br-sao) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Chennai - Airtel (in-che) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
+| Mumbai - Airtel (in-mum) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) | ![check icon](../icons/checkmark-icon.svg) |
 {: caption="Regions supported by DNS Services" caption-side="bottom"}
