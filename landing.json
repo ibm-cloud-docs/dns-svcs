@@ -30,9 +30,9 @@
     }
   ],
   "section_devtools": {
-      "api": "/apidocs/dns-svcs",
-      "cli": "/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands",
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_glb"
+    "api": "/apidocs/dns-svcs",
+    "cli": "/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_glb"
   },
   "section_updates": {
     "view_more": "/docs/dns-svcs?topic=dns-svcs-release-notes"
