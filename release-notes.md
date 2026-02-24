@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-07-21"
+  years: 2021, 2026
+lastupdated: "2026-02-24"
 
 keywords:
 
@@ -20,6 +20,12 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.dns_full}} that are grouped by date.
 {: shortdesc}
+
+## 31 Oct 2025
+{: #dns-svcs-oct3125}
+
+Chennai - Airtel region now available
+:    Chennai - Airtel is now a supported region for DNS Services. For more information, see [IBM Cloud region and data center locations for resource deployment](/docs/overview?topic=overview-locations).
 
 ## 13 March 2025
 {: #dns-svcs-mar1325}
