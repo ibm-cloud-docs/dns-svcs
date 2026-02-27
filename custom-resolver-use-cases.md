@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-15"
+  years: 2021, 2026
+lastupdated: "2026-02-27"
 
 keywords:
 
@@ -41,18 +41,40 @@ The most common use cases of custom resolvers are:
 You can perform the following workflows from the {{site.data.keyword.dns_short}} dashboard. Navigate to the **Custom resolver** tab to view your custom resolvers.
 {: note}
 
-### Creating a custom resolver with forwarding rules
+### DNS resolution using custom resolvers
 {: #create-cr}
 
-Follow this workflow to create a custom resolver with forwarding rules:
+Use custom resolvers with forwarding rules to enable DNS resolution for your VPC resources and, optionally, remote clients connecting using Client VPN for VPC. VPN clients can use the same resolver addresses to reach VPEs in your VPC.
+
+#### DNS resolution using custom resolvers with on-prem clients
+{: #create-cr-on-prem}
+
+To create a custom resolver with on-prem clients, follow these steps:
 
 1. Create a custom resolver by selecting the region, VPC, and adding at least two locations for high availability.
-1. The default forwarding rule is automatically created to forward all DNS queries to {{site.data.keyword.dns_short}} servers.
-1. Create a forwarding rule to specify where the DNS queries on a DNS zone should be forwarded to, and on which DNS servers.
+
+1. The default forwarding rule is automatically created to forward all DNS queries to DNS servers.
+
+1. Create additional forwarding rules to specify where queries for specific DNS zones should be sent.
+
 1. Enable the custom resolver.
 
 The default forwarding rule is always used last if the query name doesn't match any of the preceding forwarding rules.
-{: note}
+
+#### DNS resolution using custom resolvers with VPN clients
+{: #create-cr-vpn-client}
+
+To create a custom resolver with VPN clients, follow these steps:
+
+1. Create a custom resolver by selecting the region, VPC, and adding at least two locations for high availability.
+
+1. The default forwarding rule is automatically created to forward all DNS queries to DNS servers.
+
+1. Create additional forwarding rules to specify where queries for specific DNS zones should be sent. For VPN clients, use the custom resolver IPs as DNS addresses on the VPN page, or configure VPN routes if the VPE is in the same VPC.
+
+1. Enable the custom resolver.
+
+The default forwarding rule is always used last if the query name doesn't match any of the preceding forwarding rules.
 
 #### Custom resolver with forwarding rules example
 {: #cr-fr-example}
