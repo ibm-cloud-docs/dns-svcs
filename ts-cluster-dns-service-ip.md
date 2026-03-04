@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-03-04"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: dns-svcs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# How do I confirm my cluster DNS Service IP?
+# How do I confirm my DNS Service IP for OpenShift/ROKS clusters?
 {: #troubleshoot-check-cluster-dns-service-ip}
 {: troubleshoot}
 {: support}
