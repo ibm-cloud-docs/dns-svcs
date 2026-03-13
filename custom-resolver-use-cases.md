@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-27"
+lastupdated: "2026-03-11"
 
 keywords:
 
@@ -148,3 +148,21 @@ After the zone has been configured, records are automatically updated in the cus
 {: #dns-queries-in-vpc}
 
 To increase DNS query response times, you can choose a DNS server that is closer to the source. For instance, if the query is being made in the on-premises network, it can be directed at the on-premises DNS servers. Alternatively, if the query is being made in your VPC network, it can be directed at a configured custom resolver location.
+
+#### DNS queries from Client-to-Site VPN to a Virtual Private Endpoint in a VPC
+{: #dns-queries-vpn-to-vpc}
+
+Please note that you can also setup a [Client-to-Site VPN](/docs/vpc?topic=vpc-vpn-client-to-site-overview) and use DNS Services to connect to a Virtual private endpoint in your VPC.
+
+The following options describe ways to achieve connectivity from your remote machine to a Virtual Private Endpoint using DNS Services:
+
+1. If your Virtual Private Endpoint resides in a different VPC than your VPN:
+
+[Create a custom resolver](/docs/dns-svcs?topic=dns-svcs-ui-create-cr&interface=ui#creating-a-custom-resolver-in-the-console) and add IPs in two resolver locations to enable the HA mode. Use Custom Resolver IPs as DNS Resolution Addresses on the VPN page in your IBM Cloud Portal. For more information, see [Creating a VPN server](/docs/vpc?topic=vpc-vpn-create-server&interface=ui). 
+
+This approach is recommended if you are using multiple Virtual Private Endpoints or VPCs.
+{: note}
+
+1. If your Virtual Private Endpoint and VPN are in the same VPC:
+
+Follow these steps to [Create a VPN server](/docs/vpc?topic=vpc-vpn-create-server&interface=ui) with a 161.26.0.0/16 route in VPN Server routes. Add Private DNS Resolvers 161.26.0.7 and 161.26.0.8 oas DNS Resolution Addresses on the VPN page in your IBM Cloud Portal.
