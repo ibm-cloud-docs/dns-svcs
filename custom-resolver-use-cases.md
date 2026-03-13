@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-11"
+lastupdated: "2026-03-13"
 
 keywords:
 
@@ -149,7 +149,7 @@ After the zone has been configured, records are automatically updated in the cus
 
 To increase DNS query response times, you can choose a DNS server that is closer to the source. For instance, if the query is being made in the on-premises network, it can be directed at the on-premises DNS servers. Alternatively, if the query is being made in your VPC network, it can be directed at a configured custom resolver location.
 
-#### DNS queries from Client-to-Site VPN to a Virtual Private Endpoint in a VPC
+### DNS queries from Client-to-Site VPN to a Virtual Private Endpoint in a VPC
 {: #dns-queries-vpn-to-vpc}
 
 Please note that you can also setup a [Client-to-Site VPN](/docs/vpc?topic=vpc-vpn-client-to-site-overview) and use DNS Services to connect to a Virtual private endpoint in your VPC.

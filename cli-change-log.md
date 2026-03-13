@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-12-12"
+  years: 2022, 2026
+lastupdated: "2026-03-13"
 
 keywords: change log for dns services cli, updates to cli
 
@@ -18,6 +18,14 @@ subcollection: dns-svcs
 
 In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.dns_short}} CLI.
 {: shortdesc}
+
+## 06 March 2026
+{: #cli-mar2026}
+
+On 6 March 2026, the following features changed in the {{site.data.keyword.dns_short}} CLI:
+
+- Fixed an issue where enabling or disabling GLB origins using [update-glb-pool](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-glb-pool) failed with "Access to the subnet is forbidden" when the user did not have VPC permissions.
+- Fixed an issue where [dns glbs](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb) returned an empty list when using certain --per-page values.
 
 ## 16 September 2025
 {: #cli-sept2025}
