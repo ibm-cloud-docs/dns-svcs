@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-25"
+  years: 2021, 2026
+lastupdated: "2026-03-31"
 
 keywords: vpe for dns services, virtual private endpoints for dns services, using vpe for vpc with dns services, isolation for dns services, private network for dns services, network isolation in dns services, non-public routes for dns services, private connection for dns services, private connectivity for dns services
 
@@ -29,7 +29,7 @@ Before you target a virtual private endpoint for {{site.data.keyword.dns_short}}
 * Ensure that a [Virtual Private Cloud is created](/docs/vpc?topic=vpc-getting-started).
 * Make a plan for your [virtual private endpoints](/docs/vpc?topic=vpc-planning-considerations).
 * Ensure that [correct access controls](/docs/vpc?topic=vpc-configure-acls-sgs-endpoint-gateways&interface=ui#vpe-configuring-acls) are set for your virtual private endpoint.
-* Understand the [limitations](/docs/vpc?topic=vpc-limitations-vpe) of having a virtual private endpoint.
+* Understand the [planning considerations](/docs/vpc?topic=vpc-vpe-planning-considerations)) of having a virtual private endpoint.
 * Understand how to [view details](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway) about a virtual private endpoint.
 
 ## Setting up a VPE for {{site.data.keyword.dns_short}}
