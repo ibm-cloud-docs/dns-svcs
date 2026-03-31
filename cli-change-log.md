@@ -51,6 +51,17 @@ As part of this update (available in version 0.8.4), the JSON response structure
 - list-glb-monitors:
    - From: `jq '.[] | .name'`
    - To: `jq '.monitors[] | .name'`
+   
+- Fixed issues and improved pagination handling for GLB-related commands.
+
+## 06 March 2025
+{: #cli-mar2025}
+
+On 6 March 2025, the following features changed in the {{site.data.keyword.dns_short}} CLI:
+
+- Added support for 3xx, 4xx, and 5xx response codes for GLB monitors.
+  
+  This update allows GLB monitors to accept a wider range of HTTP response codes beyond 2xx.
 
 ## 12 October 2022
 {: #cli-oct2022}
