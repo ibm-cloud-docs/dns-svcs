@@ -85,7 +85,7 @@ Use the following steps to update to the latest version of the CLI and the {{sit
 {: #vpe-api}
 {: api}
 
-After creating an endpoint gateway for the {{site.data.keyword.dns_short}} service, use the service endpoints FQDN `api.private.dns-svcs.cloud.ibm.com` in the URL to access the service. For example:
+After creating an endpoint gateway for the {{site.data.keyword.dns_short}}, use the service endpoints FQDN `api.private.dns-svcs.cloud.ibm.com` in the URL to access the service. For example:
 
 ```sh
 curl https://api.private.dns-svcs.cloud.ibm.com/v1/dns-svcs?version='2020-03-31' -H "Authorization: Bearer $iam_token"
@@ -109,7 +109,7 @@ For examples of setting the service's FQDN for the specific SDK language, see [S
 {: #vpe-terraform}
 {: terraform}
 
-If you plan to access the {{site.data.keyword.dns_short}} service using Terraform, make sure to set the `IBMCLOUD_PRIVATE_DNS_API_ENDPOINT` environment variable to `api.private.dns-svcs.cloud.ibm.com`. For example:
+If you plan to access the {{site.data.keyword.dns_short}} using Terraform, make sure to set the `IBMCLOUD_PRIVATE_DNS_API_ENDPOINT` environment variable to `api.private.dns-svcs.cloud.ibm.com`. For example:
 
 ```sh
 export IBMCLOUD_PRIVATE_DNS_API_ENDPOINT=api.private.dns-svcs.cloud.ibm.com
