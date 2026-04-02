@@ -28,7 +28,7 @@ In this change log, you can learn about the latest changes, improvements, and up
 ## 16 September 2025
 {: #cli-sept2025}
 
-Pagination support has been added to the following DNS Services CLI commands:
+Added pagination support to the following DNS Services CLI commands:
 
 - [list-glbs](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb)
 - [list-glb-pools](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb-pools)
