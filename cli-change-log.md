@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-06"
 
 keywords: change log for dns services cli, updates to cli
 
@@ -76,7 +76,7 @@ As part of this update (available in version 0.8.4), the JSON response structure
 ## 20 July 2022
 {: #cli-jul2022}
 
-- [Secondary zones](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#secondary-zones) support added.
+- Added [Secondary zones](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#secondary-zones) support.
 - Added support for cross-account operations, allowing resources such as VPCs to be managed across different accounts.
 
 ## 14 April 2022
