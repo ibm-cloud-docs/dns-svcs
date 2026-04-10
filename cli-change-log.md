@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-06"
+lastupdated: "2026-04-10"
 
 keywords: change log for dns services cli, updates to cli
 
@@ -22,8 +22,8 @@ In this change log, you can learn about the latest changes, improvements, and up
 ## 06 March 2026
 {: #cli-mar2026}
 
-- Fixed an issue where enabling or disabling GLB origins using [update-glb-pool](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-glb-pool) failed with "Access to the subnet is forbidden" when the user did not have VPC permissions.
-- Fixed an issue where [dns glbs](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb) returned an empty list when using certain --per-page values.
+- Enabled support for managing GLB origins using [update-glb-pool](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-glb-pool) without requiring VPC permissions.
+- Fixed an issue where [dns glbs](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb) could return an empty list when using specific `--per-page` values.
 
 ## 16 September 2025
 {: #cli-sept2025}
@@ -64,14 +64,14 @@ As part of this update (available in version 0.8.4), the JSON response structure
 ## 30 May 2023
 {: #cli-may2023}
 
-- Added pagination support for forwarding rules.
-- Added support for filtering resource records by name or type when listing records.
+- Added pagination support for forwarding rules. For more information, see [forwarding rules CLI command](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-custom-resolver-forwarding-rules).
+- Added support for filtering resource records by name or type when listing records. For more information, see [resource records CLI command](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-resource-record).
 
 ## 12 October 2022
 {: #cli-oct2022}
 
 - Added IBM Power and Z binary support.
-- Adopted service context-based restrictions.
+- Adopted service context-based restrictions. For more information, see [Protecting DNS Services resources with context-based restrictions](/docs/dns-svcs?topic=dns-svcs-cbr).
 
 ## 20 July 2022
 {: #cli-jul2022}
