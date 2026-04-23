@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-04-19"
+lastupdated: "2026-04-23"
 
 keywords:
 
@@ -1138,7 +1138,7 @@ DNS_DOMAIN_ID
 Create a global load balancer in the zone `demo.com:31984fea73a15b45779fa0df4ef62f9b`.
 
 ```sh
-ibmcloud dns glb-create demo.com:31984fea73a15b45779fa0df4ef62f9b -j @glb.json
+ibmcloud dns glb-create demo.com:31984fea73a15b45779fa0df4ef62f9b --json @glb.json
 ```
 {: pre}
 
@@ -1235,7 +1235,7 @@ GLB_ID
 Update global load balancer `699d98642c564d2e855e9661899b7252` in zone `demo.com:31984fea73a15b45779fa0df4ef62f9b`.
 
 ```sh
-ibmcloud dns glb-update demo.com:31984fea73a15b45779fa0df4ef62f9b 699d98642c564d2e855e9661899b7252 -j @glb.json
+ibmcloud dns glb-update demo.com:31984fea73a15b45779fa0df4ef62f9b 699d98642c564d2e855e9661899b7252 --json @glb.json
 ```
 {: pre}
 
@@ -1305,7 +1305,7 @@ GLB_ID
 Delete global load balancer `699d98642c564d2e855e9661899b7252` in zone `demo.com:31984fea73a15b45779fa0df4ef62f9b`.
 
 ```sh
-ibmcloud dns glb-delete demo.com:31984fea73a15b45779fa0df4ef62f9b 699d98642c564d2e855e9661899b7252 -f
+ibmcloud dns glb-delete demo.com:31984fea73a15b45779fa0df4ef62f9b 699d98642c564d2e855e9661899b7252 --force
 ```
 {: pre}
 
@@ -1353,7 +1353,7 @@ ibmcloud dns glbs demo.com:31984fea73a15b45779fa0df4ef62f9b
 List load balancers for zone `demo.com:31984fea73a15b45779fa0df4ef62f9b` with pagination.
 
  ```sh
-ibmcloud dns glbs demo.com:31984fea73a15b45779fa0df4ef62f9b --output json --per-page 1000 --page 1
+ibmcloud dns glbs demo.com:31984fea73a15b45779fa0df4ef62f9b
  ```
 {: pre}
 
@@ -1456,7 +1456,7 @@ healthcheck-subnets
 Create a GLB pool.
 
 ```sh
-ibmcloud dns glb-pool-create -j @glb-pool.json
+ibmcloud dns glb-pool-create --json @glb-pool.json
 ```
 {: pre}
 
@@ -1570,7 +1570,7 @@ healthcheck-subnets
 Update a GLB pool `17b5962d775c646f3f9725cbc7a53df4`.
 
 ```sh
-ibmcloud dns glb-pool-update 17b5962d775c646f3f9725cbc7a53df4 -j @glb-pool.json
+ibmcloud dns glb-pool-update 17b5962d775c646f3f9725cbc7a53df4 --json @glb-pool.json
 ```
 {: pre}
 
@@ -1634,7 +1634,7 @@ GLB_POOL_ID
 Delete GLB pool `17b5962d775c646f3f9725cbc7a53df4`.
 
 ```sh
-ibmcloud dns glb-pool-delete 17b5962d775c646f3f9725cbc7a53df4 -f
+ibmcloud dns glb-pool-delete 17b5962d775c646f3f9725cbc7a53df4 --force
 ```
 {: pre}
 
@@ -1679,7 +1679,7 @@ ibmcloud dns glb-pools
 List all load balancer pools with pagination.
 
  ```sh
-ibmcloud dns glb-pools --output json --per-page 1000 --page 1
+ibmcloud dns glb-pools
  ```
 {: pre}
 
@@ -1820,7 +1820,7 @@ ibmcloud dns glb-monitor-create --name NAME --type (HTTP|HTTPS) --path PATH [--p
 Create a GLB monitor.
 
 ```sh
-ibmcloud dns glb-monitor-create -j @glb-monitor.json
+ibmcloud dns glb-monitor-create --json @glb-monitor.json
 ```
 {: pre}
 
@@ -1961,7 +1961,7 @@ GLB_MON_ID
 Update GLB monitor `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns glb-monitor-update f1aba936b94213e5b8dca0c0dbf1f9cc -j @glb-monitor.json
+ibmcloud dns glb-monitor-update f1aba936b94213e5b8dca0c0dbf1f9cc --json @glb-monitor.json
 ```
 {: pre}
 
@@ -2026,7 +2026,7 @@ GLB_MON_ID
 Delete the GLB monitor `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns glb-monitor-delete f1aba936b94213e5b8dca0c0dbf1f9cc -f
+ibmcloud dns glb-monitor-delete f1aba936b94213e5b8dca0c0dbf1f9cc --force
 ```
 {: pre}
 
@@ -2071,7 +2071,7 @@ ibmcloud dns glb-monitors
 List all load balancer monitors with pagination.
 
  ```sh
-ibmcloud dns glb-monitors --output json --per-page 1000 --page 1
+ibmcloud dns glb-monitors
  ```
 {: pre}
 
@@ -2118,7 +2118,7 @@ ibmcloud dns custom-resolver-create --name NAME [--location LOCATION1] [--locati
 Create a custom resolver.
 
 ```sh
-ibmcloud dns custom-resolver-create -n "example" --location crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04,enable -d "demo"
+ibmcloud dns custom-resolver-create --name "example" --location crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04,enable --description "demo"
 ```
 {: pre}
 
@@ -2159,7 +2159,7 @@ RESOLVER_ID
 Update a custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns custom-resolver-update f1aba936b94213e5b8dca0c0dbf1f9cc -n "example" --enabled true -d "demo"
+ibmcloud dns custom-resolver-update f1aba936b94213e5b8dca0c0dbf1f9cc --name "example" --enabled true --description "demo"
 ```
 {: pre}
 
@@ -2290,7 +2290,7 @@ RESOLVER_ID
 Add a location in the custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns custom-resolver-location-add f1aba936b94213e5b8dca0c0dbf1f9cc -s crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04 --enabled true
+ibmcloud dns custom-resolver-location-add f1aba936b94213e5b8dca0c0dbf1f9cc --subnet crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04 --enabled true
 ```
 {: pre}
 
@@ -2331,7 +2331,7 @@ LOCATION_ID
 Update the location `9a234ede-c2b6-4c39-bc27-d39ec139ecdb` in custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns custom-resolver-location-update f1aba936b94213e5b8dca0c0dbf1f9cc 9a234ede-c2b6-4c39-bc27-d39ec139ecdb -s crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04 --enabled true
+ibmcloud dns custom-resolver-location-update f1aba936b94213e5b8dca0c0dbf1f9cc 9a234ede-c2b6-4c39-bc27-d39ec139ecdb --subnet crn:v1:bluemix:public:is:us-south-1:a/01652b251c3ae2787110a995d8db0135::subnet:0716-b49ef064-0f89-4fb1-8212-135b12568f04 --enabled true
 ```
 {: pre}
 
@@ -2410,7 +2410,7 @@ RESOLVER_ID
 Create a forwarding rule in a custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns custom-resolver-forwarding-rule-create f1aba936b94213e5b8dca0c0dbf1f9cc -t zone --match "example.com" --dns-svcs 192.168.0.1,192.168.0.2 -d "demo"
+ibmcloud dns custom-resolver-forwarding-rule-create f1aba936b94213e5b8dca0c0dbf1f9cc --type zone --match "example.com" --dns-svcs 192.168.0.1,192.168.0.2 --description "demo"
 ```
 {: pre}
 
@@ -2454,7 +2454,7 @@ RULE_ID
 Update the forwarding rule `9a234ede-c2b6-4c39-bc27-d39ec139ecdb` in custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns custom-resolver-forwarding-rule-update f1aba936b94213e5b8dca0c0dbf1f9cc 9a234ede-c2b6-4c39-bc27-d39ec139ecdb --match "example.com" --dns-svcs 192.168.0.1,192.168.0.2 -d "demo"
+ibmcloud dns custom-resolver-forwarding-rule-update f1aba936b94213e5b8dca0c0dbf1f9cc 9a234ede-c2b6-4c39-bc27-d39ec139ecdb --match "example.com" --dns-svcs 192.168.0.1,192.168.0.2 --description "demo"
 ```
 {: pre}
 
@@ -2537,7 +2537,7 @@ ibmcloud dns custom-resolver-forwarding-rules f1aba936b94213e5b8dca0c0dbf1f9cc
 List all forwarding rules in a custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc` with pagination.
 
  ```sh
-ibmcloud dns custom-resolver-forwarding-rules f1aba936b94213e5b8dca0c0dbf1f9cc --output json --per-page 1000 --page 1
+ibmcloud dns custom-resolver-forwarding-rules f1aba936b94213e5b8dca0c0dbf1f9cc
  ```
 {: pre}
 
@@ -2621,7 +2621,7 @@ RESOLVER_ID
 Create a secondary zone for custom resolver `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns secondary-zone-create f1aba936b94213e5b8dca0c0dbf1f9cc -n "test.com" --transfer-from 169.13.12.10
+ibmcloud dns secondary-zone-create f1aba936b94213e5b8dca0c0dbf1f9cc --name "test.com" --transfer-from 169.13.12.10
 ```
 {: pre}
 
