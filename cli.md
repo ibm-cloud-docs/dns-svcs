@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -1055,7 +1055,7 @@ Create a global load balancer in a zone.
 ```sh
 ibmcloud dns glb-create DNS_ZONE_ID --name NAME --default-pools POOL_LIST --fallback-pool POOL_ID [--description DESCRIPTION] [--enabled true|false] [--ttl TTL] [--az-pools AZPOOLS1 --az-pools AZPOOLS2] [-i, --instance INSTANCE] [--output FORMAT]
 
-ibmcloud dns glb-create DNS_ZONE_ID (-j, --json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
+ibmcloud dns glb-create DNS_ZONE_ID (--json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
 ```
 {: pre}
 
@@ -1148,7 +1148,7 @@ ibmcloud dns glb-create demo.com:31984fea73a15b45779fa0df4ef62f9b --json @glb.js
 Update a global load balancer in a zone.
 
 ```sh
-ibmcloud dns glb-update DNS_ZONE_ID GLB_ID (-j, --json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
+ibmcloud dns glb-update DNS_ZONE_ID GLB_ID (--json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
 
 ibmcloud dns glb-update DNS_ZONE_ID GLB_ID [--name NAME] [--default-pools POOL_LIST] [--fallback-pool POOL_ID] [--description DESCRIPTION] [--enabled true|false] [--ttl TTL] [--az-pools AZPOOLS1 --az-pools AZPOOLS2] [-i, --instance INSTANCE] [--output FORMAT]
 ```
@@ -1296,7 +1296,7 @@ GLB_ID
 -i, --instance
 :   Instance name or ID. If not set, the context instance that is specified by `dns instance-target INSTANCE` is used.
 
--f, --force
+--force
 :   Delete load balancer without prompting for confirmation.
 
 #### Examples
@@ -1305,7 +1305,7 @@ GLB_ID
 Delete global load balancer `699d98642c564d2e855e9661899b7252` in zone `demo.com:31984fea73a15b45779fa0df4ef62f9b`.
 
 ```sh
-ibmcloud dns glb-delete demo.com:31984fea73a15b45779fa0df4ef62f9b 699d98642c564d2e855e9661899b7252 --force
+ibmcloud dns glb-delete demo.com:31984fea73a15b45779fa0df4ef62f9b 699d98642c564d2e855e9661899b7252
 ```
 {: pre}
 
@@ -1363,7 +1363,7 @@ ibmcloud dns glbs demo.com:31984fea73a15b45779fa0df4ef62f9b
 Create a GLB pool for a service instance.
 
 ```sh
-ibmcloud dns glb-pool-create (-j, --json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
+ibmcloud dns glb-pool-create (--json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
 
 ibmcloud dns glb-pool-create --name NAME --origins ORIGIN1 --origins ORIGIN2 [--description DESCRIPTION] [--enabled true|false] [--healthy-origins-threshold THRESHOLD] [--monitor MONITOR_ID] [--notification-channel CHANNEL] [--healthcheck-region REGION] [--healthcheck-subnets SUBNETS] [-i, --instance INSTANCE] [--output FORMAT]
 
@@ -1468,7 +1468,7 @@ Update the details of a GLB pool.
 ```sh
 ibmcloud dns glb-pool-update GLB_POOL_ID [--name NAME] [--enable-origin ORIGIN_NAME --enable-origin ORIGIN_NAME ...] [--disable-origin ORIGIN_NAME --disable-origin ORIGIN_NAME ...] [--add-origin ORIGIN_PARAMETER --add-origin ORIGIN_PARAMETER ...] [--remove-origin ORIGIN_NAME --remove-origin ORIGIN_NAME ...]  [--description DESCRIPTION] [--enabled true|false] [--healthy-origins-threshold THRESHOLD] [-detach-monitor] [--attach-monitor MONITOR_ID] [--healthcheck-region REGION] [--healthcheck-subnets SUBNETS] [-i, --instance INSTANCE] [--output FORMAT]
 
-ibmcloud dns glb-pool-update GLB_POOL_ID (-j, --json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
+ibmcloud dns glb-pool-update GLB_POOL_ID (--json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
 ```
 {: pre}
 
@@ -1625,7 +1625,7 @@ GLB_POOL_ID
 -i, --instance
 :   Instance name or ID. If not set, the context instance that is specified by `dns instance-target INSTANCE` is used.
 
--f, --force
+--force
 :   Delete load balancer pool without prompting for confirmation.
 
 #### Examples
@@ -1634,7 +1634,7 @@ GLB_POOL_ID
 Delete GLB pool `17b5962d775c646f3f9725cbc7a53df4`.
 
 ```sh
-ibmcloud dns glb-pool-delete 17b5962d775c646f3f9725cbc7a53df4 --force
+ibmcloud dns glb-pool-delete 17b5962d775c646f3f9725cbc7a53df4
 ```
 {: pre}
 
@@ -1689,7 +1689,7 @@ ibmcloud dns glb-pools
 Create a GLB monitor for a service instance.
 
 ```sh
-ibmcloud dns glb-monitor-create (-j, --json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
+ibmcloud dns glb-monitor-create (--json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
 
 ibmcloud dns glb-monitor-create --name NAME --type TCP [--port PORT] [--description DESCRIPTION] [--interval INTERVAL] [--retries RETRY] [--timeout TIMEOUT] [-i, --instance INSTANCE] [--output FORMAT]
 
@@ -1830,7 +1830,7 @@ ibmcloud dns glb-monitor-create --json @glb-monitor.json
 Update a GLB monitor for a service instance.
 
 ```sh
-ibmcloud dns glb-monitor-update GLB_MON_ID (-j, --json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
+ibmcloud dns glb-monitor-update GLB_MON_ID (--json @JSON_FILE | JSON_STRING) [-i, --instance INSTANCE] [--output FORMAT]
 
 ibmcloud dns glb-monitor-update GLB_MON_ID [--name NAME] [--type TCP] [--port PORT] [--description DESCRIPTION] [--interval INTERVAL] [--retries RETRY] [--timeout TIMEOUT] [-i, --instance INSTANCE] [--output FORMAT]
 
@@ -2017,7 +2017,7 @@ GLB_MON_ID
 -i, --instance
 :   Instance name or ID. If not set, the context instance that is specified by `dns instance-target INSTANCE` is used.
 
--f, --force
+--force
 :   Delete load balancer monitor without prompting for confirmation.
 
 #### Examples
@@ -2026,7 +2026,7 @@ GLB_MON_ID
 Delete the GLB monitor `f1aba936b94213e5b8dca0c0dbf1f9cc`.
 
 ```sh
-ibmcloud dns glb-monitor-delete f1aba936b94213e5b8dca0c0dbf1f9cc --force
+ibmcloud dns glb-monitor-delete f1aba936b94213e5b8dca0c0dbf1f9cc
 ```
 {: pre}
 
@@ -2086,7 +2086,7 @@ Manage custom resolvers by using the following custom resolver commands.
 Create a custom resolver for a service instance.
 
 ```sh
-ibmcloud dns custom-resolver-create --name NAME [--location LOCATION1] [--location LOCATION2] [-description DESCRIPTION] [-f, --force] [-i, --instance INSTANCE] [--output FORMAT]
+ibmcloud dns custom-resolver-create --name NAME [--location LOCATION1] [--location LOCATION2] [--description DESCRIPTION] [--force] [-i, --instance INSTANCE] [--output FORMAT]
 ```
 {: pre}
 
@@ -2138,10 +2138,10 @@ ibmcloud dns custom-resolver-update RESOLVER_ID [--name NAME] [--enabled true|fa
 RESOLVER_ID
 :   The ID of the custom resolver.
 
--n, --name
+--name
 :   The name of the custom resolver.
 
--d, --description
+--description
 :   The descriptive text of the custom resolver.
 
 --enabled
@@ -2433,7 +2433,7 @@ RESOLVER_ID
 RULE_ID
 :   The ID of custom resolver forwarding rule.
 
--d, --description
+--description
 :   The descriptive text of the custom resolver forwarding rule.
 
 --match
