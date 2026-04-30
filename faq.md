@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2025
-lastupdated: "2025-08-13"
+  years: 2020, 2026
+lastupdated: "2026-04-30"
 
 keywords:
 
@@ -221,6 +221,7 @@ You can estimate the cost of a service using the cost estimator on the provision
 {: faq}
 
 The noted DNS queries per second per availability zone rate [limit](/docs/dns-svcs?topic=dns-svcs-about-dns-services#limits) is currently the typical amount when using {{site.data.keyword.dns_short}} resolvers from a VPC. Depending on how traffic is actually routed, what protocols the queries use, and other factors, the actual rate limit might vary around this number. After a DNS query rate exceeds this rate limit, {{site.data.keyword.dns_short}} resolvers no longer respond to the excess DNS queries.
+
 
 ## Why is my custom resolver request and response count so low?
 {: #why-custom-resolver-request-response-count-low}
