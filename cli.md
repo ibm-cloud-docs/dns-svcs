@@ -2,11 +2,13 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-01"
 
 keywords:
 
 subcollection: dns-svcs
+
+content-type: cli-docs
 
 ---
 
