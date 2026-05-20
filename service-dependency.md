@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-03-06"
+lastupdated: "2026-05-20"
 
 keywords:
 
@@ -191,7 +191,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 ## NGDC Data Plane
 {: #ngdc-data-plane}
 
-The following dependencies apply to the following deployment locations: Chennai - Airtel (in-che), Montreal (ca-mon).
+The following dependencies apply to the following deployment locations: Chennai - Airtel (in-che), Montreal (ca-mon), Mumbai - Airtel (in-mum).
 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
