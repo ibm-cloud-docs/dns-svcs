@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-21"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: dns-svcs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQ
+# FAQ for DNS Services
 {: #frequently-asked-questions}
 
 Have a question about {{site.data.keyword.dns_full}}? Review frequently asked questions, which provide answers to provisioning concerns, application access, and other common inquiries.
@@ -209,19 +209,11 @@ You can disable health check monitoring by disabling the origin.
 
 See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.
 
-## Where do I find cost estimates for {{site.data.keyword.dns_short}}?
-{: #where-do-i-find-cost-estimates-for-dns-svcs}
-{: faq}
-{: support}
-
-You can estimate the cost of a service using the cost estimator on the provisioning pages for {{site.data.keyword.dns_short}} offerings. For example, log in to the [{{site.data.keyword.dns_short}}](/catalog/services/dns-services) console and click **Estimate costs** in the Summary panel. As you complete the form, cost estimates appear in the Summary side panel.
-
 ## Why am I getting timeout errors for my DNS queries from my VPC when my query rate is more or less than the noted rate limit?
 {: #dns-query-rate-limit}
 {: faq}
 
 The noted DNS queries per second per availability zone rate [limit](/docs/dns-svcs?topic=dns-svcs-about-dns-services#limits) is currently the typical amount when using {{site.data.keyword.dns_short}} resolvers from a VPC. Depending on how traffic is actually routed, what protocols the queries use, and other factors, the actual rate limit might vary around this number. After a DNS query rate exceeds this rate limit, {{site.data.keyword.dns_short}} resolvers no longer respond to the excess DNS queries.
-
 
 ## Why is my custom resolver request and response count so low?
 {: #why-custom-resolver-request-response-count-low}
