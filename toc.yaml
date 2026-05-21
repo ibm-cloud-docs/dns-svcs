@@ -149,7 +149,11 @@ toc:
   - navgroup:
       id: help
       topics:
-      - faq.md
+      - topicgroup:
+          id: faq
+          label: FAQ
+          topics:
+          - faq.md
       - topicgroup:
           label: Troubleshooting
           topics:
