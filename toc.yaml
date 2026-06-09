@@ -153,7 +153,8 @@ toc:
           id: faq
           label: FAQ
           topics:
-          - faq.md
+          - faq.md<staging
+          - faq-pricing.md
       - topicgroup:
           label: Troubleshooting
           topics:
