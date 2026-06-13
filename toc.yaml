@@ -154,6 +154,7 @@ toc:
           label: FAQ
           topics:
           - faq.md
+          - faq-pricing.md
       - topicgroup:
           label: Troubleshooting
           topics:
