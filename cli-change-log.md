@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-13"
 
 keywords: change log for dns services cli, updates to cli
 
@@ -19,16 +19,18 @@ subcollection: dns-svcs
 In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.dns_short}} CLI.
 {: shortdesc}
 
-## 06 March 2026
-{: #cli-mar2026}
+## Version 0.8.6
+{: #cli-086}
 
-Version 0.8.6 of the CLI was released on 06 March 2026. : 
+Version 0.8.6 of the CLI was released on 06 March 2026.
 
 - Fixed an issue where enabling or disabling GLB origins using [update-glb-pool](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-glb-pool) failed with "Access to the subnet is forbidden" when the user did not have VPC permissions.
 - Fixed an issue where [dns glbs](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#list-glb) returned an empty list when using certain --per-page values.
 
-## 16 September 2025
-{: #cli-sept2025}
+## Version 0.8.4
+{: #cli-084}
+
+Version 0.8.4 of the CLI was released on 25 September 2025.
 
 Added pagination support to the following DNS Services CLI commands:
 
@@ -52,56 +54,74 @@ As part of this update (available in version 0.8.4), the JSON response structure
 
 - Fixed issues and improved pagination handling for GLB-related commands.
 
-## 06 March 2025
-{: #cli-mar2025}
+## Version 0.8.2
+{: #cli-082}
+
+Version 0.8.2 of the CLI was released on 25 March 2025.
 
 - Added support for 3xx, 4xx, and 5xx response codes for GLB monitors.
 
-## 11 December 2024
-{: #cli-dec2024}
+## Version 0.8.1
+{: #cli-081}
+
+Version 0.8.1 of the CLI was released on 24 December 2024.
 
 - Added support for managing views in forwarding rules. You can now add, update, remove, and reorder views when working with forwarding rules.
 - Added support for custom resolver profiles.
 - Fixed an issue where forwarding rules failed when the forward_to value was empty.
 - Improved CLI behavior with fixes to error messages, PTR handling, and lifecycle attributes.
 
-## 30 May 2023
-{: #cli-may2023}
+## Version 0.7.3
+{: #cli-073}
+
+Version 0.7.3 of the CLI was released on 23 May 2023.
 
 - Added pagination support for forwarding rules.
 - Added support for filtering resource records by name or type when listing records.
 
-## 12 October 2022
-{: #cli-oct2022}
+## Version 0.7.1
+{: #cli-071}
+
+Version 0.7.1 of the CLI was released on 22 October 2022.
 
 - Added IBM Power and Z binary support.
 - Adopted service context-based restrictions.
 
-## 20 July 2022
-{: #cli-jul2022}
+## Version 0.7.0
+{: #cli-070}
+
+Version 0.7.0 of the CLI was released on 22 July 2022.
 
 - Added [Secondary zones](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#secondary-zones) support.
 - Added support for cross-account operations, allowing resources such as VPCs to be managed across different accounts.
 
-## 14 April 2022
-{: #cli-apr1422}
+## Version 0.5.3
+{: #cli-053}
+
+Version 0.5.3 of the CLI was released on 22 April 2022.
 
 - Updated the minimum interval for `glb-monitor-update` from 5 seconds to 60 seconds.
 
-## 07 June 2021
-{: #cli-jun0721}
+## Version 0.5.0
+{: #cli-050}
+
+Version 0.5.0 of the CLI was released on 21 June 2021.
 
 - Changed all references to the variable `INSTANCE_NAME` to `INSTANCE`.
 - Added support for custom resolver CLI commands.
 
-## 25 August 2020
-{: #cli-aug2020}
+## Version 0.3.6
+{: #cli-036}
+
+Version 0.3.6 of the CLI was released on 20 August 2020.
 
 - Added support for Global Load Balancer (GLB), including load balancer and pool management capabilities.
 - Added support for specifying a resource group during instance creation using the CLI.
 
-## 27 December 2019
-{: #cli-dec2019}
+## Version 0.1.0
+{: #cli-010}
+
+Version 0.1.0 of the CLI was released on 19 December 2019.
 
 - Introduced initial CLI support, including commands for managing instances, zones, and access control lists (ACLs).
 - Added support for managing resource records, with additional options for record operations.
