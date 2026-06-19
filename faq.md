@@ -231,7 +231,7 @@ If you want view the total request count you can do one of the following:
 
 The custom resolver metric only shows the zone name for queries that are made for zones that have forwarding rules established. Queries for any other zones result in a zone name of `.`
 
-## Pricing FAQs for DNS Services
+## Pricing FAQ for DNS Services
 {: #frequently-asked-questions-pricing}
 
 ### Where do I find cost estimates for {{site.data.keyword.dns_short}}?
