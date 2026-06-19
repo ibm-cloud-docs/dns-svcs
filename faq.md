@@ -141,11 +141,13 @@ In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-sp
 Creating two DNS Zones with the same name is allowed. Use label and description as described in the following steps to differentiate between the two.
 1. Create an instance of {{site.data.keyword.dns_short}}.
 2. Create a DNS zone for each environment (for example, production, staging, development, testing). When creating the zone, be sure to include a description indicating what environment the zone is for. The zone name is the same for each zone (for example, `testing.com`).
+
     A single {{site.data.keyword.dns_short}} instance can only contain 10 zones.
     {: note}
 
 3. Add a zone to the instance of {{site.data.keyword.dns_short}}.
 4. In each respective zone, add specific VPCs as permitted networks. For example, for a development VPC, create a permitted network with the development VPC ID in the DNS zone for the development environment.
+
     While duplicate zone names are allowed in an account, duplicate zones cannot be associated with a single permitted network.
     {: note}
 
