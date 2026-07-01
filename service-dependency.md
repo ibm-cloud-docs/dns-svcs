@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-20"
+lastupdated: "2026-06-29"
 
 keywords:
 
@@ -95,7 +95,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 | {{site.data.keyword.monitoringlong}}| Operations, Security compliance | No | data-plane |  Same region  |
 | {{site.data.keyword.atracker_full}}| Operations, Security compliance | No | data-plane |  Same region  |
 | {{site.data.keyword.cos_full}}| Disaster recovery, Security compliance | No | data-plane |  Same region  |
-| None| Operations, Security compliance | No | data-plane |  Same region  |
+| corporate-uptycs| Operations, Security compliance | No | data-plane |  Same region  |
 | SOS Inventory Management| Security compliance | No | data-plane |  Same region  |
 | SOS Tenable| Security compliance | No | data-plane |  Same region  |
 | SOS File Integrity Monitoring| Security compliance | No | data-plane |  Same region  |
@@ -104,7 +104,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 | SOS Compliance Reporting| Security compliance | No | data-plane |  Same region  |
 | OSS Platform| Operations | No | data-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | PagerDuty| none | Yes | data-plane |  external  |
-| None| Operations, Security compliance | No | data-plane |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | data-plane |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud DNS Services - Data plane deployment service dependency information - Minimal dependencies" caption-side="top"}
 {: tab-title="Minimal dependencies"}
@@ -171,7 +171,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 | {{site.data.keyword.monitoringlong}}| Operations, Security compliance | No | control-plane |  Same region  |
 | {{site.data.keyword.atracker_full}}| Operations, Security compliance | No | control-plane |  Same region  |
 | SOS SIEM| Operations, Security compliance | No | control-plane |  Same region  |
-| None| Operations, Security compliance | No | control-plane |  Same region  |
+| corporate-uptycs| Operations, Security compliance | No | control-plane |  Same region  |
 | SOS Inventory Management| Security compliance | No | control-plane |  Same region  |
 | SOS Tenable| Security compliance | No | control-plane |  Same region  |
 | SOS File Integrity Monitoring| Security compliance | No | control-plane |  Same region  |
@@ -179,7 +179,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 | SOS Container Security| Security compliance | No | control-plane |  Same region  |
 | SOS Compliance Reporting| Security compliance | No | control-plane |  Same region  |
 | PagerDuty| none | Yes | control-plane |  external  |
-| None| Operations, Security compliance | No | control-plane |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | control-plane |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud DNS Services - Control plane deployment service dependency information - Minimal dependencies" caption-side="top"}
 {: tab-title="Minimal dependencies"}
@@ -248,7 +248,7 @@ The following dependencies apply to the following deployment locations: Chennai 
 | {{site.data.keyword.monitoringlong}}| Operations, Security compliance | No | ngdc-data-plane |  Same region  |
 | {{site.data.keyword.atracker_full}}| Operations, Security compliance | No | ngdc-data-plane |  Same region  |
 | {{site.data.keyword.cos_full}}| Disaster recovery, Security compliance | No | ngdc-data-plane |  Same region  |
-| None| Operations, Security compliance | No | ngdc-data-plane |  Same region  |
+| corporate-uptycs| Operations, Security compliance | No | ngdc-data-plane |  Same region  |
 | SOS Inventory Management| Security compliance | No | ngdc-data-plane |  Same region  |
 | SOS Tenable| Security compliance | No | ngdc-data-plane |  Same region  |
 | SOS File Integrity Monitoring| Security compliance | No | ngdc-data-plane |  Same region  |
@@ -257,7 +257,7 @@ The following dependencies apply to the following deployment locations: Chennai 
 | SOS Compliance Reporting| Security compliance | No | ngdc-data-plane |  Same region  |
 | OSS Platform| Operations | No | ngdc-data-plane |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | PagerDuty| none | Yes | ngdc-data-plane |  external  |
-| None| Operations, Security compliance | No | ngdc-data-plane |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | ngdc-data-plane |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud DNS Services - NGDC Data Plane service dependency information - Minimal dependencies" caption-side="top"}
 {: tab-title="Minimal dependencies"}
