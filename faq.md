@@ -26,7 +26,7 @@ Have a question about {{site.data.keyword.dns_full}}? Review frequently asked qu
 {: faq}
 {: support}
 
-You can estimate the cost of a service using the cost estimator on the provisioning pages for {{site.data.keyword.dns_short}} offerings. For example, log in to the [{{site.data.keyword.dns_short}}](/catalog/services/dns-services) console and click **Estimate costs** in the Summary panel. As you complete the form, cost estimates appear in the Summary side panel.
+You can estimate the cost of a service by using the cost estimator on the provisioning pages for {{site.data.keyword.dns_short}} offerings. For example, log in to the [{{site.data.keyword.dns_short}}](/catalog/services/dns-services) console and click **Estimate costs** in the Summary panel. As you complete the form, cost estimates appear in the Summary side panel.
 
 ### What does "Million DNS Queries" refer to?
 {: #what-are-million-dns-queries}
@@ -34,16 +34,16 @@ You can estimate the cost of a service using the cost estimator on the provision
 {: support}
 
 - "Million DNS Queries" refers to DNS queries answered by the Private DNS Service back-end resolvers (`161.26.0.7`, `161.26.0.8`).
-- Private DNS Service back-end resolvers (`161.26.0.7`, `161.26.0.8`) only charge for private zone queries, meaning zones defined and permitted to a VPC by a given DNS Service instance. Any queries forwarded to public resolvers (`161.26.0.10`, `161.26.0.11`) are not charged.
+- Private DNS Service back-end resolvers (`161.26.0.7`, `161.26.0.8`) only charge for private zone queries, meaning zones defined and allowed to a VPC by a DNS Service instance. Any queries that are forwarded to public resolvers (`161.26.0.10`, `161.26.0.11`) are not charged.
 - A virtual server instance in a VPC without a DNS Service by default points to public resolvers (`161.26.0.10` and `161.26.0.11`) and is not charged.
 
 ### When creating DNS Services from the IBM Cloud Catalog, does a custom resolver location correspond to a single IP on a custom resolver, and does the cost increase if deployed across multiple subnets or zones?
 {: #create-dns-cost-per-subnet-zone}
 {: faq}
 
-The listed price in the [{{site.data.keyword.cloud_notm}} Catalog](https://{DomainName}/catalog/) is per `Custom Resolver Location`, where location is equivalent to being deployed to a subnet. For example, a custom resolver deployed across three subnets would cost three times the rate listed in the Catalog.
+The listed price in the [{{site.data.keyword.cloud_notm}} Catalog](https://{DomainName}/catalog/) is per `Custom Resolver Location`, where location is equivalent to being deployed to a subnet. For example, a custom resolver that is deployed across three subnets would cost three times the rate that is listed in the catalog.
 
-Billing continues even if a custom resolver or its locations are in the `disabled` state, since each custom resolver location is a managed appliance provisioned for you.
+Billing continues even if a custom resolver or its locations are in the `disabled` state, since each custom resolver location is a managed appliance that is provisioned for you.
 {: note}
 
 ### When creating DNS Services from the IBM Cloud Catalog, what does the option Million Custom Resolver External Queries refer to, and are these DNS queries forwarded by forwarding rules?
@@ -65,13 +65,14 @@ Yes, you are charged for queries that result in a cache miss and are not forward
 {: #private-zone}
 {: faq}
 
-To create your own private DNS zone using {{site.data.keyword.dns_short}}, take the following steps.
+To create your own private DNS zone using {{site.data.keyword.dns_short}}, follow these steps:
+
 1. Create a VPC instance.
 1. Create a {{site.data.keyword.dns_short}} instance.
 1. Add a DNS zone to the {{site.data.keyword.dns_short}} instance.
 1. Designate the VPC instance as a permitted network for the DNS zone.
 1. Add a DNS resource record to the DNS zone.
-1. Verify that name resolution of the DNS resource record works from within the VPC.
+1. Verify that that name resolution of the DNS resource record works from within the VPC.
 
 ### How is {{site.data.keyword.dns_short}} different from public DNS?
 {: #not-for-public}
@@ -89,7 +90,7 @@ No, {{site.data.keyword.dns_short}} currently offers only private DNS. Use [{{si
 {: #dnssec-supported-with-zones}
 {: faq}
 
-DNSSec allows resolvers to cryptographically verify the data received from authoritative servers. {{site.data.keyword.dns_short}} resolvers support DNSSec for public domains, for which requests are forwarded to public resolvers that support DNSSec. For private zones, since the authority is within {{site.data.keyword.cloud_notm}}, records are fetched using secure protocols and provide the same level of privacy and security as DNSSec provides for public zones.
+DNSSec allows resolvers to cryptographically verify the data received from authoritative servers. {{site.data.keyword.dns_short}} resolvers support DNSSec for public domains, for which requests are forwarded to public resolvers that support DNSSec. For private zones, since the authority is within {{site.data.keyword.cloud_notm}}, records are fetched by using secure protocols and provide the same level of privacy and security as DNSSec provides for public zones.
 
 ### Is {{site.data.keyword.dns_short}} regional or global?
 {: #is-dns-svcs-global}
@@ -104,14 +105,14 @@ DNSSec allows resolvers to cryptographically verify the data received from autho
 To delete a {{site.data.keyword.dns_short}} instance, follow these steps:
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking**.
-1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the instance you want to delete, then select **Delete**.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the instance that you want to delete, then select **Delete**.
 
 ### Why can't I delete a {{site.data.keyword.dns_short}} instance?
 {: #why-cant-i-delete-an-instance}
 {: faq}
 {: support}
 
-If a DNS zone has been added to the {{site.data.keyword.dns_short}} instance, the instance cannot be deleted.
+If a DNS zone is added to the {{site.data.keyword.dns_short}} instance, the instance cannot be deleted.
 
 ### Why am I getting timeout errors for DNS queries from my VPC?
 {: #dns-query-rate-limit}
@@ -126,7 +127,7 @@ The DNS queries per second per availability zone [limit](/docs/dns-svcs?topic=dn
 {: #purpose-of-label}
 {: faq}
 
-A given instance can have multiple DNS zones with the same name. The label helps differentiate between zones that share the same name.
+An instance can have multiple DNS zones with the same name. The label helps differentiate between zones that share the same name.
 
 ### How many private zones are supported?
 {: #how-many-private-zones-supported}
@@ -158,7 +159,7 @@ Creating two DNS zones with the same name is allowed. Use the **label** and **de
 1. Create an instance of {{site.data.keyword.dns_short}}.
 1. Create a DNS zone for each environment (for example, production, staging, development, testing). When creating the zone, be sure to include a description indicating what environment the zone is for. The zone name is the same for each zone (for example, `testing.com`).
 
-    A single {{site.data.keyword.dns_short}} instance can only contain 10 zones.
+    A single {{site.data.keyword.dns_short}} instance can contain only 10 zones.
     {: note}
 
 1. Add a zone to the instance of {{site.data.keyword.dns_short}}.
@@ -167,7 +168,7 @@ Creating two DNS zones with the same name is allowed. Use the **label** and **de
     While duplicate zone names are allowed in an account, duplicate zones cannot be associated with a single permitted network.
     {: note}
 
-1. The result is that traffic from the development VPC only sees records from the development DNS zone, and similarly for all other environments. This way, you can use the same zone name in all environments, with the results tailored to each respective environment.
+1. The result is that traffic from the development VPC sees records only from the development DNS zone, and similarly for all other environments. This way, you can use the same zone name in all environments, with the results tailored to each respective environment.
 
 
 ### Can I add the same permitted network (for example, a VPC) to two DNS zones of the same name?
@@ -193,7 +194,7 @@ Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authori
 {: #why-cant-i-delete-a-zone}
 {: faq}
 
-If a network has been added to a zone, the zone cannot be deleted until the permitted network is deleted from the zone.
+If a network is added to a zone, the zone cannot be deleted until the permitted network is deleted from the zone.
 
 ## DNS records
 {: #frequently-asked-questions-records}
@@ -243,9 +244,9 @@ When you disable a custom resolver or a custom resolver location, the underlying
 1. Select the instance of {{site.data.keyword.dns_short}} you want to upgrade.
 1. Select **Plan** from the navigation menu.
 1. Select **Standard DNS** from the plan table.
-1. Click **Save** and then click **OK** when prompted to verify "Are you sure that you want to change plans?".
+1. Click **Save** and then click **OK** when prompted to verify "Are you sure that you want to change plans?"
 
-See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan using the command-line interface.
+See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan by using the command-line interface.
 
 ### Why is my custom resolver request count so low?
 {: #why-custom-resolver-request-response-count-low}
@@ -258,11 +259,11 @@ If you want to view the total request count, you can do one of the following:
 * Combine the cache hits and misses.
 * View the cache requests metric.
 
-### Why are my custom resolver metrics showing a `.` instead of my requested zone name?
+### Why do my custom resolver metrics show a `.` instead of my requested zone name?
 {: #why-custom-resolver-metrics-show-period}
 {: faq}
 
-The custom resolver metric only shows the zone name for queries to zones that have forwarding rules configured. Queries for any other zones result in a zone name of `.`.
+The custom resolver metric shows the zone name only for queries to zones that have forwarding rules configured. Queries for any other zones result in a zone name of `.`.
 
 ## Global load balancers
 {: #frequently-asked-questions-glb}
@@ -283,7 +284,7 @@ HTTP and HTTPS health checks are currently supported.
 {: #what-regions-health-check-monitoring}
 {: faq}
 
-See [DNS Services supported regions](/docs/dns-svcs?topic=dns-svcs-about-dns-services#supported-regions) for an updated list of regions where health checks are currently supported.
+For an updated list of regions where health checks are currently supported, see [DNS Services supported regions](/docs/dns-svcs?topic=dns-svcs-about-dns-services#supported-regions).
 
 ### How can I disable health check monitoring for an origin?
 {: #disable-health-check-monitoring-to-origin}
