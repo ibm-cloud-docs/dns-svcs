@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-07-01"
+lastupdated: "2026-07-02"
 
 keywords:
 
@@ -35,7 +35,7 @@ You can estimate the cost of a service by using the cost estimator on the provis
 
 - "Million DNS Queries" refers to DNS queries answered by the Private DNS Service back-end resolvers (`161.26.0.7`, `161.26.0.8`).
 - Private DNS Service back-end resolvers (`161.26.0.7`, `161.26.0.8`) only charge for private zone queries, meaning zones defined and allowed to a VPC by a DNS Service instance. Any queries that are forwarded to public resolvers (`161.26.0.10`, `161.26.0.11`) are not charged.
-- A virtual server instance in a VPC without a DNS Service by default points to public resolvers (`161.26.0.10` and `161.26.0.11`) and is not charged.
+- By default, a virtual server instance in a VPC without a DNS Service points to public resolvers (`161.26.0.10` and `161.26.0.11`) and is not charged.
 
 ### When creating DNS Services from the IBM Cloud Catalog, does a custom resolver location correspond to a single IP on a custom resolver, and does the cost increase if deployed across multiple subnets or zones?
 {: #create-dns-cost-per-subnet-zone}
@@ -43,20 +43,20 @@ You can estimate the cost of a service by using the cost estimator on the provis
 
 The listed price in the [{{site.data.keyword.cloud_notm}} Catalog](https://{DomainName}/catalog/) is per `Custom Resolver Location`, where location is equivalent to being deployed to a subnet. For example, a custom resolver that is deployed across three subnets would cost three times the rate that is listed in the catalog.
 
-Billing continues even if a custom resolver or its locations are in the `disabled` state, since each custom resolver location is a managed appliance that is provisioned for you.
+Billing continues even if a custom resolver or its locations are in the `disabled` state because each custom resolver location is a managed appliance that is provisioned for you.
 {: note}
 
 ### When creating DNS Services from the IBM Cloud Catalog, what does the option Million Custom Resolver External Queries refer to, and are these DNS queries forwarded by forwarding rules?
 {: #create-dns-million-custom-resolver-external-queries}
 {: faq}
 
-The option **Million Custom Resolver External Queries** refers to queries that result in a cache miss and are not forwarded to the Private DNS resolvers (`161.26.0.7`, `161.26.0.8`).
+The option **Million Custom Resolver External Queries** refers to queries that result in a cache miss. These queries are not forwarded to the Private DNS resolvers (`161.26.0.7`, `161.26.0.8`).
 
 ### Am I charged when queries are sent through a custom resolver and when they are forwarded to on-premises DNS servers by forwarding rules?
 {: #dns-charge-per-query}
 {: faq}
 
-Yes, you are charged for queries that result in a cache miss and are not forwarded to the Private DNS resolvers (`161.26.0.7`, `161.26.0.8`).
+Yes, you are charged for queries that result in a cache miss and which are not forwarded to the Private DNS resolvers (`161.26.0.7`, `161.26.0.8`).
 
 ## General FAQ for DNS Services
 {: #frequently-asked-questions-general}
@@ -78,7 +78,7 @@ To create your own private DNS zone using {{site.data.keyword.dns_short}}, follo
 {: #not-for-public}
 {: faq}
 
-{{site.data.keyword.dns_short}} permits name resolution only from permitted VPCs within your {{site.data.keyword.cloud}} account. DNS zones are not resolvable from the internet.
+{{site.data.keyword.dns_short}} allows name resolution only from permitted VPCs within your {{site.data.keyword.cloud}} account. DNS zones are not resolvable from the internet.
 
 ### Can I manage publicly available DNS records with this service?
 {: #publicly-available-dns-records}
@@ -140,16 +140,16 @@ An instance can have multiple DNS zones with the same name. The label helps diff
 {: faq}
 
 The zone state definitions are as follows.
-* **Pending**: When a DNS zone is added to the instance, it is in `Pending`. In this state, resource records can be added, deleted, or updated. Since the zone does not have any permitted networks, the zone is not served by the resolvers in any region.
+* **Pending**: When a DNS zone is added to the instance, it is in `Pending` state. In this state, resource records can be added, deleted, or updated. Because the zone does not have any permitted networks, the zone is not served by the resolvers in any region.
 * **Active**: When a domain has one or more permitted networks added, the domain state changes to `ACTIVE` and the domain is served by the resolver from all regions.
-* **Disabled**: In this state, the zone is not served and all control path operations are disabled except deleting the zone.
+* **Disabled**: In this state, the zone is not served and all control path operations are disabled except for deleting the zone.
 
 ### Can I use any name for the zone?
 {: #can-i-use-any-name-for-zone}
 {: faq}
 {: support}
 
-In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-specific DNS zone names are restricted, in other words, they cannot be created in {{site.data.keyword.dns_short}}. See [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names) for the complete list.
+In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-specific DNS zone names are restricted, in other words, they cannot be created in {{site.data.keyword.dns_short}}. For a complete list of restricted zone names, see [Restricted DNS zone names](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones#restricted-dns-zone-names).
 
 ### Can I create two DNS zones with the same name?
 {: #can-i-create-2-zones-with-same-name}
@@ -157,7 +157,7 @@ In general, yes, you can use any name for the zone. Certain IBM-owned or IBM-spe
 
 Creating two DNS zones with the same name is allowed. Use the **label** and **description** fields as described in the following steps to differentiate between the two zones.
 1. Create an instance of {{site.data.keyword.dns_short}}.
-1. Create a DNS zone for each environment (for example, production, staging, development, testing). When creating the zone, be sure to include a description indicating what environment the zone is for. The zone name is the same for each zone (for example, `testing.com`).
+1. Create a DNS zone for each environment (for example, production, staging, development, testing). When creating the zone, make sure to include a description indicating what environment the zone is for. The zone name is the same for each zone (for example, `testing.com`).
 
     A single {{site.data.keyword.dns_short}} instance can contain only 10 zones.
     {: note}
@@ -169,7 +169,6 @@ Creating two DNS zones with the same name is allowed. Use the **label** and **de
     {: note}
 
 1. The result is that traffic from the development VPC sees records only from the development DNS zone, and similarly for all other environments. This way, you can use the same zone name in all environments, with the results tailored to each respective environment.
-
 
 ### Can I add the same permitted network (for example, a VPC) to two DNS zones of the same name?
 {: #can-i-add-same-permitted-network-to-two-dns-zones-same-name}
@@ -188,7 +187,7 @@ Unlike public DNS zones, {{site.data.keyword.dns_short}} does not expose authori
 {: faq}
 {: support}
 
-{{site.data.keyword.dns_short}} allows you to create a private DNS zone that can have the same name as a public DNS zone. See a [detailed explanation](/docs/dns-svcs?topic=dns-svcs-about-dns-services#resolving-dns-names-with-dns-services) of this scenario, referred to as Split Horizon.
+{{site.data.keyword.dns_short}} allows you to create a private DNS zone that can have the same name as a public DNS zone. This scenario is referred to as Split Horizon. For more information, see, [Resolving DNS names with DNS Services](/docs/dns-svcs?topic=dns-svcs-about-dns-services#resolving-dns-names-with-dns-services).
 
 ### Why can't I delete a DNS zone?
 {: #why-cant-i-delete-a-zone}
@@ -224,7 +223,7 @@ If the VPC is deleted, the corresponding permitted network is also deleted from 
 {: #why-can-i-resolve-resource-records-after-delete}
 {: faq}
 
-To maintain a level of performance while resolving DNS queries, DNS Services resolvers cache data related to permitted networks for a period of time. Changes made to a permitted network might not have propagated until the previously cached data expires. See [Known issues and limitations](/docs/dns-svcs?topic=dns-svcs-limitations-known-issues) for more details.
+To maintain a level of performance while resolving DNS queries, DNS Services resolvers cache data related to permitted networks for a period of time. Changes made to a permitted network might not have propagated until the previously cached data expires. For more details, see [Known issues and limitations](/docs/dns-svcs?topic=dns-svcs-limitations-known-issues).
 
 ## Custom resolvers
 {: #frequently-asked-questions-custom-resolvers}
@@ -233,7 +232,7 @@ To maintain a level of performance while resolving DNS queries, DNS Services res
 {: #disabled-custom-resolver-charge}
 {: faq}
 
-When you disable a custom resolver or a custom resolver location, the underlying appliance is still provisioned and subject to billing. To prevent unwanted charges, delete the custom resolver and custom resolver locations.
+When you disable a custom resolver or a custom resolver location, the underlying appliance is still provisioned and subjected to billing. To prevent unwanted charges, delete the custom resolver and custom resolver locations.
 
 ### How do I upgrade my plan from free to standard?
 {: #upgrade-plan-free-standard}
@@ -246,7 +245,7 @@ When you disable a custom resolver or a custom resolver location, the underlying
 1. Select **Standard DNS** from the plan table.
 1. Click **Save** and then click **OK** when prompted to verify "Are you sure that you want to change plans?"
 
-See [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-DNS-services-instance) to update to the standard plan by using the command-line interface.
+To update to the standard plan from the command-line interface, see [Update DNS Services instances](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands#update-DNS-services-instance).
 
 ### Why is my custom resolver request count so low?
 {: #why-custom-resolver-request-response-count-low}
@@ -272,7 +271,7 @@ The custom resolver metric shows the zone name only for queries to zones that ha
 {: #load-balancer}
 {: faq}
 
-See [Global load balancers limitations](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#glb-ki) for more information on global load balancer usage.
+For more information on global load balancer usage, see [Global load balancers limitations](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#glb-ki).
 
 ### What types of health checks are supported?
 {: #health-check-types-supported}
