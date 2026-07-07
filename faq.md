@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-07-02"
+lastupdated: "2026-07-06"
 
 keywords:
 
@@ -140,7 +140,7 @@ An instance can have multiple DNS zones with the same name. The label helps diff
 {: faq}
 
 The zone state definitions are as follows.
-* **Pending**: When a DNS zone is added to the instance, it is in `Pending` state. In this state, resource records can be added, deleted, or updated. Because the zone does not have any permitted networks, the zone is not served by the resolvers in any region.
+* **Pending**: When a DNS zone is added to the instance, it is in `PENDING` state. In this state, resource records can be added, deleted, or updated. Because the zone does not have any permitted networks, the zone is not served by the resolvers in any region.
 * **Active**: When a domain has one or more permitted networks added, the domain state changes to `ACTIVE` and the domain is served by the resolver from all regions.
 * **Disabled**: In this state, the zone is not served and all control path operations are disabled except for deleting the zone.
 
@@ -289,4 +289,4 @@ For an updated list of regions where health checks are currently supported, see 
 {: #disable-health-check-monitoring-to-origin}
 {: faq}
 
-You can disable health check monitoring for an origin by disabling it.
+You can disable health check monitoring for an origin by deleting the component on the load balancer itself. For more information, see [Viewing, editing, or deleting components of a global load balancer](/docs/dns-svcs?topic=dns-svcs-global-load-balancers#edit-delete-load-balancer).
