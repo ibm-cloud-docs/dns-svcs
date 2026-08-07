@@ -116,8 +116,8 @@ As a customer, you are responsible for recovering your DNS Server configuration 
 
 | Failure | Resolution |
 | ------- | ---------- |
-| Zonal failure | Mitigated for custom resolvers by deploying to multiple locations <BR> Mitigated for DNS Servers by queries answered by the nearest available availability zone. |
-| Regional failure | Outage for custom resolvers until one availability zone is restored. <BR>  Mitigated for DNS Servers by queries answered by the nearest available region. |
+| Zonal failure | Mitigated for custom resolvers by deploying to multiple locations  \n  Mitigated for DNS Servers by queries answered by the nearest available availability zone. |
+| Regional failure | Outage for custom resolvers until one availability zone is restored.  \n   Mitigated for DNS Servers by queries answered by the nearest available region. |
 | Data corruption | Restore service configurations from an external source of truth. |
 {: caption="DR scenarios for DNS Services" caption-side="bottom"}
 
