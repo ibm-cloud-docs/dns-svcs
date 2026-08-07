@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-23"
+  years: 2026
+lastupdated: "2026-08-07"
 
 keywords: HA for dns services, DR for dns-svcs, dns-svcs recovery time objective, dns-svcs recovery point objective
 
-subcollection: content-kit
+subcollection: dns-svcs
 
 ---
 
@@ -30,7 +30,7 @@ For more information about the deployment regions and data center locations for 
 ### Control plane
 {: #ha-control-plane}
 
-{{site.data.keyword.dns_full}} is a globally available (GA) service. Its public API endpoints for DNS configuration are available through a global load balancer deplyed in two [multizone regions](#x9774820){: term} (MZRs) of {{site.data.keyword.cloud_notm}}, ensuring high availability. These regions are Dallas and Washington, DC. If one region experiences an outage, the global load balancer automatically routes API traffic to the other region. For example, if the Dallas region is unavailable, requests are redirected to other available geographic regions—in this case, Washington, DC.
+{{site.data.keyword.dns_full}} is a globally available (GA) service. Its public API endpoints for DNS configuration are available through a global load balancer deployed in two [multizone regions](#x9774820){: term} (MZRs) of {{site.data.keyword.cloud_notm}}, ensuring high availability. These regions are Dallas and Washington, DC. If one region experiences an outage, the global load balancer automatically routes API traffic to the other region. For example, if the Dallas region is unavailable, requests are redirected to other available geographic regions—in this case, Washington, DC.
 
 In the event of a global failure, the control plane is restored with a focus on reducing data loss for resources. Therefore, customers should also plan for disaster recovery.
 
@@ -41,7 +41,7 @@ A control plane handles user-initiated DNS configuration requests, whereas a dat
 ### Data plane DNS servers
 {: #data-plane-dns-server}
 
-The [DNS servers](/docs/dns-svcs?topic=dns-svcs-service-connection) are distributed globally across multiple MZRs and use anycast IP addresses to optimize latency and ensure high availability. If an availability zone or a entire region experiences an outage, DNS queries are automatically routed to nearest availability zone or region. DNS data is replicated across the following regions to support both latency optimization and high availability:
+The [DNS servers](/docs/dns-svcs?topic=dns-svcs-service-connection) are distributed globally across multiple MZRs and use anycast IP addresses to optimize latency and ensure high availability. If an availability zone or an entire region experiences an outage, DNS queries are automatically routed to nearest availability zone or region. DNS data is replicated across the following regions to support both latency optimization and high availability:
 
 - Dallas (us-south)
 - Washington, D.C. (us-east)
@@ -82,11 +82,11 @@ Service Level Objectives (SLOs) define the design points that the {{site.data.ke
 |  Availability % | 99.999% |
 {: caption="SLO for DNS Services" caption-side="bottom"}
 
-The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the [SLAs for commitments and credits](/docs/overview?topic=overview-slas#slas) that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](//docs/resiliency?topic=resiliency-slo#slo-high-network-services).
+The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the [SLAs for commitments and credits](/docs/overview?topic=overview-slas#slas) that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/resiliency?topic=resiliency-slo#slo-high-network-services).
 
 For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
 
-See [How IBM Cloud ensures high availability and disaster recovery](/docs/overview?topic=overview-zero-downtime#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}.
+See [How IBM Cloud ensures high availability and disaster recovery](/docs/resiliency?topic=resiliency-ha-redundancy#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}.
 
 ## Disaster recovery architecture
 {: #disaster-recovery-intro}
@@ -189,4 +189,4 @@ For more information about service availability within regions and data centers,
 
 All upgrades follow {{site.data.keyword.IBM_notm}} service best practices, including recovery plans and rollback processes. Regular maintenance might cause short interruptions, mitigated by [client availability retry logic](/docs/resiliency?topic=resiliency-high-availability-design#client-retry-logic-for-ha). Changes are rolled out sequentially, region by region, and zone by zone within a region. {{site.data.keyword.IBM_notm}} reverts updates at the first sign of a defect. 
 
-IBM provides advance notice for all planned maintenance activities. If a change is expected to affect your workloads, IBM communicates this through official notifications. To stay updated on maintenance, service announcements, and other updates, see the [Monitoring notifications and status](/docs/account?topic=account-viewing-cloud-status) page.
+IBM provides advance notice for all planned maintenance activities. If a change is expected to affect your workloads, IBM communicates this through official notifications. To stay updated on maintenance, service announcements, and other updates, see the [Monitoring notifications and status](/docs/support?topic=support-best-practices) page.

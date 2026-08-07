@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2025
-lastupdated: "2025-12-12"
+  years: 2018, 2026
+lastupdated: "2026-08-07"
 
 keywords:
 
@@ -101,7 +101,7 @@ The following three types of platform logs are generated for DNS services:
 :   Logs are created when there is critical activity regarding a healthcheck appliance. These logs can be related to the status of the appliance VSI itself, or to any of the origins that the healthcheck is monitoring. Learn more about [creating a health check](/docs/dns-svcs?topic=dns-svcs-global-load-balancers&interface=ui#add-a-health-check).
 
 `custom_resolver_event` 
-:   Logs are created when there is critical activity regarding custom resolvers. Activities such as create and delete events for custom resolver locations and status updates of the locations all fall under this category.Learn more about [working with custom resolvers](/docs/dns-svcs?topic=dns-svcs-custom-resolver).
+:   Logs are created when there is critical activity regarding custom resolvers. Activities such as create and delete events for custom resolver locations and status updates of the locations all fall under this category. Learn more about [working with custom resolvers](/docs/dns-svcs?topic=dns-svcs-custom-resolver).
 
 ## Viewing logs
 {: #log-viewing}
@@ -118,7 +118,7 @@ For more information about launching the {{site.data.keyword.logs_full_notm}} UI
 ## Fields by log type
 {: #log-fields}
 
-For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#platform_reqd).
+For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs).
 
 | Field             | Type       | Description             |
 |-------------------|------------|-------------------------|
@@ -149,7 +149,7 @@ Common messages to look for:
 
 - `"Linked DNS zone <zone ID> under instance <instance ID> is approved by zone owner"` - indicates that a request to link a zone was approved.
 
-- `"The permitted network <VPC ID> on linked dns zone <zone ID> under instance <instance ID>"' is removed by zone owner` - indicates that a previously allowed linked zone has been revoked.
+- `"The permitted network <VPC ID> on linked dns zone <zone ID> under instance <instance ID>" is removed by zone owner` - indicates that a previously allowed linked zone has been revoked.
 
 ### health_check_event logs
 {: #analyzing-health-check-event-logs}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-16"
+lastupdated: "2026-08-07"
 
 keywords:
 
@@ -157,7 +157,7 @@ The following options describe ways to achieve connectivity from your remote sys
 
 1. If your VPE resides in a different VPC than your VPN:
 
-   [Create a custom resolver](/docs/dns-svcs?topic=dns-svcs-ui-create-cr&interface=ui#creating-a-custom-resolver-in-the-console) and add IPs in two resolver locations to enable high availability. Then, enter the custom resolver IP addresses in the DNS server 1 IP address and DNS server 2 IP address fields in the Additional configuration section of the VPN page. For more information, see [Creating a VPN server](/docs/vpc?topic=vpc-vpn-create-server&interface=ui). 
+   [Create a custom resolver](/docs/dns-svcs?topic=dns-svcs-ui-create-cr&interface=ui#create-cr-ui) and add IPs in two resolver locations to enable high availability. Then, enter the custom resolver IP addresses in the DNS server 1 IP address and DNS server 2 IP address fields in the Additional configuration section of the VPN page. For more information, see [Creating a VPN server](/docs/vpc?topic=vpc-vpn-create-server&interface=ui). 
 
    This approach is recommended if you are using multiple VPEs or VPCs.
    {: note}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-04-15"
+  years: 2021, 2026
+lastupdated: "2026-08-07"
 
 keywords:
 
@@ -160,7 +160,7 @@ You cannot enable or disable the custom resolver and locations, delete the custo
 
 A view defines an expression that enables DNS queries to be routed to different DNS resolvers based on the evaluation result. This evaluation enables advanced server block routing functions such as split DNS.
 
-The view expression follows [Common Expression Language](https://github.com/google/cel-spec/blob/master/doc/langdef.md), but does not support all CEL build-in functions and macros. Currently, the expression supports only the following custom functions, variables, and operators.
+The view expression follows [Common Expression Language](https://github.com/cel-expr/cel-spec/blob/master/doc/langdef.md), but does not support all CEL build-in functions and macros. Currently, the expression supports only the following custom functions, variables, and operators.
 
 * Functions
    * `ipInRange(ip, cidr)`: Return a boolean value indicating whether the `ip` address is in the `cidr` range.

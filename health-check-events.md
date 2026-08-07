@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2025
-lastupdated: "2025-02-04"
+  years: 2020, 2026
+lastupdated: "2026-08-07"
 
 keywords:
 
@@ -18,9 +18,10 @@ subcollection: dns-svcs
 When using global load balancing, you can create a health check to specify how the origin's health is monitored. Health check events are status changes from monitored origin pools and their associated origin servers. If an origin's status changes, a new event is recorded with the event's description.
 {: shortdesc}
 
-As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.la_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Logging is the same for both services. For information about migrating from {{site.data.keyword.la_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see migration planning. {: important}
+As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.la_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Logging is the same for both services. For information about migrating from {{site.data.keyword.la_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-migration-overview).
+{: important}
 
-{{site.data.keyword.loganalysisfull}} manages system and application logs in the IBM Cloud. You can use this service to access health check events for your origin pools and origin servers. For more information, see the [Getting started tutorial](/docs/log-analysis?topic=log-analysis-getting-started) for {{site.data.keyword.loganalysislong_notm}}.
+{{site.data.keyword.loganalysisfull}} manages system and application logs in the IBM Cloud. You can use this service to access health check events for your origin pools and origin servers. For more information, see the [Getting started tutorial](/docs/cloud-logs?topic=cloud-logs-getting-started) for {{site.data.keyword.loganalysislong_notm}}.
 
 ## Before you begin
 {: #loganalysis-preparation}
@@ -54,24 +55,24 @@ To view health check events in a {{site.data.keyword.loganalysisshort}}[Deprecat
 
 To view health check events, use the UI of the {{site.data.keyword.loganalysisshort}}[Deprecated]{: tag-red} instance that you configured to receive the platform logs in the previous steps.
 
-For more information, see [Launching the {{site.data.keyword.loganalysisshort}} web UI through the IBM Cloud UI](/docs/log-analysis?topic=log-analysis-launch#launch_cloud_ui).
+For more information, see [Launching the {{site.data.keyword.loganalysisshort}} web UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
 To search health check events from within the logging instance, enter the health check event type `health_check_event` in the **Search** field.
 
-![{{site.data.keyword.loganalysisshort}} source search](images/health-check-type-filter.png "Search within logging instance"){: caption="Search within logging instance" caption-side="bottom"
+![{{site.data.keyword.loganalysisshort}} source search](images/health-check-type-filter.png "Search within logging instance"){: caption="Search within logging instance" caption-side="bottom"}
 
 You can also search for the events you want by combining other event fields. For example:
 
 - Search health check events for a specific {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN](images/health-check-type-filter-crn.png "Search events by CRN"){: caption="Search events by CRN" caption-side="bottom"
+    ![search events by CRN](images/health-check-type-filter-crn.png "Search events by CRN"){: caption="Search events by CRN" caption-side="bottom"}
 - Search health check events for a pool by specifying its `name` and its {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN and pool name](images/health-check-type-filter-crn-pool.png "Search events by CRN and pool name"){: caption="Search events by CRN and pool name" caption-side="bottom"
+    ![search events by CRN and pool name](images/health-check-type-filter-crn-pool.png "Search events by CRN and pool name"){: caption="Search events by CRN and pool name" caption-side="bottom"}
 - Search health check events for an origin by specifying its `name` and its {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN and origin name](images/health-check-type-filter-crn-origin.png "Search events by CRN and origin name"){: caption="Search events by CRN and origin name" caption-side="bottom"
+    ![search events by CRN and origin name](images/health-check-type-filter-crn-origin.png "Search events by CRN and origin name"){: caption="Search events by CRN and origin name" caption-side="bottom"}
 - Search health check events for an origin when its status becomes healthy by specifying its `name` and `overall_health` fields and also its {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN, origin name and health](images/health-check-type-filter-crn-origin-health.png "Search events by CRN, origin name, and health"){: caption="Search events by CRN, origin name, and health" caption-side="bottom"
+    ![search events by CRN, origin name and health](images/health-check-type-filter-crn-origin-health.png "Search events by CRN, origin name, and health"){: caption="Search events by CRN, origin name, and health" caption-side="bottom"}
 - Search health check events for a pool when its status becomes DEGRADED by specifying its `name` and `healthy` fields and also its {{site.data.keyword.dns_short}} instance.
-    ![search events by CRN, pool name and health](images/health-check-type-filter-crn-pool-health.png "Search events by CRN, pool name, and health"){: caption="Search events by CRN, pool name, and health" caption-side="bottom"
+    ![search events by CRN, pool name and health](images/health-check-type-filter-crn-pool-health.png "Search events by CRN, pool name, and health"){: caption="Search events by CRN, pool name, and health" caption-side="bottom"}
 
 ## Health check event properties
 {: #health-check-event-properties}
