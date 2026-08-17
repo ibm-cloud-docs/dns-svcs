@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-04-16"
+lastupdated: "2026-08-17"
 
 keywords: DNS Services
 
@@ -51,7 +51,7 @@ DNS Services supports the following data format and schema of the exported data,
    ibmcloud dns zone ZONE_ID [-i, --instance INSTANCE] [--output json]
    ```
 
-  Example request using the [DNS Services API](/apidocs/dns-svcs#introduction-to-dns-services-api):
+   Example request using the [DNS Services API](/apidocs/dns-svcs#introduction-to-dns-services-api):
 
    ```curl
    curl -X GET   https://api.dns-svcs.cloud.ibm.com/v1/instances/1407a753-a93f-4bb0-9784-bcfc269ee1b3/dnszones/2d0f862b-67cc-41f3-b6a2-59860d0aa90e \

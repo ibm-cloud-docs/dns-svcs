@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-23"
+  years: 2026
+lastupdated: "2026-08-17"
 
 keywords: HA for dns services, DR for dns-svcs, dns-svcs recovery time objective, dns-svcs recovery point objective
 
-subcollection: content-kit
+subcollection: dns-svcs
 
 ---
 
@@ -18,7 +18,7 @@ subcollection: content-kit
 
 
 [High availability](#x2284708){: term} (HA) is the ability for a service to remain operational and accessible in the presence of unexpected failures. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure. [Disaster recovery](#x2113280){: term} is the process of recovering the service instance to a working state. It includes procedures for copying and storing an installed system's essential data in a secure location, and for recovering that data to restore normal operation.
-{: shortdesc} 
+{: shortdesc}
 
 DNS Services is designed to meet the [Service Level Objectives (SLO)](/docs/resiliency?topic=resiliency-slo#slo-high-network-services) with the Standard plan. DNS Services is a highly available global service, architected with separate failure domains to enhance resilience. The control plane is resilient to both zonal and regional failures, and its failure does not affect the data plane. The data plane is resilient to at least zonal failures, and its failure doesn't affect the control plane.
 
@@ -30,7 +30,7 @@ For more information about the deployment regions and data center locations for 
 ### Control plane
 {: #ha-control-plane}
 
-{{site.data.keyword.dns_full}} is a globally available (GA) service. Its public API endpoints for DNS configuration are available through a global load balancer deplyed in two [multizone regions](#x9774820){: term} (MZRs) of {{site.data.keyword.cloud_notm}}, ensuring high availability. These regions are Dallas and Washington, DC. If one region experiences an outage, the global load balancer automatically routes API traffic to the other region. For example, if the Dallas region is unavailable, requests are redirected to other available geographic regions—in this case, Washington, DC.
+{{site.data.keyword.dns_full}} is a globally available (GA) service. Its public API endpoints for DNS configuration are available through a global load balancer deployed in two [multizone regions](#x9774820){: term} (MZRs) of {{site.data.keyword.cloud_notm}}, ensuring high availability. These regions are Dallas and Washington, DC. If one region experiences an outage, the global load balancer automatically routes API traffic to the other region. For example, if the Dallas region is unavailable, requests are redirected to other available geographic regions—in this case, Washington, DC.
 
 In the event of a global failure, the control plane is restored with a focus on reducing data loss for resources. Therefore, customers should also plan for disaster recovery.
 
@@ -41,7 +41,7 @@ A control plane handles user-initiated DNS configuration requests, whereas a dat
 ### Data plane DNS servers
 {: #data-plane-dns-server}
 
-The [DNS servers](/docs/dns-svcs?topic=dns-svcs-service-connection) are distributed globally across multiple MZRs and use anycast IP addresses to optimize latency and ensure high availability. If an availability zone or a entire region experiences an outage, DNS queries are automatically routed to nearest availability zone or region. DNS data is replicated across the following regions to support both latency optimization and high availability:
+The [DNS servers](/docs/dns-svcs?topic=dns-svcs-service-connection) are distributed globally across multiple MZRs and use anycast IP addresses to optimize latency and ensure high availability. If an availability zone or an entire region experiences an outage, DNS queries are automatically routed to nearest availability zone or region. DNS data is replicated across the following regions to support both latency optimization and high availability:
 
 - Dallas (us-south)
 - Washington, D.C. (us-east)
@@ -82,11 +82,11 @@ Service Level Objectives (SLOs) define the design points that the {{site.data.ke
 |  Availability % | 99.999% |
 {: caption="SLO for DNS Services" caption-side="bottom"}
 
-The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the [SLAs for commitments and credits](/docs/overview?topic=overview-slas#slas) that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](//docs/resiliency?topic=resiliency-slo#slo-high-network-services).
+The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the [SLAs for commitments and credits](/docs/overview?topic=overview-slas#slas) that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/resiliency?topic=resiliency-slo#slo-high-network-services).
 
 For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
 
-See [How IBM Cloud ensures high availability and disaster recovery](/docs/overview?topic=overview-zero-downtime#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}.
+See [How IBM Cloud ensures high availability and disaster recovery](/docs/resiliency?topic=resiliency-ha-redundancy#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}.
 
 ## Disaster recovery architecture
 {: #disaster-recovery-intro}
@@ -106,6 +106,7 @@ Maintaining an external record of your DNS configuration is important for recove
 | [Import DNS resource records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records&interface=ui#ui-import-records)  | Import DNS records on a text file into a zone through the dashboard. | Need to recreate the zone before importing DNS records. |
 | External source of truth | DNS zones, permitted networks, DNS resource records, custom resolvers, custom resolver forwarding rules, and more captured in a customer managed configuration files like Terraform scripts, shell scripts or programs. | Customer must create the script or program, and persist the configuration where it can be used during disaster. |
 | [Backup and restore](/docs/dns-svcs?topic=dns-svcs-writing-dns-svcs-config-to-file) | Backup a service instance by using customer written script. | Customer must create the script and persist the backup copy where it can be used during recovery. |
+{: caption="Disaster recovery features" caption-side="bottom"}
 
 ### Planning for DR
 {: #features-for-disaster-recovery}
@@ -116,8 +117,8 @@ As a customer, you are responsible for recovering your DNS Server configuration 
 
 | Failure | Resolution |
 | ------- | ---------- |
-| Zonal failure | Mitigated for custom resolvers by deploying to multiple locations <BR> Mitigated for DNS Servers by queries answered by the nearest available availability zone. |
-| Regional failure | Outage for custom resolvers until one availability zone is restored. <BR>  Mitigated for DNS Servers by queries answered by the nearest available region. |
+| Zonal failure | Mitigated for custom resolvers by deploying to multiple locations  \n  Mitigated for DNS Servers by queries answered by the nearest available availability zone. |
+| Regional failure | Outage for custom resolvers until one availability zone is restored.  \n   Mitigated for DNS Servers by queries answered by the nearest available region. |
 | Data corruption | Restore service configurations from an external source of truth. |
 {: caption="DR scenarios for DNS Services" caption-side="bottom"}
 
@@ -147,14 +148,14 @@ For more information about responsibility ownership between you and {{site.data.
 Change management includes tasks, such as configuration changes and deletion.
 
 Grant users and processes the Identity and Access Management (IAM) roles and actions with the least privilege that is required for their work. For more information, see [How can I prevent accidental deletion of services?](/docs/resiliency?topic=resiliency-dr-faq#prevent-accidental-deletion).
-{: tip} 
+{: tip}
 
 Best practices for managing change also include:
- 
-* Plan and document changes by maintaining a change log for any modifications that are made to your DNS Services configuration. 
+
+* Plan and document changes by maintaining a change log for any modifications that are made to your DNS Services configuration.
 * Create a backup of critical configurations before performing major changes.
 * Schedule high-impact changes during low-traffic windows and notify impacted teams.
-* Monitor your DNS Services health and metrics to ensure that everything is performing as expected. 
+* Monitor your DNS Services health and metrics to ensure that everything is performing as expected.
 
 ## How IBM helps ensure disaster recovery
 {: #ibm-disaster-recovery}
@@ -182,11 +183,11 @@ DNS Services provide mechanisms to protect your data and restore service functio
 
 If {{site.data.keyword.IBM_notm}} can’t restore the service instance, then you must restore the service as described in the [Disaster recovery architecture](#disaster-recovery-intro).
 
-For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region). 
+For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
 
 ## How IBM maintains services
 {: #ibm-service-maintenance}
 
-All upgrades follow {{site.data.keyword.IBM_notm}} service best practices, including recovery plans and rollback processes. Regular maintenance might cause short interruptions, mitigated by [client availability retry logic](/docs/resiliency?topic=resiliency-high-availability-design#client-retry-logic-for-ha). Changes are rolled out sequentially, region by region, and zone by zone within a region. {{site.data.keyword.IBM_notm}} reverts updates at the first sign of a defect. 
+All upgrades follow {{site.data.keyword.IBM_notm}} service best practices, including recovery plans and rollback processes. Regular maintenance might cause short interruptions, mitigated by [client availability retry logic](/docs/resiliency?topic=resiliency-high-availability-design#client-retry-logic-for-ha). Changes are rolled out sequentially, region by region, and zone by zone within a region. {{site.data.keyword.IBM_notm}} reverts updates at the first sign of a defect.
 
-IBM provides advance notice for all planned maintenance activities. If a change is expected to affect your workloads, IBM communicates this through official notifications. To stay updated on maintenance, service announcements, and other updates, see the [Monitoring notifications and status](/docs/account?topic=account-viewing-cloud-status) page.
+IBM provides advance notice for all planned maintenance activities. If a change is expected to affect your workloads, IBM communicates this through official notifications. To stay updated on maintenance, service announcements, and other updates, see the [Monitoring notifications and status](/docs/support?topic=support-best-practices) page.

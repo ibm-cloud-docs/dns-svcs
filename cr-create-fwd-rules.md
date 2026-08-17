@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-06-03"
+  years: 2021, 2026
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -26,6 +26,7 @@ Forwarding rules are configurations that you can set up to direct DNS queries to
 
     VPC network behavior and your VPC network configurations can also affect traffic to and from custom resolvers that are located on your VPC. For example, if you want to create a forwarding rule to a DNS resolver on the external internet for DNS queries matching a certain DNS zone, you must create a public gateway to allow external connectivity for your custom resolvers. See [About networking for VPC](/docs/vpc?topic=vpc-about-networking-for-vpc) for more information on VPC networking.
     {: tip}
+
 * **Views (optional)**: Composed of an expression that when evaluated to true forwards the DNS query to the specified DNS resolvers.
 
 After a rule is configured and the custom resolver is enabled, DNS query requests go to the custom resolver first.

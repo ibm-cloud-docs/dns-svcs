@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-10-09"
+  years: 2019, 2026
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -32,7 +32,7 @@ With {{site.data.keyword.cloud_notm}} IAM, you can manage and define access for 
 
 To simplify access, {{site.data.keyword.dns_short}} aligns with {{site.data.keyword.cloud_notm}} IAM roles so that each user has a different view of the service, according to the role the user is assigned. If you are a security admin for your service, you can assign {{site.data.keyword.cloud_notm}} IAM roles that correspond to the specific {{site.data.keyword.dns_full}} permissions you want to grant to members of your team.
 
-This section discusses {{site.data.keyword.cloud_notm}} IAM in the context of {{site.data.keyword.dns_short}}. For complete IAM documentation, see [Managing access](/docs/account?topic=account-cloudaccess) in {{site.data.keyword.cloud_notm}}.
+This section discusses {{site.data.keyword.cloud_notm}} IAM in the context of {{site.data.keyword.dns_short}}. For complete IAM documentation, see [Managing access](/docs/secure-enterprise?topic=secure-enterprise-access-management-overview) in {{site.data.keyword.cloud_notm}}.
 {: note}
 
 ### Platform access roles

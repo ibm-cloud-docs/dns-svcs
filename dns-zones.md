@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-02-19"
+lastupdated: "2026-08-17"
 
 keywords: restricted zones
 
@@ -101,6 +101,7 @@ The following DNS zone names are not permitted.
 * `registry.redhat.io`
 * `registry.connect.redhat.com`
 * `quay.io`
+* `quantum.ibm.com` 
 
 ## Edit a DNS zone in the console
 {: #edit-dns-zone-ui}
@@ -117,7 +118,7 @@ The following DNS zone names are not permitted.
 1. From the DNS Zones page, click the Delete icon from the row for the zone that you want to delete. A confirmation dialog appears.
 2. Click **Delete**.
 
-# Manage DNS zones from the CLI
+## Manage DNS zones from the CLI
 {: #managing-dns-zones-cli}
 {: cli}
 

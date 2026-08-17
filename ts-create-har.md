@@ -6,7 +6,7 @@ lastupdated: "2025-05-08"
 
 keywords: HAR files, HAR, HTTP Archive
 
-subcollection: dns
+subcollection: dns-svcs
 
 content-type: troubleshoot
 

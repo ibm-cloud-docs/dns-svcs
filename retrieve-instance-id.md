@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2025
-lastupdated: "2025-05-08"
+  years: 2020, 2026
+lastupdated: "2026-08-17"
 
 keywords: instance ID, instance GUID, get instance ID, get instance GUID, instance ID API, instance ID CLI
 
@@ -72,7 +72,7 @@ You can also retrieve the instance ID for your service instance by using the [{{
 
 You might want to retrieve the instance ID programmatically to help you build and connect your application. You can call the [{{site.data.keyword.cloud_notm}} Resource Controller API](/apidocs/resource-controller){: external}, and then pipe the JSON output to `jq` to extract this value.
 
-1. [Retrieve an {{site.data.keyword.cloud_notm}} IAM access token](/docs/account?topic=account-iamapikeysforservices).
+1. [Retrieve an {{site.data.keyword.cloud_notm}} IAM access token](/docs/account?topic=account-service_credentials).
 
 2. Call the [Resource Controller API](/apidocs/resource-controller){: external} to retrieve your instance ID.
 

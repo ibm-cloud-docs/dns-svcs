@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-08-17"
 
 keywords: vpe for dns services, virtual private endpoints for dns services, using vpe for vpc with dns services, isolation for dns services, private network for dns services, network isolation in dns services, non-public routes for dns services, private connection for dns services, private connectivity for dns services
 
@@ -27,9 +27,9 @@ VPEs are virtual IP interfaces that are bound to an endpoint gateway created on 
 Before you target a virtual private endpoint for {{site.data.keyword.dns_short}} you must complete the following tasks.
 
 * Ensure that a [Virtual Private Cloud is created](/docs/vpc?topic=vpc-getting-started).
-* Make a plan for your [virtual private endpoints](/docs/vpc?topic=vpc-planning-considerations).
+* Make a plan for your [virtual private endpoints](/docs/vpc?topic=vpc-vpe-planning-considerations).
 * Ensure that [correct access controls](/docs/vpc?topic=vpc-configure-acls-sgs-endpoint-gateways&interface=ui#vpe-configuring-acls) are set for your virtual private endpoint.
-* Understand the [planning considerations](/docs/vpc?topic=vpc-vpe-planning-considerations)) of having a virtual private endpoint.
+* Understand the [planning considerations](/docs/vpc?topic=vpc-vpe-planning-considerations) of having a virtual private endpoint.
 * Understand how to [view details](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway) about a virtual private endpoint.
 
 ## Setting up a VPE for {{site.data.keyword.dns_short}}
@@ -116,4 +116,4 @@ export IBMCLOUD_PRIVATE_DNS_API_ENDPOINT=api.private.dns-svcs.cloud.ibm.com
 ```
 {: pre}
 
-For more information, see [DNS Services resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list#ibm-dns-service_rd).
+For more information, see [DNS Services resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference).

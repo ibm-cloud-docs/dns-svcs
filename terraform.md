@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-01-14"
+lastupdated: "2026-08-17"
 
 subcollection: dns-svcs
 
@@ -78,7 +78,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
 
 1. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, select the {{site.data.keyword.dns_short}} instance that you created and note the instance ID.
 
-1. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
+1. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-access-report).
 
 ## What's next?
 {: #terraform-setup-next}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-06-03"
+  years: 2021, 2026
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -19,7 +19,6 @@ You can add a custom resolver in {{site.data.keyword.dns_full}} by using the UI,
 {: shortdesc}
 
 ## Creating a custom resolver in the console
-
 {: #create-cr-ui}
 {: ui}
 
@@ -27,11 +26,11 @@ To add a custom resolver in the console, follow these steps:
 
    You must create a DNS service before you create a custom resolver. Each VPC can only have one custom resolver.
    {: important}
-   
+
 1. If you haven't already, [create a DNS service](/docs/dns-svcs?topic=dns-svcs-getting-started&interface=ui).
 1. From your browser, open the [{{site.data.keyword.cloud_notm}} console](/login) and log in to your account.
 1. Select the **Navigation Menu** ![Menu icon](../icons/icon_hamburger.svg), then click **Resource list > Networking > dns-cr-instance**.
-1. Navigate to the **Custom resolver** tab, then click **Create custom resolver**. 
+1. Navigate to the **Custom resolver** tab, then click **Create custom resolver**.
 1. Enter a name and description for your custom resolver.
 1. Select a profile, region, VPC, and subnet from the list menu.
 

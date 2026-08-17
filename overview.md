@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -65,7 +65,7 @@ If the name resolution request for `www.example.com` originated from a client in
 
 {{site.data.keyword.dns_short}} ensures a level of privacy for information that is specified in your zones and resource records.
 
-{{site.data.keyword.dns_short}} is private only. For provisioning and configuring DNS records for public DNS resolution, refer to [{{site.data.keyword.cis_full_notm}}](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis) ({{site.data.keyword.cis_short_notm}}).
+{{site.data.keyword.dns_short}} is private only. For provisioning and configuring DNS records for public DNS resolution, refer to [{{site.data.keyword.cis_full_notm}}](/docs/cis?topic=cis-getting-started) ({{site.data.keyword.cis_short_notm}}).
 {: note}
 
 ## Limits
