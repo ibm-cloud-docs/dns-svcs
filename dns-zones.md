@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-08-07"
+lastupdated: "2026-08-17"
 
 keywords: restricted zones
 
@@ -101,6 +101,7 @@ The following DNS zone names are not permitted.
 * `registry.redhat.io`
 * `registry.connect.redhat.com`
 * `quay.io`
+* `quantum.ibm.com`
 
 ## Edit a DNS zone in the console
 {: #edit-dns-zone-ui}
