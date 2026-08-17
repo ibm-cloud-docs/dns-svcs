@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-06-03"
+  years: 2021, 2026
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -32,8 +32,8 @@ To delete a forwarding rule in the console, follow these steps:
 1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the rule that you want to delete.
 1. Select **Delete**.
 
-  You cannot delete the default rule.
-  {: note}
+   You cannot delete the default rule.
+   {: note}
 
 ## Deleting custom resolver forwarding rules from the CLI
 {: #cli-cr-fwd-rules-delete}

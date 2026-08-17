@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2025
-lastupdated: "2025-05-08"
+  years: 2019, 2026
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -584,7 +584,7 @@ curl -X POST \
 {: #create-amx-resource-record-api}
 {: api}
 
-### Request
+### MX request
 {: #create-mx-request}
 {: api}
 
@@ -603,7 +603,7 @@ curl -X POST \
 ```
 {: pre}
 
-### Response
+### MX response
 {: #create-mx-response}
 {: api}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-06-03"
+  years: 2021, 2026
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -30,7 +30,8 @@ To delete a resolver location in the console, follow these steps:
 1. In the Custom resolver table, click the name of the custom resolver that you want to edit.
 1. From the custom resolver details page, select the **Resolver locations** tab. Here you can enable or disable your custom resolver location by setting the toggle switch.
 
-  Deleting an enabled location is not permitted. {: note}
+   Deleting an enabled location is not permitted.
+   {: note}
 
 1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") icon for the location that you want to delete.
 1. Select **Delete**.
