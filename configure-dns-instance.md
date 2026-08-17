@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2025
-lastupdated: "2025-05-08"
+  years: 2019, 2026
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -30,7 +30,7 @@ Set up a {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks,
 
    You are redirected to the {{site.data.keyword.dns_short}} instance page showing **DNS Zones** information.
 
-You can also navigate directly to the {{site.data.keyword.dns_short}} instance creation by going to the [{{site.data.keyword.dns_short}} catalog entry](https://{DomainName}/catalog/services/dns-services).
+You can also navigate directly to the {{site.data.keyword.dns_short}} instance creation by going to the [{{site.data.keyword.dns_short}} catalog entry](/catalog/services/dns-services).
 
 ## Creating a DNS zone in the console
 {: #creating-a-dns-zone}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-07"
+lastupdated: "2026-08-17"
 
 keywords: vpe for dns services, virtual private endpoints for dns services, using vpe for vpc with dns services, isolation for dns services, private network for dns services, network isolation in dns services, non-public routes for dns services, private connection for dns services, private connectivity for dns services
 
@@ -116,4 +116,4 @@ export IBMCLOUD_PRIVATE_DNS_API_ENDPOINT=api.private.dns-svcs.cloud.ibm.com
 ```
 {: pre}
 
-For more information, see [DNS Services resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list).
+For more information, see [DNS Services resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference).

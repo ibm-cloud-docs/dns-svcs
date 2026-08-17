@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-08-07"
+lastupdated: "2026-08-17"
 
 keywords: context-based restrictions for dns services
 
@@ -24,9 +24,9 @@ These restrictions work with traditional IAM policies, which are based on identi
 A user must have the `Administrator` role on the {{site.data.keyword.dns_short}} service to create, update, or delete rules. And a user must have either the `Editor` or `Administrator` role on the Context-based restrictions service to create, update, or delete network zones. A user with the `Viewer` role on the Context-based restrictions service can only add network zones to a rule. 
 {: note}
 
-Any {{site.data.keyword.cloudaccesstraillong_notm}} or audit log events generated come from the context-based restrictions service, not {{site.data.keyword.dns_short}}. For more information, see [Monitoring context-based restrictions](/docs/secure-enterprise?topic=secure-enterprise-cbr-monitor).
+Any {{site.data.keyword.cloudaccesstraillong_notm}} or audit log events generated come from the context-based restrictions service, not {{site.data.keyword.dns_short}}. For more information, see [Monitoring context-based restrictions](/docs/secure-enterprise?topic=secure-enterprise-at_events).
 
-To get started protecting your {{site.data.keyword.dns_short}} resources with context-based restrictions, see the tutorial for [Leveraging context-based restrictions to secure your resources](/docs/secure-enterprise?topic=secure-enterprise-context-restrictions-tutorial).
+To get started protecting your {{site.data.keyword.dns_short}} resources with context-based restrictions, see the tutorial for [Leveraging context-based restrictions to secure your resources](/docs/secure-enterprise?topic=secure-enterprise-context-restrictions-create).
 
 ## Creating network zones 
 {: #network-zone}
@@ -42,9 +42,9 @@ A network zone represents an allowlist of IP addresses where an access request i
 {: #network-zone-cli} 
 {: cli}
 
-1. To create network zones from the CLI, [install the CBR CLI plug-in](/docs/secure-enterprise?topic=secure-enterprise-cbr-plugin).
+1. To create network zones from the CLI, [install the CBR CLI plug-in](/docs/cli?topic=cli-cbr-plugin#install-cbr-plugin).
 2. Use the `cbr-zone-create` command to add network locations and VPCs to network zones. For more information, see the CBR
-   [CLI reference](/docs/secure-enterprise?topic=secure-enterprise-cbr-plugin#cbr-zones-cli).
+   [CLI reference](/docs/cli?topic=cli-cbr-plugin#cbr-zones-cli).
 
    The following example command adds an individual IP, range, subnet, and a VPC to a network zone.
 
@@ -132,8 +132,8 @@ Context-based restrictions protect only the actions associated with the [DNS Ser
 
 - [Resource Instance APIs](/apidocs/resource-controller/resource-controller#list-resource-instances)
 - [Resource Keys APIs](/apidocs/resource-controller/resource-controller#list-resource-keys)
-- [Resource Bindings APIs](/apidocs/resource-controller/resource-controller#list-resource-bindings)
-- [Resource Aliases APIs](/apidocs/resource-controller/resource-controller#list-resource-aliases)
+- [Resource Bindings APIs](/apidocs/resource-controller/resource-controller)
+- [Resource Aliases APIs](/apidocs/resource-controller/resource-controller)
 - [IAM Policy APIs](/apidocs/iam-policy-management#list-policies)
 - [Global Search APIs](/apidocs/search)
 - Global Tagging [Attach](/apidocs/tagging#attach-tag) and [Detach](/apidocs/tagging#detach-tag) APIs
@@ -156,8 +156,8 @@ You can select a service instance by entering the ID. Alternatively, you can use
 {: #rules-cli} 
 {: cli}
 
-1. To create rules from the CLI, [install the CBR CLI plug-in](/docs/secure-enterprise?topic=secure-enterprise-cbr-plugin#install-cbr-plugin).
-1. Use the [`ibmcloud cbr rule-create` command](/docs/secure-enterprise?topic=secure-enterprise-cbr-plugin#cbr-cli-rule-create-command) to create CBR rules. For more information, see the CBR [CLI reference](/docs/secure-enterprise?topic=secure-enterprise-cbr-plugin#cbr-zones-cli).
+1. To create rules from the CLI, [install the CBR CLI plug-in](/docs/cli?topic=cli-cbr-plugin#install-cbr-plugin).
+1. Use the [`ibmcloud cbr rule-create` command](/docs/cli?topic=cli-cbr-plugin#cbr-cli-rule-create-command) to create CBR rules. For more information, see the CBR [CLI reference](/docs/cli?topic=cli-cbr-plugin#cbr-zones-cli).
 
 The examples in this section are enforcement rules. You can make them report-only by adding `--enforcement-mode report`.
 
@@ -230,6 +230,6 @@ You must work with an account administrator to ensure appropriate VPC operator p
 {: #cbr-monitoring}
 
 The context-based restriction service generates audit logs every time a context-based rule is enforced. For more information, see
-[Monitoring context-based restrictions](/docs/secure-enterprise?topic=secure-enterprise-cbr-monitor).
+[Monitoring context-based restrictions](/docs/secure-enterprise?topic=secure-enterprise-at_events).
 
 Activity tracker events that are generated by the context-based restriction service contain a *CorrelationId* field. You can search the value of this field to find the audit events that are generated by {{site.data.keyword.dns_short}}.

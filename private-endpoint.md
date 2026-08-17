@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-07"
+lastupdated: "2026-08-17"
 
 keywords:
 
@@ -84,6 +84,6 @@ export IBMCLOUD_PRIVATE_DNS_API_ENDPOINT=https://api.private.dns-svcs.cloud.ibm.
 ```
 {: pre}
 
-For more information on using Terraform, see [{{site.data.keyword.dns_short}} resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list).
+For more information on using Terraform, see [{{site.data.keyword.dns_short}} resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference).
 
 For more information on using VPEs in Terraform, see [`ibm_is_virtual_endpoint_gateway_ip`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_virtual_endpoint_gateway_ip){: external}.
