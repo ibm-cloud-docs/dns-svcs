@@ -15,7 +15,7 @@ subcollection: dns-svcs
 # Setting up your {{site.data.keyword.dns_short}} instance
 {: #setting-up-your-dns-instance}
 
-Set up a {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks, and resource records by using the UI or API.
+Set up an {{site.data.keyword.dns_full}} instance, DNS zones, permitted networks, and resource records by using the UI or API.
 {: shortdesc}
 
 ## Creating a {{site.data.keyword.dns_short}} instance in the console
