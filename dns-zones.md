@@ -101,7 +101,7 @@ The following DNS zone names are not permitted.
 * `registry.redhat.io`
 * `registry.connect.redhat.com`
 * `quay.io`
-* `quantum.ibm.com`
+* `quantum.ibm.com` 
 
 ## Edit a DNS zone in the console
 {: #edit-dns-zone-ui}
