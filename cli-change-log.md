@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-19"
 
 keywords: change log for dns services cli, updates to cli
 
@@ -20,7 +20,7 @@ In this change log, you can learn about the latest changes, improvements, and up
 {: shortdesc}
 
 ## Version 0.8.7
-{: #cli-086}
+{: #cli-087}
 
 Version 0.8.7 of the CLI was released on 16 September 2026.
 

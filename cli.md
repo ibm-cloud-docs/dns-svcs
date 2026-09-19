@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-19"
 
 keywords:
 
@@ -1793,7 +1793,7 @@ ibmcloud dns glb-monitor-create --name NAME --type (HTTP|HTTPS) --path PATH [--p
 :   The port number that the health check connects to.
 
 --expected-codes
-:   The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`.
+:   The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`, `2xx,3xx`, `2xx,4xx`,`2xx,3xx,4xx`.
 
 --expected-body
 :   A case-insensitive substring to look for in the response body.
@@ -1934,7 +1934,7 @@ GLB_MON_ID
 :   The port number that the health check connects to.
 
 --expected-codes
-:   The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`.
+:   The expected HTTP response code or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`, `2xx,3xx`, `2xx,4xx`,`2xx,3xx,4xx`.
 
 --expected-body
 :   A case-insensitive substring to look for in the response body.
