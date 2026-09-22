@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-07-31"
+lastupdated: "2026-09-22"
 
 keywords:
 
@@ -98,7 +98,7 @@ Follow these steps to create a health check:
     TCP monitor type options end with this step. Click **Create** to save your changes and create the health check. HTTP and HTTPS monitor types have additional options, which follow.
     {: note}
 
-1. Enter the **Expected response codes**, which are the HTTP response codes or code range of the health check. This value must be between `200-299` with wildcards denoted by an `x`.
+1. Enter the **Expected response codes**, which are the HTTP response codes or code range of the health check. Valid values: `200`, `201`, `202`, `203`, `204`, `205`, `206`, `207`, `208`, `226`, `2xx`, `3xx`, `4xx`, `5xx`, `2xx,3xx`, `2xx,4xx`,`2xx,3xx,4xx`.
 1. Optionally, enter a **Response body** which is a case-insensitive substring to match against in the response body. If this string is not found, the origin is marked as unhealthy.
 1. In the optional **Request headers** section, you can add and configure HTTP request headers to send in the health check. Enter a header name and value in the fields provided. Click **Add request header** to configure additional headers.
 1. Click **Create** to save your changes and create the health check.
