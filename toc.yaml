@@ -44,7 +44,6 @@ toc:
           label: Global load balancers
           topics:
           - glb.md
-          - health-check-events.md
       - topicgroup:
           label: Custom resolvers
           topics:

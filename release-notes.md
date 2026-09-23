@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-22"
+lastupdated: "2026-09-23"
 
 keywords:
 
@@ -24,8 +24,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## 17 September 2026
 {: dns-svcs-sept172026}
 
-Multiple response codes for GLB healthcheck monitors
-:    Added support for GLB healthcheck monitors enum combinations `2xx,3xx`, `2xx,4xx` and `2xx,3xx,4xx`. 
+Multiple response codes for GLB health check monitors
+:    Added support for GLB health check monitors enum combinations `2xx,3xx`, `2xx,4xx` and `2xx,3xx,4xx`. 
 
 ## 28 Feb 2026
 {: #dns-svcs-feb2826}
