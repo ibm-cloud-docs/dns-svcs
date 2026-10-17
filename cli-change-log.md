@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-19"
+lastupdated: "2026-09-23"
 
 keywords: change log for dns services cli, updates to cli
 
@@ -24,7 +24,7 @@ In this change log, you can learn about the latest changes, improvements, and up
 
 Version 0.8.7 of the CLI was released on 16 September 2026.
 
-- Added support for GLB healthcheck monitors enum combinations `2xx,3xx`, `2xx,4xx` and `2xx,3xx,4xx`. 
+- Added support for GLB health check monitors enum combinations `2xx,3xx`, `2xx,4xx` and `2xx,3xx,4xx`. 
 
 ## Version 0.8.6
 {: #cli-086}
