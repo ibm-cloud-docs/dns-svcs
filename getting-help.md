@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-09"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: dns-svcs
 If you experience an issue or have questions when using {{site.data.keyword.dns_full}}, you can use the following resources before you open a support case.
 {: shortdesc}
 
-* Ask a question in the [AI assistant](/docs/overview?topic=overview-ask-ai-assistant) from the console or the {{site.data.keyword.cloud_notm}} CLI.
+* Troubleshoot with {{site.data.keyword.paver_full}}{: external}. {{site.data.keyword.paver}} is an embedded AI operator that understands your account context, creates a resolution plan, and executes changes on your behalf, while always requiring your approval before touching your live environment.
 * Review [FAQs](/docs/dns-svcs?topic=dns-svcs-frequently-asked-questions) in the product documentation.
 * Review [Troubleshooting](/docs/dns-svcs?topic=dns-svcs-troubleshoot-nxdomain) to diagnose and resolve common issues.
 * Check the status of the {{site.data.keyword.cloud_notm}} platform and resources by going to the [Status page](/status){: external}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-06-03"
+  years: 2022, 2026
+lastupdated: "2026-11-09"
 
 keywords:
 
@@ -34,7 +34,7 @@ To remove the subnet, first remove the health check configuration associated wit
 To remove the health check, take the following steps:
 
 1. Navigate to **Global load balancer > Origin pools**.
-1. Click the overflow menu ![overflow menu](/images/overflow-icon.png "overflow menu icon") and select **Edit**.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") and select **Edit**.
 1. In the side panel that appears, scroll to the Health monitoring section and select **No health check** from the menu.
 1. Click **Save**.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-09"
 
 keywords: vpe for dns services, virtual private endpoints for dns services, using vpe for vpc with dns services, isolation for dns services, private network for dns services, network isolation in dns services, non-public routes for dns services, private connection for dns services, private connectivity for dns services
 
@@ -103,7 +103,7 @@ api.private.dns-svcs.cloud.ibm.com
 ```
 {: pre}
 
-For examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/dns-svcs?code=go#authentication).
+For examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/docs/apis/dns-svcs?code=go#authentication).
 
 ### Using the VPE with Terraform
 {: #vpe-terraform}

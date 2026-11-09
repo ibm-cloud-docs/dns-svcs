@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2025
-lastupdated: "2025-04-17"
+  years: 2020, 2026
+lastupdated: "2026-11-09"
 
 keywords: dns-svcs, DNS Services, Private DNS, dns support script, dns backup script
 
@@ -254,7 +254,7 @@ fi
 
 * This example script uses the outputs of the plugin and commands related to this service through the CLI.
 * A full list of {{site.data.keyword.dns_full_notm}} CLI commands are available in the [documentation](/docs/dns-svcs?topic=dns-svcs-dns-services-cli-commands).
-* APIs that are noted in the [API documentation](/apidocs/dns-svcs) can also produce similar outputs.
+* APIs that are noted in the [API documentation](/docs/apis/dns-svcs) can also produce similar outputs.
 * A different script can export different resources under {{site.data.keyword.dns_short}} in different formats, as needed.
 
 ## Alternatives to a script

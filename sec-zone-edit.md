@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-06-03"
+  years: 2022, 2026
+lastupdated: "2026-11-09"
 
 keywords:
 
@@ -61,7 +61,7 @@ Where:
 
 To edit a secondary zone using the API, follow these steps:
 
-1. Set up your [API environment](/apidocs/dns-svcs#authentication) with the correct variables.
+1. Set up your [API environment](/docs/apis/dns-svcs#authentication) with the correct variables.
 1. Store the following values in variables to be used in the API command:
     * `INSTANCE_ID`, which is the unique identifier of a service instance.
     * `RESOLVER_ID`, which is the unique identifier of a custom resolver.

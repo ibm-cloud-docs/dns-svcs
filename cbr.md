@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-09"
 
 keywords: context-based restrictions for dns services
 
@@ -57,7 +57,7 @@ A network zone represents an allowlist of IP addresses where an access request i
 {: #network-zone-api} 
 {: api}
 
-You can create network zones by using the `create-zone` command. For more information, see the [API docs](/apidocs/context-based-restrictions#create-zone).
+You can create network zones by using the `create-zone` command. For more information, see the [API docs](/docs/apis/context-based-restrictions#create-zone).
 
 The `addresses` attribute specifies individual IP addresses, ranges, subnets, and VPCs where requests originating from are permitted. 
 {: tip}
@@ -128,16 +128,16 @@ The `addresses` attribute specifies individual IP addresses, ranges, subnets, an
 ## Limitations
 {: #cbr-limitations}
 
-Context-based restrictions protect only the actions associated with the [DNS Services API](/apidocs/dns-svcs). Actions associated with the following platform APIs are not protected by context-based restrictions. Reference the API docs for the specific action IDs.
+Context-based restrictions protect only the actions associated with the [DNS Services API](/docs/apis/dns-svcs). Actions associated with the following platform APIs are not protected by context-based restrictions. Reference the API docs for the specific action IDs.
 
-- [Resource Instance APIs](/apidocs/resource-controller/resource-controller#list-resource-instances)
-- [Resource Keys APIs](/apidocs/resource-controller/resource-controller#list-resource-keys)
-- [Resource Bindings APIs](/apidocs/resource-controller/resource-controller)
-- [Resource Aliases APIs](/apidocs/resource-controller/resource-controller)
-- [IAM Policy APIs](/apidocs/iam-policy-management#list-policies)
-- [Global Search APIs](/apidocs/search)
-- Global Tagging [Attach](/apidocs/tagging#attach-tag) and [Detach](/apidocs/tagging#detach-tag) APIs
-- [Context-based Restriction Rule APIs](/apidocs/context-based-restrictions#create-rule)
+- [Resource Instance APIs](/docs/apis/resource-controller/resource-controller#list-resource-instances)
+- [Resource Keys APIs](/docs/apis/resource-controller/resource-controller#list-resource-keys)
+- [Resource Bindings APIs](/docs/apis/resource-controller/resource-controller)
+- [Resource Aliases APIs](/docs/apis/resource-controller/resource-controller)
+- [IAM Policy APIs](/docs/apis/iam-policy-management#list-policies)
+- [Global Search APIs](/docs/apis/search)
+- Global Tagging [Attach](/docs/apis/tagging#attach-tag) and [Detach](/docs/apis/tagging#detach-tag) APIs
+- [Context-based Restriction Rule APIs](/docs/apis/context-based-restrictions#create-rule)
 
 ### DNS Services CBR Limitations
 {: #cbr-dns-limitations}
@@ -172,7 +172,7 @@ ibmcloud cbr rule-create  --zone-id 65810ac762004f22ac19f8f8edf70a34 --descripti
 {: #rules-api} 
 {: api}
 
-Review the following example requests to create rules. For more information about the `v1/rules` API, see the [API docs](/apidocs/context-based-restrictions#create-rule).
+Review the following example requests to create rules. For more information about the `v1/rules` API, see the [API docs](/docs/apis/context-based-restrictions#create-rule).
 
 When you create a rule with context attribute to restrict requests to private endpoint, it is not possible to restrict access to an overlay IP for an individual VPC virtual server instance or bare-metal server. You must specify the VPC zone's underlay IP addresses, which are also known as Cloud Service Endpoint IPs.
 {: note}

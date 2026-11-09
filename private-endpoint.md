@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-09"
 
 keywords:
 
@@ -71,7 +71,7 @@ api.private.dns-svcs.cloud.ibm.com
 ```
 {: pre}
 
-For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/apidocs/dns-svcs?code=go).
+For more examples of setting the service's FQDN for the specific SDK language, see [SDK API examples](/docs/apis/dns-svcs?code=go).
 
 ### Integrating with Virtual Private Endpoint for VPC with Terraform
 {: #terraform-dns-svcs}

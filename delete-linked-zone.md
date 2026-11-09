@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-05-08"
+  years: 2022, 2026
+lastupdated: "2026-11-09"
 
 keywords:
 
@@ -25,7 +25,7 @@ Delete a linked zone by using the UI, CLI, or API.
 To delete a linked zone using the UI, take the following steps:
 
 1. Navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance, then select the **Linked zones** tab.
-1. Click overflow menu ![Overflow menu icon](images/overflow-icon.png "Overflow menu icon") of the linked zone you want to delete.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") of the linked zone you want to delete.
 1. Select **Delete linked zone**.
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-05-08"
+  years: 2022, 2026
+lastupdated: "2026-11-09"
 
 keywords:
 
@@ -37,7 +37,7 @@ To update an access request using the UI, take the following steps:
 1. Navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance.
 1. Click the link in the **Name** column of the request you want to review.
 1. Select the  **Cross-account ACL** tab.
-1. Click overflow menu ![Overflow menu icon](images/overflow-icon.png "Overflow menu icon") of the linked zone for which you want to manage an access request.
+1. Click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") of the linked zone for which you want to manage an access request.
 1. Select **Review request**.
 1. Select **Reject** or **Approve** to complete the request, or click the `X` at the top right of the side panel to close the request and take no action.
 
