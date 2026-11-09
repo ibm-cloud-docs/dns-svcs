@@ -122,7 +122,7 @@ toc:
       topics:
       - link:
           label: DNS Services API
-          href: https://{DomainName}/apidocs/dns-svcs
+          href: https://{DomainName}/docs/apis/dns-svcs
       - topicgroup:
           label: SDKs
           links:

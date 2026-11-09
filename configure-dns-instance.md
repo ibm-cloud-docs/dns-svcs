@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-11-09"
 
 keywords:
 
@@ -89,7 +89,7 @@ dig @161.26.0.7 A xyz.example.com
 {: #creating-dns-instance-api}
 {: api}
 
-See the [create a new resource instance](/apidocs/resource-controller/resource-controller#create-resource-instance) documentation for the Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set. Each account can have multiple resource groups, and each resource group has a unique ID.
+See the [create a new resource instance](/docs/apis/resource-controller/resource-controller#create-resource-instance) documentation for the Resource Controller API. Note that the `resource_group` and `resource_plan_id` must be set. Each account can have multiple resource groups, and each resource group has a unique ID.
 
 Set the variables as follows to create an instance of the standard plan:
 
@@ -98,7 +98,7 @@ Set the variables as follows to create an instance of the standard plan:
 ```
 {: codeblock}
 
-See the [Resource Controller API reference](/apidocs/resource-controller/resource-controller) documentation for more information on using the API.
+See the [Resource Controller API reference](/docs/apis/resource-controller/resource-controller) documentation for more information on using the API.
 
 Command lines for instances are using resource controller API, not DNS APIs. These commands are equivalent to commands `ibmcloud resource service-instance`, which provide convenience for DNS users to manage {{site.data.keyword.dns_short}} instances.
 {: note}

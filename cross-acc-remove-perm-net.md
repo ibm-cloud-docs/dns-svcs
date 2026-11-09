@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-05-08"
+  years: 2022, 2026
+lastupdated: "2026-11-09"
 
 keywords:
 
@@ -26,7 +26,7 @@ To remove a permitted network using the UI, take the following steps:
 
 1. Navigate to the **Zones** section of your {{site.data.keyword.dns_short}} instance, then select the **Linked zones** tab.
 1. Click the link in the **Zone name** column of the linked zone you want to view the **Linked zone details** page.
-1. In the **Permitted networks** tab, click the overflow menu ![Overflow menu icon](images/overflow-icon.png "Overflow menu icon") of the permitted network you want to delete, and select **Delete**.
+1. In the **Permitted networks** tab, click the **Actions** menu ![Actions icon](../icons/action-menu-icon.svg "Actions") of the permitted network you want to delete, and select **Delete**.
 
 ## Removing a permitted network from the CLI
 {: #cli-remove-permit-network}
